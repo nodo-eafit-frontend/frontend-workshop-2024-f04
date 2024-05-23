@@ -1,0 +1,24 @@
+#motivation {
+	position: relative;
+}
+
+#motivation > picture {
+	background-attachment: fixed;
+	background-image: url(../assets/jason-strull-unsplash.jpg);
+	background-position: bottom;
+	background-size: cover;
+	border-radius: 0.5rem;
+	filter: brightness(0.5);
+	height: -webkit-fill-available;
+	padding: 3rem;
+	position: absolute;
+	text-align: center;
+	width: -webkit-fill-available;
+}
+
+#motivation > section {
+	position: relative;
+	padding: 3rem;
+	text-align: center;
+	color: var(--white);
+}
