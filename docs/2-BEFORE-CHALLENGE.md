@@ -59,5 +59,5 @@ repo
 
 ---
 
-- [⬅️ Anterior](/docs/1-NEW-BRANCH.md)
+- [⬅️ Atrás](/docs/1-NEW-BRANCH.md)
 - [🏠 Inicio](/README.md)

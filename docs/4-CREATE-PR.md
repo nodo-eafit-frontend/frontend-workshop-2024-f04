@@ -16,5 +16,5 @@ En este paso es necesario que te apoyes de la plataforma Github.
 
 ---
 
-- [⬅️ Anterior](/docs/3-COMMIT-PUSH-CHANGES.md)
+- [⬅️ Atrás](/docs/3-COMMIT-PUSH-CHANGES.md)
 - [🏠 Inicio](/README.md)
