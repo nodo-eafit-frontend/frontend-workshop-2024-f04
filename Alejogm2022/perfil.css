@@ -1,27 +1,30 @@
 body{
-    background-color: lightgreen;
+    background: linear-gradient(90deg, #1f7daf 0%, #85D8CE 100%);
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+  
 }
 
 h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     font-weight: bold;
 }
 
 h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     font-weight: bold;
     color: rgb(37, 68, 37);
 }
 
 p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
 }
 
 h3{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     font-weight: bold;
 }
@@ -31,4 +34,9 @@ h3{
     border-style: groove;
     border-color: khaki;
     padding: 5px;
+}
+
+.container{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
 }
