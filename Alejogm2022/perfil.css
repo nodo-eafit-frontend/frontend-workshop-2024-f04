@@ -1,42 +1,48 @@
-body{
+body {
     background: linear-gradient(90deg, #1f7daf 0%, #85D8CE 100%);
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-  
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    font-family: "Raleway", sans-serif;
-    text-align: center;
+h1, h2, h3 {
     font-weight: bold;
 }
 
-h2{
-    font-family: "Raleway", sans-serif;
-    text-align: center;
-    font-weight: bold;
+h2 {
     color: rgb(37, 68, 37);
 }
 
-p{
-    font-family: "Raleway", sans-serif;
+p, ul {
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-h3{
-    font-family: "Raleway", sans-serif;
-    text-align: center;
-    font-weight: bold;
-}
-
-.imag{
-    border: 5px;
-    border-style: groove;
-    border-color: khaki;
+.img {
     padding: 5px;
+    animation: ilustrationAnimate 1s ease-in-out infinite alternate;
 }
 
-.container{
-    font-family: "Raleway", sans-serif;
-    text-align: center;
+.container {
+    padding: 20px;
+}
+
+@keyframes ilustrationAnimate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+mark {
+    background-color: yellow;
 }
