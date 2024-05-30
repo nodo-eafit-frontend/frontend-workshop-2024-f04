@@ -32,5 +32,5 @@ Los avances de tu código quedan guardados en tu rama local, por eso mismo, tien
 
 ---
 
-- [⬅️ Anterior](/docs/2-BEFORE-CHALLENGE.md)
+- [⬅️ Atrás](/docs/2-BEFORE-CHALLENGE.md)
 - [🏠 Inicio](/README.md)
