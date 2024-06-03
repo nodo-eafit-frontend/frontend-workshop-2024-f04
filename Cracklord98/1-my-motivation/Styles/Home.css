@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url(../src/Typography/RobotoCondensed/roboto-condensed-cyrillic-500-normal.ttf);
+}
+
+#musicButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.navbar {
+    margin-top: 1rem;
+    max-height: 12rem;
+    background-color: #00f7ff; /* Red background */
+    color: #3412f5; /* White text */
+  }
+/* ... (otros estilos CSS) ... */
+.navbar-img {
+    max-width: 1000%; /* Ajusta el ancho máximo según tus preferencias */
+    max-height: 1000%; /* Ajusta la altura máxima según tus preferencias */
+  }
+  
+
+#main {
+  width: 100%;
+  height: 80rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+}
+#LogoNodo {
+  height: 20%;
+  width: 20%;
+}
+
+#Home {
+  background: fixed;
+  background-image: url(../src/Backgrounds/cool-background\ \(2\).png);
+  background-size: 100%;
+  padding: 2rem;
+}
+
+
+
+#Home h1 {
+  background: linear-gradient(90deg, #00f7ff, #ffd000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+#Bold{
+    color:#20e2e9
+}
+
+#MiPerfilJPG{
+    width: 50%;
+    height: 50%;
+}
+
+
+#Intro-Parraf {
+    font-family: 'MiFuente', sans-serif; /* Aplica la fuente personalizada */
+    font-size: 1.3rem; 
+    color: aliceblue;
+  }
+
+
+  /*
+  #video-fondo {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+*/

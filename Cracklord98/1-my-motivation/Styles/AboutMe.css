@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url(../src/Typography/RobotoCondensed/roboto-condensed-cyrillic-500-normal.ttf);
+}
+
+
+
+#AboutMe {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background: fixed;
+  background-image: url(../src/Backgrounds/cool-background.png);
+  background-size: 100%;
+  }
+  
+  #AboutMe h2 {
+    color: #bfb5df;
+  }
+  
+  #AboutMe img.float-start {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  #AboutMe p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-family: 'MiFuente', sans-serif;
+    color: antiquewhite; /* Aplica la fuente personalizada */
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+  #MiPhoto {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }

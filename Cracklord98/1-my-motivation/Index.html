@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Perfil</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./Styles/NavBar.css">
+    <link rel="stylesheet" href="./Styles/Home.css">
+    <link rel="stylesheet" href="./Styles/AboutMe.css">
+    <link rel="stylesheet" href="Styles/Laboral.css">
+    <link rel="stylesheet" href="./Styles/NodoMotivation.css">
+    <link rel="stylesheet" href="./Styles/NodoLearning.css">
+    <link rel="stylesheet" href="./Styles/Hobbies.css">
+    <link rel="stylesheet" href="./Styles/Footer.css">
+  
+    <link rel="stylesheet" href="./Styles/animation.css">
+
+    <audio id="musicaFondo" autoplay loop>
+      <source src="./src/Music/better-day-186374.mp3" type="audio/mpeg">
+      <script src="./main.js"></script>
+      Tu navegador no admite el elemento de audio.
+  </audio>
+</head>
+<body>
+  <button id="musicButton" class="btn btn-primary">Reproducir música</button>
+<header >
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img id="LogoNodo"
+            src="./src/Logos/nodo-logo.png" alt="Mi Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Home">
+                        <img class="navbar-img" src="./src/Logos/eva--home-fill.svg" alt="Home">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#AboutMe">
+                      <img class="navbar-img" src="./src/Logos/icon-park-outline--me.svg" alt="Acerca de mí">
+                      Acerca de mí
+                  </a>
+              </li>                 
+               <li class="nav-item">
+                <a class="nav-link active" href="#MyLaboralExperience">
+                    <img class="navbar-img" src="./src/Logos/material-symbols--work.svg" alt="Mi experiencia Laboral">
+                    Mi experiencia laboral
+                </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" href="#NodoMotivation">
+                  <img class="navbar-img" src="/src/Logos/reshot-icon-software-engineer-VA8RSG936Z.svg alt="Motivacion Nodo">
+                  Motivación Nodo
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#LearningNodo">
+                <img class="navbar-img" src="./src/Logos/solar--emoji-funny-circle-bold.svg" alt="Aprendizaje Nodo">
+                Aprendizaje Nodo
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#Hobbies">
+              <img class="navbar-img" src="./src/Logos/solar--emoji-funny-circle-bold.svg" alt="Hobbies">
+              Hobbies
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#ContactMe">
+            <img class="navbar-img" src="./src/Logos/streamline--contact-phonebook-2.svg" alt="Acerca de mí">
+            Contact Me
+        </a>
+    </li>
+                <!-- Agrega más enlaces para tus otras secciones -->
+            </ul>
+        </div>
+    </div>
+</nav>
+  </header>
+
+<main>
+  <section id="Home">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-context-center">
+        <div class="col-md-6">
+          <h1>Hey, soy Andres Toro</h1>
+          <p id="Intro-Parraf">
+            Ingeniero industrial y administrador con <b id="Bold">+2 años de experiencia.</b><br>
+            Enfocado en mercados financieros e inteligencia de negocios. 
+          </p>
+          <div id="BottonCV">
+            <a href="./src/PDF/HDV ESP.pdf" download="Andres_Toro_CV.pdf" class="btn btn-primary">Descargar CV</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="MiPerfilJPG" src="./src/Photos/Profile.png" alt="Foto_de_Perfil"/>
+        </div>
+      </div>
+      </div>
+        </div>  
+      </div>
+  </section>
+       <!-- <video autoplay loop muted playsinline id="video-fondo">
+          <source src="./src/Backgrounds/BG1.mp4" type="video/mp4">
+          Tu navegador no admite el elemento de video.
+    </video> -->
+
+
+
+    <section id="AboutMe">
+      <section id="AboutMe" class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="MyPhoto" src="./src/Photos/Yo.png" alt="Foto de Andrés" class="img-fluid rounded-circle mx-auto d-block">
+          </div>
+          <div class="col-md-6">
+            <div class="flex-container d-flex justify-content-center">
+              <h2 class="text-center fw-bold mt-4">Sobre mí
+              <img src="./src/Logos/3dicons.png" alt="Icono pequeño" class="bi bi-person me-3"></h2>
+            </div>
+            <p class="text-justify">
+              ✌️¡Hola!✌️ Soy Andrés, un apasionado de la tecnología con un espíritu creativo, innovador y curioso. Busco colaborar de forma efectiva en el desarrollo personal y profesional de las personas con las que trabajo y en la elaboración de productos y servicios tecnológicos de alta calidad que aporten un valor agregado al mundo y que impacten de forma positiva en la vida de sus usuarios.
+            </p>
+            <p class="text-center mt-4">
+             😁 ¡Si compartes mi visión y te entusiasma la idea de crear algo increíble, no dudes en ponerte en contacto conmigo! Estoy listo para formar parte de tu proyecto y juntos hacer historia. ¡Espero con ansias tu mensaje! 🔥
+            </p>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+    <section id="MyLaboralExperience">
+      <section id="MyLaboralExperience" class="container">
+        <h2>Mi experiencia laboral</h2>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="job-entry">
+              <h3 class="mt-4">Título del puesto de trabajo</h3>
+              <p>Descripción del puesto de trabajo, incluyendo las responsabilidades, logros y habilidades adquiridas.</p>
+            </div>
+            <div class="job-entry">
+              <h3 class="mt-4">Título del puesto de trabajo</h3>
+              <p>Descripción del puesto de trabajo, incluyendo las responsabilidades, logros y habilidades adquiridas.</p>
+            </div>
+            <div class="job-entry">
+              <h3 class="mt-4">Título del puesto de trabajo</h3>
+              <p>Descripción del puesto de trabajo, incluyendo las responsabilidades, logros y habilidades adquiridas.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="company-logo">
+              <img src="./src/Imagenes/empresa1.png" alt="Logo de la empresa 1" class="img-fluid">
+            </div>
+            <div class="company-logo">
+              <img src="./src/Imagenes/empresa2.png" alt="Logo de la empresa 2" class="img-fluid">
+            </div>
+            <div class="company-logo">
+              <img src="./src/Imagenes/empresa3.png" alt="Logo de la empresa 3" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+    <section id="NodoMotivation">
+
+    </section>
+
+  <section id="LearningNodo" class="container">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="flex-container">
+              <h2 class="text-center fw-bold mt-4">Aprendiendo Nodo</h2>
+              <img src="./src/Imagenes/icono-pequeno.svg" alt="Icono pequeño" class="me-3">
+
+      </section>
+      
+    </section>
+    <section id="Hobbies">
+      <div class="container">
+        <div class="row d-flex align-items-center justify-context-center">
+          <div class="col-md-6">
+            <div class="wrapper">
+              <span class="primer-texto">Soy</span>
+              <ul class="textos">
+                  <li><span>Ingeniero</span></li>
+                  <li><span>Desarrollador</span></li>
+                  <li><span>Gamer</span></li>
+              </ul>
+    </div>
+    </section>
+    <section id="technologies" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Tecnologías que me gustaría aprender en NODO</h2>
+  
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="ruta/a/logo-github.png" class="card-img-top" alt="GitHub">
+              <div class="card-body">
+                <h5 class="card-title">GitHub</h5>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card h-100">
+              <img src="ruta/a/logo-git.png" class="card-img-top" alt="Git">
+              <div class="card-body">
+                <h5 class="card-title">Git</h5>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Agrega más elementos 'div.col' para mostrar más tecnologías -->
+  
+        </div>
+      </div>
+    </section>
+</main>
+<footer id="ContactMe" class="bg-dark text-white text-center py-3">
+    <p>© 2024 Mi Sitio Web</p>
+    <p><a href="https://github.com/Cracklord98" target="_blank">Mi perfil de GitHub</a></p>
+</footer>
+
+
+
+
+
+
+
+<script src="./Bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
