@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+        .profile img {
+            border-radius: 50%;
+            margin-left: 20px;
+            width: 200px; /* Ajusta el tamaño de la foto */
+            height: 200px; /* Asegura que la imagen sea circular */
+            object-fit: cover;
+        }
+        .profile div {
+            flex: 1;
+        }
+        .hobbies .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .hobbies .hobby {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+    <div class="container">
+        <!-- Tu sello personal -->
+        <section class="profile">
+            <div>
+                <h2>Lued Beltran</h2>
+                <p>Me defino como un agente de cambio comprometido con la excelencia y la mejora continua. Mi combinación de habilidades técnicas, liderazgo inspirador y visión estratégica me convierten en un activo invaluable para cualquier equipo o proyecto.</p>
+            </div>
+            <img src="foto linkedin.png" alt="Foto de Lued Beltran" class="foto-perfil">
+        </section>
+        <!-- Motivación en Nodo -->
+        <section>
+            <h2>¿Qué te mueve en Nodo?</h2>
+            <p>Al unirme a la comunidad Nodo como aprendiz de desarrollo, mi propósito es adquirir habilidades técnicas avanzadas, contribuir al conocimiento colectivo y fomentar la innovación y la creatividad en la creación de soluciones tecnológicas. Me comprometo a desarrollar habilidades de liderazgo y mentoría, promover la ética profesional y la responsabilidad social, y mantener una actitud de aprendizaje continuo y adaptabilidad. Asimismo, busco establecer relaciones profesionales sólidas, colaborando con otros para impulsar el crecimiento personal y profesional, y crear un impacto positivo en la comunidad y en la sociedad.</p>
+            <div class="right-column">
+                <h2>Razones</h2>
+                <p>Unirme a la comunidad Nodo como aprendiz de desarrollo representa una oportunidad invaluable para mi crecimiento profesional y personal. En esta comunidad, busco adquirir y perfeccionar habilidades técnicas esenciales que me permitirán destacarme en el campo del desarrollo de software. Además, deseo contribuir activamente al conocimiento colectivo, participando en proyectos colaborativos que fomenten la innovación y la creatividad. La ética profesional y la responsabilidad social son pilares fundamentales para mí, y estoy comprometida a aplicarlos en cada iniciativa. Asimismo, la comunidad Nodo ofrece un entorno propicio para desarrollar habilidades de liderazgo y mentoría, mientras construyo relaciones profesionales sólidas que amplíen mis horizontes y oportunidades.</p>
+            </div>
+        </section>
+        <!-- Aprende sin límites -->
+        <section>
+            <h2>Aprende sin límites</h2>
+            <p>Deseo adquirir habilidades en Programación y Desarrollo de Software: Dominio de lenguajes de programación como JavaScript, Python, Java, entre otros, y familiaridad con frameworks y herramientas de desarrollo modernas.</p>
+            <div class="right-column">
+                <h2>Lista de deseos</h2>
+                <ul>
+                    <li>Curso: Desarrollo Web Full Stack
+                        <p>Este curso espero que pueda proporcionar los conocimientos y habilidades necesarias para desarrollar aplicaciones web de principio a fin, abarcando tanto el front-end (HTML, CSS, JavaScript) como el back-end (Node.js, Express, bases de datos).</p>
+                    </li>
+                    <li>Taller: Introducción a Metodologías Ágiles y Scrum
+                        <p>En este taller práctico, espero aprender sobre  los principios y prácticas de las metodologías ágiles, con un enfoque específico en Scrum. Aprenderás a gestionar proyectos de manera ágil, colaborativa y adaptativa.</p>
+                    </li>
+                    <li>Evento: Conferencia de Innovación Tecnológica
+               <p>Este evento espero reuna a expertos en tecnología e innovación para compartir las últimas tendencias, herramientas y mejores prácticas en el desarrollo de software. Podrás aprender de conferencias, paneles de discusión y talleres prácticos.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Tus Hobbies -->
+        <section>
+            <h2>Tus Hobbies</h2>
+            <div class="grid">
+                <div class="hobby">
+                    <img src="familia.png" alt="Compartir tiempo viajando con mi familia es mi mayor hobbie">
+                    <p>Compartir tiempo viajando con mi familia es mi mayor hobbie.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>¡Conéctate conmigo en <a href="https://github.com/Ludekabeko/Nodo-talleres">GitHub</a>!</p>
+    </footer>
+</body>
+</html>
