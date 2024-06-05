@@ -1,0 +1,12 @@
+.navbar {
+    margin-top: 1rem;
+    max-height: 12rem;
+    background-color: #00f7ff; /* Red background */
+    color: #3412f5; /* White text */
+  }
+/* ... (otros estilos CSS) ... */
+.navbar-img {
+    max-width: 100%; /* Ajusta el ancho máximo según tus preferencias */
+    max-height: 100%; /* Ajusta la altura máxima según tus preferencias */
+  }
+  

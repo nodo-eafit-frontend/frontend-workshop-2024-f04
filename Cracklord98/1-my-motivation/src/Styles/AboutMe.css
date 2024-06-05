@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MiFuente';
-    src: url(../src/Typography/RobotoCondensed/roboto-condensed-cyrillic-500-normal.ttf);
+    src: url(../assets/Typography/RobotoCondensed/roboto-condensed-cyrillic-600-normal.ttf);
 }
 
 
@@ -9,7 +9,7 @@
     padding-top: 1rem;
     padding-bottom: 2rem;
     background: fixed;
-  background-image: url(../src/Backgrounds/cool-background.png);
+  background-image: url(../assets/Backgrounds/cool-background.png);
   background-size: 100%;
   }
   
