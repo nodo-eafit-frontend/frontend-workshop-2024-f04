@@ -1,0 +1,97 @@
+body {
+  padding: 0%;
+  margin: 0%;
+}
+
+#hero_name {
+  min-height: 550px;
+  background-color: #000033;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 30px;
+  position: relative;
+  padding: 6px 0px;
+}
+
+.texto_1 {
+  font-family: "Amiko", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  justify-content: center;
+  color: #fbb315;
+}
+
+/*inicio texto animado */
+
+.animated_text {
+  font-family: "Molengo", sans-serif;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #ff2800;
+}
+
+.animated_text span {
+  position: relative;
+}
+
+.animated_text ::before {
+  content: "Diseñador gráfico";
+  animation: words 9s infinite;
+}
+@keyframes words {
+  0%,
+  25% {
+    content: "Diseñador gráfico";
+  }
+  26%,
+  50% {
+    content: "Diseñador UX";
+  }
+  51%,
+  75% {
+    content: "Motion grapher";
+  }
+  76%,
+  100% {
+    content: "Aprendiz Frontend";
+  }
+}
+
+/* fin texto animado */
+
+#profile {
+  display: flex;
+  align-items: center;
+}
+.text_profile {
+  padding: 20px;
+}
+
+.text_profile h3 {
+  font-family: "Istok Web", sans-serif;
+  font-style: normal;
+  font-size: 27px;
+}
+.text_profile p {
+  font-family: "Amiko", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+.image_profile {
+  margin: 10px;
+}
+.image_profile img {
+  width: 200px;
+  border-radius: 50%;
+}
