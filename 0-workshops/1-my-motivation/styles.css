@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica,
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+}
+
+.nombre-foto {
+    display: flex;
+    align-items: center;
+}
+
+.nombre-foto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.texto ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #3a24f8;
+
+    
+    border-radius: 5px;
+    padding: 5%;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.carrusel {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.carrusel img {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  max-width: 800px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.grid-item p {
+  margin-top: 10px;
+}
+
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
