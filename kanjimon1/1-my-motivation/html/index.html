@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/diseno.css" />
     <title>Quien soy, Mi motivaci&oacute;n</title>
 </head>
@@ -11,8 +12,9 @@
     <br>
     <nav class="navigation">
         <menu>
-            <ul>
-                <li><a href="#quiensoy">Qui&eacute;n soy</a> </li>
+            <ul class="navig">
+                <li><a class="active" href="#quiensoy">Qui&eacute;n soy</a> </li>
+                <li><a href="#quiensoy1">Motivaci&oacute;n</a></li>
                 <li><a href="#motivation">Motivaci&oacute;n</a></li>                
                 <li><a href="#aprende">Aprende sin l&iacute;mites</a></li>
                 <li><a href="#tushobbies">Tus Hobbies</a></li>
@@ -20,17 +22,19 @@
         </menu>        
     </nav>    
     <br>
-        <article id="quiensoy" class="quiensoy">            
-            <section>
+        <article id="quiensoy" class="quiensoy">
+            <section>                            
                 <h2>Mi sello personal</h2>
                     <p>Nombre:
                         Juan Camilo Montoya Rúa               
-                    </p>            
-            </section>                                
-            <h2>Foto:</h2>
-            <p>
-                <img src="../pics/IMG_7121.JPG" alt="foto" />
-            </p>            
+                    </p>
+            </section>                   
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="../pics/IMG_7121.JPG"></a>
+                    <img src="../pics/IMG_7121.JPG" alt="camilo" />                    
+                </div>
+            </div>        
         </article>
         <br>
         <article id="quiensoy1">
@@ -51,6 +55,11 @@
                     <h2>¿Qu&eacute; me mueve en Nodo?</h2>
                     <br>
                     <h2>Motivaci&oacute;n:</h2>
+                    <p>
+                        Poder compartir el conocmiento que he adquirido durantes algunos a&ntilde;os que he trabajado en IT;
+                        que es un programa impartido por personas que tienes los skills requeridos y que el aprendizaje se 
+                        basará como se desempe&ntilde;a utilizando las nuevas metodolog&iacute;as 
+                    </p>
                 </section>
                 <br>
                 <section>
@@ -75,7 +84,7 @@
                         adquiridos durante el estudio de este programa, para estar a la par de personas que hayan tenido
                         un skill y de esta manera aprender muchas más habilidades que comprenden el mundo del desarrollo
                         ya que este &aacute;mbito no solo est&acute; enfocado a codificar sino a aprender de muchas &acute;reas.
-                    </p>
+                        </p>
                     </div>
                 </div>
                 <div class="card">
@@ -93,16 +102,45 @@
             </div>                    
             </section>  
         </article>
-            <br>  
+        <br> 
         <article id="tushobbies" class="tushobbies">
-                <h2>Imagen Hobbie 1:</h2>
-                <img src="../pics/finnnish.jpeg" alt="foto" />
-                <h2>Imagen Hobbie 2:</h2>
-                <img src="../pics/eurovision.jpeg" alt="foto" />
-                <h2>Imagen Hobbie 3:</h2>
-                <img src="../pics/Running.jpg" alt="foto" />
-                <br>            
-        </article>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pics/finnnish.jpeg">
+                <img src="../pics/finnnish.jpeg" alt="idiomas" />
+                <div class="desc">Me gustan los retos que pocos puedan asumir como el aprendixaje de un nuevo 
+                    idioma y uno muy caracter&iacute;stico es el fin&eacute;s por no estar realcionado a ninguna
+                    lengua indoeuropea lo hace un reto grande por aprenderlo
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pics/eurovision.jpeg">
+                <img src="../pics/eurovision.jpeg" alt="musica" />
+                <div class="desc">Me gusta mucho la m&uacute;sica folk y como en la imagen del al lado los idiomas
+                    permimiendome conocer nuevos ritmos y esto es f&aacute;cil a trv&eacute;s de la m&uacute;sica
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pics/Running.jpg">
+                <img src="../pics/Running.jpg" alt="ejercicio" />
+                <div class="desc">Me gusta salir a la respirar aire puro en las monta&ntilde;as haciendo
+                    ejercicio corriendo, trotando caminando para despejar la mente y liberar energ&iacute;as
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="../pics/Aviones.jpeg">
+                <img src="../pics/Aviones.jpeg" alt="viajar" />
+                <div class="desc">Me gusta viajar a lugares distintos y tener diferentes experiencias
+                </div>
+            </div>
+        </div>
+        </article>            
         <article class="slogan">
             <section>
                 <h2>Slogan</h2>
@@ -110,7 +148,7 @@
                         ¡Para atrás ni para coger impulso!                     
                     </p>                                
             </section>
-        </article>        
+        </article>    
         <br>
     <footer>
         <p>
