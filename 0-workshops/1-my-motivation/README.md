@@ -1,4 +1,4 @@
-# Reto I: Quién Soy y Mi Motivación
+# Reto I: Quién Soy y Mi Motivación - HTML & CSS
 
 ¿Te has imaginado alguna vez crear tu propio espacio en internet? Un lugar donde puedas compartir tus ideas, mostrar tus proyectos o simplemente expresar tu creatividad. ¡Con HTML y CSS, puedes hacer eso y mucho más!
 
@@ -42,7 +42,7 @@ Te convertirás en un artesano digital y construirás una página web que incluy
 
 ### CSS Básico
 
-- **Reset CSS:**: Tener consistencia y control de los estilos en cualquier Navegador.
+- **Reset CSS:** Tener consistencia y control de los estilos en cualquier Navegador.
 - **Selectores de CSS:** Ubica los elementos específicos que deseas modificar.
 - **Pseudo-clases y Pseudo-elementos:** Aplica estilos a estados específicos de los elementos (:hover, :first-child, ::before, ::after, etc).
 - **Cascada, Herencia y Especificidad:** Comprende cómo se aplican y se heredan los estilos.
