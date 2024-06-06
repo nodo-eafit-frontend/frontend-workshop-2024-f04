@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    margin: auto;
+}
+
+h1{ font-size: 2.5em;}
+h2{ font-size: 1.9em;}
+h3{font-size: 1.4em;}
+p{ font-size: 1.2em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: greenyellow;
+}
+
+button:hover{
+    background-color: chartreuse;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+header{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: rgb(53, 243, 6);
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+
+}
+
+header a:hover{
+    color:rgb(53, 243, 6);
+}
+
+#Quiénsoy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: rgb(2, 10, 0);
+    color: white;
+}
+
+#Quiénsoy img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+#Motiv .container{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+#Motiv .texto{
+    width: 60%;
+    text-align: initial; 
+    padding: 0px 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Motiv .img{
+height: 50%;
+width: 50%;
+}
