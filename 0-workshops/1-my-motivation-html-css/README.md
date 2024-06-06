@@ -37,7 +37,6 @@ Te convertirás en un artesano digital y construirás una página web que incluy
 - **Etiquetas y Atributos:** Crea diferentes elementos con etiquetas y personalízalos con atributos.
 - **Imágenes:** Agrega vida a tu contenido con imágenes optimizadas.
 - **Listas:** Ordena tus ideas con listas numeradas, con viñetas y de definiciones.
-- **Tablas:** Presenta información de forma organizada y fácil de comprender.
 - **Hipervínculos:** Conecta tu mundo web con enlaces internos y externos.
 
 ### CSS Básico
