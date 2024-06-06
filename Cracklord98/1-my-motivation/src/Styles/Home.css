@@ -7,6 +7,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  background-color: bisque;
 }
 
 #main {
@@ -31,7 +32,7 @@
 }
 
 #Home h1 {
-  background: linear-gradient(90deg, #00f7ff, #ffd000);
+  background: linear-gradient(90deg, #00f7ff, #f0a206);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

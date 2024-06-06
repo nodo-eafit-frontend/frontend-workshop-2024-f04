@@ -1,5 +1,14 @@
 #MyLaboralExperience{
-    background-color: aqua;
-    background-image: url(../assets/Backgrounds/cool-background\ \(4\).png)
-
+    padding: 1rem;
+    background: linear-gradient(to right, #2196F3 0%, #035AA6 100%);
+    animation: movimiento 10s linear infinite;
 }
+
+@keyframes movimiento {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
