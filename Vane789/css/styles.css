@@ -1,0 +1,233 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    background: linear-gradient(to bottom, #000, #1A1D54);
+    color: #fff;
+    width: 100%;
+}
+
+.logo-nav img {
+    width: 12rem;
+    margin-top: 0.3rem;
+}
+
+.navbar {
+    position: relative;
+    background: #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    z-index: -1;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #b1b3d0;
+    font-size: 16px;
+}
+
+.navbar-menu a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#quien-soy{
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    text-align: end;
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.profile {
+    text-align: initial;
+}
+
+.profile p {
+    margin-top: 20px;
+    margin-right: 60px;
+}
+
+picture img {
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: crecerSombra 3s infinite;
+}
+
+@keyframes crecerSombra {
+    0% {
+        box-shadow: 0px 1px 20px rgba(70, 62, 181, 0.5);
+    }
+    50% {
+        box-shadow: 0px 1px 20px 4cap rgba(70, 62, 181, 0.5); 
+    }
+    100% {
+        box-shadow: 0px 1px 20px rgba(70, 62, 181, 0.5); 
+    }
+}
+
+#motivacion{
+    max-width: 50%;
+    background-color: rgba(12, 12, 13, 0.3);
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #292929;
+}
+
+#motivacion h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#motivacion h3, p{
+    color: #fff;
+    padding: 5px;
+}
+
+#metas{
+    width: 52%;
+    margin: 0 auto;
+}
+
+#metas h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#metas p{
+    margin-top: 15px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.card li{
+    list-style: none;
+    display: flex;
+    padding-top: 20px;
+} 
+
+.card > ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content{
+    border-radius: 0.5rem;
+    background-color: rgba(12, 12, 13, 0.3);
+    border: 2px solid #292929;
+    box-shadow: 2px 2px 5px 2px var(--shadow-color);
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+    
+}
+
+.content span{
+    padding: 5px;
+}
+
+.shake-left-right:hover{
+    background: #1A1D54;
+    border: 2px solid #1e30d3;
+    animation:shake-left-right 0.8s linear both
+
+} 
+@keyframes shake-left-right{
+    0%,100%{transform:rotate(0deg);
+    transform-origin:50% 50%}
+    10%{transform:rotate(8deg)}
+    20%,40%,60%{transform:rotate(-10deg)}
+    30%,50%,70%{transform:rotate(10deg)}
+    80%{transform:rotate(-8deg)}
+    90%{transform:rotate(8deg)}}
+
+
+#hobbies{
+    text-align: center;
+}
+
+#hobbies h2{
+   margin-top: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+}
+
+.hobby img{
+    width: 15rem;
+}
+
+.hobby p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+footer{
+    padding-top: 50px;
+    text-align: center;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer > section {
+    max-width: 45rem;
+    padding-top: 50px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contacto img{
+    margin-top: 5px;
+    width: 4rem;
+}
