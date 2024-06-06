@@ -5,6 +5,7 @@
     <meta http-equiv="CONTENT-TYPE">
     <title>MyProfile-JaimeGallo</title>
     <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minim-scale=1 maximum-scale=1">
 </head>
 <body>
     <header>
@@ -46,48 +47,66 @@
                 <img src="img/Logo HTML .jpg" alt="HTML">
                 <h3>HTML</h3>
                 <p>Aprender HTML básico: Semántica HTML, etiquetas y atributos, imágenes, listas, tablas, hipervinculos.</p>
-                <a href="#">Leer más</a>
+                <form action="https://developer.mozilla.org/es/docs/Web/HTML">
+                    <button>Leer más</button>
+                </form>
             </div>
 
             <div class="carta">
                 <img src="img/Logo css.jpg" alt="CSS">
                 <h3>CSS</h3>
-                <p>Aprender CSS básico: Reset CSS, selectores, pseudo-clases y pseudo-elementos, cascada, herencia y especifidad, propiedades, diseño y posicionamiento, unidades de medida.</p>
-                <a href="#">Leer más</a>
+                <p>Aprender CSS básico: Reset CSS, selectores, pseudo-clases y pseudo-elementos, cascada, herencia y especifidad, propiedades.</p>
+                <form action="https://developer.mozilla.org/es/docs/Web/CSS">
+                    <button>Leer más</button>
+                </form>
             </div>
 
             <div class="carta">
                 <img src="img/JavaScript.jpg" alt="HTML">
                 <h3>JavaScript</h3>
                 <p>JacaScript y su versión Typescript, algoritomos, comunicación, persistencia y debuggins.</p>
-                <a href="#">Leer más</a>
+                <form action="https://developer.mozilla.org/es/docs/Web/JavaScript">
+                    <button>Leer más</button>
+                </form>
             </div>
 
             <div class="carta">
                 <img src="img/Datos.jpg" alt="HTML">
                 <h3>Estructura de datos</h3>
                 <p>Arreglos y matrices, conocerla para aplicar soluciones estáticas en la codificación de programas.</p>
-                <a href="#">Leer más</a>
+                <form action="https://es.wikipedia.org/wiki/Estructura_de_datos">
+                    <button>Leer más</button>
+                </form>
             </div>
 
         </div>
    </section>
 
     <section id="hobbies">
+        <h2>Mis hobbies</h2>
         <div class="container">
-            <h2>Mis hobbies</h2 >
-            <div class="Ejercicio">Ejercicio</div>
-                <div class="img"></div>
-            <div class="Leer">Leer</div>
-                <div class="img"></div>
-            <div class="Ver fútbol">Ver fútbol</div>
-                <div class="img"></div>
-            <div class="Música">Música</div>
-                <div class="img"></div>
+
+            <div class="hobbies-imágenes">
+                <img src="img/Ejercicio.jpg" alt="Ejercicio" class="imagen">
+                <h2 class="título">Ejercicio</h2>
+            </div>
+            <div class="hobbies-imágenes">
+                <img src="img/Leer.jpg" alt="Leer" class="imagen">
+                <h2 class="título">Leer</h2>
+            </div>
+            <div class="hobbies-imágenes">
+                <img src="img/Fútbol.jpg" alt="Fútbol" class="imagen">
+                <h2 class="título">Fútbol</h2>
+            </div>
+            <div class="hobbies-imágenes">
+                <img src="img/Música.jpg" alt="Música" class="imagen">
+                <h2 class="título">Música</h2>
+            </div>
+                
         </div>   
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <p>&copy;JaimeGallo</p>
         </div>
