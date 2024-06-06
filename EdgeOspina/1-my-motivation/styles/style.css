@@ -1,0 +1,79 @@
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to left, black, #252147);
+    text-align: center;
+    ;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* PORTADA */
+.portada {
+    background: linear-gradient(to bottom, rgb(20, 12, 46), #090908, #1f1b23);
+    height: 100 px;
+    width: 100%;
+    margin: 0;
+}
+
+#img-yo {
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    float: inline-end;
+    margin-right: 20%;
+}
+
+/* CUERPO */
+body {
+    background: linear-gradient(to bottom, #e3e3f6, #b7d9ff, #e3e3f6);
+    height: 100vh;
+    margin: 100px, 100px, 100px, 100px;
+}
+
+#motivacion{
+    margin-left: 8%;
+}
+#metas{
+    margin-left: 8%;
+}
+#hobbies{
+    margin-left: 8%;
+}
+
+
+/* SEPARADOR */
+hr {
+    border: 2px;
+    height: 2px;
+    background-color: #ccc;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(to left, #002f61, #030016);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
