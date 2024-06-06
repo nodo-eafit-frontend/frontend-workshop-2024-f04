@@ -20,9 +20,10 @@ p, ul {
     line-height: 1.6;
 }
 
-.img {
+.profile-img, .setup-img, .agm-img{
     padding: 5px;
     animation: ilustrationAnimate 1s ease-in-out infinite alternate;
+    
 }
 
 .container {
@@ -45,4 +46,8 @@ a {
 
 mark {
     background-color: yellow;
+}
+
+section.container ul {
+    list-style-type: none;
 }
