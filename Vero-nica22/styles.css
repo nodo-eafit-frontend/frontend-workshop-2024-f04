@@ -13,11 +13,22 @@ body {
     /*list-style: none;*/
 }
 
-
-
-header{
+.presentacion{
     width: 1200px;
     margin: 0 auto;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-hobbies{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
@@ -34,13 +45,17 @@ header{
 
 .presentacion{
     /*position: absolute;*/
+    width: 1200px;
+    margin: 0 auto;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position:relative;
 
 }
+
 
 .imagen-1{
     width: 290px; 
@@ -60,9 +75,7 @@ h1{
     letter-spacing: 2px;
     margin: 20px;
 }
-#prueba{
-    position:relative;
-}
+
 .texto-presentacion{
     font-size: 24px;
     left: 60px;  /*Mueve horizontalmente*/
@@ -164,10 +177,6 @@ h3{
     padding: 20px; 
 }
 
-/*.itemCarrouselArrows > i:hover {
-    cursor: pointer;
-}*/
-
 #itemCarrousel-1{
     background-color: rgb(153, 206, 244) ;
 }
@@ -192,6 +201,27 @@ h3{
 
 .itemCarrouselArrows > a > i{
     color: white;
+}
+
+.listaDeseos {
+    margin: 20px 0 9px 20px; /*A, D,B I*/
+}
+
+h4{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(71, 71, 71);
+    margin: 0 20px 9px 0; /*A, D,B I*/
+}
+
+.listaDeseos  li {
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0 10px 9px 0; /*A, D,B I*/
+    width: 1200px;
+    margin: 0 auto;
 }
 
 /*Grid*/
@@ -251,24 +281,6 @@ h5{
     border: 1px solid plum;
 }
 
-.listaDeseos {
-    margin: 20px 0 9px 0; /*A, D,B I*/
-}
-
-h4{
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgb(71, 71, 71);
-    margin: 0 20px 9px 0; /*A, D,B I*/
-}
-
-.listaDeseos  li {
-    font-size: 20px;
-    font-weight: 200;
-    margin: 0 10px 9px 0; /*A, D,B I*/
-}
 
 .footer {
     position: relative;
