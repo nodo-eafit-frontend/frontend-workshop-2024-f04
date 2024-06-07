@@ -1,0 +1,150 @@
+h1 {color: blueviolet;}
+body {
+    background: linear-gradient(rgb(59, 13, 73), rgb(188, 169, 201), rgb(59,13,73));
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(9, 129, 63);
+}
+
+
+.container1 {
+    display: flex;
+}
+
+.text1 {
+    flex: 1;
+    padding: px;
+    margin: 8px;
+}
+
+.image1 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    padding: px;
+}
+
+.image1 img {
+    width: 100%;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    max-width: 90%;
+    height: auto;
+}
+
+
+.parte2 {
+    flex: 1;
+    padding: 10px; margin-right:15px;
+}
+
+
+
+
+
+
+.container2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: none;}
+
+.slider input{
+    visibility: hidden;
+    display: none;}
+
+.buttons {
+    position: auto; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    bottom:50px; 
+    gap: 5px;}
+
+.buttons label{
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(rgb(31, 36, 66), rgb(37, 11, 48), rgb(22, 1, 26));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 1;
+    transition: 300ms ease-in-out; 
+}
+
+
+
+.buttons label:hover{
+    scale: 1.2;
+    opacity: 1
+}
+
+.slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.slider input:nth-child(3):checked ~ .buttons label:nth-child(3){
+    opacity: 1;
+    scroll-margin: 1.2; 
+    width: 33px;
+}
+
+.content{
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 400ms ease-in-out;
+}
+
+.firstslide,.secondslide,.thirdslide{position: relative; width: 100vw;height: 100vw; display: flex; justify-content: center;align-items: center;}
+
+.firstslide{
+    background-image: url(https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/original);
+    background-position: center;
+}
+
+.secondslide{
+    background-image: url(https://i.ytimg.com/vi/PRSyHTajxPk/maxresdefault.jpg);
+    background-position: center;
+}
+
+.thirdslide{
+    background-image: url(https://blog.desafiolatam.com/wp-content/uploads/2023/05/Top-5-bibliotecas-React-para-desarrolladores-1024x682.jpeg);
+    background-position:center;
+}
+
+.slider input:nth-child(1):checked ~ .content {
+    left: 0;
+}
+
+.slider input:nth-child(2):checked ~ .content {
+    left: -100vw;
+}
+
+.slider input:nth-child(3):checked ~ .content {
+    left: -200vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+.container3{
+    width: 100%;
+    display: flex;
+    max-width: fit-content;
+}
+
+.card{
+    width: 100%;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgba(93, 29, 153, 0.5);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
