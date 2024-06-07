@@ -8,26 +8,30 @@
     z-index: -1; 
   }
 
+  #NodoMotivation{
+    padding: 1rem;
+  }
   #NodoMotivation img {
-    height:auto;
-    width: 10%;;
+    height: auto;
+    width: 10%;
   }
-
-  #NodoMotivation p{
-    color:beige
+  
+  #NodoMotivation p {
+    color: beige;
+    font-size: 1.5rem;
   }
-
+  
   .ticker {
     overflow: hidden;
     position: relative;
     height: 50px;
-    background-color: #1f0d49;
+    background-color: #4e13d8;
     border: 1px solid #0a5b91;
   }
   
   .spam-word {
     position: absolute;
-    width: 100%;
+    width: auto;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -35,21 +39,23 @@
     line-height: 50px;
     text-align: center;
     font-size: 20px;
+    transform: translateX(0);
     animation: ticker 10s linear infinite;
+    min-width: 150px; /* Ajusta este valor según tus necesidades */
   }
   
   .spam-word {
-    color: #00b7ff;
+    color: #00e1ff;
     font-weight: bold;
     padding: 0 10px;
   }
   
   @keyframes ticker {
     0% {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
     }
     100% {
-      transform: translate3d(-100%, 0, 0);
+      transform: translateX(-100%);
     }
   }
   
