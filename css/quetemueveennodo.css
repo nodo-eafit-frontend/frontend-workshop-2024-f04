@@ -1,0 +1,58 @@
+.experience {
+  list-style-type: none;
+    background-color: #F24F13;
+    color: #000000;
+    padding: 5px 5;
+    text-align: center;
+}
+.slider-container {
+    display: 10%;
+    width: 30%;
+    height: 155vh;
+    overflow-x: scroll;
+  }
+  
+  .slider-container {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .imgslide {
+    flex: 50%;
+    width: 80px;
+    object-fit: cover;
+  }
+  .imgslide {
+    scroll-snap-align: center;
+  }
+  .navega{
+    display: inline-block;
+    list-style-type: none;
+    background-color: antiquewhite;
+    
+  }
+  .motivacion{
+    text-align: justify;
+    background-color: antiquewhite;
+  }
+  .cursos{
+    background-color: antiquewhite;
+  }#aprender > ul {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    margin: 5px;
+    background-color: antiquewhite;
+  }
+  
+  #aprender > ul > li {
+    margin: 1rem;
+    background-color: #F24F13;
+  }
+  
+  #aprender > ul > li:first-child {
+    margin-left: 0.5rem;
+  }
+  
+  #aprender > ul > li:last-child {
+    margin-right: 0.5rem;
+  }

@@ -1,0 +1,22 @@
+
+  img {
+    width: 30;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+  .footer {
+    background-color: #F24F13;
+    color: #fff;
+    padding: 30px 5;
+    text-align: center;
+  }
+.contacto{
+  display: inline-flex;
+  list-style-type: none;
+  
+
+ 
+ height: 100px;
+  }
