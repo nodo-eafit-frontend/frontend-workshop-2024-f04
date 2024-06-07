@@ -30,7 +30,7 @@
     color: #0ef;
     list-style: none;
     padding: 0px 20px;
-    text-shadow: 0 0 10px #0ef;
+    text-shadow: 0 0 10px rgb(0, 60, 255);
     animation: slide 12s steps(3) infinite, colorful 6s infinite;
 }
 

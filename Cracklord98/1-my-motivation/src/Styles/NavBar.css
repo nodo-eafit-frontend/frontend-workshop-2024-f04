@@ -6,6 +6,8 @@
 .navbar-img {
   max-width: 80px; /* Adjust as needed */
   max-height: 80px;
+  width: 40px;
+  height: 40px;
   display: inline-block; /* Ensures text wraps next to the image */
   margin-right: 10px; /* Adjust spacing as desired */
 }
