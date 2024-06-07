@@ -37,7 +37,6 @@ Te convertirás en un artesano digital y construirás una página web que incluy
 - **Etiquetas y Atributos:** Crea diferentes elementos con etiquetas y personalízalos con atributos.
 - **Imágenes:** Agrega vida a tu contenido con imágenes optimizadas.
 - **Listas:** Ordena tus ideas con listas numeradas, con viñetas y de definiciones.
-- **Tablas:** Presenta información de forma organizada y fácil de comprender.
 - **Hipervínculos:** Conecta tu mundo web con enlaces internos y externos.
 
 ### CSS Básico
@@ -63,6 +62,7 @@ Te convertirás en un artesano digital y construirás una página web que incluy
 - [HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [Difference between Section vs Article elements in HTML](https://stackoverflow.com/questions/7549561/difference-between-section-vs-article-elements-in-html) _[Stack Overflow]_
 - Stack Overflow, Herramientas de IA y búsquedas en Internet.
+- 🎥 [HolaMundo | Aprende HTML ahora! curso completo GRATIS desde cero](https://www.youtube.com/watch?v=MJkdaVFHrto)
 
 ### CSS
 
@@ -71,6 +71,8 @@ Te convertirás en un artesano digital y construirás una página web que incluy
 - [Grid Garden](https://cssgridgarden.com/#es)
 - [CSS básico - MDN](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - [Positioning - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- 🎥 [HolaMundo | Aprende CSS ahora! curso completo GRATIS desde cero](https://www.youtube.com/watch?v=wZniZEbPAzk)
+- 🎥 [Soy Dalto | Curso de HTML y CSS desde CERO (Completo) cero](https://www.youtube.com/watch?v=ELSm-G201Ls)
 
 ### Tools
 
