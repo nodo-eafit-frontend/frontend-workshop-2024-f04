@@ -1,0 +1,125 @@
+:root {
+  --background-color: #fffef7;
+  --color1-color: #ff9c07;
+  --color2-color: #000000;
+  --color3-color: #faad65;
+  --color4-color: #ffe9bf;
+
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--color2-color);
+
+header {
+    background-color: var(--color4-color);
+ margin-right: 0%;
+ margin-left: 0%;
+}
+
+.inicio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: var(--color4-color);
+    color: #F2C1AE;
+}
+nav menu {
+  text-align: center;
+  display: inline-flexbox;
+  margin: 30px; 
+  background-color: var(--color1-color);
+}
+
+nav li {
+  display: inline-flex;
+  margin-right: 10px; 
+  background-color: var(--color1-color);
+}
+
+nav a {
+  text-decoration: none; 
+  color: rgb(0, 0, 0); 
+  font-weight: bold; 
+  background-color: var(--color1-color);
+  margin-right: 60px; 
+}
+
+nav a:hover { 
+  color:var(--color3-color);
+   background-color:var(--background-color);
+  margin-right: 60px; 
+}
+
+h1 {
+  font-size: x-large;
+  color: var(--color1-color);
+   text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+h2 {
+    padding: 20px 0;
+    font-size: larger;
+    text-align: left;
+    margin-bottom: 20px; 
+    font-weight: bold;   
+}
+h3 {
+    padding: 20px 0;
+    font-size: medium;
+    text-align: left;
+    margin-bottom: 20px; 
+    font-weight: bold;   
+}
+h4 {
+    padding: 20px 0;
+    font-size: medium;
+    text-align: left;
+    margin-bottom: 20px; 
+    font-weight: bold;  
+}
+h5{
+    padding: 20px 0;
+    font-size: medium;
+    text-align: left;
+    margin-bottom: 20px; 
+    font-weight: bold;  
+}
+h6{
+  font-size:small
+    text-align: left;
+    margin-bottom: 20px; 
+    font-weight: bold;  
+}
+
+.perfil{
+  width: 200px;
+  height: 150px;
+  background-color: var(--color4);
+  border: 2px solid var(--color1-color);
+  margin: auto;
+  display: block;
+}
+
+#boton-inicio {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  padding: 10px 20px; 
+  background-color: var(--color1-color);
+  color: rgb(0, 0, 0); 
+  cursor: pointer; 
+  opacity: 0.7; 
+  transition: opacity 0.5s; 
+}
+#botoninicio { 
+  opacity: 1; 
+}
+
+main {
+  margin: 100px 0 0 0;
+}
