@@ -1,9 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.carousel {
+.carrusel {
     width: 80%;
     max-width: 800px;
     overflow: hidden;
@@ -25,39 +20,10 @@ body {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    background-color: #007BFF;
+    background-color: #badbff;
     color: #fff;
     font-size: 1.5rem;
     scroll-snap-align: start;
-}
-
-.carousel-navigation {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.carousel-navigation a {
-    text-decoration: none;
-    color: #007BFF;
-    padding: 5px 10px;
-    margin: 0 5px;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
-}
-
-.carousel-navigation a:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-
-.carousel {
-    width: 80%;
-    max-width: 800px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
 }
 
 .carousel-items {
@@ -78,4 +44,30 @@ body {
     background-color: #007BFF;
     height: 300px;
     scroll-snap-align: start;
+}
+
+
+
+
+
+
+
+
+.carousel-navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-navigation a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+.carousel-navigation a:hover {
+    background-color: #007BFF;
+    color: #fff;
 }

@@ -31,7 +31,7 @@
     max-width: 200px;
     max-height: 200px;
     float: inline-end;
-    margin-right: 20%;
+    margin-right: 25%;
 }
 
 /* CUERPO */
@@ -39,16 +39,19 @@ body {
     background: linear-gradient(to bottom, #e3e3f6, #b7d9ff, #e3e3f6);
     height: 100vh;
     margin: 100px, 100px, 100px, 100px;
+    font-family: Arial, sans-serif;
 }
 
-#motivacion{
-    margin-left: 8%;
+#motivacion {
+    margin-left: 5%;
 }
-#metas{
-    margin-left: 8%;
+
+#metas {
+    margin-left: 5%;
 }
-#hobbies{
-    margin-left: 8%;
+
+#hobbies {
+    margin-left: 5%;
 }
 
 
