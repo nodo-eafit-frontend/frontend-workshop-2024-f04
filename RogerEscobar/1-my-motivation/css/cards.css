@@ -1,0 +1,51 @@
+#expectation {
+  background-color: rgb(219, 216, 231);
+  width: 100%;
+}
+
+#expectation h3 {
+  font-family: "Istok Web", sans-serif;
+  font-style: normal;
+  font-size: 27px;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: -30px;
+}
+
+.cards_container {
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 200%;
+}
+
+.card {
+  margin: 20px;
+  width: 250px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px gray;
+}
+
+.card h4 {
+  font-family: "Amiko", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #ff2800;
+  text-align: center;
+  margin: 10px 5px -10px 0px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.card p {
+  padding: 0px 10px;
+  font-family: "Amiko", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
