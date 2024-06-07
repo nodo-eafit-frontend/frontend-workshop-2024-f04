@@ -5,15 +5,14 @@
     width: 100%;
     background: linear-gradient(to left, black, #252147);
     text-align: center;
-    ;
 }
 
-.navbar ul li {
+.navbar menu li {
     display: inline;
     margin: 20px;
 }
 
-.navbar ul li a {
+.navbar menu li a {
     text-decoration: none;
     color: white;
 }
@@ -21,7 +20,7 @@
 /* PORTADA */
 .portada {
     background: linear-gradient(to bottom, rgb(20, 12, 46), #090908, #1f1b23);
-    height: 100 px;
+    height: 300px;
     width: 100%;
     margin: 0;
 }
@@ -42,18 +41,34 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#motivacion {
-    margin-left: 5%;
+section {
+    margin: 50px 5%;
 }
 
 #metas {
-    margin-left: 5%;
+    margin-left: 40%;
 }
+
 
 #hobbies {
     margin-left: 5%;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+}
 
 /* SEPARADOR */
 hr {
@@ -68,7 +83,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
 }
 
 footer a {

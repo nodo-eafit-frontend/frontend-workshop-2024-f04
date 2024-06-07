@@ -1,13 +1,8 @@
-#contacto p #email-img {
+#contacto img {
     max-width: 30px;
     max-height: 30px;
 }
 
-#contacto p #whatsapp-img {
-    max-width: 30px;
-    max-height: 30px;
-}
-
-.img-carousel {
-    max-width: 370px;
+.carrusel-items li img {
+    max-height: 100px;
 }

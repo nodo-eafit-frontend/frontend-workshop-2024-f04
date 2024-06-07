@@ -6,34 +6,39 @@
 
 .portada p {
     color: #adadad;
-    font-size:x-large;
+    font-size: x-large;
     font-family: Tahoma;
     margin-left: 8%;
     margin-right: 30%;
     text-align: justify;
 }
 
-#contacto h1{
+#contacto h1 {
     color: rgb(187, 187, 234);
 }
-#contacto p{
-    color:antiquewhite;
+
+#contacto p {
+    color: antiquewhite;
 }
 
 h1 {
     text-align: center;
     color: #0f1111;
     font-family: sans-serif;
-    
 }
 
 h2 {
-    color: #0f0e0d
+    color: #0f0e0d;
 }
 
 p {
     color: #050b0f;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 5%;
     text-align: justify;
+}
+
+#metas h1 {
+    text-align: left;
+    text-decoration-color: blue;
+    margin-left: 13%;
 }
