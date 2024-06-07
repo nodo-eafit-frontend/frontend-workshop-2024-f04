@@ -8,6 +8,7 @@ body {
 
 h1, h2, h3 {
     font-weight: bold;
+    text-align: center;
 }
 
 h2 {
@@ -23,6 +24,7 @@ p, ul {
 .profile-img, .setup-img, .agm-img{
     padding: 5px;
     animation: ilustrationAnimate 1s ease-in-out infinite alternate;
+    width:"25%"
     
 }
 
@@ -48,6 +50,88 @@ mark {
     background-color: yellow;
 }
 
-section.container ul {
-    list-style-type: none;
+
+footer p {
+
+    font-weight: bold;
+    text-transform: uppercase;
+
 }
+
+.carrusel-container {
+
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel {
+
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+
+    flex: 0 0 20%;
+    margin: 200px;
+    padding: 10px;
+    background-color: #9feccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left; 
+    font-weight: bold;
+
+}
+
+.card ul {
+    list-style-type: disc; 
+    margin-left: 20px; 
+}
+
+.card ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.grid-container {
+
+    margin: auto;
+    display:grid;
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+    background-color: #b0f1c6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; 
+    font-weight: bold;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    background-color: #5fb7f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.grid-item ul {
+
+    list-style-type: disc; 
+    margin-left: 20px; 
+    
+}
+
+.grid-item ul li {
+
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
