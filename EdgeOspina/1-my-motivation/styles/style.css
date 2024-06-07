@@ -31,6 +31,8 @@
     max-height: 200px;
     float: inline-end;
     margin-right: 25%;
+    border-radius: 80px;
+
 }
 
 /* CUERPO */
@@ -56,12 +58,10 @@ section {
 
 .container {
     display: flex;
-    justify-content: space-around;
 }
 
 .column {
     flex: 1;
-    padding: 10px;
     text-align: center;
 }
 
