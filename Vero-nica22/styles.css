@@ -13,22 +13,11 @@ body {
     /*list-style: none;*/
 }
 
-.presentacion{
-    width: 1200px;
-    margin: 0 auto;
-}
 
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.section-hobbies{
-    width: 1200px;
-    margin: 0 auto;
-}
 
 header{
+    width: 1200px;
+    margin: 0 auto;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
@@ -71,15 +60,16 @@ h1{
     letter-spacing: 2px;
     margin: 20px;
 }
-
+#prueba{
+    position:relative;
+}
 .texto-presentacion{
     font-size: 24px;
-    left: 190px;  /*Mueve horizontalmente*/
-    top: 520px;/*Verticalmente*/
+    left: 60px;  /*Mueve horizontalmente*/
+    top: 120px;/*Verticalmente*/
     width: 680px; /*El ancho */
-    position: absolute;
+    position:   absolute; 
     padding: 250 250px;
-    /*text-justify: center;*/
     margin-bottom: 18px;
 }
 
