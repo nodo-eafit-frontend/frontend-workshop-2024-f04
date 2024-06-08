@@ -1,8 +1,9 @@
 body{
-    font-family: 'Lucida Sans','Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin:10px;
     padding: 50px;
     align-content: center;
+    height: 200%;
+    background-color:#efeae7a9;
 }
 article.padre{
     background-image: url("img1.jpg");border-radius: 2%;
@@ -20,6 +21,7 @@ article.padre{
 }
 p{
     text-align: center;
+    font-size: 120%;
 }
 h1{
     color: rgba(95, 158, 160, 0.703);
@@ -45,27 +47,30 @@ ol{
     border: 2px solid;
     flex-shrink: 1;
     margin: 10px 60px;
-    justify-content: center;
     border-radius: 5px;
     height: 70vh;
-    background-color:#efeae7a9;
+    background-color:#fffefdec;
     overflow:initial;
 
 }
+.Content p{
+    text-align: center;
+    font-size: 18px;
+    margin:5px 5px 5px;
+}
 .cards{
     display: flex;
-    margin: 50px;
+    margin: 10px;
     width: 200px;
     image-orientation:from-image;
     border: 30px; 
     padding: 20px 15px;
-    text-align: justify;
     
 }
 .card{
     flex: 30px;
-    margin: 40px;
-    border: 5px solid black;
+    margin: 20px 10px;
+    border: 5px solid rgb(254, 251, 251);
     display: flex;
     flex-direction: column;
     cursor: default;
@@ -73,7 +78,7 @@ ol{
     }
 h3{
     font-size: 30px;
-    text-align:inherit;
+    text-align:center;
     color: rgb(69, 124, 132);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -96,6 +101,7 @@ h4{
     height: min-content;
     align-items:self-end;
     margin-inline-start: auto;
+    border-radius: 30px;
 }
 
 a{
@@ -105,6 +111,7 @@ a{
     align-items:normal;
     display:flex;
     text-align:left;
+    font-size: 20px;
 }
 h5{
     font-size: 200%;
