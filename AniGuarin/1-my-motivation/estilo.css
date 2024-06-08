@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-color: rgb(189, 125, 197);
+     
+}
+main {
+    column-count: 3; 
+    display: flexbox;
+    
+}
+p {
+    text-align: left; 
+    
+}
+h1{
+    text-align: center;  
+
+}
+h2{
+    text-align: center; 
+    background-color: rgb(132, 90, 230);
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+}
+
+
