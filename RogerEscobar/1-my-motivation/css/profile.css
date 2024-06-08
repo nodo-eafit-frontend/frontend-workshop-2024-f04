@@ -10,17 +10,10 @@
 }
 
 .text_profile h3 {
-  font-family: "Istok Web", sans-serif;
-  font-style: normal;
-  font-size: 27px;
-  margin-bottom: -10px;
+  text-align: left;
+  margin-bottom: 6px;
 }
-.text_profile p {
-  font-family: "Amiko", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  text-align: justify;
-}
+
 .image_profile {
   margin: 10px;
 }

@@ -16,13 +16,13 @@
 .logo {
   width: 90px;
   position: relative;
-  padding: 30px 0px;
+  padding: 30px;
 }
 
 .texto_1 {
   font-family: "Amiko", sans-serif;
   font-weight: 700;
-  margin-bottom: -5px;
+  margin-bottom: 6px;
   font-size: 50px;
   text-align: center;
   justify-content: center;
@@ -31,7 +31,6 @@
 
 .btn_container {
   display: flex;
-  align-content: center;
   justify-content: center;
 }
 
@@ -41,7 +40,7 @@
   font-family: "Amiko", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: #ff2800;
   text-align: center;
   background-color: rgb(255, 255, 255);
