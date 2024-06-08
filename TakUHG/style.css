@@ -1,6 +1,9 @@
-h1 {color: blueviolet;}
+h1 {
+    color: blueviolet;
+}
+
 body {
-    background: linear-gradient(rgb(59, 13, 73), rgb(188, 169, 201), rgb(59,13,73));
+    background: linear-gradient(rgb(59, 13, 73), rgb(188, 169, 201), rgb(59, 13, 73));
 }
 
 h3 {
@@ -32,7 +35,8 @@ h3 {
 
 .parte2 {
     flex: 1;
-    padding: 10px; margin-right:15px;
+    padding: 10px;
+    margin-right: 15px;
 }
 
 
@@ -40,25 +44,28 @@ h3 {
 
 
 
-.container2{
+.container2 {
     position: relative;
     width: 100%;
     height: auto;
-    background-image: none;}
+    background-image: none;
+}
 
-.slider input{
+.slider input {
     visibility: hidden;
-    display: none;}
+    display: none;
+}
 
 .buttons {
-    position: auto; 
-    width: 100%; 
-    display: flex; 
+    position: auto;
+    width: 100%;
+    display: flex;
     justify-content: center;
-    bottom:50px; 
-    gap: 5px;}
+    bottom: 50px;
+    gap: 5px;
+}
 
-.buttons label{
+.buttons label {
     width: 25px;
     height: 25px;
     background: radial-gradient(rgb(31, 36, 66), rgb(37, 11, 48), rgb(22, 1, 26));
@@ -66,74 +73,84 @@ h3 {
     opacity: 0.5;
     cursor: pointer;
     z-index: 1;
-    transition: 300ms ease-in-out; 
+    transition: 300ms ease-in-out;
 }
 
 
 
-.buttons label:hover{
+.buttons label:hover {
     scale: 1.2;
     opacity: 1
 }
 
-.slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
-.slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
-.slider input:nth-child(3):checked ~ .buttons label:nth-child(3){
+.slider input:nth-child(1):checked~.buttons label:nth-child(1),
+.slider input:nth-child(2):checked~.buttons label:nth-child(2),
+.slider input:nth-child(3):checked~.buttons label:nth-child(3) {
     opacity: 1;
-    scroll-margin: 1.2; 
+    scroll-margin: 1.2;
     width: 33px;
 }
 
-.content{
+.content {
     position: relative;
     width: 300vw;
     display: flex;
     transition: 400ms ease-in-out;
 }
 
-.firstslide,.secondslide,.thirdslide{position: relative; width: 100vw;height: 100vw; display: flex; justify-content: center;align-items: center;}
+.firstslide,
+.secondslide,
+.thirdslide {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.firstslide{
+.firstslide {
     background-image: url(https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/original);
     background-position: center;
 }
 
-.secondslide{
+.secondslide {
     background-image: url(https://i.ytimg.com/vi/PRSyHTajxPk/maxresdefault.jpg);
     background-position: center;
 }
 
-.thirdslide{
+.thirdslide {
     background-image: url(https://blog.desafiolatam.com/wp-content/uploads/2023/05/Top-5-bibliotecas-React-para-desarrolladores-1024x682.jpeg);
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.slider input:nth-child(1):checked ~ .content {
+.slider input:nth-child(1):checked~.content {
     left: 0;
 }
 
-.slider input:nth-child(2):checked ~ .content {
+.slider input:nth-child(2):checked~.content {
     left: -100vw;
 }
 
-.slider input:nth-child(3):checked ~ .content {
+.slider input:nth-child(3):checked~.content {
     left: -200vw;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
-.container3{
+.container3 {
     width: 100%;
     display: flex;
     max-width: fit-content;
 }
 
-.card{
+.card {
     width: 100%;
     margin: 10px;
     border-radius: 6px;
@@ -143,7 +160,6 @@ h3 {
     cursor: default;
 }
 
-.card img{
+.card img {
     height: 500px;
 }
-
