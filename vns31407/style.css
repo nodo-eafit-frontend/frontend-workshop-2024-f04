@@ -6,13 +6,12 @@ body{
     text-align: justify;
 }
 
-img{
+.ima1{
     width: 300px;
     height: 300px;
     align-items: center;
-    color: #8a2dbd; 
     border-radius: 70px;
-    
+    border:10px solid #8a2dbd;
 }
 
 .p0{
@@ -50,3 +49,21 @@ footer{
     text-align: center;
 }
 
+.Hobbies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hobbies img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+}
+
+.imagenes{
+    display: flex;
+    gap: 20px;
+}
