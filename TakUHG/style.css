@@ -11,6 +11,8 @@ h3 {
 
 .container1 {
     display: flex;
+    margin-bottom: 80px;
+    margin-right: 30px;
 }
 
 .text1 {
@@ -20,20 +22,11 @@ h3 {
 }
 
 .image1 {
-    width: 200px;
-    height: 200px;
-    position: relative;
     overflow: hidden;
-    flex: 1;
-    padding: px;
 }
 
 .image1 img {
-    width: 100%;
-    position: absolute;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    max-width: 90%;
-    height: auto;
+    width: 200px;
 }
 
 
@@ -113,6 +106,8 @@ h3 {
 .thirdslide{
     background-image: url(https://blog.desafiolatam.com/wp-content/uploads/2023/05/Top-5-bibliotecas-React-para-desarrolladores-1024x682.jpeg);
     background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .slider input:nth-child(1):checked ~ .content {
@@ -146,5 +141,9 @@ h3 {
     background-color: rgba(93, 29, 153, 0.5);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     cursor: default;
+}
+
+.card img{
+    height: 500px;
 }
 
