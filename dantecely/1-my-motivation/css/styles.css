@@ -1,3 +1,15 @@
+@import url('reset.css');
+
+@import url('fonts.css');
+@import url('pallete.css');
+
+@import url('navigation.css');
+@import url('who-am-i.css');
+@import url('motivation.css');
+@import url('learning.css');
+@import url('card.css');
+@import url('hobbies.css');
+
 body {
 	color: var(--font-color);
 	background-color: var(--background-color);
