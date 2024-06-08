@@ -14,8 +14,8 @@ h3 {
 
 .container1 {
     display: flex;
-    margin-bottom: 80px;
-    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-right: 10px;
 }
 
 .text1 {
@@ -112,11 +112,15 @@ h3 {
 .firstslide {
     background-image: url(https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/original);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .secondslide {
     background-image: url(https://i.ytimg.com/vi/PRSyHTajxPk/maxresdefault.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .thirdslide {
@@ -143,6 +147,9 @@ h3 {
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 .container3 {
     width: 100%;
