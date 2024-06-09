@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .perfil {
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+nav menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+article {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #333;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.hobby {
+    text-align: center;
+}
+
+.hobby img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+dl {
+    margin-top: 20px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+}
+
