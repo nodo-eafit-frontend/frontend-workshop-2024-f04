@@ -1,4 +1,13 @@
+#LearningNodo {
+    padding: 1rem;
+}
+
+#LearningNodo h2{
+    color: antiquewhite;
+}
+
 #LearningNodo img {
-    height: auto;
+    height: 50%;
     width: auto;
 }
+
