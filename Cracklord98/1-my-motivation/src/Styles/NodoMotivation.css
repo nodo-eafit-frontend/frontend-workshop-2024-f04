@@ -20,42 +20,37 @@
     color: beige;
     font-size: 1.5rem;
   }
-  
+
   .ticker {
     overflow: hidden;
-    position: relative;
-    height: 50px;
-    background-color: #4e13d8;
-    border: 1px solid #0a5b91;
-  }
-  
-  .spam-word {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    margin: 0;
-    padding: 0;
     white-space: nowrap;
-    line-height: 50px;
-    text-align: center;
-    font-size: 20px;
-    transform: translateX(0);
-    animation: ticker 10s linear infinite;
-    min-width: 150px; /* Ajusta este valor según tus necesidades */
+    height: 50px;
+    background-color: #f5f5f5;
+    border: 2px solid #0a5b91;
+}
+#NodoMotivation ul {
+    list-style: none;
   }
-  
-  .spam-word {
-    color: #00e1ff;
-    font-weight: bold;
-    padding: 0 10px;
+  #NodoMotivation li {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    vertical-align: middle;
   }
-  
-  @keyframes ticker {
+.list-inline {
+    display: inline-block;
+    animation: moviment 15s linear infinite;
+}
+
+.spam-word {
+    margin-right: 20px;
+}
+
+@keyframes moviment {
     0% {
-      transform: translateX(0);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
+}
