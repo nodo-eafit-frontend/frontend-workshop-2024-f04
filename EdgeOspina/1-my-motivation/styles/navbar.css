@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to left, black, #252147);
+    text-align: center;
+}
+
+.navbar menu li {
+    display: inline;
+    margin: 20px;
+}
+
+.navbar menu li a {
+    text-decoration: none;
+    color: white;
+}

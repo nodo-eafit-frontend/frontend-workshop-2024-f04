@@ -1,21 +1,13 @@
-/* BARRA DE NAVEGACIÓN */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(to left, black, #252147);
-    text-align: center;
-}
+@import url("fonts.css");
+/*@import url(https://meyerweb.com/eric/tools/css/reset/reset.css); 
+    Profe, ese reset me dañó la página completa :(
+    Yo voy a dejar eso comentado mejor.*/
+@import url("carousel.css");
+@import url("images.css");
+@import url("navbar.css");
+@import url("container.css");
 
-.navbar menu li {
-    display: inline;
-    margin: 20px;
-}
 
-.navbar menu li a {
-    text-decoration: none;
-    color: white;
-}
 
 /* PORTADA */
 .portada {
@@ -23,16 +15,6 @@
     height: 300px;
     width: 100%;
     margin: 0;
-}
-
-#img-yo {
-    align-items: center;
-    max-width: 200px;
-    max-height: 200px;
-    float: inline-end;
-    margin-right: 25%;
-    border-radius: 80px;
-
 }
 
 /* CUERPO */
@@ -51,24 +33,6 @@ section {
     margin-left: 40%;
 }
 
-
-#hobbies {
-    margin-left: 5%;
-}
-
-.container {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-    text-align: center;
-}
-
-.column img {
-    width: 100%;
-    height: auto;
-}
 
 /* SEPARADOR */
 hr {

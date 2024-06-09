@@ -1,3 +1,12 @@
+#img-yo {
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    float: inline-end;
+    margin-right: 25%;
+    border-radius: 80px;
+}
+
 #contacto img {
     max-width: 30px;
     max-height: 30px;
