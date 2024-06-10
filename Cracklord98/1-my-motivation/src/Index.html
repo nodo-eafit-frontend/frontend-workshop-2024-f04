@@ -18,9 +18,10 @@
 
     <audio id="musicaFondo" autoplay loop>
       <source src="./assets/Music/movement-200697.mp3" type="audio/mpeg">
-      <script src="./main.js"></script>
-      Tu navegador no admite el elemento de audio.
-  </audio>
+      <source src="./assets/Music/movement-200697.ogg" type="audio/ogg"> Tu navegador no admite el elemento de audio.
+    </audio>
+    <script src="./main.js"></script>
+  
   <header >
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -208,78 +209,157 @@
     </section>
 
     <section id="LearningNodo" class="container">
-      <h2 class="text-center mb-5">Tecnologías que me gustaría aprender en NODO</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-50">
-            <img src="./assets/Logo/github.svg" class="card-img-top" alt="GitHub">
-            <div class="card-body">
-              <h4 class="card-title">GitHub</h4>
-              <h6>Plataforma de alojamiento de codigo para el control de versiones y colaborar</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-50">
-            <img src="./assets/Logo/git.svg" class="card-img-top" alt="Git">
-            <div class="card-body">
-              <h4 class="card-title">Git</h4>
-              <h6>Sistema de control de versiones distribuido, gratuito y de codigo abierto</h6>
-            </div>
-          </div>
-        </div>
-            <!-- Agrega más elementos 'div.col' para mostrar más tecnologías -->
-      </div>
-    </div>
-      <video autoplay loop playsinline id="video-bg">
-        <source src="./assets/Backgrounds/BG1.mp4" type="video/mp4">
-        Tu navegador no admite el elemento de video.
-      </video>
-
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicadores -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <!-- Agrega más indicadores según la cantidad de tarjetas -->
-        </ol>
-      
-        <!-- Slides -->
+      <h2 class="text-center mb-5">
+        Tecnologías que me gustaría aprender en NODO
+      </h2>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="card h-50">
-              <img src="./assets/Logo/github.svg" class="card-img-top" alt="GitHub">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/github.svg" alt="GitHub">
               <div class="card-body">
-                <h4 class="card-title">GitHub</h4>
-                <h6>Plataforma de alojamiento de código para el control de versiones y colaboración</h6>
+                <h5 class="card-title">GitHub</h5>
+                <p class="card-text">Plataforma de alojamiento de código para el control de versiones y colaboración.</p>
+                <a href="https://docs.github.com/en" class="btn btn-primary">Go to GitHub</a>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card h-50">
-              <img src="./assets/Logo/git.svg" class="card-img-top" alt="Git">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/git.svg" alt="Git">
               <div class="card-body">
-                <h4 class="card-title">Git</h4>
-                <h6>Sistema de control de versiones distribuido, gratuito y de código abierto</h6>
+                <h5 class="card-title">Git</h5>
+                <p class="card-text">Sistema de control de versiones distribuido, gratuito y de codigo abierto.</p>
+                <a href="https://git-scm.com/about" class="btn btn-primary">Go to Git</a>
               </div>
             </div>
           </div>
-          <!-- Agrega más tarjetas según la cantidad deseada -->
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/html5.svg" alt="Html">
+              <div class="card-body">
+                <h5 class="card-title">Html</h5>
+                <p class="card-text">"HyperText Markup Language" es un lenguage de marcación.</p>
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML" class="btn btn-primary">Go to Html</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/css.svg" alt="Css">
+              <div class="card-body">
+                <h5 class="card-title">Css</h5>
+                <p class="card-text">"Cascading Style Sheet" es un lenguage de hojas de estilo.</p>
+                <a href="https://developer.mozilla.org/es/docs/Web/css" class="btn btn-primary">Go to Css</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/javascript.svg" alt="JavaScript">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">Lenguage de programación que impulsa la Web.</p>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" class="btn btn-primary">Go to JS</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/react.svg" alt="React">
+              <div class="card-body">
+                <h5 class="card-title">React JS</h5>
+                <p class="card-text">Biblioteca de JavaScript para construir interfaces de usuario.</p>
+                <a href="https://es.react.dev/" class="btn btn-primary">Go to Css</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/sass.svg" alt="Sass">
+              <div class="card-body">
+                <h5 class="card-title">Sass</h5>
+                <p class="card-text">Preprocesador de CSS.</p>
+                <a href="https://sass-lang.com/" class="btn btn-primary">Go to Sass</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/" alt="TypeScript">
+              <div class="card-body">
+                <h5 class="card-title">TypeScript</h5>
+                <p class="card-text">Lenguage de programación fuertemente tipadoque se basa en JavaScript.</p>
+                <a href="https://www.typescriptlang.org/" class="btn btn-primary">Go to TypeScript</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/vscode.svg" alt="VSCode">
+              <div class="card-body">
+                <h5 class="card-title">VS Code</h5>
+                <p class="card-text">Editor de codigode alto nivel.</p>
+                <a href="https://code.visualstudio.com/" class="btn btn-primary">Go to VS Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/figma.svg" alt="Figma">
+              <div class="card-body">
+                <h5 class="card-title">Figma</h5>
+                <p class="card-text">Herramienta de diseño y prototipado colaborativa basada en la nube.</p>
+                <a href="https://www.figma.com/" class="btn btn-primary">Go to Figma</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/angular.svg" alt="Angular">
+              <div class="card-body">
+                <h5 class="card-title">Angular</h5>
+                <p class="card-text">Framework para aplicaciones web desarrollado en TypeScript.</p>
+                <a href="https://angular.dev/" class="btn btn-primary">Go to Angular</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/tailwindcss.svg" alt="Tailwind">
+              <div class="card-body">
+                <h5 class="card-title">Tailwind CSS</h5>
+                <p class="card-text">Framework de CSS de codigo abierto para el diseño de paguinas web.</p>
+                <a href="https://tailwindcss.com/" class="btn btn-primary">Go to Tailwind</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img class="card-img-top" src="./assets/Logo/carrusel/python.svg" alt="Python">
+              <div class="card-body">
+                <h5 class="card-title">Python</h5>
+                <p class="card-text">Un lenguaje de alto nivel de programacion multiparadigma.</p>
+                <a href="https://www.python.org/" class="btn btn-primary">Go to Python</a>
+              </div>
+            </div>
+          </div>
         </div>
-      
-        <!-- Controles -->
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
+          <span class="sr-only">Prev</span>
         </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Siguiente</span>
+          <span class="sr-only">Next</span>
         </a>
       </div>
       
+      
+      <video autoplay loop playsinline id="video-bg">
+        <source src="./assets/Backgrounds/BG1.mp4" type="video/mp4">
+        Tu navegador no admite el elemento de video.
+      </video>
       </section>
 
 
@@ -310,7 +390,7 @@
 
 
 
-<script src="../Bootstrap/js/bootstrap.min.js"></script>
+<script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
