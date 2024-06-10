@@ -1,5 +1,14 @@
-*{
-    box-sizing: border-box;
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+
+#Quiénsoy, #Motiv{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
 }
 
 body{
@@ -8,10 +17,15 @@ body{
     padding: 0;
 }
 
-h1{ font-size: 2.5em;}
+h1{ 
+    font-size: 2.5em;
+    font-weight: bold;
+}
 h2{ 
     text-align: center;
-    font-size: 1.9em;}
+    font-size: 1.9em;
+    font-weight: bold;
+}
 h3{font-size: 1.4em;}
 p{ font-size: 1.2em;}
 
@@ -24,16 +38,11 @@ button{
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     color: white;
     background-color: greenyellow;
+    margin: 2%;
 }
 
 button:hover{
     background-color: chartreuse;
-}
-
-.container{
-    max-width: 1400px;
-    margin: auto;
-
 }
 
 header{
@@ -71,12 +80,6 @@ header a:hover{
 }
 
 #Quiénsoy{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
     background-color: rgb(2, 10, 0);
     color: white;
 }
@@ -84,12 +87,16 @@ header a:hover{
 #Quiénsoy img{
     height: 200px;
     border-radius: 50%;
-}
+    margin: 5%;
+    }
 
 #Motiv .container{
     display: flex;
     justify-content: center;
     margin: 5%;
+    width: 100%;
+    max-width: 1200px;
+    height: 530px;
 }
 
 #Motiv .texto{
@@ -98,21 +105,41 @@ header a:hover{
     padding: 0px 30px;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
 }
 
-#Motiv .img{
+#Motiv p{
+    margin: 2%;
+    align-items: center;
+}
+
+#Motiv img{
 height: 50%;
 width: 50%;
+align-self: center;
 }
 
 #aprender{
     background-color: gold;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#aprender h2{
+    margin-top: 2%;
 }
 
 #aprender .container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 5%;
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 #aprender .container .carta{
@@ -121,10 +148,13 @@ width: 50%;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.3);
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
+    margin-top: 30px;
     text-align: center;
     transition: all 0.25s;
     background-color: beige;
+    font-weight: 600;
+    align-self: center;
 }
 
 #aprender .container .carta:hover{
@@ -135,59 +165,81 @@ width: 50%;
 #aprender .container .carta img{
     width: 90px;
     height: 60px;
-}
-
-#aprender .container .carta{
-    font-weight: 600;
+    margin: 5%;
 }
 
 #aprender .container .carta p{
     padding: 0 1rem;
     font-size: 12px;
     font-weight: 300;
+    margin: 5%;
 }
 
-#hobbies .container{
+#hobbies{
+    margin-top: 10%;
+}
+
+#hobbies h2{
+    margin: 5%;
+}
+
+#hobbies .container{ 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(100px auto);
     padding: 20px;
     gap: 10px;
+    margin: 20%;
+    margin-top: 0%;
 }
 
-
-.imagen{
-    width: 100%;
-    height: 100%;
+#hobbies .imagen{
+    width: 80%;
+    height: 80%;
     object-fit: cover;
 }
 
-.hobbies-imágenes{
+.hobbies-imagenes{
     position: relative;
 }
 
-.título{
-position: absolute;
+#hobbies .titulo{
+position: relative;
 bottom: 0;
-background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
-width: 100%;
+background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.12));
+width: 75%;
 margin: 0;
 padding: 10px;
-color: white;
+color: black;
 font-size: 20px;
 text-align: center;
 }
 
-.hobbies-imágenes:nth-child(1){
+.hobbies-imagenes:nth-child(1){
 grid-row-start: span 2;
 }
 
-.hobbies-imágenes:nth-child(2){
-grid-row-start: span 2;
+.hobbies-imagenes:nth-child(4){
+grid-column-start: span 2;
 }
 
-#hoobies .hobbies-imágenes:nth-child(3){
-grid-row-start: span 2;
+@media screen {
+
+    #aprender .container{ 
+        display: flex;
+        justify-content: center;
+    }
+
+    #aprender h3{
+        margin-top: 0;
+    }
+    #aprender p{
+        display: block;
+    }
+
+    #aprender .carta{
+        padding: 15px;
+    }
 }
 
 #footer .container p{
