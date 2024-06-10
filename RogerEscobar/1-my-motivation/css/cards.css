@@ -5,7 +5,7 @@
 .cards_container {
   padding: 15px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   overflow-x: scroll;
 }
 .cards_container li {
@@ -18,17 +18,7 @@
   height: 500px;
   border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0px 0px 30px gray;
-}
-
-.card h4 {
-  font-family: "Amiko", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
-  color: #ff2800;
-  text-align: center;
-  margin: 6px;
+  box-shadow: 0px 0px 15px rgb(186, 186, 186);
 }
 
 .card img {

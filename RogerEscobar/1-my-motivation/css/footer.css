@@ -1,0 +1,38 @@
+footer {
+  background-color: #000033;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #fbb315;
+}
+
+.fa-linkedin {
+  font-size: 30px;
+}
+
+.fa-instagram {
+  font-size: 30px;
+}
+
+.fa-github {
+  font-size: 30px;
+}
+
+.credit {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
