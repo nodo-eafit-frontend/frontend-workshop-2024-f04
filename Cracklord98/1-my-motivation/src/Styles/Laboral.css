@@ -4,7 +4,9 @@
   background-size: 200% 100%;
   animation: movimiento 10s linear infinite;
 }
-
+#MyLaboralExperience h2{
+  font-size: 2.5rem;
+}
 #MyLaboralExperience p {
   font-size:  1.2rem;
   color: bisque;

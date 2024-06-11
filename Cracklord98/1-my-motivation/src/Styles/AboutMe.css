@@ -14,7 +14,9 @@
   }
   
   #AboutMe h2 {
-    color: #bfb5df;
+    color:azure;
+    font-size: 2.5rem;
+    font-family: MiFuente;
   }
   
   #AboutMe img.float-start {
