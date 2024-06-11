@@ -1,16 +1,21 @@
-BODY {
-    background-color: rgb(24, 26, 24);
-    text-align: center
-}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+/*
+-reset del css ok
+-paleta de colores con el :root
+-manejo de fuentes de texto ok
+-tarjetas de lo que quieres aprender en proceso
+-tarjeta con grid para hobbies
+*/
+
+body {
+    background-color: rgb(24, 26, 24);
+    text-align: center;
     font-family: "Poppins", sans-serif;
-}
-body{
     color: aliceblue;
 }
-h1 {
-    color: bisque;
+h1, h2, h3, h4 {
+    color: rgb(12, 97, 131);
 }
 .imagen{
 border-radius: 300px;
@@ -23,4 +28,9 @@ border-radius: 300px;
     flex: 50%;
     margin: 11px;
     border: 7px solid black;
+}
+
+.quien-soy >section {
+    display:flexbox;
+    margin: 50px;
 }
