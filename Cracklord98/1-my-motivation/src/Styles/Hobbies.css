@@ -1,0 +1,20 @@
+.hobbies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hobby-item {
+    width: 33.333%;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .hobby-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #Hobbies p{
+    color: aliceblue;
+  }
