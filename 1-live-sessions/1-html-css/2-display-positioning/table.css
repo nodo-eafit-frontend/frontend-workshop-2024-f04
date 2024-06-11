@@ -1,0 +1,13 @@
+.table-flex,
+.table-grid {
+	width: 100vw;
+	height: 30rem;
+}
+
+.table-flex {
+	background-color: burlywood;
+}
+
+.table-grid {
+	background-color: darkolivegreen;
+}
