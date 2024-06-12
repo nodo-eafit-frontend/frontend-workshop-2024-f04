@@ -114,6 +114,7 @@ body {
     box-shadow: 1px 1px 5px rgb(241, 241, 241);
     border: solid rgba(3, 133, 255, 0);
     border-radius: 10px;
+    text-transform: uppercase;
   }
 .aprende:hover{
 
