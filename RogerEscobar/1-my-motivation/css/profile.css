@@ -4,20 +4,20 @@
   align-items: center;
   height: 600px;
 }
-.text_profile {
+.text-profile {
   max-width: 500px;
   padding: 20px;
 }
 
-.text_profile h3 {
+.text-profile h3 {
   text-align: left;
   margin-bottom: 6px;
 }
 
-.image_profile {
+.image-profile {
   margin: 10px;
 }
-.image_profile img {
+.image-profile img {
   width: 200px;
   border-radius: 50%;
 }

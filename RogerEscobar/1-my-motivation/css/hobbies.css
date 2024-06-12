@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.grid_container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 20px;
@@ -20,7 +20,7 @@
   align-content: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0px 0px 15px 0px rgba(166, 166, 166, 0.219);
+  box-shadow: 0px 0px 15px 0px var(--color-shadows);
 }
 
 i {
@@ -30,15 +30,15 @@ i {
 }
 
 .fa-person-biking {
-  color: gray;
+  color: var(--color-blue);
 }
 
 .fa-gamepad {
-  color: gray;
+  color: var(--color-blue);
 }
 
 .fa-tv {
-  color: gray;
+  color: var(--color-blue);
 }
 
 h4 {

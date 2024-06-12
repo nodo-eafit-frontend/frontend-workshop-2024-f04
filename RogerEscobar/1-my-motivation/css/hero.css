@@ -1,12 +1,12 @@
-#hero_name {
+#hero-name {
   min-height: 720px;
-  background-color: #000033;
+  background-color: var(--color-blue);
   display: block;
   align-items: center;
   justify-content: center;
 }
 
-.logo-rog_container {
+.logo-rog-container {
   height: 250px;
   display: flex;
   justify-content: center;
@@ -19,31 +19,31 @@
   padding: 30px;
 }
 
-.texto_1 {
+.texto-1 {
   font-family: "Amiko", sans-serif;
   font-weight: 700;
   margin-bottom: 6px;
   font-size: 50px;
   text-align: center;
   justify-content: center;
-  color: #fbb315;
+  color: var(--color-yellow);
 }
 
-.btn_container {
+.btn-container {
   display: flex;
   justify-content: center;
 }
 
-.btn_about {
+.btn-about {
   text-decoration: none;
   cursor: pointer;
   font-family: "Amiko", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  color: #ff2800;
+  color: var(--color-red);
   text-align: center;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-background);
   border: none;
   border-radius: 25px;
   padding: 15px;
@@ -51,9 +51,9 @@
   width: 250px;
 }
 
-.btn_about:hover {
-  color: #fff;
-  background-color: #ff2800;
+.btn-about:hover {
+  color: var(--color-white);
+  background-color: var(--color-red);
   border: none;
   border-radius: 25px;
   padding: 15px;
@@ -64,20 +64,20 @@
 
 /*inicio texto animado */
 
-.animated_text {
+.animated-text {
   font-family: "Molengo", sans-serif;
   font-weight: 400;
   text-align: center;
   justify-content: center;
   font-size: 30px;
-  color: #ff2800;
+  color: var(--color-red);
 }
 
-.animated_text span {
+.animated-text span {
   position: relative;
 }
 
-.animated_text ::before {
+.animated-text ::before {
   content: "Diseñador gráfico";
   animation: words 9s infinite;
 }

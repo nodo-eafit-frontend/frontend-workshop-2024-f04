@@ -1,6 +1,7 @@
 footer {
-  background-color: #000033;
+  background-color: var(--color-blue);
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .contact {
@@ -9,13 +10,13 @@ footer {
 }
 
 .contact a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact a:hover {
-  color: #fbb315;
+  color: var(--color-yellow);
 }
 
 .fa-linkedin {
@@ -31,8 +32,9 @@ footer {
 }
 
 .credit {
-  color: #fff;
+  font-family: "Amiko";
+  font-weight: 700;
+  color: var(--color-white);
   text-align: center;
-  font-size: 12px;
-  padding-bottom: 10px;
+  font-size: 16px;
 }

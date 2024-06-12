@@ -1,5 +1,5 @@
 #motivation {
-  background-color: #fbb315;
+  background-color: var(--color-yellow);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -7,12 +7,12 @@
   height: 600px;
 }
 
-.text_motivation {
+.text-motivation {
   max-width: 500px;
   min-width: 300px;
   padding: 20px;
 }
-.logo-eafit_container {
+.logo-nodo-container {
   max-width: 200px;
   display: flex;
   justify-content: center;

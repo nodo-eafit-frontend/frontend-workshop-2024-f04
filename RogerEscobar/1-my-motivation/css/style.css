@@ -1,5 +1,6 @@
 /* Styles CSS */
 @import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+@import url(/RogerEscobar/1-my-motivation/css/colors.css);
 @import url(/RogerEscobar/1-my-motivation/css/cards.css);
 @import url(/RogerEscobar/1-my-motivation/css/fonts.css);
 @import url(/RogerEscobar/1-my-motivation/css/hero.css);
@@ -25,7 +26,7 @@ h4 {
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
-  color: #ff2800;
+  color: var(--color-red);
   text-align: center;
   margin: 6px;
 }

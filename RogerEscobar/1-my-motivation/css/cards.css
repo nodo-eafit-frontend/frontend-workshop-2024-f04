@@ -1,14 +1,14 @@
 #expectation {
-  background-color: rgb(219, 216, 231);
+  background-color: var(--color-background);
 }
 
-.cards_container {
+.cards-container {
   padding: 15px;
   display: flex;
   justify-content: center;
   overflow-x: scroll;
 }
-.cards_container li {
+.cards-container li {
   display: inline-block;
   margin: 20px;
 }
@@ -18,7 +18,7 @@
   height: 500px;
   border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0px 0px 15px rgb(186, 186, 186);
+  box-shadow: 0px 0px 15px var(--color-shadows);
 }
 
 .card img {
