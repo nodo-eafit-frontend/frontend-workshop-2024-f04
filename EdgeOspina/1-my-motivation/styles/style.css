@@ -1,36 +1,146 @@
-@import url("fonts.css");
-/*@import url(https://meyerweb.com/eric/tools/css/reset/reset.css); 
-    Profe, ese reset me dañó la página completa :(
-    Yo voy a dejar eso comentado mejor.*/
-@import url("carousel.css");
-@import url("images.css");
-@import url("navbar.css");
-@import url("container.css");
+/* @import url("https://cdn.jsdelivr.net/npm/normalize.css/normalize.css"); */
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-
-/* PORTADA */
-.portada {
-    background: linear-gradient(to bottom, rgb(20, 12, 46), #090908, #1f1b23);
-    height: 300px;
-    width: 100%;
-    margin: 0;
+:root {
+    --primary-color: #252147;
+    --secondary-color: #0b0323;
+    --accent-color: #184467;
+    --background-color: #030304;
+    --text-color: #181818;
+    --text-lighter-color: #9cb4c5;
+    --text-light-color: #b6c7fc;
+    --text-footer-color: antiquewhite;
+    --body-background-1: #e3e3f6;
+    --body-background-2: #b7d9ff;
 }
 
 /* CUERPO */
 body {
-    background: linear-gradient(to bottom, #e3e3f6, #b7d9ff, #e3e3f6);
+    background: linear-gradient(to bottom, var(--body-background-1), var(--body-background-2), var(--body-background-1));
     height: 100vh;
     margin: 100px, 100px, 100px, 100px;
     font-family: Arial, sans-serif;
 }
 
-section {
-    margin: 50px 5%;
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to left, black, var(--primary-color));
+    text-align: center;
+    padding: 10px;
 }
 
-#metas {
-    margin-left: 40%;
+.navbar menu li {
+    display: inline;
+    margin: 20px;
+}
+
+.navbar menu li a {
+    text-decoration: none;
+    color: var(--text-light-color);
+    font-size: large;
+}
+
+
+/* PORTADA */
+.portada {
+    background: linear-gradient(to bottom,
+            var(--secondary-color),
+            var(--background-color),
+            var(--secondary-color));
+    height: 250px;
+    width: 100%;
+    margin: 0;
+    padding-top: 3rem;
+}
+
+.portada h1 {
+    color: var(--text-light-color);
+    font-size: xx-large;
+    padding: 2cap;
+    font: lighter;
+    font-family: "poppins";
+}
+
+.portada p {
+    color: var(--text-lighter-color);
+    font-size: x-large;
+    font-family: Tahoma;
+    text-align: justify;
+    margin-left: 15%;
+}
+
+#img-yo {
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    float: right;
+    margin-right: 30%;
+    border-radius: 80px;
+}
+
+/* MAIN */
+main h1 {
+    text-align: center;
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-size: x-large;
+    padding: 20px;
+}
+
+main h2 {
+    color: var(--text-color);
+    font-size: larger;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 8%;
+}
+
+main p {
+    color: var(--text-color);
+    margin: 30px;
+    text-align: justify;
+    padding-left: 8%;
+    padding-right: 8%;
+    line-height: 1.4;
+}
+
+/* MOTIVACIÓN */
+#motivacion ul {
+    font-style: oblique;
+    padding-left: 10%;
+}
+
+#motivacion ul li {
+    line-height: 1.5;
+    list-style-type: circle;
+}
+
+/* APRENDIZAJES */
+.carrusel {
+    width: 80%;
+    max-width: 900px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.carrusel-items {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    gap: 35px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.carrusel-items li img {
+    max-height: 135px;
 }
 
 
@@ -41,20 +151,54 @@ hr {
     background-color: #ccc;
 }
 
+/* HOBBIES */
+.grid {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#hobbies img {
+    width: 20rem;
+}
+
+.item {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 /* FOOTER */
 footer {
-    background: linear-gradient(to left, #002f61, #030016);
-    color: white;
-    text-align: center;
+    background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
+    color: var(--text-footer-color);
+    text-align: left;
     padding: 20px;
+    padding-left: 15%;
+    line-height: 1.7;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: x-large;
 }
 
 footer a {
-    color: white;
+    color: var(--text-footer-color);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 10px;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+#contacto img {
+    max-width: 20px;
+    max-height: 20px;
 }
