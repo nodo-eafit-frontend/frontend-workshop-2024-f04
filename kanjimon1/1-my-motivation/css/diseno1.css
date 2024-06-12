@@ -241,7 +241,7 @@ footer > h2 {
     background: transparent;
   }
 
-  .slides > div{
+.slides > div {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 300px;
@@ -259,20 +259,38 @@ footer > h2 {
     font-size: 100px;    
   }
 
+  /*.slides > div{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: var(--fourth-color);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;    
+  }*/
+
   .slides img {
     object-fit: cover;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 500;
+    left: 500;
     width: 300px;
-    height: 300px;    
+    height: 300px;
   }
 
   .slider > a {
     display: inline-flex;
     width: 1.5em;
     height: 1.5em;
-    background: var(--background-color);
+    background: var(--secondary-color);
     text-decoration: none;
     align-items: center;
     justify-content: center;
@@ -289,8 +307,9 @@ footer > h2 {
     background: var(--fifth-color);
   }
 
-  @supports(scroll-snap-type){
+  /*
+  @supports (scroll-snap-type) {
     .slider > a {
       display: none;
     }
-  }
+  }*/

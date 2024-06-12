@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" type="text/css" href="../css/diseno.css" />-->
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/diseno1.css" />
     <title>Quien soy, Mi motivaci&oacute;n</title>
@@ -10,35 +9,28 @@
         <header>
             <h1>Presentaci&oacute;n</h1>
          <nav class="navigation">
-            <menu>
                 <ul class="navig">
                     <li><a class="active" href="#quien-soy">Sello personal</a></li>
                     <li><a href="#quien-soy-1">Qui&eacute;n soy</a></li>
                     <li><a href="#motivation">Motivaci&oacute;n</a></li>                
                     <li><a href="#aprende">Aprende sin l&iacute;mites</a></li>
                     <li><a href="#slider">Tus Hobbies</a></li>
+                    <li><a href="#slogan">Slogan</a></li>
                 </ul>
-            </menu>        
         </nav>
         </header>
         <main>
             <article id="quien-soy" class="quien-soy">
                 <section>
-                    <h2>Mi sello personal</h2>
-                        <span>
-                            <strong>
-                                Juan Camilo Montoya R&uacute;a
-                            </strong> 
-                        </span>
+                    <span>Mi sello personal
+                        <p>
+                            Juan Camilo Montoya R&uacute;a
+                        </p>            
+                    </span>
                 </section>
-                <div class="responsive">
-                    <div class="gallery">                        
-                        <img src="../pics/IMG_7121.JPG" alt="camilo" />                    
-                    </div>
-                </div>        
-            </article>        
+                        <img src="../pics/IMG_7121.JPG" alt="camilo" />
+            </article>
             <article id="quien-soy-1">
-                <section>
                     <h2>Qui&eacute;n soy:</h2>
                     <p>
                         Soy una persona apasionada la tecnolog&iacute;, que disfruta el aprender nuevas habilidades
@@ -47,7 +39,6 @@
                         administraci&oacute;n de bases de datos Oracle, y encuentro que todo lo relacionado con la l&oacute;gica 
                         de promaci&oacute;n va a estar presente siempre y por tal motivo mi necesidad de actualizar mis conocimientos.
                     </p>
-                </section>                   
             </article>             
             <article id="motivation">
                 <section>                    
@@ -98,32 +89,42 @@
                       </div>
                     </div>               
             </section>            
-            <section>
+            <section id="slider">                    
                 <div class="slider">
                     <a href="#slide-1">1</a>
                     <a href="#slide-2">2</a>
                     <a href="#slide-3">3</a>
-                    <div class="slides">
-                        <div id="slide-1">                            
-                            <img src="../pics/finnnish.jpeg" alt="idiomas" />
-                        </div>
-                        <div id="slide-2">
-                            <img src="../pics/eurovision.jpeg" alt="musica" />
-                        </div>
-                        <div id="slide-3">
-                            <img src="../pics/Running.jpg" alt="ejercicio" />
-                        </div>
+                    <div class="slides">                
+                    <ul>
+                        <li id="slide-1">
+                            <img class="slide-1" src="../pics/finnnish.jpeg" alt="idiomas" />
+                        </li>
+                        <li id="slide-2">
+                            <img class="slide-2" src="../pics/eurovision.jpeg" alt="musica" />
+                        </li>
+                        <li id="slide-3">
+                            <img class="slide-3" src="../pics/Running.jpg" alt="ejercicio" />
+                        </li>
+                    </ul>
+
+                    <!--<div id="slide-1">
+                        <img src="../pics/finnnish.jpeg" alt="idiomas" />
                     </div>
-                </div>            
+                    <div id="slide-2">
+                        <img src="../pics/eurovision.jpeg" alt="musica" />
+                    </div>
+                    <div id="slide-3">
+                        <img src="../pics/Running.jpg" alt="ejercicio" />
+                    </div>-->
+                    </div>
+                </div>       
             </section>
             </article>
-            <article class="slogan">
-                <section>
+            <article id="slogan" class="slogan">                
                     <h2>Slogan</h2>
                         <p>
                             ¡Para atrás ni para coger impulso!                     
-                        </p>                                
-                </section>
+                        </p>
         </article>
         </main>                
     <footer>
