@@ -1,0 +1,111 @@
+body {
+    background-image: linear-gradient(to left,rgb(205, 182, 249),rgb(139, 190, 245));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.contenido {
+    margin: 100px auto;
+    width:75%;
+}
+.perfil {
+    width:250px;
+    border-radius: 20px;
+    border: 3px solid rgb(125, 94, 249);
+    float: right;
+    margin-left: 20px;
+}
+.text h1 {
+    font-size: 45px;
+    padding: 5px
+}
+.text { 
+    font-size:  22px;
+}
+.carrusel{
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+}
+.slide-content{
+    margin: 0 40px;
+}
+.card {
+    width:210px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.card-image {
+    position: relative;
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px
+}
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgb(125, 94, 249)
+}
+.name {
+    font-size: 30px;
+    font-weight: 500;
+    color:rgb(125, 94, 249)
+}
+
+.grid {
+    display:grid;
+    height: 30vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7.5fr 15fr;
+    grid-template-areas: 
+    "hobbie1 hobbie2 hobbie3 hobbie4"
+    "content1 content2 content3 content4";
+    grid-gap:0.2rem;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+#hobbie1{
+    background: rgb(198, 173, 245);
+    grid-area:hobbie1;
+}
+#hobbie2{
+    background: rgb(180, 173, 245);
+    grid-area:hobbie2;
+}
+#hobbie3{
+    background: rgb(127, 142, 255);
+    grid-area:hobbie3;
+}
+#hobbie4{
+    background: rgb(94, 109, 248);
+    grid-area:hobbie4;
+}
+#content1{
+    background: rgb(198, 173, 245);
+    grid-area:content1;
+}
+#content2 {
+    background: rgb(180, 173, 245);
+    grid-area: content2;
+}
+#content3 {
+    background: rgb(127, 142, 255);
+    grid-area: content3;
+}
+#content4 {
+    background: rgb(94, 109, 248);
+    grid-area:content4;
+}
