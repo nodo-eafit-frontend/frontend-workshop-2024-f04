@@ -1,0 +1,115 @@
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import url("who-am-I.css");
+@import url("my-motivation.css");
+@import url("my-learning.css" );
+@import url("my-hobies.css");
+@import url("cards.css");
+
+:root {
+    --tabs-border-color: #ABCDEF;
+    --tabs-border-size: 6px;
+    --tabs-text-color: white;
+    --tabs-dark-color: #012345;
+    --tabs-lite-color: #345678;
+    --card-color:#548231;
+    --tabs-width: 200px;
+    --tabs-height: 40px;
+    --button-color:#151718
+  }
+
+body {
+    line-height: 1.2;
+    background-color: rgb(193, 211, 211);
+
+  }
+  body > main  {
+	max-width: 70rem;
+	margin-inline: auto;
+}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  } 
+  body nav{
+    background-color: rgb(71, 61, 48);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 80px;
+  }
+  .dropdown{
+    display:grid;
+    position:inherit;
+  }
+
+  button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:200%;
+    border-radius: 0 0 20 20;
+    background-color:var(--button-color);
+    color: var(--tabs-text-color)
+
+  }
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(52, 181, 63, 0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: inline-flex;
+    color: #ece8f4;
+    padding: 5px;
+    text-decoration:double;
+  }
+  .dropdown-content a:hover {
+    color: #d7b5b5;
+    background-color: #d6dfe0;
+  }
+
+  h1,h2{
+    font-family: fantasy;
+    font-size: 3cap;
+  }
+  body > main + footer {
+	color: var(--tabs-border-color);
+	background-color: var(--button-color);
+    min-height: 3px;
+	margin-top: 2rem;
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+}
+
+body > main + footer > section {
+	align-items: center;
+	border-top: 2px var(--white) solid;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 4rem;
+}
+
+body > main + footer p {
+	font-style: italic;
+}
+
+body > main + footer ul {
+	align-items: inherit;
+	display: inherit;
+}
+
+body > main + footer ul li {
+	width: 2rem;
+	margin: 0.25rem;
+}
+
+body > main + footer ul img {
+	width: 100%;
+}
+
+li:has(img[alt='Slack Logo']) {
+	width: 2.5rem;
+}

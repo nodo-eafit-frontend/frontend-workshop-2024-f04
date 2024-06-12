@@ -1,0 +1,12 @@
+#my-learning th {
+  background-color: #151718;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+  color: var(--tabs-text-color);
+  height: 1.5cm;
+}
+
+#my-learning img{
+    width: 200px;
+    height: 200px;
+}

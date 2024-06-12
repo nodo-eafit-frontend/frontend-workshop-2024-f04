@@ -1,0 +1,28 @@
+
+.container-hobies{
+    width: 900px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.container-hobies>img{
+    
+    width: 900px;
+    height: 100%;
+   
+}
+.pt-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.left,.right,.badge{
+    cursor: pointer;
+}
+.badge{
+width: 13px;
+height: 13px;
+padding: 0;
+}
