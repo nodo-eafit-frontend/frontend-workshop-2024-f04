@@ -60,7 +60,7 @@ footer p {
 
 .carrusel-container {
 
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -74,8 +74,8 @@ footer p {
 .card {
 
     flex: 0 0 20%;
-    margin: 200px;
-    padding: 10px;
+    margin: 150px;
+    padding: 20px;
     background-color: #9feccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
