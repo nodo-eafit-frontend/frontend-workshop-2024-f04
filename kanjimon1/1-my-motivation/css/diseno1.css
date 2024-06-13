@@ -224,7 +224,7 @@ footer > h2 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling:touch;    
+    -webkit-overflow-scrolling:touch;
   }
 
   .slides::-webkit-scrollbar{
@@ -241,7 +241,7 @@ footer > h2 {
     background: transparent;
   }
 
-.slides > div {
+/*.slides > div {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 300px;
@@ -256,32 +256,32 @@ footer > h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;    
-  }
-
-  /*.slides > div{
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 300px;
-    height: 300px;
-    margin-right: 50px;
-    border-radius: 10px;
-    background: var(--fourth-color);
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;    
+    font-size: 100px;
   }*/
+
+  .slides > ul {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: var(--fourth-color);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
 
   .slides img {
     object-fit: cover;
-    position: absolute;
-    top: 500;
-    left: 500;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
     width: 300px;
     height: 300px;
   }
@@ -306,10 +306,9 @@ footer > h2 {
   .slider > a:focus {
     background: var(--fifth-color);
   }
-
-  /*
-  @supports (scroll-snap-type) {
+ 
+  @supports (scroll-snap-type: x) {
     .slider > a {
-      display: none;
+      display: inline-flex;
     }
-  }*/
+  }
