@@ -1,0 +1,12 @@
+{
+  "name": "3-rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Workshop to first steps with Javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marvin Cely",
+  "license": "ISC"
+}
