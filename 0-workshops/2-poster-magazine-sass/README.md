@@ -28,23 +28,23 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 
 ## ¿Qué se va a evaluar?
 
-- **Organización de recursos:**
+- [ ] **Organización de recursos:**
   - Fuentes de texto
   - Paleta de colores
   - Reset CSS
-- **Uso de herramientas como:**
+- [ ] **Uso de herramientas como:**
   - Mixins
   - Functions
   - Variables
   - Extends
-- **Diseño responsive: Diseño adaptable para diferentes dispositivos:**
+- [ ] **Diseño responsive: Diseño adaptable para diferentes dispositivos:**
   - Móbil
   - Tablet
   - Escritorio
-- **Código limpio y modular:**
+- [ ] **Código limpio y modular:**
   - Utilizar metodología BEM
   - Reorganizar cada widget o componente por un archivo sass.
-- **Uso de propiedades css:**
+- [ ] **Uso de propiedades css:**
   - box-model:
     - margin
     - padding
@@ -54,6 +54,8 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
   - display: flexbox
 
 ## Recursos
+
+- [PNG Eggs | Imágenes PNG](https://www.pngegg.com/es)
 
 ### HTML & CSS
 
