@@ -155,7 +155,7 @@ hr {
 .grid {
     display: grid;
     grid-row-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 1rem;
     flex: 1;
     text-align: center;
