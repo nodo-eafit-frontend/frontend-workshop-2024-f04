@@ -4,11 +4,10 @@
 }
 
 
-
 #AboutMe {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    background: fixed;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background: fixed;
   background-image: url(../assets/Backgrounds/cool-background.png);
   background-size: 100%;
   }

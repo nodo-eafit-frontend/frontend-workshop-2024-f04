@@ -1,0 +1,10 @@
+:root {
+    --background:linear-gradient(90deg, #00f7ff, #f0a206); ;
+}
+
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css2");
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url(../assets/Typography/RobotoCondensed/roboto-condensed-cyrillic-600-normal.ttf);
+}

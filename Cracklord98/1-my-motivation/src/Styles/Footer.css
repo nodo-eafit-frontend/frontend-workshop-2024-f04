@@ -1,3 +1,6 @@
 #ConcatcMe {
     font-size: medium;
 }
+ul {
+    list-style-type: none;
+}

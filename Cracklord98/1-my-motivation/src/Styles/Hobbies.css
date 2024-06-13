@@ -1,11 +1,12 @@
 .hobbies-grid {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns:repeat(3,1fr);
+    -ms-grid-row-align: center;
   }
   
   .hobby-item {
-    width: 33.333%;
+    width: 100%;
     padding: 15px;
     text-align: center;
   }
