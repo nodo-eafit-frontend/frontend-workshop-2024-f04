@@ -122,9 +122,9 @@ main p {
 .carrusel {
     width: 80%;
     max-width: 900px;
-    border: 3px solid #ccc;
+    border: 3px solid var(--text-lighter-color);
     border-radius: 20px;
-    background-color: #fff;
+    background-color: white;
     margin-left: 20%;
     margin-right: 10%;
 }
@@ -148,7 +148,7 @@ main p {
 hr {
     border: 2px;
     height: 2px;
-    background-color: #ccc;
+    background-color: var(--text-lighter-color);
 }
 
 /* HOBBIES */
@@ -170,6 +170,7 @@ hr {
 .item {
     font-size: 1.5rem;
     font-weight: 600;
+    line-height: 1.5;
     color: var(--text-color);
 }
 
