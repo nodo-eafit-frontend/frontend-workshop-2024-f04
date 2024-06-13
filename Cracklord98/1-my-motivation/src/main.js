@@ -4,9 +4,9 @@ const musicPlayer = document.getElementById("musicaFondo");
 musicButton.addEventListener("click", () => {
   if (musicPlayer.paused) {
     musicPlayer.play();
-    musicButton.textContent = "Pausar música";
+    musicButton.textContent = "Pausar música😥";
   } else {
     musicPlayer.pause();
-    musicButton.textContent = "Reproducir música";
+    musicButton.textContent = "🔥Reproducir música😎";
   }
 });

@@ -30,13 +30,13 @@
           
             <menu class="navbar-nav ms-auto"> 
               <li class="nav-item bs-primary-text-emphasis">
-                <a class="nav-link active navbar-brand text-white" href="#Home">
+                <a class="nav-link active navbar-brand text-white" href="#home">
                   <img src="assets/Logo/eva--home-fill.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                   <b>Home</b>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active navbar-brand text-white" href="#AboutMe">
+                <a class="nav-link active navbar-brand text-white" href="#about-me">
                   <img src="assets/Logo/icon-park-outline--me.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                   <b>Acerca de mi</b>
                 </a>
@@ -77,32 +77,24 @@
       </nav>
     </header>
     <main>
-        <article id="Home">
-          <div class="container">
-            <div class="row d-flex align-items-center justify-context-center">
-            <div class="col-md-6">
-              <h1 class=".display-1">Hey, soy Andres Toro</h1>
-              <p id="Intro-Parraf" class="lead">
-                Ingeniero industrial y administrador con <b id="Bold">+2 años de experiencia.</b><br>
-                Enfocado en mercados financieros e inteligencia de negocios. 
-              </p>
-              <div id="BottonCV">
-                <a href="./assets/PDF/HDV ESP.pdf" download="Andres_Toro_CV.pdf" class="btn btn-primary">Descargar CV</a>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <img id="MiPerfilJPG" src="./assets/Photos/Profile.png" alt="Foto_de_Perfil"/>
+      <article id="home" class="container-fluid">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md-6">
+            <h1 class="display-1"><b>Hey, soy Andrés Toro</b></h1>
+            <p id="intro-parraf" class="lead">
+              Ingeniero industrial y administrador con <b class="bold">+2 años de experiencia.</b><br>
+              Enfocado en mercados financieros e inteligencia de negocios.
+            </p>
+            <div id="button-cv">
+              <a href="./assets/PDF/HDV ESP.pdf" download="Andres_Toro_CV.pdf" class="btn btn-primary fs-4"><b>Descargar CV</b></a>
             </div>
           </div>
-          </div>
-            </div>  
-          </div>
+          <img id="mi-perfil-jpg" src="./assets/Photos/Profile.png" alt="Foto_de_Perfil" class="col-md-6 img-fluid small-img"/>
+        </div>
+      </article>   
         
-
-
-        </article>
-        <article id="AboutMe">
-          <div class="container">
+      <article id="about-me" class="container-fluid">
+        <div>
             <div class="row">
               <div class="col-md-6">
                 <img id="MyPhoto" src="./assets/Photos/Yo.png" alt="Foto de Andrés" class="img-fluid rounded-circle mx-auto d-block">
@@ -124,49 +116,48 @@
               </div>
             </div>
           </div>
-        </article>
-        <article id="MyLaboralExperience" class="container-fluid">
-          <div class="container">  
+      </article>
+      <article id="MyLaboralExperience" class="container-fluid">
             <h2>Mi experiencia laboral</h2>
             <div class="row">
               <div class="col-md-8">
-                <div class="job-entry">
-                  <h3 class="mt-4">Trainee Bancolombia</h3>
-                  <p>En mi práctica en <b>Bancolombia</b> como Practicante del Área Transaccional PYMES Antioquia, me sumergí en el mundo financiero, aprendiendo sobre productos y servicios del banco. Adquirí habilidades en gestión de datos, seguimiento de desempeño, redacción de informes y desarrollo de propuestas de mejora, culminando con una propuesta enfocada en la gestión de permisos y productos.</p>
-                </div>
-                <div class="job-entry">
-                  <h3 class="mt-4"><b>Junior Analyst</b></h3>
-                  <p>En <b>Global Analitik</b>, he desarrollado habilidades en análisis de mercado, comunicación y colaboración, aportando al éxito del negocio. He participado en la recolección de datos, análisis de información, elaboración de presentaciones, recomendaciones basadas en datos, fomento de la cultura de colaboración y elaboración de informes de progreso..</p>
-                </div>
-                <div class="job-entry">
-                  <h3 class="mt-4"><b>Consultor Junior</b></h3>
-                  <p>En <b>Solex SA</b>, he desarrollado habilidades en la implementación de herramientas BI, consultoría y formación, impulsando la toma de decisiones estratégicas en las organizaciones. He demostrado mi capacidad para transformar datos en información accionable, optimizando procesos, maximizando recursos y fomentando una cultura data-driven.</p>
-                </div>
+                <ul class="list-unstyled">
+                  <li class="job-entry">
+                    <h3 class="mt-4">Trainee Bancolombia</h3>
+                    <p>En mi práctica en <b>Bancolombia</b> como Practicante del Área Transaccional PYMES Antioquia, me sumergí en el mundo financiero, aprendiendo sobre productos y servicios del banco. Adquirí habilidades en gestión de datos, seguimiento de desempeño, redacción de informes y desarrollo de propuestas de mejora, culminando con una propuesta enfocada en la gestión de permisos y productos.</p>
+                  </li>
+                  <li class="job-entry">
+                    <h3 class="mt-4"><b>Junior Analyst</b></h3>
+                    <p>En <b>Global Analitik</b>, he desarrollado habilidades en análisis de mercado, comunicación y colaboración, aportando al éxito del negocio. He participado en la recolección de datos, análisis de información, elaboración de presentaciones, recomendaciones basadas en datos, fomento de la cultura de colaboración y elaboración de informes de progreso.</p>
+                  </li>
+                  <li class="job-entry">
+                    <h3 class="mt-4"><b>Consultor Junior</b></h3>
+                    <p>En <b>Solex SA</b>, he desarrollado habilidades en la implementación de herramientas BI, consultoría y formación, impulsando la toma de decisiones estratégicas en las organizaciones. He demostrado mi capacidad para transformar datos en información accionable, optimizando procesos, maximizando recursos y fomentando una cultura data-driven.</p>
+                  </li>
+                </ul>
               </div>
               <div class="col-md-4 justify-content-center">
-                <div class="company-logo">
-                  <img src="./assets/Photos/Bancolombia.png" alt="Logo de la empresa 1" class="img-fluid">
-                </div>
-                <div class="company-logo">
-                  <img src="./assets/Photos/Global.png" alt="Logo de la empresa 2" class="img-fluid">
-                </div>
-                <div class="company-logo">
-                  <img src="./assets/Photos/Solex.png" alt="Logo de la empresa 3" class="img-fluid">
-                </div>
+                <ul class="list-unstyled text-center">
+                  <li class="company-logo mb-3">
+                    <img src="./assets/Photos/Bancolombia.png" alt="Logo de Bancolombia" class="img-fluid">
+                  </li>
+                  <li class="company-logo mb-3">
+                    <img src="./assets/Photos/Global.png" alt="Logo de Global Analitik" class="img-fluid">
+                  </li>
+                  <li class="company-logo mb-3">
+                    <img src="./assets/Photos/Solex.png" alt="Logo de Solex SA" class="img-fluid">
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        
-        </article>
-        <article id="NodoMotivation" class="container-fluid">
-        <div class="container">
+      </article>
+      <article id="NodoMotivation" class="container-fluid">
                 <div class="row">
                       <h2 >
                         Motivación Nodo
                         <img src="./assets/Logo/reshot-icon-software-engineer-VA8RSG936Z.svg" alt="Icono pequeño" class="me-3">
                       </h2>
                   </div>
-        </div>
         <div class="container">
             <div class="ticker">
               <ul class="list-inline">
@@ -185,8 +176,8 @@
             </div>
           </div>
         </div>
-        </article>
-        <article id="LearningNodo" class="container">
+      </article>
+      <article id="LearningNodo" class="container">
         <h2 class="text-center mb-5">
           <b>Tecnologías que me gustaría aprender en NODO</b>
         </h2>
@@ -206,7 +197,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/git.svg" alt="Git">
                 <div class="card-body">
-                  <h5 class="card-title">Git</h5>
+                  <h5 class="card-title"><b>Git</b></h5>
                   <p class="card-text">Sistema de control de versiones distribuido, gratuito y de codigo abierto.</p>
                   <a href="https://git-scm.com/about" class="btn btn-primary">Go to Git</a>
                 </div>
@@ -216,7 +207,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/html5.svg" alt="Html">
                 <div class="card-body">
-                  <h5 class="card-title">Html</h5>
+                  <h5 class="card-title"><b>Html</b></h5>
                   <p class="card-text">"HyperText Markup Language" es un lenguage de marcación.</p>
                   <a href="https://developer.mozilla.org/es/docs/Web/HTML" class="btn btn-primary">Go to Html</a>
                 </div>
@@ -226,7 +217,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/css.svg" alt="Css">
                 <div class="card-body">
-                  <h5 class="card-title">Css</h5>
+                  <h5 class="card-title"><b>Css</b></h5>
                   <p class="card-text">"Cascading Style Sheet" es un lenguage de hojas de estilo.</p>
                   <a href="https://developer.mozilla.org/es/docs/Web/css" class="btn btn-primary">Go to Css</a>
                 </div>
@@ -236,7 +227,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/javascript.svg" alt="JavaScript">
                 <div class="card-body">
-                  <h5 class="card-title">JavaScript</h5>
+                  <h5 class="card-title"><b>JavaScript</b></h5>
                   <p class="card-text">Lenguage de programación que impulsa la Web.</p>
                   <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" class="btn btn-primary">Go to JS</a>
                 </div>
@@ -246,7 +237,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/react.svg" alt="React">
                 <div class="card-body">
-                  <h5 class="card-title">React JS</h5>
+                  <h5 class="card-title"><b>React JS</b></h5>
                   <p class="card-text">Biblioteca de JavaScript para construir interfaces de usuario.</p>
                   <a href="https://es.react.dev/" class="btn btn-primary">Go to Css</a>
                 </div>
@@ -256,7 +247,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/sass.svg" alt="Sass">
                 <div class="card-body">
-                  <h5 class="card-title">Sass</h5>
+                  <h5 class="card-title"><b>Sass</b></h5>
                   <p class="card-text">Preprocesador de CSS.</p>
                   <a href="https://sass-lang.com/" class="btn btn-primary">Go to Sass</a>
                 </div>
@@ -266,7 +257,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/typescript.svg" alt="TypeScript">
                 <div class="card-body">
-                  <h5 class="card-title">TypeScript</h5>
+                  <h5 class="card-title"><b>TypeScript</b></h5>
                   <p class="card-text">Lenguage de programación fuertemente tipadoque se basa en JavaScript.</p>
                   <a href="https://www.typescriptlang.org/" class="btn btn-primary">Go to TypeScript</a>
                 </div>
@@ -276,7 +267,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/vscode.svg" alt="VSCode">
                 <div class="card-body">
-                  <h5 class="card-title">VS Code</h5>
+                  <h5 class="card-title"><b>VS Code</b></h5>
                   <p class="card-text">Editor de codigode alto nivel.</p>
                   <a href="https://code.visualstudio.com/" class="btn btn-primary">Go to VS Code</a>
                 </div>
@@ -286,7 +277,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/figma.svg" alt="Figma">
                 <div class="card-body">
-                  <h5 class="card-title">Figma</h5>
+                  <h5 class="card-title"><b>Figma</b></h5>
                   <p class="card-text">Herramienta de diseño y prototipado colaborativa basada en la nube.</p>
                   <a href="https://www.figma.com/" class="btn btn-primary">Go to Figma</a>
                 </div>
@@ -296,7 +287,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/angular.svg" alt="Angular">
                 <div class="card-body">
-                  <h5 class="card-title">Angular</h5>
+                  <h5 class="card-title"><b>Angular</b></h5>
                   <p class="card-text">Framework para aplicaciones web desarrollado en TypeScript.</p>
                   <a href="https://angular.dev/" class="btn btn-primary">Go to Angular</a>
                 </div>
@@ -306,7 +297,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/tailwindcss.svg" alt="Tailwind">
                 <div class="card-body">
-                  <h5 class="card-title">Tailwind CSS</h5>
+                  <h5 class="card-title"><b>Tailwind CSS</b></h5>
                   <p class="card-text">Framework de CSS de codigo abierto para el diseño de paguinas web.</p>
                   <a href="https://tailwindcss.com/" class="btn btn-primary">Go to Tailwind</a>
                 </div>
@@ -316,7 +307,7 @@
               <div class="card">
                 <img class="card-img-top" src="./assets/Logo/carrusel/python.svg" alt="Python">
                 <div class="card-body">
-                  <h5 class="card-title">Python</h5>
+                  <h5 class="card-title"><b>Python</b></h5>
                   <p class="card-text">Un lenguaje de alto nivel de programacion multiparadigma.</p>
                   <a href="https://www.python.org/" class="btn btn-primary">Go to Python</a>
                 </div>
@@ -332,13 +323,12 @@
             <span class="visually-hidden">Next</span>
           </a>        
         </div>   
-        <video autoplay loop playsinline id="video-bg">
+        <video autoplay loop playsinline muted id="video-bg">
           <source src="./assets/Backgrounds/BG1.mp4" type="video/mp4">
           //Tu navegador no admite el elemento de video.
         </video>
-        </article>       
-        <article id="Hobbies">
-          <div class="container">
+      </article>       
+      <article id="Hobbies" class="container">
             <h2 class="text-center"><b>Hobbies</b></h2>
             <div class="row d-flex align-items-center justify-content-center">
               <div class="col-md-6">
@@ -368,8 +358,7 @@
                 </div>
               </div>
             </div>
-          </div>
-        </article> 
+      </article> 
     </main>
   <footer id="ContactMe" class="bg-dark text-white text-center py-3">
     <ul>

@@ -27,3 +27,9 @@
   #musicButton:hover {
     background-color: darksalmon;
   }
+  
+.row {
+    height: 100%; /* Asegúrate de que la fila ocupe todo el alto */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+  }

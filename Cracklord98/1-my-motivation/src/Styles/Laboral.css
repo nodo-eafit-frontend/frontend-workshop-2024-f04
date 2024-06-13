@@ -3,6 +3,7 @@
   background: linear-gradient(to right, #2196F3 0%, #a60368 100%);
   background-size: 200% 100%;
   animation: movimiento 10s linear infinite;
+  padding-left: 2rem;
 }
 #MyLaboralExperience h2{
   font-size: 2.5rem;
