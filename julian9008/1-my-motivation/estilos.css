@@ -76,7 +76,9 @@ li {
 }
 
 .contenido {
-    display: grid;
+    display: flex;
+	justify-content: center;
+	align-items: normal;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     margin: 10px auto;
