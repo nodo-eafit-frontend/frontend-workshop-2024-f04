@@ -46,25 +46,39 @@ button:hover{
 }
 
 header{
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    font-size: 1em;
-    color: rgb(53, 243, 6);
-}
-
-header .container{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    align-items: end;
+    padding: 3px 3px;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: rgb(53, 243, 6);
+    align-items: center;
 }
 
-header nav{
+.logo h2{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(44, 252, 3);
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+nav{
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding-bottom: 25px;
-
+    padding-right: 5px;
+    align-items: center;
 }
 
 header a{
@@ -72,12 +86,12 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: black;
-
 }
 
 header a:hover{
     color:rgb(53, 243, 6);
 }
+
 
 #Quiénsoy{
     background-color: rgb(2, 10, 0);
@@ -110,6 +124,7 @@ header a:hover{
 
 #Motiv p{
     margin: 2%;
+    margin-top: 10px;
     align-items: center;
 }
 
@@ -117,6 +132,7 @@ header a:hover{
 height: 50%;
 width: 50%;
 align-self: center;
+padding: 5px;
 }
 
 #aprender{
@@ -221,25 +237,6 @@ grid-row-start: span 2;
 
 .hobbies-imagenes:nth-child(4){
 grid-column-start: span 2;
-}
-
-@media screen {
-
-    #aprender .container{ 
-        display: flex;
-        justify-content: center;
-    }
-
-    #aprender h3{
-        margin-top: 0;
-    }
-    #aprender p{
-        display: block;
-    }
-
-    #aprender .carta{
-        padding: 15px;
-    }
 }
 
 #footer .container p{
