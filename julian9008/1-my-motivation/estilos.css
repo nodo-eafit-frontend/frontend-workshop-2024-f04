@@ -1,87 +1,89 @@
 :root {
-    --background-color: rgb(180, 246, 224);
-    --primary-color: #333;
-    --text-color: #fff;
+	--background-color: rgb(180, 246, 224);
+	--primary-color: #333;
+	--text-color: #fff;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
 }
 
 header {
-    background: var(--primary-color);
-    color: var(--text-color);
-    padding: 1rem 0;
-    text-align: center;
+	background: var(--primary-color);
+	color: var(--text-color);
+	padding: 1rem 0;
+	text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 nav menu {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 nav menu li {
-    display: inline;
-    margin: 0 10px;
+	display: inline;
+	margin: 0 10px;
 }
 
 nav menu li a {
-    color: var(--text-color);
-    text-decoration: none;
+	color: var(--text-color);
+	text-decoration: none;
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
 }
 
 .image-container img {
-    border-radius: 50%;
-    max-width: 450px;
-    height: auto;
+	border-radius: 50%;
+	max-width: 450px;
+	height: auto;
 }
 
 .card img {
-    max-width: 100%; /* Ajuste para el tamaño de las imágenes de los gustos */
-    height: auto;
+	max-width: 100%; /* Ajuste para el tamaño de las imágenes de los gustos */
+	height: auto;
 }
 
-h1, h2, p {
-    text-align: center;
-    padding: 0 20px;
+h1,
+h2,
+p {
+	text-align: center;
+	padding: 0 20px;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    margin: 10px;
-    height: auto;
-    width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 10px;
+	margin: 10px;
+	height: auto;
+	width: 100%;
 }
 
 .card {
-    background-color: bisque;
-    padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	background-color: bisque;
+	padding: 15px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 footer {
-    background: var(--primary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 10px 0;
+	background: var(--primary-color);
+	color: var(--text-color);
+	text-align: center;
+	padding: 10px 0;
 }
