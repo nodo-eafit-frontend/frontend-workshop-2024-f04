@@ -1,6 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..800&display=swap');
 
+:root{
+    --color-prim:  palevioletred;
+    --color-nodo: #E1E2E6;
+    --color-sec: rgb(216, 112, 131);
+    --color-terc: rgb(71, 71, 71);
+    --color-cuar: rgb(153, 206, 244);
+    --color-quit: plum;
+    --color-sext: pink;
+    --color-sev: rgb(255, 225, 172);
+    --color-eig: rgb(66, 65, 65);
+    --color-white: white;
+    --color-footer: blanchedalmond;
+}
+
 body {
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -10,7 +24,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    /*list-style: none;*/
 }
 
 
@@ -23,7 +36,7 @@ picture{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
-        url(./foto-cerezos.jpeg);
+        url(./img/foto-cerezos.jpeg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,7 +70,7 @@ picture{
 h1{
     font-size: 2.5rem;
     font-weight: 800;
-    color: palevioletred;
+    color: var(--color-prim);
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     margin: 1.25rem;
@@ -75,7 +88,7 @@ h1{
 
 .nodo{
     padding: 2.5rem;
-    background-color: #E1E2E6;
+    background-color: var(--color-nodo);
     width: 100%;
     min-height: 25vh;
     margin: 1.25rem 0 0 0;
@@ -84,7 +97,7 @@ h1{
 h2{
     font-size: 1.875rem; 
     font-weight: 500;
-    color: rgb(216, 112, 131);
+    color: var(--color-sec);
     letter-spacing: 0.0625rem; 
     margin: 0 0 0.5625rem 0; 
     text-align: center;
@@ -111,7 +124,7 @@ h3{
     margin: 0 0 0.5625rem 0;
     text-align: center;
     text-transform: uppercase;
-    color: rgb(71, 71, 71);
+    color: var(--color-terc);
 }
 
 .item-carrousel p{
@@ -159,19 +172,19 @@ h3{
 }
 
 #item-carrousel-1{
-    background-color: rgb(153, 206, 244) ;
+    background-color: var(--color-cuar) ;
 }
 
 #item-carrousel-2{
-    background-color: plum;
+    background-color: var(--color-quit);
 }
 
 #item-carrousel-3{
-    background-color: pink;
+    background-color: var(--color-sext);
 }
 
 #item-carrousel-4{
-    background-color: rgb(255, 225, 172);
+    background-color: var(--color-sev);
 }
 
 .conte-carrouselController{
@@ -181,7 +194,7 @@ h3{
 }
 
 .item-carrousel-arrows > a > i{
-    color: white;
+    color: var(--color-white);
 }
 
 .listaDeseos {
@@ -193,7 +206,7 @@ h4{
     font-weight: 500;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
-    color: rgb(71, 71, 71);
+    color: var(--color-terc);
     margin: 0 1.25rem 0.5625rem 0; /*A, D,B I*/
 }
 
@@ -229,9 +242,8 @@ h5{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.25rem;
-    /*text-align: center;*/
     left: 12.5rem;
-    color: rgb(66, 65, 65);
+    color: var(--color-eig);
 
 }
 
@@ -255,18 +267,18 @@ h5{
 }
 
 .hobbies div {
-    background: pink;
+    background: var(--color-sext);
     
 }
 .hobbies div:hover {
-    border: 0.0625rem solid plum;
+    border: 0.0625rem solid var(--color-quit);
 }
 
 
 .footer {
     position: relative;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: var(--color-footer);
     min-height: 6.25rem;
     padding: 1.25rem 3.125rem;
     display: flex;
