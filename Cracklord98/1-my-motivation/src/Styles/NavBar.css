@@ -1,22 +1,20 @@
 .navbar {
-  background-color: #146bc15c; /* Color de fondo azul */
+  background-color: var(--color-navbar);
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: medium;
 }
-
 
 .navbar-brand img {
   height: 24; 
   width: 30;
 }
 
-
 .nav-item {
   margin: 0 .5px; 
 }
 
 #navbarNav {
-  background-color: #898a8bc0; 
+  background-color: var(--color-navbar1); 
 }
 
 #LogoNodo {

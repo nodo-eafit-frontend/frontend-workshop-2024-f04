@@ -20,7 +20,7 @@
 }
 
 .bold{
-    color:#20e2e9;
+    color: var(color-bold);
     font-weight: bold;
 }
 

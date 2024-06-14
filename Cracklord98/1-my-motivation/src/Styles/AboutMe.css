@@ -3,7 +3,6 @@
     src: url(../assets/Typography/RobotoCondensed/roboto-condensed-cyrillic-600-normal.ttf);
 }
 
-
 #about-me {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -35,7 +34,6 @@
     align-items: center;
   }
   
- 
   #mi-photo {
     width: auto;
     height: 400px;

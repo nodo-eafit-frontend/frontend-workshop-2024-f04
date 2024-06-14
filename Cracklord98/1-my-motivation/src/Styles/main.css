@@ -4,6 +4,13 @@
   --color-bg3: linear-gradient(45deg, red, blue, rgb(14, 236, 218), black); 
   --color-textp: aliceblue;
   --color-h2: azure;
+  --color-music:rgb(122, 174, 233);
+  --color-music1: bisque;
+  --color-navbar: #146bc15c;
+  --color-navbar1:#898a8bc0;
+  --color-bold:#20e2e9;
+  --color-card:rgba(22, 22, 26, 0.18);
+  --color-bgcard: #e1e1e1
 }
 
 
@@ -29,7 +36,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: bisque;
+    background-color: var(--color-music1);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -40,6 +47,6 @@
   }
   
   #music-button:hover {
-    background-color: rgb(122, 174, 233);
+    background-color: var(--color-music);
   }
   
