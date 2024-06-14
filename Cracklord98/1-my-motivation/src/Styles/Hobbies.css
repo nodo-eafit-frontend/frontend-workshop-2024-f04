@@ -18,7 +18,15 @@
   #hobbies h2{
     font-size: 2.5rem;
     color:var(--color-h2);
+    background-image: url(../assets/Backgrounds/flame.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
+
+  
   
   #hobbies p{
     color: aliceblue;
