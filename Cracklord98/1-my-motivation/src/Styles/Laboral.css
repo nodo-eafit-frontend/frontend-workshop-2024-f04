@@ -1,18 +1,20 @@
 #my-laboral-experience {
   padding: 1rem;
-  background: linear-gradient(to right, #2196F3 0%, #a60368 100%);
-  background-size: 200% 100%;
-  animation: movimiento 10s linear infinite;
+  background: var(--color-bg2);
+  background-size: 200% 200%;
+  animation: movimiento 15s linear infinite;
   padding-left: 2rem;
+  color: var(--color-textp);
 }
+
 #my-laboral-experience h2{
   font-size: 2.5rem;
+  color: var(--color-h2);
 }
 #my-laboral-experience p {
   font-size:  1.2rem;
-  color: bisque;
+  color: var(--color-textp);
 }
-
 
 @keyframes movimiento {
   0% {

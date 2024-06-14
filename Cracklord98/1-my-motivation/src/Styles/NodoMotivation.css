@@ -1,71 +1,89 @@
-    #video-bg {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; 
-  }
-
-  #nodo-motivation{
-    padding: .5rem;
-    width: auto;
-    height: auto;
-    color: #fff;
-    background: linear-gradient(45deg,red,blue,rgb(14, 236, 218),black);
-    background-size: 400% 400%;
-    position: relative;
-    animation: cambiar 20s ease-in-out infinite;
-  }
-
-  @keyframes cambiar {
-    0% { background-position: 0 50%;}
-    50% { background-position: 100% 50%;}
-    100% { background-position: 0 -50%;}
-  }
-  
-  #nodo-motivation img {
-    height: auto;
-    width: 5%;
-  }
-  
-  #nodo-motivation p {
-    color: beige;
-    font-size: 1.5rem;
-  }
-
-  .ticker {
-    overflow: hidden;
-    white-space: nowrap;
-    height: 50px;
-    background-color: #eeb00600;
-    border: 2px solid #0a5b91;
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-  #nodo-motivation ul {
-    list-style: none;
-  }
-  #nodo-motivation li {
-    display: inline;
-    padding-left: 3px;
-    padding-right: 3px;
-    vertical-align: middle;
-  }
-.list-inline {
-    display: inline-block;
-    animation: moviment 20s linear infinite;
+
+#nodo-motivation {
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  color: #fff;
+  background: var(--color-bg3);
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 20s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 -50%; }
+}
+
+#nodo-motivation img {
+  height: auto;
+  width: 5%;
+}
+
+#nodo-motivation p {
+  color: var(--color-textp);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 50px;
+  background-color: #46433c00;
+  border: 2px solid #0a5b91;
+  box-sizing: border-box;
+}
+
+#nodo-motivation ul {
+  list-style: none;
+}
+
+#nodo-motivation li {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+#nodo-motivation .list-inline {
+  display: inline-block;
+  animation: moviment 20s linear infinite;
+  width: 100%;
 }
 
 .spam-word {
-    margin-right: 20px;
-    font-size:25px ;
+  margin-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 @keyframes moviment {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
+
+#nodo-motivation #mis-metas li {
+  list-style-type: circle;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1.3rem;
+  display: block;
+  line-height: 1.5;
+}
+
+
+

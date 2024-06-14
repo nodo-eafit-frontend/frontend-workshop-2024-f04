@@ -1,6 +1,11 @@
 :root {
-    --background:linear-gradient(90deg, #00f7ff, #f0a206); ;
+  --color-bg1: linear-gradient(90deg, #00f7ff, #f0a206); 
+  --color-bg2: linear-gradient(to right, #2196F3 0%, #a60368 100%);
+  --color-bg3: linear-gradient(45deg, red, blue, rgb(14, 236, 218), black); 
+  --color-textp: aliceblue;
+  --color-h2: azure;
 }
+
 
 @import url("https://meyerweb.com/eric/tools/css/reset/reset.css2");
 
@@ -9,6 +14,16 @@
     src: url(../assets/Typography/RobotoCondensed/roboto-condensed-cyrillic-600-normal.ttf);
 }
 
+#main {
+  width: 100vh;
+  height: 90rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
 
 #music-button {
     position: fixed;
@@ -25,11 +40,6 @@
   }
   
   #music-button:hover {
-    background-color: rgb(122, 228, 233);
+    background-color: rgb(122, 174, 233);
   }
   
-.row {
-    height: 100%; /* Asegúrate de que la fila ocupe todo el alto */
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-  }

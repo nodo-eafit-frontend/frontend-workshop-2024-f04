@@ -13,7 +13,7 @@
   }
   
   #about-me h2 {
-    color:azure;
+    color: var(--color-h2);
     font-size: 2.5rem;
     font-family: MiFuente;
   }
@@ -27,7 +27,7 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-family: 'MiFuente', sans-serif;
-    color: antiquewhite; /* Aplica la fuente personalizada */
+    color: var(--color-textp);
   }
   
   .flex-container {
