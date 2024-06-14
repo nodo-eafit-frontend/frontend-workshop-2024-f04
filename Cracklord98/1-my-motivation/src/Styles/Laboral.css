@@ -1,14 +1,14 @@
-#MyLaboralExperience {
+#my-laboral-experience {
   padding: 1rem;
   background: linear-gradient(to right, #2196F3 0%, #a60368 100%);
   background-size: 200% 100%;
   animation: movimiento 10s linear infinite;
   padding-left: 2rem;
 }
-#MyLaboralExperience h2{
+#my-laboral-experience h2{
   font-size: 2.5rem;
 }
-#MyLaboralExperience p {
+#my-laboral-experience p {
   font-size:  1.2rem;
   color: bisque;
 }

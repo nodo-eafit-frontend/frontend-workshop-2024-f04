@@ -1,4 +1,4 @@
-#Hobbies{
+#hobbies{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     color: #fff;
 }
 
-#Hobbies .textos{
+#hobbies .textos{
     height: 90px;
     line-height: 90px;
     overflow: hidden;

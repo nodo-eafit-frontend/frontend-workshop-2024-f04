@@ -10,7 +10,7 @@
 }
 
 
-#musicButton {
+#music-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -24,7 +24,7 @@
     transition: background-color 0.3s ease;
   }
   
-  #musicButton:hover {
+  #music-button:hover {
     background-color: darksalmon;
   }
   

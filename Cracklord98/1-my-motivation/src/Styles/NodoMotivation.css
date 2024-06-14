@@ -8,7 +8,7 @@
     z-index: -1; 
   }
 
-  #NodoMotivation{
+  #nodo-motivation{
     padding: .5rem;
     width: auto;
     height: auto;
@@ -25,12 +25,12 @@
     100% { background-position: 0 -50%;}
   }
   
-  #NodoMotivation img {
+  #nodo-motivation img {
     height: auto;
     width: 8%;
   }
   
-  #NodoMotivation p {
+  #nodo-motivation p {
     color: beige;
     font-size: 1.5rem;
   }
@@ -42,10 +42,10 @@
     background-color: #eeb00600;
     border: 2px solid #0a5b91;
 }
-#NodoMotivation ul {
+#nodo-motivation ul {
     list-style: none;
   }
-  #NodoMotivation li {
+  #nodo-motivation li {
     display: inline;
     padding-left: 3px;
     padding-right: 3px;

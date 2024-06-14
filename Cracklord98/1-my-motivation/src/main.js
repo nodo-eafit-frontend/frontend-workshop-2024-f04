@@ -1,5 +1,5 @@
-const musicButton = document.getElementById("musicButton");
-const musicPlayer = document.getElementById("musicaFondo");
+const musicButton = document.getElementById("music-button");
+const musicPlayer = document.getElementById("music-fondo");
 
 musicButton.addEventListener("click", () => {
   if (musicPlayer.paused) {
