@@ -27,7 +27,7 @@
   
   #nodo-motivation img {
     height: auto;
-    width: 8%;
+    width: 5%;
   }
   
   #nodo-motivation p {
@@ -53,7 +53,7 @@
   }
 .list-inline {
     display: inline-block;
-    animation: moviment 15s linear infinite;
+    animation: moviment 20s linear infinite;
 }
 
 .spam-word {
