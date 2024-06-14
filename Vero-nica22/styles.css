@@ -13,22 +13,13 @@ body {
     /*list-style: none;*/
 }
 
-.presentacion{
-    width: 1200px;
+
+main {
+    width: 75rem;
     margin: 0 auto;
 }
 
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.section-hobbies{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-header{
+picture{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)), 
@@ -45,8 +36,6 @@ header{
 
 .presentacion{
     /*position: absolute;*/
-    width: 1200px;
-    margin: 0 auto;
     left: 0;
     right: 0;
     display: flex;
@@ -58,93 +47,86 @@ header{
 
 
 .imagen-1{
-    width: 290px; 
-    /*border-radius: 100px;*/
-    border-radius: 50px;
+    width: 18.125rem; 
+    border-radius: 3.125rem;
     position: relative;
-    left: 860px; /* Mueve horizontalmente */
-    margin: 10px 0 25px 0 ; /*A, D,B I*/
+    left: 53.75rem; /* Mueve horizontalmente */
+    margin: 0.625rem 0 1.56rem 0 ; /*A, D,B I*/
     top: 0; /* Mueve verticalemnte*/
 }
 
 h1{
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     color: palevioletred;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 20px;
+    letter-spacing: 0.15rem;
+    margin: 1.25rem;
 }
 
 .texto-presentacion{
-    font-size: 24px;
-    left: 60px;  /*Mueve horizontalmente*/
-    top: 120px;/*Verticalmente*/
-    width: 680px; /*El ancho */
+    font-size: 1.5rem;
+    left: 3.75rem;  /*Mueve horizontalmente*/
+    top: 7.5rem;/*Verticalmente*/
+    width: 42.5rem; /*El ancho */
     position:   absolute; 
-    padding: 250 250px;
-    margin-bottom: 18px;
+    padding: 250 15.62rem;
+    margin-bottom: 1.125rem;
 }
 
 .nodo{
-    padding: 40px;
+    padding: 2.5rem;
     background-color: #E1E2E6;
     width: 100%;
     min-height: 25vh;
-    margin: 20px 0 0 0;
+    margin: 1.25rem 0 0 0;
 }
 
 h2{
-    font-size: 30px;
+    font-size: 1.875rem; 
     font-weight: 500;
     color: rgb(216, 112, 131);
-    letter-spacing: 1px;
-    margin: 0 0 9px 0;
+    letter-spacing: 0.0625rem; 
+    margin: 0 0 0.5625rem 0; 
     text-align: center;
     text-transform: uppercase;
 }
 .texto-nodo{
-    font-size: 20px;
-    /*left: 190px;  /*Mueve horizontalmente*/
-    /*top: 550px;/*Verticalmente*/
-    /*idth: 680px; /*El ancho */
+    font-size: 1.25rem;
     position: absolute;
-    padding: 250 250px;
-    /*text-justify: center;*/
-    margin: 12px 0 10px 0; /*A, D,B I*/
+    padding: 250 15.625rem;
+    margin: 0.75rem 0 0.625rem 0; /*A, D,B I*/
 
 }
 
 /*Carrusel de metas*/
 .carrousel{
     width: 100%;
-    margin: 50px 0 50px 0; /*A, D,B I*/
+    margin: 3.125rem 0 3.125rem 0; /*A, D,B I*/
 }
 
 h3{
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    margin: 0 0 9px 0;
+    letter-spacing: 0.0625rem;
+    margin: 0 0 0.5625rem 0;
     text-align: center;
     text-transform: uppercase;
     color: rgb(71, 71, 71);
 }
 
 .itemCarrousel p{
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 400;
-    /*text-transform: uppercase;
-    letter-spacing: 1px;*/
     text-align: center;
-    margin: 80px 18px 0 18px; /*A, D,B I*/
+    margin: 5rem 1.125rem 0 1.125rem ; /*A, D,B I*/
     
     
 }
 
 .conteCarrousel{
     width: 40%;
-    height: 200px;
+    height: 12.5rem;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -174,7 +156,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; 
+    padding: 1.25rem; 
 }
 
 #itemCarrousel-1{
@@ -204,23 +186,23 @@ h3{
 }
 
 .listaDeseos {
-    margin: 20px 0 9px 20px; /*A, D,B I*/
+    margin: 1.25rem 0 0.5625rem 1.25rem; /*A, D,B I*/
 }
 
 h4{
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     text-transform: uppercase;
     color: rgb(71, 71, 71);
-    margin: 0 20px 9px 0; /*A, D,B I*/
+    margin: 0 1.25rem 0.5625rem 0; /*A, D,B I*/
 }
 
 .listaDeseos  li {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 200;
-    margin: 0 10px 9px 0; /*A, D,B I*/
-    width: 1200px;
+    margin: 0 0.625rem 0.5625rem 0; /*A, D,B I*/
+    width: 75rem;
     margin: 0 auto;
 }
 
@@ -229,47 +211,47 @@ h4{
     position: relative;
     left: 50%;
     transform: translate(-20%, 0);
-    margin: 20px 0 20px 0; /*A, D,B I*/
+    margin: 1.25rem 0 1.25rem 0; /*A, D,B I*/
 }
 .hobbies{
     display: grid;
-    grid-template-columns: 300px 250px;
-    grid-template-rows: auto 80px;
+    grid-template-columns: 18.75rem 15.625rem;
+    grid-template-rows: auto 5rem;
     gap: 1em;
     width: 100%;
-    margin: 20px 0 20px 0; /*A, D,B I*/
+    margin: 1.25rem 0 1.25rem 0; /*A, D,B I*/
     
 }
 
 h5{
     position: relative;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 200;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
     /*text-align: center;*/
-    left: 200px;
+    left: 12.5rem;
     color: rgb(66, 65, 65);
 
 }
 
 .hobbies h{
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 200;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin: 9px;
+    letter-spacing: 0.125rem;
+    margin: 0.5625rem;
     text-align: center;
 }
 
 .hobbies p{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 9px;
+    letter-spacing: 0.0625rem;
+    margin: 0.5625rem;
     text-align: center;
 }
 
@@ -278,7 +260,7 @@ h5{
     
 }
 .hobbies div:hover {
-    border: 1px solid plum;
+    border: 0.0625rem solid plum;
 }
 
 
@@ -286,14 +268,14 @@ h5{
     position: relative;
     width: 100%;
     background-color: blanchedalmond;
-    min-height: 100px;
-    padding: 20px 50px;
+    min-height: 6.25rem;
+    padding: 1.25rem 3.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 65px 0 0 0;
-    left: 60px;
+    margin: 4.0625rem 0 0 0;
+    left: 3.75rem;
     
 }
 
@@ -307,11 +289,11 @@ h5{
 
 .icon-elem{
     list-style: none;
-    margin: 0 5px;
+    margin: 0 0.3125rem;
 }
 
 .icon{
-    font-size: 30px;
+    font-size: 1.875rem;
     display: inline-block;
 }
 
