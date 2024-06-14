@@ -35,7 +35,6 @@ picture{
 }
 
 .presentacion{
-    /*position: absolute;*/
     left: 0;
     right: 0;
     display: flex;
@@ -124,7 +123,7 @@ h3{
     
 }
 
-.conteCarrousel{
+.conte-carrousel{
     width: 40%;
     height: 12.5rem;
     overflow: hidden;
@@ -175,7 +174,7 @@ h3{
     background-color: rgb(255, 225, 172);
 }
 
-.conteCarrouselController{
+.conte-carrouselController{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -236,7 +235,7 @@ h5{
 
 }
 
-.hobbies h{
+.hobbies h6{
     font-size: 0.9375rem;
     font-weight: 200;
     text-transform: uppercase;
