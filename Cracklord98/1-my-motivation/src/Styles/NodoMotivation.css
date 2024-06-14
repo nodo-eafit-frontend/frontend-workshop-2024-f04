@@ -30,6 +30,10 @@
   width: 5%;
 }
 
+#nodo-motivation h2 {
+  font-size: 2.5rem;
+}
+
 #nodo-motivation p {
   color: var(--color-textp);
   font-size: 1.3rem;
