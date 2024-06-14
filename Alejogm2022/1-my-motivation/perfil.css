@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient(90deg, #1f7daf 0%, #85D8CE 100%);
+    background: linear-gradient(90deg, #5ab1e0 0%, #b3f8f0 100%);
     font-family: "Raleway", sans-serif;
     text-align: center;
-    margin: 0;
+    margin: 10%;
     padding: 0;
 }
 
@@ -29,7 +29,7 @@ p, ul {
 }
 
 .container {
-    padding: 20px;
+    padding: 10px;
 }
 
 @keyframes ilustrationAnimate {
@@ -59,40 +59,30 @@ footer p {
 }
 
 .carrusel-container {
-
+    text-align: center;
     width: 100%;
     overflow: hidden;
-    position: relative;
+    position: relative;  
 }
 
 .carrusel {
-
+    text-align:center;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
 .card {
-
-    flex: 0 0 20%;
-    margin: 150px;
+   
+    flex: 0 0 10%;
+    margin: 10px;
     padding: 20px;
-    background-color: #9feccc;
+    background-color: #63ae8e;
+    box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: left; 
     font-weight: bold;
 
-}
-
-.card ul {
-    list-style-type: disc; 
-    margin-left: 20px; 
-}
-
-.card ul li {
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    color: #666;
 }
 
 .grid-container {
