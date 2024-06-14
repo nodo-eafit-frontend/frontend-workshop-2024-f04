@@ -1,3 +1,7 @@
+*{
+    background-color: bisque;
+}
+
 #titulo{
     color: darkolivegreen;
     background-color: rgb(179, 179, 179);
@@ -66,8 +70,12 @@ th{
     text-shadow: 3px 5px 5px grey;
     font-size: 25px;
     font-family: "Bebas Neue";
-    margin-left: 300px;
-    background-color: rgb(179, 179, 179);
-    margin: 15px 20px 25px 30px;
+    margin-left: 116px;
+}
 
+.subtitulo3{
+    color: darkolivegreen;
+    text-shadow: 3px 5px 5px grey;
+    font-size: 25px;
+    font-family: "Bebas Neue";
 }
