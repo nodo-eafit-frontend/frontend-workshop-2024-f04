@@ -1,18 +1,25 @@
-header {
-    text-align: center;
-    padding: 1px;
-    background: hsla(320, 70%, 71%, 0.561);
-    color: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Georgia;
+    font-family: Georgia, serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
     background-color: #eee2e2;
+    color: #333;
 }
 
+
+header {
+    text-align: center;
+    padding: 10px;
+    background: hsla(320, 70%, 71%, 0.561);
+    color: #fff;
+}
 
 
 section {
@@ -23,51 +30,75 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
 }
 
-.img {
+
+.imgPerfil {
     display: block;
-    margin: 0 auto;
-    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30%;
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
+
 h2 {
-    color: #000000;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 
 p {
-    color: #000000;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
 
 .hobbies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* O utiliza justify-content: center para centrarlas */
+    gap: 20px;
+    text-align: center;
 }
+
+.hobbies h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+}
+
+
 
 .hobby {
     text-align: center;
 }
 
-.hobby img {
-    width: 100%;
-    height: auto;
-
-    border-radius: 10px;
+img {
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
+
 
 footer {
     text-align: center;
-    padding: 1px;
+    padding: 10px;
     background: #e981c68f;
     color: #fff;
-    
 }
 
+
 footer a {
-    color: #4d0a50;
+    color: #00817b;
     text-decoration: none;
 }
