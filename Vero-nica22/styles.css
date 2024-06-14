@@ -115,7 +115,7 @@ h3{
     color: rgb(71, 71, 71);
 }
 
-.itemCarrousel p{
+.item-carrousel p{
     font-size: 1.625rem;
     font-weight: 400;
     text-align: center;
@@ -131,7 +131,7 @@ h3{
     margin: 0 auto;
 }
 
-.itemCarrousel{
+.item-carrousel{
     position: relative;
     width: 100%;
     height: 100%;
@@ -140,12 +140,12 @@ h3{
     align-items: center;
 }
 
-.itemCarrouselTarjeta{
+.item-carrousel-tarjeta{
     width: 100%;
     height: 100%;
 }
 
-.itemCarrouselArrows{
+.item-carrousel-arrows{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -159,19 +159,19 @@ h3{
     padding: 1.25rem; 
 }
 
-#itemCarrousel-1{
+#item-carrousel-1{
     background-color: rgb(153, 206, 244) ;
 }
 
-#itemCarrousel-2{
+#item-carrousel-2{
     background-color: plum;
 }
 
-#itemCarrousel-3{
+#item-carrousel-3{
     background-color: pink;
 }
 
-#itemCarrousel-4{
+#item-carrousel-4{
     background-color: rgb(255, 225, 172);
 }
 
@@ -181,7 +181,7 @@ h3{
     justify-content: space-evenly;
 }
 
-.itemCarrouselArrows > a > i{
+.item-carrousel-arrows > a > i{
     color: white;
 }
 
