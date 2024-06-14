@@ -144,24 +144,35 @@ footer a:hover {
 }
 
 
-.whatIknow-learn .card ul {
+.whatIknow-learn .card {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.whatIknow-learn .card ul .skill {
+.whatIknow-learn .card .skill {
     margin-bottom: 10px;
 }
 
 .whatIknow-learn .card ul .skill img {
     width: 150px;
-    height: auto; 
+    height: auto;
+}
+
+.skills-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill {
+    margin: 0 10px; 
 }
 
 .MyFreeTime .grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -183,8 +194,22 @@ footer a:hover {
 }
 
 .hobby img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 5px;
+}
+
+.hobby-s {
+    display: flex;
+    align-items: center;
+}
+
+.hobby-s p {
+    margin-right: 10px; 
+}
+
+.hobby-s img {
+    max-width: 22%;
+    margin: 0 10px; 
 }
 
 h3 {
