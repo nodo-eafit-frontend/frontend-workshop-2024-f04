@@ -4,85 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>my-motivation</title>
 </head>
 <body>
+    
+    
+    
     <div class="container1">
-        <div class="text1">
+        <header>
             <h1>Hola! Soy TakUHG</h1>
             <p>Tengo 15 años (casi 16), actualmente curso el grado 10mo en el colegio Bethlemitas Bello.</p>
-        </div>
-        <div class="image1">
-            <img src="https://i.pinimg.com/736x/eb/a1/49/eba149d7406a41cbd1e220313980fb57.jpg" alt="Descripción de la imagen">
-        </div>
+        </header>
+        <main>
+            <div class="image1">
+                <img src="https://i.pinimg.com/736x/eb/a1/49/eba149d7406a41cbd1e220313980fb57.jpg" alt="Descripción de la imagen">
+            </div>
+        </main>
     </div>
     
+    
+
+
 
     <div class="parte2">
     <h2>¿Qué me mueve en nodo?</h2>
     <p>Me motiva el aprender y mi curiosidad por constante conocimiento, cada nuevo reto es para mi un desafio emocionante el cual debo dominar desde mi perspectiva creativa y mi manera de ver las cosas un poco diferente. <br><br> La oportunidad que se me ofreció para ingresar a nodo a partir de una beca fue una de las principales razones que me llevaron a llegar a nodo.</p>
     </div>
 
-    <br><br><br>
 
     <h2>Metas</h2>
-    <div class="container2">
+    <article class="container2">
         <div class="slider">
             <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2" checked>
-            <input type="radio" name="slider" id="slide3" checked>
-            
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+           
             <div class="buttons">
                 <label for="slide1"></label>
                 <label for="slide2"></label>
                 <label for="slide3"></label>
             </div>
-
-            <div class="content">
-                <div class="firstslide"><h3>HTML, CSS Y JavaScript</h3></div>
-                <div class="secondslide"><h3>Front-end y Back-end</h3></div>
-                <div class="thirdslide"><h3>Frameworks y Bibliotecas</h3></div>
-            </div>
-        </div>
-    </div>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <h2>Lista de deseos</h2>
-    <br>
-
-    <div class="container3">
-        <div class="card">
-            <figure>
-                <img src="https://aula.nodoeafit.com//contenido/modulo_conferencias/img/Procesamiento-de-datos_1300x872.jpg">
-            </figure>
-            <div class="contenido">
-                <h3>Procesamiento de datos</h3>
-                <p>Descubre las habilidades fundamentales que necesitas para conocer el mundo del procesamiento de datos. Los módulos especializados que conforman el curso son: Programación con Python; Estadística básica con Python; Bases de datos relacionales; y Limpieza y transformación de datos en Python.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <figure>
-                <img src="https://img04.en25.com/EloquaImages/clients/UniversidadEAFIT/%7beeba4700-129b-4fee-ab30-067dc36abcbe%7d_Saberes-monte.jpg">
-            </figure>
-            <div class="contenido">
-                <h3>Exposición: "Saberes de Monte."</h3>
-                <p> Viaje al corazón de un territorio y su gente, biblioteca Universidad EAFIT</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <figure>
-                <img src="https://aula.nodoeafit.com/contenido/modulo_conferencias/img/Exploraci%C3%B3n-de-datos_1300x872.jpg">
-            </figure>
-            <div class="contenido">
-                <h3>Exploracón de datos"</h3>
-                <p>Los datos son un activo valioso para cualquier organización. Por eso, en este curso aprenderás sobre el inagotable mundo de la exploración y la visualización de datos: ¿qué es, por qué es importante, qué herramientas existen en el mercado para esto y cuáles son los beneficios de procesar, interpretar y presentar datos adecuadamente?</p>
-            </div>
-        </div>
     
-    </div>
+            <div class="content">
+                <section class="firstslide"><span>HTML, CSS Y JavaScript</span></section>
+                <section class="secondslide"><span>Front-end y Back-end</span></section>
+                <section class="thirdslide"><span>Frameworks y Bibliotecas</span></section>
+            </div>
+        </div>
+    </article>
+    
+
+    
+
+    <article class="container3">
+        <header>
+            <h2>Lista de deseos</h2>
+        </header>
+        <ul>
+            <li class="card">
+                <img src="https://aula.nodoeafit.com//contenido/modulo_conferencias/img/Procesamiento-de-datos_1300x872.jpg" alt="Procesamiento de datos">
+                <div class="contenido">
+                    <h3>Procesamiento de datos</h3>
+                    <p>Descubre las habilidades fundamentales que necesitas para conocer el mundo del procesamiento de datos. Los módulos especializados que conforman el curso son: Programación con Python; Estadística básica con Python; Bases de datos relacionales; y Limpieza y transformación de datos en Python.</p>
+                </div>
+            </li>
+            <li class="card">
+                <img src="https://img04.en25.com/EloquaImages/clients/UniversidadEAFIT/%7beeba4700-129b-4fee-ab30-067dc36abcbe%7d_Saberes-monte.jpg" alt="Exposición: Saberes de Monte">
+                <div class="contenido">
+                    <h3>Exposición: "Saberes de Monte."</h3>
+                    <p>Viaje al corazón de un territorio y su gente, biblioteca Universidad EAFIT</p>
+                </div>
+            </li>
+            <li class="card">
+                <img src="https://aula.nodoeafit.com/contenido/modulo_conferencias/img/Exploraci%C3%B3n-de-datos_1300x872.jpg" alt="Exploración de datos">
+                <div class="contenido">
+                    <h3>Exploración de datos</h3>
+                    <p>Los datos son un activo valioso para cualquier organización. Por eso, en este curso aprenderás sobre el inagotable mundo de la exploración y la visualización de datos: ¿qué es, por qué es importante, qué herramientas existen en el mercado para esto y cuáles son los beneficios de procesar, interpretar y presentar datos adecuadamente?</p>
+                </div>
+            </li>
+        </ul>
+    </article>
+
+    
+
+    
+<h2>Mis hobbies</h2>
+
+<div class="container4">
+    <article class="parte">
+        <img src="https://i.pinimg.com/564x/53/67/34/536734e21b1326f269d3c6bbed8ee072.jpg" alt="Imagen 1">
+        <div class="text-overlay">Videojuegos <br> "La pasión por los videojuegos nos impulsa a desafiar los límites y a innovar constantemente. Cada historia es el resultado de ese impulso creativo."</div>
+    </article>
+    <article class="parte">
+        <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2022/03/aesthetic-pictures-photographer-rainbow.jpg" alt="Imagen 2">
+        <div class="text-overlay">Fotografía <br> "A través de la lente de una cámara, podemos encontrar la belleza en los detalles más simples de la vida."</div>
+    </article>
+    <article class="parte">
+        <img src="https://i.pinimg.com/564x/93/cb/76/93cb761e4300d10830aba3e15bad7050.jpg" alt="Imagen 3">
+        <div class="text-overlay">Pintura <br> "La pintura es una forma de arte que busca la eternidad en el cambio."</div>
+    </article>
+</div>
+
+
+
+
+
+    <footer>
+        <p>© 2024 TakUHG. Todos los derechos reservados.</p>
+        <p>Encuéntrame en <a href="https://github.com/TakUHG">GitHub</a>.</p>
+    </footer>
 
 </body>
 </html>

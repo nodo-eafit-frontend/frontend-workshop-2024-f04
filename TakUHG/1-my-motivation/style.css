@@ -1,42 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 h1 {
-    color: blueviolet;
+    color: rgb(177, 131, 219);
 }
 
 body {
     background: linear-gradient(rgb(59, 13, 73), rgb(188, 169, 201), rgb(59, 13, 73));
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 h3 {
     font-size: 25px;
-    color: rgb(9, 129, 63);
+    color: rgb(46, 177, 166);
 }
+
+h2 {
+    color: #20024e;
+}
+
+
 
 
 .container1 {
     display: flex;
-    margin-bottom: 30px;
+    flex-direction: row;
+    margin-bottom: 70px;
     margin-right: 10px;
+    margin-top: 70px;
 }
 
-.text1 {
+header {
     flex: 1;
-    padding: px;
-    margin: 8px;
+    padding: 0 8px;
+    margin-top: 35px;
 }
 
-.image1 {
+main {
     overflow: hidden;
+    margin-top: 30px;
 }
 
 .image1 img {
     width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
+
+
+
 
 
 .parte2 {
     flex: 1;
     padding: 10px;
     margin-right: 15px;
+    margin-bottom: 90px;
 }
 
 
@@ -44,11 +67,19 @@ h3 {
 
 
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container2 {
     position: relative;
     width: 100%;
     height: auto;
-    background-image: none;
+    margin-bottom: 160px;
+    margin-top: 20px;
 }
 
 .slider input {
@@ -57,11 +88,11 @@ h3 {
 }
 
 .buttons {
-    position: auto;
+    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 50px;
+    bottom: 20px;
     gap: 5px;
 }
 
@@ -76,18 +107,15 @@ h3 {
     transition: 300ms ease-in-out;
 }
 
-
-
 .buttons label:hover {
-    scale: 1.2;
-    opacity: 1
+    transform: scale(1.2);
+    opacity: 1;
 }
 
-.slider input:nth-child(1):checked~.buttons label:nth-child(1),
-.slider input:nth-child(2):checked~.buttons label:nth-child(2),
-.slider input:nth-child(3):checked~.buttons label:nth-child(3) {
+.slider input:nth-of-type(1):checked ~ .buttons label:nth-of-type(1),
+.slider input:nth-of-type(2):checked ~ .buttons label:nth-of-type(2),
+.slider input:nth-of-type(3):checked ~ .buttons label:nth-of-type(3) {
     opacity: 1;
-    scroll-margin: 1.2;
     width: 33px;
 }
 
@@ -103,49 +131,47 @@ h3 {
 .thirdslide {
     position: relative;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .firstslide {
-    background-image: url(https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/original);
+    background-image: url('https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/original');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .secondslide {
-    background-image: url(https://i.ytimg.com/vi/PRSyHTajxPk/maxresdefault.jpg);
+    background-image: url('https://i.ytimg.com/vi/PRSyHTajxPk/maxresdefault.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .thirdslide {
-    background-image: url(https://blog.desafiolatam.com/wp-content/uploads/2023/05/Top-5-bibliotecas-React-para-desarrolladores-1024x682.jpeg);
+    background-image: url('https://blog.desafiolatam.com/wp-content/uploads/2023/05/Top-5-bibliotecas-React-para-desarrolladores-1024x682.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.slider input:nth-child(1):checked~.content {
+.slider input:nth-of-type(1):checked ~ .content {
     left: 0;
 }
 
-.slider input:nth-child(2):checked~.content {
+.slider input:nth-of-type(2):checked ~ .content {
     left: -100vw;
 }
 
-.slider input:nth-child(3):checked~.content {
+.slider input:nth-of-type(3):checked ~ .content {
     left: -200vw;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 
@@ -154,11 +180,27 @@ h3 {
 .container3 {
     width: 100%;
     display: flex;
-    max-width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 130px;
+    margin-top: 30px;
 }
 
-.card {
-    width: 100%;
+.container3 header {
+    margin-bottom: 20px;
+}
+
+.container3 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container3 li.card {
+    width: calc(33.333% - 20px);
     margin: 10px;
     border-radius: 6px;
     overflow: hidden;
@@ -168,5 +210,95 @@ h3 {
 }
 
 .card img {
-    height: 500px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contenido {
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.parte {
+    position: relative;
+    background-color: rgba(22, 5, 49, 0.562);
+    padding: 22px;
+    border: rgb(100, 79, 53) 1px solid;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.parte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.parte:hover .text-overlay {
+    opacity: 1;
+}
+
+@media (min-width: 600px) {
+    .container4 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .container4 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #a88eb9;
+    padding: 20px;
+    text-align: center;
 }
