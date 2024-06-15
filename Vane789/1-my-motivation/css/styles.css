@@ -1,33 +1,46 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    /* Colores principales */
+    --colorPrimary: rgba(12, 12, 13, 0.3);
+    
+    /*Colore bordes */
+    --border: #292929;
+
+    /* Definición de degradado */
+    --gradientPrimary: linear-gradient(to bottom, #000, #1A1D54);
+    --gradientSecondary: linear-gradient(to right, #ff00ff, #00ffff);
+
+    --colorComplementaryPrimary: #FFFFFF;
+    --colorComplementarySecondary: #000000;
+
+    --font: "Poppins", sans-serif;
 }
 
 body{
-    font-family: "Poppins";
-    background: linear-gradient(to bottom, #000, #1A1D54);
-    color: #fff;
+    font-family: var(--font);
+    background: var(--gradientPrimary);
+    color: var( --colorComplementaryPrimary);
     width: 100%;
 }
 
-.logo-nav img {
+.navbar img {
     width: 12rem;
     margin-top: 0.3rem;
 }
 
 .navbar {
     position: relative;
-    background: #000;
+    background: var(--colorComplementarySecondary);
     border-radius: 50px;
     display: flex;
     align-items: center;
     margin: 20px auto;
     width: 50%;
     justify-content: space-evenly;
+    display: flex;
+    align-items: center;
 }
 
 .navbar::before {
@@ -38,13 +51,8 @@ body{
     right: -2px;
     bottom: -2px;
     border-radius: 50px;
-    background: linear-gradient(to right, #ff00ff, #00ffff);
+    background: var(--gradientSecondary);
     z-index: -1;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
 }
 
 .navbar-menu {
@@ -63,8 +71,8 @@ body{
 }
 
 .navbar-menu a:hover {
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: var(--colorComplementaryPrimary);
+    border-bottom: 1px solid var(--colorComplementaryPrimary);
 }
 
 #quien-soy{
@@ -85,7 +93,7 @@ body{
     margin-right: 60px;
 }
 
-picture img {
+#quien-soy img {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
@@ -106,12 +114,12 @@ picture img {
 
 #motivacion{
     max-width: 50%;
-    background-color: rgba(12, 12, 13, 0.3);
+    background-color: var( --colorPrimary);
     margin: 0 auto;
     margin-top: 50px;
     padding: 40px;
     border-radius: 20px;
-    border: 2px solid #292929;
+    border: 2px solid var(--border);
 }
 
 #motivacion h2 {
@@ -120,7 +128,7 @@ picture img {
 }
 
 #motivacion h3, p{
-    color: #fff;
+    color: var(--colorComplementaryPrimary);
     padding: 5px;
 }
 
@@ -150,14 +158,13 @@ picture img {
 
 .card > ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .content{
     border-radius: 0.5rem;
-    background-color: rgba(12, 12, 13, 0.3);
-    border: 2px solid #292929;
-    box-shadow: 2px 2px 5px 2px var(--shadow-color);
+    background-color: var(--colorPrimary);
+    border: 2px solid var(--border);
     width: 8rem;
     display: flex;
     flex-direction: column;
@@ -208,7 +215,7 @@ picture img {
 .hobby p{
     font-size: 1rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--colorComplementaryPrimary);
 }
 
 footer{
@@ -227,7 +234,8 @@ footer > section {
     margin: 0 auto;
 }
 
-.contacto img{
+i{
     margin-top: 5px;
-    width: 4rem;
+    font-size: 3rem;
+    color: var(--colorComplementaryPrimary);
 }
