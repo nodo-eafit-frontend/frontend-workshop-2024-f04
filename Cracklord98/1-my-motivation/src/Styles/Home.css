@@ -29,14 +29,12 @@
     height: auto;
 }
 
-
 #intro-parraf {
     font-family: 'MiFuente', sans-serif; 
     font-size: 1.4rem; 
-    color: var(--color-text-p);
+    color: var(--color-textp);
     font-weight:500;
   }
-
 
 #home .row {
   height: 100%; 
