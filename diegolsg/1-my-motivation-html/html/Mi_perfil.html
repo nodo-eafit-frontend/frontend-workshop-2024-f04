@@ -8,22 +8,21 @@
   </head>
   <body>
     <nav class="dropdown">
-      <button>menu</button>
+      <span>menu</span>
       <menu class="dropdown-content">
+        <li>
         <a href="#who-am-i">¡Quién Soy!</a>
         <a href="#my-motivation">¡Qué me Motiva!</a>
         <a href="#my-learning">Mis Aprendizajes</a>
         <a href="#my-hobies">Hobbies</a>
+      </li>
       </menu>
     </nav>
-
     <main>
-      <br />
-      <br />
-      <h1>¡Quién soy!</h1>
-      <br />
-      <h2>¡Hola!... soy Diego León Suaza Grajales</h2>
       <article id="who-am-i">
+        <section>
+        <h1>¡Quién soy!</h1>
+        <h2>¡Hola!... soy Diego León Suaza Grajales</h2>
         <p>
           Soy ingeniero electrónico apasionado y dedicado a obtener nuevos
           conocimientos con el fin de lograr grandes desarrollos y oportunidades
@@ -34,6 +33,7 @@
           juegos, Además me cosidero una persona muy familiar que difruta
           compartir momentos que me fortalecen emosionalmente.
         </p>
+      </section>
         <section class="tabs">
           <div class="tab-container">
             <div id="tab2" class="tab">
@@ -59,11 +59,9 @@
           </div>
         </section>
       </article>
-      <br />
-      <br />
-      <article id="my-motivation"></article>
+  
+      <article id="my-motivation">
       <h2>¡Qué me motiva!</h2>
-      <br />
       <dl>
         <dt>Motivación en Nodo:</dt>
         <dd>
@@ -82,11 +80,9 @@
         <dd>Horarios accesibles que encajan con jornada laboral</dd>
         <dd>Deseos de aprendizaje</dd>
       </dl>
-      <br />
-      <br />
+    </article>
       <article id="my-learning">
         <h2>Mis aprendizajes</h2>
-        <br />
         <table>
           <tr>
             <th>frontend</th>
@@ -192,11 +188,7 @@
                 </li>
                 <li>
                   <section class="card">
-                    <img
-                      src="../utils/image/typescript.png"
-                      alt="typescript Logo"
-                      target="_blank"
-                    />
+                    <img src="../utils/image/typescript.png" alt="typescript Logo" target="_blank"/>
                     <footer class="experience">
                       <span>
                         <i class="material-symbols-outlined"></i>
@@ -341,45 +333,19 @@
       </article>
 
       <article id="my-hobies">
-        <br />
         <h2>Hobies</h2>
-        <br />
         <section class="container-hobies">
-         
           <img class="mySlides" src="../utils/image/ajedrez.jpg" />
-          <p class="pt-text"></p>
           <img class="mySlides" src="../utils/image/futbol.jpg" />
-          <p class="pt-text"></p>
-          <img class="mySlides" src="../utils/image/lectura.jpg" />
-          <p class="pt-text"></p>
+          <img class="mySlides" src="../utils/image/lectura.jpg" /> 
           <img class="mySlides" src="../utils/image/pasear.jpg" />
-          <p class="pt-text"></p>
           <img class="mySlides" src="../utils/image/video_juegos.jpg" />
           <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-          <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            
-            function plusDivs(n) {
-              showDivs(slideIndex += n);
-            }
-            
-            function showDivs(n) {
-              var i;
-              var x = document.getElementsByClassName("mySlides");
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              x[slideIndex-1].style.display = "block";  
-            }
-            </script>
+          <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>    
       </article>
+
     </main>
-    <footer>
-      <section>
+    <footer>   
         <p>© Realizado por Diego León Suaza Grajales</p>
         <ul id="contact-me">
           <li>
@@ -408,7 +374,25 @@
             </a>
           </li>
         </ul>
-      </section>
     </footer>
   </body>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
 </html>

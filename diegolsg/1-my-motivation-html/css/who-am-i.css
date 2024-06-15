@@ -1,89 +1,91 @@
 #who-am-i {
-	align-items: center;
-	text-align: end;
-    display: flex;
+  align-items: center;
+  text-align: end;
+  display: flex;
 }
 #who-am-i :first-child {
-	text-align:justify;
+  text-align: justify;
 }
 
 #who-am-i picture {
-	border-radius: 10%;
-	display: inline-block;
-	flex-shrink: 0;
-	height: 18rem;
-	margin-left: 3rem;
-	overflow: hidden;
-	position: relative;
-	width: 20rem;
+  border-radius: 10%;
+  display: inline-block;
+  flex-shrink: 0;
+  height: 18rem;
+  margin-left: 3rem;
+  overflow: hidden;
+  position: relative;
+  width: 20rem;
 }
 
 #who-am-i picture > img {
-	height: 100%;
+  height: 100%;
   width: 100%;
-	
 }
-
 
 .tab-content {
-    display: none;
-  }
-  
-  .tab:target .tab-content, .tab:last-of-type .tab-content {
-    display: block;
-  }
-  
-  .tab:target ~ .tab:last-of-type .tab-content {
-    display: none;
-  }
-
-  
-  
-
-  .tabs * {
-    box-sizing: border-box;
-  }
-  .tab-container {
-    position: relative;
-    padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
-  } 
-  #tab1>a { --tabs-position: 0; }
-  #tab2>a { --tabs-position: 1; }
-  
-  
-  .tab>a {
-    text-align: center;
-    position: absolute;
-    width: calc(var(--tabs-width));
-    height: calc(var(--tabs-height) + var(--tabs-border-size)); 
-    top: 0;
-    left: calc(var(--tabs-width) * var(--tabs-position)); /* posición de cada pestaña */
+  display: none;
 }
-.tabs { 
-    padding: 10px;
-    color: var(--tabs-text-color);
-  }
-  .tab-content {
-    background-color: var(--tabs-lite-color); 
-    padding: 20px;
-    border: var(--tabs-border-size) solid var(--tabs-border-color);
-    border-radius: 0 20px 20px 20px;
-    position: relative;
-    z-index: 100;
-    width: 470px;
-  }
-  .tab>a {
-    background-color: var(--tabs-dark-color); 
-    padding: 10px;
-    border: var(--tabs-border-size) solid var(--tabs-border-color);
-    border-radius: 20px 20px 0 0;
-    border-bottom: 0;
-  }
-  .tab:target>a, .tab:last-of-type>a {
-    background-color: var(--tabs-lite-color); 
-    z-index: 300;
-  }
-  .tab:target ~ .tab:last-of-type>a {
-    background-color: var(--tabs-dark-color); 
-    z-index: 0; 
-  }
+
+.tab:target .tab-content,
+.tab:last-of-type .tab-content {
+  display: block;
+}
+
+.tab:target ~ .tab:last-of-type .tab-content {
+  display: none;
+}
+
+.tabs * {
+  box-sizing: border-box;
+}
+.tab-container {
+  position: relative;
+  padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
+}
+#tab1 > a {
+  --tabs-position: 0;
+}
+#tab2 > a {
+  --tabs-position: 1;
+}
+
+.tab > a {
+  text-align: center;
+  position: absolute;
+  width: calc(var(--tabs-width));
+  height: calc(var(--tabs-height) + var(--tabs-border-size));
+  top: 0;
+  left: calc(
+    var(--tabs-width) * var(--tabs-position)
+  ); /* posición de cada pestaña */
+}
+.tabs {
+  padding: 10px;
+  color: var(--tabs-text-color);
+}
+.tab-content {
+  background-color: var(--tabs-lite-color);
+  padding: 20px;
+  border: var(--tabs-border-size) solid var(--tabs-border-color);
+  border-radius: 0 20px 20px 20px;
+  position: relative;
+  z-index: 100;
+  width: 470px;
+}
+.tab > a {
+  background-color: var(--tabs-dark-color);
+  padding: 10px;
+  border: var(--tabs-border-size) solid var(--tabs-border-color);
+  border-radius: 20px 20px 0 0;
+  border-bottom: 0;
+}
+.tab:target > a,
+.tab:last-of-type > a {
+  background-color: var(--tabs-lite-color);
+  z-index: 300;
+}
+.tab:target ~ .tab:last-of-type > a {
+  background-color: var(--tabs-dark-color);
+  z-index: 0;
+}
