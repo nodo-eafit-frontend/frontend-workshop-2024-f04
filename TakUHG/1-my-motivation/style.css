@@ -187,6 +187,25 @@ html {
     display: none;
   }
 
+  h2 {
+    font-size: 1.5em; /* Tamaño de fuente para h2 */
+    margin: 0.83em 0; /* Márgenes para h2 */
+}
+
+h3 {
+    font-size: 1.17em; /* Tamaño de fuente para h3 */
+    margin: 1em 0; /* Márgenes para h3 */
+}
+
+p {
+    margin: 1em 0; /* Márgenes para párrafos */
+}
+
+span {
+    font-size: inherit; /* Tamaño de fuente igual al tamaño del padre */
+    line-height: inherit; /* Altura de línea igual a la del padre */
+}
+
 
 
 
