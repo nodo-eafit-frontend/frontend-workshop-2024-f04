@@ -1,131 +1,81 @@
+
+
 body{
-    font-family: 'Lucida Sans','Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:10px;
-    padding: 50px;
+    margin:40px;
+    padding: 0px;
     align-content: center;
+    font-family:monospace;
+    background-color: rgba(255, 252, 247, 0.758);
 }
-article.padre{
-    background-image: url("img1.jpg");border-radius: 2%;
-    font-family: "Dancing Script";
-    font-optical-sizing: auto;
-    font-weight: 542;
-    font-style: normal;
-    font-size: 300%;
-    text-align: center;
-}
-#second{
-    width: 300px;
-    border-radius: 30%;
-    border-top-style:groove;
-}
-p{
-    text-align: center;
+.main{
+    margin: 0 auto;
+    width: 60vw;
+    height: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
 }
 h1{
-    color: rgba(95, 158, 160, 0.703);
-    margin: 5px;
-    text-align: center;
+    font-size: 50;
+}
+span{
+    color: rgb(46, 137, 137);
+}
+.main img{
+    width: 80%;
+    border-radius: 30%;
 }
 h2{
-    color:rgb(236, 241, 241);
-    background-color:rgb(69, 124, 132); border-radius: 30px;
-    margin: 30px;
-    text-align: center;
-    text-transform:lowercase;
-    }
-ol{
-    font-size: 20px ;
-    font-style: oblique;
-    background-image: url(hobbies/fondo.jpg); border-radius: 30px;
-    text-align:left;
-    color: #efeae7;
-    margin: 50px 250px;
+    background-color:rgba(46, 137, 137, 0.555);
+    margin-bottom: auto;
+    border-radius: 10px;
+   text-align: center;
+   width:80%; margin:0 auto;
 }
-.Content{ 
-    border: 2px solid;
-    flex-shrink: 1;
-    margin: 10px 60px;
-    justify-content: center;
-    border-radius: 5px;
-    height: 70vh;
-    background-color:#efeae7a9;
-    overflow:initial;
-
-}
-.cards{
-    display: flex;
-    margin: 50px;
-    width: 200px;
-    image-orientation:from-image;
-    border: 30px; 
-    padding: 20px 15px;
-    text-align: justify;
-    
-}
-.card{
-    flex: 30px;
-    margin: 40px;
-    border: 5px solid black;
-    display: flex;
-    flex-direction: column;
-    cursor: default;
-
-    }
-h3{
-    font-size: 30px;
-    text-align:inherit;
-    color: rgb(69, 124, 132);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-h4{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    background-color: rgb(69, 124, 132); border-radius: 30px;
-    text-align:center;
-    color-scheme:initial;
-    color: #efeae7;
-
-}
-.imagen-1{
-    width: 200px;
+.reasons{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 200vw;
     align-items: center;
-    height: 50%;
 }
-.imagen2{
-    width: 200px;
-    height: min-content;
-    align-items:self-end;
-    margin-inline-start: auto;
+.reasons img{
+width: 100%;
+padding: 50%;
+}
+.reasonsinfo1{
+    grid-auto-flow: column;
+    font-size: 20px;
+}
+.reasonsinfo1 ul {
+    padding: 0;
+}
+.reasonsinfo1 ul li {
+    width: 100%; 
+    margin-bottom: 10px;
+
 }
 
-a{
+p{
     font-size: 150%;
 }
-.container0{
-    align-items:normal;
-    display:flex;
-    text-align:left;
-}
-h5{
-    font-size: 200%;
-    text-align:center;
-    color:rgb(69, 124, 132);
-    font-family: 'Times New Roman', Times, serif;
-}
-.hobbies{
-    width: 200px;
-    border-radius: 50px;
-    margin: 40px;
-}
-h6{
-  font-family: "Dancing Script";
-  font-optical-sizing: auto;
-  font-weight: 542;
-  font-style: normal;
-  font-size: 300%;
-  text-align: center;
-  color: #efeae7;
-  background-color:rgba(76, 127, 135, 0.543);
-  background-size: 20cm; border-radius: 50px;
+h3,h4{
+    font-size:30px;
+    color: cadetblue;
+    text-align: center;
+    margin: 1cm;
 
 }
+ol{
+    background-image: url(imagenes/fondo.jpg);
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: auto;
+    border-radius: 10px;
+    width:80%; margin:0 auto;
+    list-style-type: none;
+    font-size: 200%;
+
+}
+
+
+

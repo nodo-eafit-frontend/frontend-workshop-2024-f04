@@ -1,0 +1,31 @@
+.cards-section{
+    display: flex;
+    margin: 2cm;
+    text-align: center;
+    
+    
+    
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border: 1px solid rgba(46, 137, 137, 0.555);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    padding: 30px;
+}
+
+
+.card-img {
+    width: 20px;
+    height: 50%;
+    
+    
+}
+    
