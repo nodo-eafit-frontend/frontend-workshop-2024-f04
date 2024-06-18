@@ -1,0 +1,206 @@
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+@font-face {
+    font-family: "letra-portada";
+    src: url(./assets/linkin-park-extrabold.ttf);
+}
+
+@font-face {
+    font-family: "letra-secundaria";
+    src: url(./assets/metropolis-semibold.otf);
+}
+
+@font-face {
+    font-family: "letra-principal";
+    src: url(./assets/saonara.otf);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #948b8b;
+}
+
+.container {
+    background: linear-gradient(35deg, rgb(10, 10, 10) 0%, rgb(29, 31, 29) 34%, rgba(55, 57, 54, 0.9904412449) 60%, rgb(83, 87, 82) 74%, rgb(140, 147, 140) 88%);
+    height: 800px;
+    width: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+header {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#left-top,
+#left-bot,
+#right-top,
+#right-bot {
+    position: relative;
+    text-align: left;
+    padding: 5px;
+    width: 30%;
+}
+
+#left-bot,
+#right-top,
+#right-left,
+#bottom {
+    z-index: 10;
+    position: relative;
+}
+
+#right-top,
+#right-bot {
+    left: 68%;
+    bottom: 80%;
+    direction: rtl;
+    text-align: justify;
+}
+
+#left-bot {
+    bottom: 10%;
+}
+
+#bryan-cranston {
+    z-index: 5;
+    position: fixed;
+    width: 40rem;
+    top: 1%;
+    right: 30%;
+}
+
+.item {
+    position: relative;
+    text-align: left;
+    padding: 5px;
+}
+
+#gq {
+    font-family: "letra-portada";
+    font-size: 13rem;
+    color: azure;
+    letter-spacing: -17px;
+}
+
+#british {
+    font-family: "letra-secundaria";
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#gentlemen {
+    text-transform: uppercase;
+    font-family: "letra-secundaria";
+    color: azure;
+    font-size: 0.5rem;
+    font-weight: bolder;
+}
+
+#june {
+    font-family: "letra-secundaria";
+    text-transform: uppercase;
+    color: #52a8a8;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+#euro {
+    font-family: "letra-secundaria";
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: azure;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family: "letra-principal";
+    background-color: azure;
+    color: black;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#rupert {
+    color: #52a8a8;
+    font-family: "letra-principal";
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#alastair {
+    color: azure;
+    font-family: "letra-secundaria";
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#alex {
+    color: azure;
+    font-family: "letra-secundaria";
+    font-size: 2.5rem;
+}
+
+#rematch {
+    color: azure;
+    font-family: "letra-secundaria";
+    font-size: 2.3rem;
+}
+
+#cobra-saint {
+    font-family: "letra-secundaria";
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#cobra-saint #vs {
+    font-size: 0.6rem;
+}
+
+#cfgg {
+    color: #52a8a8;
+    font-family: "letra-principal";
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#and {
+    color: azure;
+    font-family: "letra-principal";
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+#oat {
+    color: azure;
+    font-family: "letra-principal";
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+#bbf {
+    text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
