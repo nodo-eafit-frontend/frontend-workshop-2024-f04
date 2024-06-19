@@ -6,8 +6,56 @@
 
 .table-flex {
 	background-color: burlywood;
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: end; */
+	/* flex-direction: row-reverse; */
+
+	position: relative;
+	overflow-y: scroll;
+	height: 20rem;
+}
+
+.table-flex > .blue {
+	position: absolute;
+	bottom: 200px;
+	right: 200px;
+}
+
+.table-flex > .yellow {
+	position: fixed;
+	bottom: 150px;
+	right: 250px;
+}
+
+.table-flex > .green {
+	position: absolute;
+	bottom: 100px;
+	right: 300px;
+}
+
+.table-flex > .red {
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+body > .red {
+	position: sticky;
+	top: 0;
+	right: 0;
+	z-index: 10;
 }
 
 .table-grid {
 	background-color: darkolivegreen;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 1rem;
+	place-items: center;
+}
+
+section.table-grid > div.green {
+	grid-area: 2 / 2 / 3 / 3;
 }
