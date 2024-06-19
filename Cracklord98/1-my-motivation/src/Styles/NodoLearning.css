@@ -1,13 +1,38 @@
-#LearningNodo {
+#learning-nodo {
     padding: 1rem;
 }
 
-#LearningNodo h2{
-    color: antiquewhite;
+#learning-nodo h2{
+    color: var(--color-h2);
+    font-size: 2.5rem;
 }
 
-#LearningNodo img {
-    height: 50%;
-    width: auto;
+@media (min-width: 768px) {
+    .carousel-inner {
+      display: flex;
+    }
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+  }
+
+.carousel-inner{
+    padding: 1em;
 }
 
+.card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 var(--color-card);
+    border: none;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    background-color:var(--color-bgcard);
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}

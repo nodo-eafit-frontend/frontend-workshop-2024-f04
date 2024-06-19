@@ -1,0 +1,33 @@
+.hobbies-grid {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns:repeat(3,1fr);
+    -ms-grid-row-align: center;
+  }
+  
+  .hobby-item {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .hobby-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #hobbies h2{
+    font-size: 2.5rem;
+    color:var(--color-h2);
+    background-image: url(../assets/Backgrounds/flame.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  #hobbies p{
+    color: var(--color-textp);
+  }
+
