@@ -11,6 +11,13 @@
   font-family: "letra-principal";
   src: url(./assets/saonara.otf);
 }
+:root {
+  --primary-color: azure;
+  --secondary-color: #52a8a8;
+  --text-color: black;
+  --background-gradient: linear-gradient(35deg, rgba(10,10,10,1) 0%, rgba(29,31,29,1) 34%, rgba(55,57,54,0.9904412448573179) 60%, rgba(83,87,82,1) 74%, rgba(140,147,140,1) 88%);
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -19,15 +26,15 @@ body, html {
   display: flex;
   justify-content: center;
   background-color: #171619;
+  color: var(--primary-color);
 }
 
 .container {
-  background: linear-gradient(35deg, rgb(10, 10, 10) 0%, rgb(29, 31, 29) 34%, rgba(55, 57, 54, 0.9904412449) 60%, rgb(83, 87, 82) 74%, rgb(140, 147, 140) 88%);
-  height: 700px;
+  background: var(--background-gradient);
+  height: 694px;
   width: 550px;
   border: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   overflow: hidden;
@@ -36,7 +43,6 @@ body, html {
 header {
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 #left-top, #left-bot, #right-top, #right-bot {
@@ -44,6 +50,10 @@ header {
   text-align: left;
   padding: 5px;
   width: 30%;
+}
+
+#right-bot {
+  width: 20%;
 }
 
 #left-bot, #right-top, #right-left {
@@ -54,6 +64,7 @@ header {
 #right-top, #right-bot {
   left: 68%;
   bottom: 80%;
+  direction: rtl;
   text-align: justify;
 }
 
@@ -86,15 +97,15 @@ header {
 
 #gq {
   font-family: "letra-portada";
-  font-size: 13rem;
-  color: azure;
+  font-size: 12rem;
   letter-spacing: -17px;
+  font-weight: 100;
 }
 
 #british {
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  color: black;
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: bolder;
 }
@@ -102,7 +113,6 @@ header {
 #gentlemen {
   text-transform: uppercase;
   font-family: "letra-secundaria";
-  color: azure;
   font-size: 0.5rem;
   font-weight: bolder;
 }
@@ -110,7 +120,7 @@ header {
 #june {
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-size: 0.8rem;
   letter-spacing: 3px;
   font-weight: bolder;
@@ -120,21 +130,20 @@ header {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   font-size: 0.8rem;
-  color: azure;
   letter-spacing: 3px;
 }
 
 h2 {
   font-family: "letra-principal";
-  background-color: azure;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: bolder;
 }
 
 #rupert {
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-family: "letra-principal";
   font-size: 2rem;
   text-transform: uppercase;
@@ -142,20 +151,17 @@ h2 {
 }
 
 #alastair {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 1rem;
   text-transform: uppercase;
 }
 
 #alex {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 2.5rem;
 }
 
 #rematch {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 2.3rem;
 }
@@ -163,7 +169,7 @@ h2 {
 #cobra-saint {
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  color: black;
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: bolder;
 }
@@ -172,7 +178,7 @@ h2 {
 }
 
 #cfgg {
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-family: "letra-principal";
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -180,7 +186,6 @@ h2 {
 }
 
 #and {
-  color: azure;
   font-family: "letra-principal";
   font-size: 1.6rem;
   font-weight: 200;
@@ -189,7 +194,6 @@ h2 {
 }
 
 #oat {
-  color: azure;
   font-family: "letra-principal";
   font-size: 1.8rem;
   font-weight: 200;
@@ -200,7 +204,6 @@ h2 {
 }
 
 #interview, #story-b {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 0.3rem;
   text-transform: uppercase;
@@ -211,34 +214,31 @@ h2 {
 }
 
 #n24 {
-  color: azure;
   font-family: "letra-principal";
   font-size: 2rem;
 }
 
 #page {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 
 #watch-guide {
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-family: "letra-secundaria";
   font-size: 1.6rem;
   font-weight: 900;
 }
 
 #brands {
-  color: azure;
   font-family: "letra-secundaria";
   font-size: 1rem;
   text-transform: uppercase;
 }
 
 #bmr {
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-family: "letra-principal";
   font-size: 6rem;
   text-transform: uppercase;
@@ -246,19 +246,14 @@ h2 {
   line-height: 0.7;
 }
 
-#rising {
-  color: azure;
-}
-
 #hollywood {
-  color: azure;
   font-family: "letra-principal";
   font-size: 1.8rem;
   font-weight: 200;
 }
 
 #bryanc {
-  color: #52a8a8;
+  color: var(--secondary-color);
   font-family: "letra-secundaria";
   font-size: 1.3rem;
   font-weight: 900;
