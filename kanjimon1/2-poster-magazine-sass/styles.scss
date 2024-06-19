@@ -1,9 +1,79 @@
-$myColor: red;
-$textColor: black;
+@import 'reset.scss';
+@import 'pallette.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
-body{
-    color: $textColor;
-    text-align: center;
-    background: $myColor;
+body {  
+  background: linear-gradient(to right, #524f4e, #f4f4f4);  
 }
 
+h1 {
+    font-size: 220px;
+    /*background-color: $articlebackground;*/
+    color: $myColor;
+    margin-left: 450px;
+
+    /*google fonts*/
+    .dm-serif-text-regular {
+        font-family: $fontfamily;
+        font-weight: $fontweight;
+        font-style: normal;
+    }
+  
+  .dm-serif-text-regular-italic {
+    font-family: $fontfamily;
+    font-weight: $fontweight;
+    font-style: italic;
+  }
+}
+
+img {
+  position: absolute;
+  left: $marginleft;
+  top: 0px;
+  z-index: 1;
+}
+
+#prueba-1 {  
+  h2 {
+    font-size: $fontsize; // Adjust the font size as needed
+    color: $myColor;
+    margin-left: $marginleft1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  p {    
+    margin: 10px 0;
+  }
+}
+
+#prueba-2 {
+    h2 {
+      font-size: $fontsize; // Adjust the font size as needed
+      color: $myColor;
+      margin-top: 50px;
+      margin-left: $marginleft1;      
+    }
+}
+
+#prueba-3 {
+  h2 {
+    font-size: $fontsize; // Adjust the font size as needed
+    color: $myColor;
+    margin-left: $marginleft2;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#prueba-4 {
+  h2 {
+    font-size: $fontsize; // Adjust the font size as needed
+    color: $myColor;
+    margin-top: 50px;
+    margin-left: $marginleft2;
+    position: absolute;
+    z-index: 1;
+  }
+}
+  
