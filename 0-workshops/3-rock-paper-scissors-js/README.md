@@ -29,6 +29,9 @@ npm run test
 npm run start
 ```
 
+### Demo:
+https://github.com/nodo-eafit-frontend/frontend-workshop-2024-f04/assets/18010349/67455860-1f3c-4594-a376-f41168449330
+
 ## ¿Qué vas a aprender?
 
 Este reto es una excelente oportunidad para fortalecer tus conocimientos en JavaScript y Node Js. Aquí tienes un adelanto de lo que aprenderás:
