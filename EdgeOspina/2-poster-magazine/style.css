@@ -44,11 +44,8 @@ header {
   padding: 5px;
 }
 
-#left-top, #left-bot, #right-top, #right-bot {
-  width: 30%;
-}
-
-#left-bot, #right-top, #right-bot {
+#left-top :not(#gq), #left-bot, #right-top, #right-bot {
+  width: 29%;
   z-index: 10;
 }
 
@@ -58,9 +55,10 @@ header {
 }
 
 #left-top :not(#gq, #british) {
-  top: 3.5rem;
-  left: 5%;
+  top: 3.6rem;
+  left: 15%;
   line-height: 8px;
+  position: relative;
 }
 
 #left-bot {
@@ -116,7 +114,7 @@ header {
   text-transform: uppercase;
   color: black;
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 900;
   position: relative;
   top: 3.5rem;
   left: 3.5rem;
@@ -128,9 +126,6 @@ header {
   color: black;
   font-size: 0.7rem;
   font-weight: 800;
-  position: relative;
-  bottom: 0px;
-  right: 45px;
   filter: blur(2px);
 }
 
@@ -139,6 +134,7 @@ header {
   font-family: "letra-secundaria";
   font-size: 0.4rem;
   font-weight: bolder;
+  width: 20rem;
 }
 
 #june {
@@ -286,26 +282,6 @@ h2 {
   font-family: "letra-secundaria";
   font-size: 1.3rem;
   font-weight: 900;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    width: 90%;
-    height: auto;
-    margin: 20px;
-    position: relative;
-  }
-  #left-top, #left-bot, #right-top, #right-bot, #lower-segment {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-  }
-  #bryan-cranston {
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

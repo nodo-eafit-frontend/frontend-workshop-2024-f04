@@ -35,12 +35,10 @@ header {
     padding: 5px;
 }
 
-#left-top, #left-bot, #right-top, #right-bot {
-    width: 30%;
+#left-top :not(#gq), #left-bot, #right-top, #right-bot {
+    width: 29%;
+    z-index: 10;
 }
-
-#left-bot, #right-top, #right-bot {
-    z-index: 10;}
 
 #right-top, #right-bot{
     bottom: 80%;
@@ -48,9 +46,10 @@ header {
 }
 
 #left-top :not(#gq, #british){
-    top: 3.5rem;
-    left: 5%;
+    top: 3.6rem;
+    left: 15%;
     line-height: 8px;
+    position: relative;
 }
 
 #left-bot{
@@ -105,7 +104,7 @@ header {
     text-transform: uppercase;
     color: $text-color;
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight:900;
     position: relative;
     top: 3.5rem;
     left: 3.5rem;
@@ -116,9 +115,6 @@ header {
     color: $text-color;
     font-size: 0.7rem;
     font-weight: 800;
-    position: relative;
-    bottom: 0px;
-    right: 45px;
     filter: blur(2px);
 }
 
