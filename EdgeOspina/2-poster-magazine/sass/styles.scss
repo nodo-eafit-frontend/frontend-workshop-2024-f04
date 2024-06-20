@@ -29,27 +29,26 @@ header {
     position: relative;
 }
 
-#left-top, #left-bot, #right-top, #right-bot {
-    position: relative;
+.item {
+    position: absolute;
     text-align: left;
     padding: 5px;
+}
+
+#left-top, #left-bot, #right-top, #right-bot {
     width: 30%;
 }
 
-#left-bot, #right-top, #right-bot{
-    z-index: 10;
-    position: relative;
-}
+#left-bot, #right-top, #right-bot {
+    z-index: 10;}
 
 #right-top, #right-bot{
-
     bottom: 80%;
     text-align:right;
 }
 
 #left-top :not(#gq, #british){
     top: 3.5rem;
-    position: relative;
     left: 5%;
     line-height: 8px;
 }
@@ -61,26 +60,25 @@ header {
 }
 
 #right-bot{
-    top: 9rem;
+    top: 14rem;
     right: 10rem;
     left: 75%;
     width: 20%;
-    position: relative;
 }
 
 #right-top{
     bottom: 30rem;
-    position: absolute;
     width: 160px;
     left: 65%;
+    position: absolute;
 }
-#lower-segment{
+#lower-segment {
     top: 67%;
     z-index: 10;
-    position: absolute;
     width: 480px;
     text-align: center;
     left: 2.6rem;
+    position: absolute;
 }
 
 #bryan-cranston{
@@ -92,21 +90,16 @@ header {
     filter: brightness(45%);
 }
 
-.item{
-    position: absolute;
-    text-align: left;
-    padding: 5px;
-}
-
-#gq{
+#gq {
     font-family: 'letra-portada';
     font-size: 12rem;
     letter-spacing: -17px;
     font-weight: 100;
-    position: absolute;
     top: 20px;
     left: -25px;
+    position: absolute;
 }
+
 #british {
     font-family: 'letra-secundaria';
     text-transform: uppercase;
@@ -160,7 +153,7 @@ h2{
     width: 1;
     padding: 2px;
     margin: 3px;
-    display: inline; 
+    display: inline-block;  
 }
 #rupert{
     color: $secondary-color;

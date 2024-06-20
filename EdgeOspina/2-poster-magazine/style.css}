@@ -288,24 +288,4 @@ h2 {
   font-weight: 900;
 }
 
-@media (max-width: 1024px) {
-  .container {
-    width: 90%;
-    height: auto;
-    margin: 20px;
-    position: relative;
-  }
-  #left-top, #left-bot, #right-top, #right-bot, #lower-segment {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-  }
-  #bryan-cranston {
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css%7D.map */
