@@ -48,7 +48,7 @@ header {
   width: 20%;
 }
 
-#left-bot, #right-top, #right-bot {
+#left-bot, #right-top, #right-left {
   z-index: 10;
   position: relative;
 }
@@ -272,6 +272,4 @@ h2 {
   font-family: "letra-secundaria";
   font-size: 1.3rem;
   font-weight: 900;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styles.css.map */
