@@ -29,6 +29,7 @@ body, html {
   border: 1px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
+  overflow: hidden;
 }
 
 header {
@@ -44,33 +45,51 @@ header {
   width: 30%;
 }
 
-#right-bot {
-  width: 20%;
-}
-
 #left-bot, #right-top, #right-bot {
   z-index: 10;
   position: relative;
 }
 
 #right-top, #right-bot {
-  left: 68%;
   bottom: 80%;
-  direction: rtl;
-  text-align: justify;
+  text-align: right;
+}
+
+#left-top :not(#gq, #british) {
+  top: 3.5rem;
+  position: relative;
+  left: 5%;
+  line-height: 8px;
 }
 
 #left-bot {
-  bottom: 40%;
+  bottom: 38%;
+  left: 3%;
   position: absolute;
 }
 
+#right-bot {
+  top: 9rem;
+  right: 10rem;
+  left: 75%;
+  width: 20%;
+  position: relative;
+}
+
+#right-top {
+  bottom: 30rem;
+  position: absolute;
+  width: 160px;
+  left: 65%;
+}
+
 #lower-segment {
-  top: 60%;
+  top: 67%;
   z-index: 10;
   position: absolute;
   width: 480px;
   text-align: center;
+  left: 2.6rem;
 }
 
 #bryan-cranston {
@@ -104,9 +123,9 @@ header {
   color: black;
   font-size: 0.7rem;
   font-weight: 800;
-  position: absolute;
-  bottom: 12px;
-  left: 60px;
+  position: relative;
+  top: 3.5rem;
+  left: 3.5rem;
 }
 
 #british-bg {
@@ -118,45 +137,49 @@ header {
   position: relative;
   bottom: 0px;
   right: 45px;
-  filter: blur(1px);
+  filter: blur(2px);
 }
 
 #gentlemen {
   text-transform: uppercase;
   font-family: "letra-secundaria";
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   font-weight: bolder;
 }
 
 #june {
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  color: #52a8a8;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
+  color: #84d0f0;
+  font-size: 0.5rem;
+  letter-spacing: 2px;
   font-weight: bolder;
 }
 
 #euro {
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
+  font-size: 0.5rem;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-family: "letra-principal";
   background-color: azure;
   color: black;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
   font-weight: bolder;
+  width: 1;
+  padding: 2px;
+  margin: 3px;
+  display: inline;
 }
 
 #rupert {
-  color: #52a8a8;
+  color: #84d0f0;
   font-family: "letra-principal";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -167,12 +190,7 @@ h2 {
   text-transform: uppercase;
 }
 
-#alex {
-  font-family: "letra-secundaria";
-  font-size: 2.3rem;
-}
-
-#rematch {
+#alex, #rematch {
   font-family: "letra-secundaria";
   font-size: 2.3rem;
 }
@@ -181,32 +199,33 @@ h2 {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: bolder;
 }
 #cobra-saint #vs {
-  font-size: 0.6rem;
+  font-size: 0.4rem;
 }
 
 #cfgg {
-  color: #52a8a8;
+  color: #84d0f0;
   font-family: "letra-principal";
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 900;
 }
 
 #and {
   font-family: "letra-principal";
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: 200;
   text-transform: lowercase;
   font-style: italic;
+  color: azure;
 }
 
 #oat {
   font-family: "letra-principal";
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -221,12 +240,13 @@ h2 {
 }
 
 #paul-henderson, #stuart-m, #norman-j {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
+  font-weight: 100;
 }
 
 #n24 {
   font-family: "letra-principal";
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 #page {
@@ -236,7 +256,7 @@ h2 {
 }
 
 #watch-guide {
-  color: #52a8a8;
+  color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.6rem;
   font-weight: 900;
@@ -244,12 +264,12 @@ h2 {
 
 #brands {
   font-family: "letra-secundaria";
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
 #bmr {
-  color: #52a8a8;
+  color: #84d0f0;
   font-family: "letra-principal";
   font-size: 6rem;
   text-transform: uppercase;
@@ -263,12 +283,12 @@ h2 {
 
 #hollywood {
   font-family: "letra-principal";
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 200;
 }
 
 #bryanc {
-  color: #52a8a8;
+  color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.3rem;
   font-weight: 900;
