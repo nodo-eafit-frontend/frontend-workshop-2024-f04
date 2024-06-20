@@ -56,6 +56,7 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 ## Recursos
 
 - [PNG Eggs | Imágenes PNG](https://www.pngegg.com/es)
+- [What ¿he Font](https://www.myfonts.com/pages/whatthefont)
 
 ### HTML & CSS
 
