@@ -1,27 +1,6 @@
-@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-
-@font-face {
-    font-family: 'letra-portada';
-    src: url(./assets/linkin-park-extrabold.ttf);
-}
-
-@font-face {
-    font-family: 'letra-secundaria';
-    src: url(./assets/metropolis-semibold.otf);
-}
-
-@font-face {
-    font-family: 'letra-principal';
-    src: url(./assets/saonara.otf);
-}
-
-:root {
-    --primary-color: azure;
-    --secondary-color: #52a8a8;
-    --text-color: black;
-    --background-gradient: linear-gradient(35deg, rgba(10,10,10,1) 0%, rgba(29,31,29,1) 34%, rgba(55,57,54,0.9904412448573179) 60%, rgba(83,87,82,1) 74%, rgba(140,147,140,1) 88%);
-}
-
+@import "fonts";
+@import "palletes";
+@import "reset";
 
 body, html {
     margin: 0;
@@ -31,11 +10,11 @@ body, html {
     display: flex;
     justify-content: center;
     background-color: #171619;
-    color: var(--primary-color);
+    color: $primary-color;
 }
 
 .container {
-    background: var(--background-gradient);
+    background: $background-gradient;
     height: 694px;
     width: 550px;
     border: 1px solid black;
@@ -48,6 +27,7 @@ body, html {
 header {
     text-transform: uppercase;
     text-align: center;
+    position: relative;
 }
 
 #left-top, #left-bot, #right-top, #right-bot {
@@ -85,14 +65,14 @@ header {
 #bryan-cranston{
     z-index: 5;
     position:absolute;
-    width: 40rem;
+    width: 45rem;
     top: 1%;
-    right: 1%;
+    left:auto;
     filter: brightness(65%);
 }
 
 .item{
-    position: relative;
+    position: absolute;
     text-align: left;
     padding: 5px;
 }
@@ -102,14 +82,32 @@ header {
     font-size: 12rem;
     letter-spacing: -17px;
     font-weight: 100;
+    position: absolute; 
+    top: 20px;
+    left: -25px;
 }
 #british {
     font-family: 'letra-secundaria';
     text-transform: uppercase;
-    color: var(--text-color);
-    font-size: 1rem;
-    font-weight: bolder;
+    color: $text-color;
+    font-size: 0.7rem;
+    font-weight: 800;
+    position: absolute; 
+    bottom:12px;
+    left: 60px;
 }
+#british-bg {
+    font-family: 'letra-secundaria';
+    text-transform: uppercase;
+    color: $text-color;
+    font-size: 0.7rem;
+    font-weight: 800;
+    position: relative; 
+    bottom: 0px;
+    right: 45px;
+    filter: blur(1px);
+}
+
 #gentlemen {
     text-transform: uppercase;
     font-family: 'letra-secundaria';
@@ -119,7 +117,7 @@ header {
 #june{
     font-family: 'letra-secundaria';
     text-transform: uppercase;
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-size: 0.8rem;
     letter-spacing: 3px;
     font-weight: bolder;
@@ -133,14 +131,14 @@ header {
 
 h2{
     font-family: 'letra-principal';
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: $primary-color;
+    color: $text-color;
     font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: bolder;
 }
 #rupert{
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-family: 'letra-principal';
     font-size: 2rem;   
     text-transform: uppercase;
@@ -162,7 +160,7 @@ h2{
 #cobra-saint{
     font-family: 'letra-secundaria';
     text-transform: uppercase;
-    color: var(--text-color);
+    color: $text-color;
     font-size: 1rem;
     font-weight: bolder;
 #vs{
@@ -170,7 +168,7 @@ h2{
 }
 }
 #cfgg{
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-family: 'letra-principal';
     font-size: 1.6rem;   
     text-transform: uppercase;
@@ -210,7 +208,7 @@ h2{
     text-transform: uppercase;
 }
 #watch-guide{
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-family: 'letra-secundaria';
     font-size: 1.6rem; 
     font-weight: 900;
@@ -221,12 +219,15 @@ h2{
     text-transform: uppercase;
 }
 #bmr{
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-family: 'letra-principal';
     font-size: 6rem;   
     text-transform: uppercase;
     font-weight: 400;
     line-height: 0.7;
+}
+#rising{
+    color: $secondary-color;
 }
 #hollywood{
     font-family: 'letra-principal';
@@ -234,7 +235,7 @@ h2{
     font-weight: 200;
 }
 #bryanc{
-    color: var(--secondary-color);
+    color: $secondary-color;
     font-family: 'letra-secundaria';
     font-size: 1.3rem; 
     font-weight: 900;
