@@ -1,26 +1,42 @@
+style ccs
+@import url("reset.css");
+
+
 body {
-    font-family: Arial, Helvetica,
-    margin: 0;
-    padding: 0;
+   font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0  
+        
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    
+      background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(14, 3, 13));
+       
+}
+
+
 header {
-    background-color: #333333;
-    color: #fff;
+    background-color:lightseagreen;
+    color: #e8eeee;
     padding: 20px;
 }
 
 .nombre-foto {
     display: flex;
     align-items: center;
+    justify-content: center;
+    
 }
 
 .nombre-foto img {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin-left: 20px;
 }
+
 
 main {
     padding: 20px;
@@ -37,20 +53,22 @@ main {
     margin-bottom: 20px;
 }
 
-.card {
-    border: 1px solid #3a24f8;
 
+.card {
     
+    border: 1px solid #0f98dd;
     border-radius: 5px;
     padding: 5%;
-    width: 200px;
+    width: 300px;
+    list-style: none;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
+   
 }
 
 .carrusel {
@@ -64,11 +82,15 @@ main {
     height: auto;
     display: inline-block;
     margin-right: 10px;
+   
 }
+
+
+
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   grid-auto-rows: auto;
   grid-gap: 20px;
   max-width: 800px;
@@ -89,8 +111,8 @@ main {
 }
 
 footer {
-    background-color: #333333;
-    color: #fff;
+    background-color: #000b0c;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
 }
