@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.magazine {
+	@include background-magazine;
+	// aspect-ratio: 2 / 2.9;
+	color: $color-white;
+	// background-color: $color-red;
+	margin: 2rem;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: min-content;
+
+	&__title {
+		font-size: $font-size-title;
+		text-align: center;
+		font-family: $font-vogue;
+		line-height: 0.89;
+		position: relative;
+	}
+
+	&__title span {
+		position: relative;
+	}
+
+	&__title span:first-of-type {
+		z-index: 3;
+	}
+
+	&__title span:last-of-type {
+		z-index: 1;
+	}
+
+	img {
+		z-index: 2;
+		position: absolute;
+    width: 26rem;
+    top: 45px;
+    left: -24px;
+	}
+
+	> article {
+		position: relative;
+		z-index: 2;
+	};
+}
+
