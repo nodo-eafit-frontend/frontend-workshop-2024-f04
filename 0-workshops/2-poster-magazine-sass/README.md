@@ -57,6 +57,8 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 
 - [PNG Eggs | Imágenes PNG](https://www.pngegg.com/es)
 - [What ¿he Font](https://www.myfonts.com/pages/whatthefont)
+- [SASS - Por qué usar SASS ? - Estructura de carpetas](https://dev.to/fernandomoyano/sass-464d)
+- [CSS Gracdiend](https://cssgradient.io/)
 
 ### HTML & CSS
 
@@ -75,3 +77,4 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 
 - [Guía de diseño responsivo](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS responsive box that maintains aspect ratio but NEVER overflows the viewport \[duplicate\]](https://stackoverflow.com/questions/69226967/css-responsive-box-that-maintains-aspect-ratio-but-never-overflows-the-viewport)
