@@ -21,7 +21,6 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 
 - **Fundamentos de SASS:** Variables, anidamiento, mixins, funciones, herencia y operadores.
 - **Organización de código:** Cómo estructurar tus archivos SASS para una mejor mantenibilidad.
-- **Diseño responsivo:** Adaptar tus diseños para que se vean bien en diferentes dispositivos.
 - **Buenas prácticas de CSS:** Escribir código CSS limpio, eficiente y reutilizable.
 - **Metodologías de CSS:** Entenderás cómo organizar tu código CSS utilizando metodologías como BEM (Block Element Modifier).
 - **Preprocesadores:** Aprenderás a compilar archivos SASS a CSS y cómo integrarlos en tu flujo de trabajo.
@@ -37,10 +36,6 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
   - Functions
   - Variables
   - Extends
-- [ ] **Diseño responsive: Diseño adaptable para diferentes dispositivos:**
-  - Móbil
-  - Tablet
-  - Escritorio
 - [ ] **Código limpio y modular:**
   - Utilizar metodología BEM
   - Reorganizar cada widget o componente por un archivo sass.
@@ -72,9 +67,3 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 - [sass npm](https://www.npmjs.com/package/sass)
 - [Blocks, Elements and Modifiers](https://getbem.com/introduction/)
 - [Creando proyectos CSS mantenibles con SASS y BEM](https://medium.com/laboratoria-how-to/creando-proyectos-css-mantenibles-con-sass-y-bem-54e013c7b1d9)
-
-### Recursos de Diseño Responsivo:
-
-- [Guía de diseño responsivo](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [CSS responsive box that maintains aspect ratio but NEVER overflows the viewport \[duplicate\]](https://stackoverflow.com/questions/69226967/css-responsive-box-that-maintains-aspect-ratio-but-never-overflows-the-viewport)
