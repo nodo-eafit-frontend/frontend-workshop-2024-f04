@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #323;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro, .motivacion, .aprende, .hobbies {
+            margin-bottom: 40px;
+        }
+        .intro img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .intro h1, .intro p {
+            text-align: center;
+        }
+        .aprende .cards {
+            display: flex;
+            overflow-x: scroll;
+        }
+        .aprende .card {
+            flex: 0 0 200px;
+            background: white;
+            margin-right: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .hobbies .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .hobby {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .hobby img {
+            width: 50px;
+        }
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio</h1>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <img src="imagenes/Foto mariana.jpg" alt="Tu Foto">
+            <h1>¡Hola! Soy Mariana Vasquez</h1>
+            <p>Diseñadora Grafiaca apasionada por la tecnología y entusiamada por aprender diseño web.</p>
+        </section>
+   <section class="motivacion">
+    <h2>¿Qué te mueve en Nodo?</h2>
+    <h3>Motivación</h3>
+    <p>Me impulsa la posibilidad de aprender y crecer en una comunidad dinámica y colaborativa.</p>
+    <h3>Razones</h3>
+    <p>Elegí Nodo porque ofrece un entorno ideal para desarrollar mis habilidades y conectar con otros entusiastas de la tecnología.</p>
+</section>
+<section class="aprende">
+    <h2>Metas</h2>
+    <p>Quiero adquirir conocimientos en desarrollo web, inteligencia artificial y más.</p>
+    <h3>Lista de deseos</h3>
+    <div class="cards">
+        <div class="card">Aprender diferentes lenguajes de programacion</div>
+        <div class="card">Aprender front-end</div>
+        <div class="card">Aprender Back-end</div>
+    </div>
+</section>
+<section class="hobbies">
+    <h2>¡Mis Hobbies!</h2>
+    <div class="grid">
+        <div class="hobby">
+            <img src="imagenes/Hobby1.png" alt="Hobby 1">
+            <p>Escultismo</p>
+        </div>
+        <div class="hobby">
+            <img src="imagenes/Hobby2.png" alt="Hobby 2">
+            <p>Danza oriental</p>
+        </div>
+        <div class="hobby">
+            <img src="imagenes/Hobby3.png" alt="Hobby 3">
+            <p>Crochet</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
