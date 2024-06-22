@@ -1,0 +1,30 @@
+/* Cover styles */
+.magazine__cover {
+    @include container;
+    padding: 2rem 0;
+    position: relative;
+
+    .cover__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .cover__text {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        background-color: rgba($secondary-color, 0.7);
+        color: #fff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        .cover__headline {
+            font-size: $subheader-font-size;
+            margin-bottom: 0.5rem;
+        }
+
+        .cover__subtitle {
+            font-size: px-to-rem(14px);
+        }
+    }
+}

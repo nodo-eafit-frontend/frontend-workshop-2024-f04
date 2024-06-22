@@ -1,0 +1,11 @@
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin container {
+    width: 80%;
+    margin: 0 auto;
+}
