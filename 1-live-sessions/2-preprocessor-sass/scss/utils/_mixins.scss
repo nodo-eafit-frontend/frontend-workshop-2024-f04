@@ -1,6 +1,4 @@
-@use './pallete' as *;
-
-@mixin background-magazine {
-  background: $color-red;
-  background: linear-gradient(45deg, $color-black 0%, $color-red 61%);
+@mixin background-magazine($color1, $color2, $degree) {
+  background-color: $color1;
+  background: linear-gradient($degree, $color2 0%, $color1 61%);
 }
