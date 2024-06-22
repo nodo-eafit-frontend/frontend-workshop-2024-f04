@@ -1,0 +1,113 @@
+@import url('reset.css');
+
+@import url('fonts.css');
+@import url('pallete.css');
+
+@import url('navigation.css');
+@import url('who-am-i.css');
+@import url('motivation.css');
+@import url('learning.css');
+@import url('card.css');
+@import url('hobbies.css');
+
+body {
+	color: var(--font-color);
+	background-color: var(--background-color);
+	font-family: 'Hind', sans-serif;
+	line-height: 1.6;
+}
+
+body > main > article,
+body > nav,
+body > footer > section {
+	max-width: 45rem;
+	margin-inline: auto;
+}
+
+a {
+	text-decoration: none;
+	color: var(--font-color);
+}
+
+main > article {
+	padding-top: 4rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: bolder;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+.name {
+	color: var(--primary-color);
+}
+
+article p {
+	margin-top: 1rem;
+}
+
+.button {
+	padding-block: 1rem;
+	padding-inline: 2rem;
+	background-color: var(--primary-color);
+	color: var(--background-color);
+	display: inline-block;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+}
+
+.icon {
+	font-size: 3rem;
+}
+
+.icon-svg {
+	width: 10px;
+	height: 10px;
+}
+
+body > main + footer {
+	color: var(--white);
+	background-color: var(--primary-color);
+	margin-top: 2rem;
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+}
+
+body > main + footer > section {
+	align-items: center;
+	border-top: 2px var(--white) solid;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 4rem;
+}
+
+body > main + footer p {
+	font-style: italic;
+}
+
+body > main + footer ul {
+	align-items: inherit;
+	display: inherit;
+}
+
+body > main + footer ul li {
+	width: 2rem;
+	margin: 0.25rem;
+}
+
+body > main + footer ul img {
+	width: 100%;
+}
+
+li:has(img[alt='Slack Logo']) {
+	width: 2.5rem;
+}
