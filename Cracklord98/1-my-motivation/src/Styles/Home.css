@@ -1,0 +1,51 @@
+.container-fluid {
+  padding-right: 2rem; 
+  padding-left: 2rem;
+}
+
+#home {
+  background: fixed;
+  background-image: url(../assets/Backgrounds/cool-background\ \(2\).png);
+  background-size: 100%;
+  padding: 2rem;
+}
+
+#home h1 {
+  background: var(--color-bg1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.8rem;
+  font-weight: bold
+}
+
+.bold{
+    color: var(color-bold);
+    font-weight: bold;
+}
+
+.small-img{
+    width: 25%;
+    height: auto;
+}
+
+#intro-parraf {
+    font-family: 'MiFuente', sans-serif; 
+    font-size: 1.4rem; 
+    color: var(--color-textp);
+    font-weight:500;
+  }
+
+#home .row {
+  height: 100%; 
+  display: flex;
+  align-items: center;
+}
+
+#home .col-md-6 {
+  margin: auto; /* Ajusta la alineación horizontal */
+}
+
+#button-cv {
+  margin-top: 1rem;
+}
