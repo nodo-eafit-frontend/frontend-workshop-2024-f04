@@ -20,7 +20,7 @@ body {
     padding: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    background-color: $color-font-blue;
+    background-color: $backgraund-color;
     background: linear-gradient(0deg, $color-font-blue , rgb(4, 49, 66));
     border: 30px solid $color-font-yellow;
 
@@ -35,9 +35,10 @@ body {
 
     .heading {
         h1 {
-            font-size: 15rem;
+            
+            font-size: 18rem;
             color: $color-font-white;
-            font-family: $font-familiy-principal;
+            font-family: $font-familiy-title;
             font-weight: 800;
             text-align: center;
             margin: 0;
@@ -47,10 +48,9 @@ body {
             position: absolute;
             top: 30px;
             left: 800px;
-            font-size: 1rem;
+            font-size: 1.5rem;
             color: $color-font-white;
-            font-family: Arial, Helvetica, sans-serif;
-            //text-align: right;
+            font-family: $font-familiy-secundaria;
             margin: 0;
         }
 
@@ -69,16 +69,16 @@ body {
                 width: 33%;
             }
 
-            .column1 {
+            .column1 { 
                 height: 420px;
                 display: block;
                 flex-direction: row-reverse;
                 flex-flow: wrap;
-                align-items: left;
                 text-align: center;
                 justify-content: center;
                 overflow: visible;
                 color: $color-font-white;
+                font-family: $font-family-content;
             }
 
             .column2 {
@@ -86,10 +86,6 @@ body {
                 display: block;
                 flex-direction: row-reverse;
                 flex-flow: wrap;
-                align-items: left;
-                text-align: center;
-                justify-content: center;
-                color: $color-font-white;
             }
 
             .column3 {
@@ -101,6 +97,7 @@ body {
                 text-align: center;
                 justify-content: center;
                 overflow: visible;
+                font-family: $font-family-athlete;
 
 
 
@@ -130,7 +127,6 @@ body {
                     .athlete {
                         font-size: 1rem;
                         color: $color-font-white;
-                        font-family: Arial, Helvetica, sans-serif;
                         text-align: center;
 
                     }
@@ -140,64 +136,72 @@ body {
     }
 
 
-    .athletes {
+    .objects {
+        
 
         h2 {
             color: $color-font-yellow;
-            font-size: 5rem;
+            font-size: 7rem;
             text-align: center;
+            font-family: $font-family-content;
+            text-shadow: 1px 1px 1px black;
         }
 
         span {
-            font-size: 9rem;
-            font-family: 'Courier New', Courier, monospace;
+            font-size: 11rem;
+            font-family: $font-family-content;
             color: $color-font-white;
+            text-shadow: 1px 1px 1px black;
         }
 
         p {
-            font-size: 3rem;
-            font-family: 'Courier New', Courier, monospace;
+            font-size: 3.5rem;
+            font-family: $font-family-content;
             color: $color-font-white;
+            text-shadow: 1px 1px 1px black;
         }
 
         .last {
-            font-size: 2.2rem;
+            font-size: 3.5rem;
             color: $color-font-blue;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: $font-family-content;
             text-align: center;
-
+            text-shadow: 1px 1px 1px black;
         }
     }
 
-    .athletes {
+    .objects {
         margin-bottom: 1rem;
         text-align: center;
         box-sizing: border-box
+        
     }
 }
+.objects {
+    position: relative;
+    z-index: 3;
 
+}
 .heading {
     position: relative;
     z-index: 1;
 }
 .main{
     max-width: 1000px;
+    min-width: none;
 }
 .cristiano {
-    top: 210px;
-    z-index: 2;
-    width: 71.3rem;
-    height: 56.5rem;
-    display: block; 
-    margin: 0 auto;
     position: absolute;
     bottom: 0;
+    top: 210px;
+    z-index: 2;
+    width: 93.5vw;
+    height: 81vw;
+    display: block; 
+    margin: 0 auto;
+    
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
-.athletes {
-    position: relative;
-    z-index: 3;
-
-}

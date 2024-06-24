@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,8 +57,8 @@ body {
   padding: 0;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background-color: #6fb6cd;
-  background: linear-gradient(0deg, #6fb6cd, #043142);
+  background-color: #2f6c81;
+  background: linear-gradient(0deg, #68bac6, #043142);
   border: 30px solid #e4ae23; }
   .container .heading,
   .container .content,
@@ -66,7 +68,7 @@ body {
     width: 100%;
     height: 100%; }
   .container .heading h1 {
-    font-size: 15rem;
+    font-size: 18rem;
     color: white;
     font-family: "Playfair Display", serif;
     font-weight: 800;
@@ -76,9 +78,9 @@ body {
     position: absolute;
     top: 30px;
     left: 800px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
     margin: 0; }
   .container .heading .floyd {
     width: 100%;
@@ -97,20 +99,16 @@ body {
       display: block;
       flex-direction: row-reverse;
       flex-flow: wrap;
-      align-items: left;
       text-align: center;
       justify-content: center;
       overflow: visible;
-      color: white; }
+      color: white;
+      font-family: "Oswald", sans-serif; }
     .container .heading .floyd .column2 {
       height: 420px;
       display: block;
       flex-direction: row-reverse;
-      flex-flow: wrap;
-      align-items: left;
-      text-align: center;
-      justify-content: center;
-      color: white; }
+      flex-flow: wrap; }
     .container .heading .floyd .column3 {
       height: 420px;
       display: flex;
@@ -119,7 +117,8 @@ body {
       align-items: center;
       text-align: center;
       justify-content: center;
-      overflow: visible; }
+      overflow: visible;
+      font-family: "Bebas Neue", sans-serif; }
       .container .heading .floyd .column3 .box {
         width: 30%;
         display: flex;
@@ -138,51 +137,56 @@ body {
         .container .heading .floyd .column3 .box .athlete {
           font-size: 1rem;
           color: white;
-          font-family: Arial, Helvetica, sans-serif;
           text-align: center; }
-  .container .athletes h2 {
+  .container .objects h2 {
     color: #e4ae23;
-    font-size: 5rem;
-    text-align: center; }
-  .container .athletes span {
-    font-size: 9rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: white; }
-  .container .athletes p {
-    font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: white; }
-  .container .athletes .last {
-    font-size: 2.2rem;
-    color: #6fb6cd;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center; }
-  .container .athletes {
+    font-size: 7rem;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 1px 1px 1px black; }
+  .container .objects span {
+    font-size: 11rem;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black; }
+  .container .objects p {
+    font-size: 3.5rem;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black; }
+  .container .objects .last {
+    font-size: 3.5rem;
+    color: #68bac6;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px black; }
+  .container .objects {
     margin-bottom: 1rem;
     text-align: center;
     box-sizing: border-box; }
+
+.objects {
+  position: relative;
+  z-index: 3; }
 
 .heading {
   position: relative;
   z-index: 1; }
 
 .main {
-  max-width: 1000px; }
+  max-width: 1000px;
+  min-width: none; }
 
 .cristiano {
-  top: 210px;
-  z-index: 2;
-  width: 71.3rem;
-  height: 56.5rem;
-  display: block;
-  margin: 0 auto;
   position: absolute;
   bottom: 0;
+  top: 210px;
+  z-index: 2;
+  width: 93.5vw;
+  height: 81vw;
+  display: block;
+  margin: 0 auto;
   left: 50%;
   transform: translateX(-50%); }
-
-.athletes {
-  position: relative;
-  z-index: 3; }
 
 /*# sourceMappingURL=styles.css.map */
