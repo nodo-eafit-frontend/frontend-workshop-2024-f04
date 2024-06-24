@@ -47,7 +47,7 @@ table {
 body {
   max-width: 80rem;
   min-width: 12rem;
-  height: 100vh;
+  height: auto;
   margin: 0 auto; }
 
 .container {
@@ -60,13 +60,6 @@ body {
   background-color: #2f6c81;
   background: linear-gradient(0deg, #68bac6, #043142);
   border: 30px solid #e4ae23; }
-  .container .heading,
-  .container .content,
-  .container .athletes {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    width: 100%;
-    height: 100%; }
   .container .heading h1 {
     font-size: 18rem;
     color: white;
@@ -82,7 +75,7 @@ body {
     color: white;
     font-family: "Roboto", serif;
     margin: 0; }
-  .container .heading .floyd {
+  .container .heading .section {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -90,27 +83,27 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center; }
-    .container .heading .floyd .column1,
-    .container .heading .floyd .column2,
-    .container .heading .floyd .column3 {
+    .container .heading .section .column1,
+    .container .heading .section .column2,
+    .container .heading .section .column3 {
       width: 33%; }
-    .container .heading .floyd .column1 {
-      height: 420px;
+    .container .heading .section .column1 {
+      margin-top: 9rem;
+      height: 26.2rem;
       display: block;
-      flex-direction: row-reverse;
-      flex-flow: wrap;
       text-align: center;
-      justify-content: center;
-      overflow: visible;
-      color: white;
-      font-family: "Oswald", sans-serif; }
-    .container .heading .floyd .column2 {
-      height: 420px;
+      overflow: visible; }
+      .container .heading .section .column1 .ronaldo {
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.3rem; }
+    .container .heading .section .column2 {
+      height: 26.2rem;
       display: block;
       flex-direction: row-reverse;
       flex-flow: wrap; }
-    .container .heading .floyd .column3 {
-      height: 420px;
+    .container .heading .section .column3 {
+      height: 26.2rem;
       display: flex;
       flex-direction: row;
       flex-flow: wrap;
@@ -119,51 +112,75 @@ body {
       justify-content: center;
       overflow: visible;
       font-family: "Bebas Neue", sans-serif; }
-      .container .heading .floyd .column3 .box {
-        width: 30%;
+      .container .heading .section .column3 h2 {
+        padding: 6px;
+        margin-left: 3px;
+        font-size: 2rem;
+        text-align: center; }
+      .container .heading .section .column3 h3 {
+        padding: 6px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 2rem;
+        text-align: center; }
+      .container .heading .section .column3 h4 {
+        padding: 6px;
+        margin-top: 6px;
+        margin-bottom: 3rem;
+        margin-left: 3px;
+        font-size: 2rem;
+        text-align: center; }
+      .container .heading .section .column3 .box {
+        width: 35%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         background: #e4ae23; }
-        .container .heading .floyd .column3 .box .floyd {
-          margin-top: -50px;
-          width: 150px; }
-        .container .heading .floyd .column3 .box .line {
-          width: 100%;
-          height: 2px;
-          border: none;
-          background-color: black;
-          align-items: center; }
-        .container .heading .floyd .column3 .box .athlete {
-          font-size: 1rem;
-          color: white;
-          text-align: center; }
-  .container .objects h2 {
+      .container .heading .section .column3 .floyd {
+        align-items: center;
+        margin-top: -85px;
+        margin-left: -22px;
+        width: 190px; }
+      .container .heading .section .column3 .line {
+        width: 100%;
+        height: 2px;
+        border: none;
+        background-color: black;
+        align-items: center; }
+      .container .heading .section .column3 .athlete {
+        font-size: 1.6rem;
+        color: white;
+        text-align: center;
+        padding: 6px;
+        margin-top: 6px; }
+  .container .objects {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    box-sizing: border-box; }
+  .container .objects > h2 {
     color: #e4ae23;
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: center;
     font-family: "Oswald", sans-serif;
     text-shadow: 1px 1px 1px black; }
-  .container .objects span {
-    font-size: 11rem;
+  .container .objects > span {
+    font-size: 14rem;
     font-family: "Oswald", sans-serif;
     color: white;
     text-shadow: 1px 1px 1px black; }
-  .container .objects p {
-    font-size: 3.5rem;
+  .container .objects > p {
+    font-size: 3rem;
     font-family: "Oswald", sans-serif;
     color: white;
     text-shadow: 1px 1px 1px black; }
-  .container .objects .last {
-    font-size: 3.5rem;
+  .container .objects > .last {
+    font-size: 3.2rem;
     color: #68bac6;
     font-family: "Oswald", sans-serif;
     text-align: center;
     text-shadow: 1px 1px 1px black; }
-  .container .objects {
-    margin-bottom: 1rem;
-    text-align: center;
-    box-sizing: border-box; }
 
 .objects {
   position: relative;
@@ -180,13 +197,11 @@ body {
 .cristiano {
   position: absolute;
   bottom: 0;
-  top: 210px;
+  top: 250px;
   z-index: 2;
-  width: 93.5vw;
-  height: 81vw;
+  width: 76rem;
+  height: 73.7rem;
   display: block;
-  margin: 0 auto;
-  left: 50%;
-  transform: translateX(-50%); }
+  margin: 0 auto; }
 
 /*# sourceMappingURL=styles.css.map */

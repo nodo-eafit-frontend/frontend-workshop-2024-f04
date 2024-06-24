@@ -8,7 +8,7 @@ body {
 
     max-width: 80rem;
     min-width: 12rem;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
 
 }
@@ -24,18 +24,10 @@ body {
     background: linear-gradient(0deg, $color-font-blue , rgb(4, 49, 66));
     border: 30px solid $color-font-yellow;
 
-    .heading,
-    .content,
-    .athletes {
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
-        width: 100%;
-        height: 100%;
-    }
 
     .heading {
         h1 {
-            
+
             font-size: 18rem;
             color: $color-font-white;
             font-family: $font-familiy-title;
@@ -54,7 +46,7 @@ body {
             margin: 0;
         }
 
-        .floyd {
+        .section {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -63,33 +55,39 @@ body {
             text-align: center;
             justify-content: center;
 
+
             .column1,
             .column2,
             .column3 {
                 width: 33%;
             }
 
-            .column1 { 
-                height: 420px;
+            .column1 {
+                margin-top: 9rem;
+                height: 26.2rem;
                 display: block;
-                flex-direction: row-reverse;
-                flex-flow: wrap;
                 text-align: center;
-                justify-content: center;
                 overflow: visible;
-                color: $color-font-white;
-                font-family: $font-family-content;
+
+                .ronaldo {
+                    color: $color-font-white;
+                    font-family: $font-family-content;
+                    font-size: 1.3rem;
+
+                }
+
             }
 
             .column2 {
-                height: 420px;
+                height: 26.2rem;
                 display: block;
                 flex-direction: row-reverse;
                 flex-flow: wrap;
             }
 
             .column3 {
-                height: 420px;
+
+                height: 26.2rem;
                 display: flex;
                 flex-direction: row;
                 flex-flow: wrap;
@@ -100,36 +98,63 @@ body {
                 font-family: $font-family-athlete;
 
 
+                h2 {
+                    padding: 6px;
+                    margin-left: 3px;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                h3 {
+                    padding: 6px;
+                    margin-top: 6px;
+                    margin-bottom: 6px;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                h4 {
+                    padding: 6px;
+                    margin-top: 6px;
+                    margin-bottom: 3rem;
+                    margin-left: 3px;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+
 
                 .box {
-                    width: 30%;
+                    width: 35%;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     background: $color-font-yellow;
+                }
 
+                .floyd {
+                    align-items: center;
+                    margin-top: -85px;
+                    margin-left: -22px;
+                    width: 190px;
+                }
 
+                .line {
+                    width: 100%;
+                    height: 2px;
+                    border: none;
+                    background-color: black;
+                    align-items: center;
 
-                    .floyd {
-                        margin-top: -50px;
-                        width: 150px;
+                }
 
-                    }
+                .athlete {
+                    font-size: 1.6rem;
+                    color: $color-font-white;
+                    text-align: center;
+                    padding: 6px;
+                    margin-top: 6px;
 
-                    .line {
-                        width: 100%;
-                        height: 2px;
-                        border: none;
-                        background-color: black;
-                        align-items: center;
-                    }
-
-                    .athlete {
-                        font-size: 1rem;
-                        color: $color-font-white;
-                        text-align: center;
-
-                    }
                 }
             }
         }
@@ -137,71 +162,67 @@ body {
 
 
     .objects {
-        
-
-        h2 {
-            color: $color-font-yellow;
-            font-size: 7rem;
-            text-align: center;
-            font-family: $font-family-content;
-            text-shadow: 1px 1px 1px black;
-        }
-
-        span {
-            font-size: 11rem;
-            font-family: $font-family-content;
-            color: $color-font-white;
-            text-shadow: 1px 1px 1px black;
-        }
-
-        p {
-            font-size: 3.5rem;
-            font-family: $font-family-content;
-            color: $color-font-white;
-            text-shadow: 1px 1px 1px black;
-        }
-
-        .last {
-            font-size: 3.5rem;
-            color: $color-font-blue;
-            font-family: $font-family-content;
-            text-align: center;
-            text-shadow: 1px 1px 1px black;
-        }
-    }
-
-    .objects {
-        margin-bottom: 1rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+        margin-bottom: 5rem;
         text-align: center;
         box-sizing: border-box
-        
+    }
+
+    .objects>h2 {
+        color: $color-font-yellow;
+        font-size: 6rem;
+        text-align: center;
+        font-family: $font-family-content;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .objects>span {
+        font-size: 14rem;
+        font-family: $font-family-content;
+        color: $color-font-white;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .objects>p {
+        font-size: 3rem;
+        font-family: $font-family-content;
+        color: $color-font-white;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .objects>.last {
+        font-size: 3.2rem;
+        color: $color-font-blue;
+        font-family: $font-family-content;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
     }
 }
+
 .objects {
     position: relative;
     z-index: 3;
 
 }
+
 .heading {
     position: relative;
     z-index: 1;
 }
-.main{
+
+.main {
     max-width: 1000px;
     min-width: none;
 }
+
 .cristiano {
     position: absolute;
     bottom: 0;
-    top: 210px;
+    top: 250px;
     z-index: 2;
-    width: 93.5vw;
-    height: 81vw;
-    display: block; 
+    width: 76rem;
+    height: 73.7rem;
+    display: block;
     margin: 0 auto;
-    
-    left: 50%;
-    transform: translateX(-50%);
-    
 }
-
