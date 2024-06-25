@@ -1,0 +1,31 @@
+.container-hobies {
+  width: 950px;
+  height: 450px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.mySlides > img {
+  width: 950px;
+  height: 400px;
+}
+.mySlides > div {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 400%;
+  color: var(--color-text-img);
+}
+
+.left,
+.right,
+.badge {
+  cursor: pointer;
+}
+.badge {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+}
