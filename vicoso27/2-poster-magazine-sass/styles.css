@@ -20,35 +20,43 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 body {
   max-width: 80rem;
   min-width: 12rem;
   height: auto;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .container {
   max-width: 100%;
@@ -57,142 +65,166 @@ body {
   padding: 0;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background-color: #2f6c81;
-  background: linear-gradient(0deg, #68bac6, #043142);
-  border: 30px solid #e4ae23; }
-  .container .heading h1 {
-    font-size: 18rem;
-    color: white;
-    font-family: "Playfair Display", serif;
-    font-weight: 800;
-    text-align: center;
-    margin: 0; }
-  .container .heading .title {
-    position: absolute;
-    top: 30px;
-    left: 800px;
-    font-size: 1.5rem;
-    color: white;
-    font-family: "Roboto", serif;
-    margin: 0; }
-  .container .heading .section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    align-items: center;
-    text-align: center;
-    justify-content: center; }
-    .container .heading .section .column1,
-    .container .heading .section .column2,
-    .container .heading .section .column3 {
-      width: 33%; }
-    .container .heading .section .column1 {
-      margin-top: 9rem;
-      height: 26.2rem;
-      display: block;
-      text-align: center;
-      overflow: visible; }
-      .container .heading .section .column1 .ronaldo {
-        color: white;
-        font-family: "Oswald", sans-serif;
-        font-size: 1.3rem; }
-    .container .heading .section .column2 {
-      height: 26.2rem;
-      display: block;
-      flex-direction: row-reverse;
-      flex-flow: wrap; }
-    .container .heading .section .column3 {
-      height: 26.2rem;
-      display: flex;
-      flex-direction: row;
-      flex-flow: wrap;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      overflow: visible;
-      font-family: "Bebas Neue", sans-serif; }
-      .container .heading .section .column3 h2 {
-        padding: 6px;
-        margin-left: 3px;
-        font-size: 2rem;
-        text-align: center; }
-      .container .heading .section .column3 h3 {
-        padding: 6px;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        font-size: 2rem;
-        text-align: center; }
-      .container .heading .section .column3 h4 {
-        padding: 6px;
-        margin-top: 6px;
-        margin-bottom: 3rem;
-        margin-left: 3px;
-        font-size: 2rem;
-        text-align: center; }
-      .container .heading .section .column3 .box {
-        width: 35%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: #e4ae23; }
-      .container .heading .section .column3 .floyd {
-        align-items: center;
-        margin-top: -85px;
-        margin-left: -22px;
-        width: 190px; }
-      .container .heading .section .column3 .line {
-        width: 100%;
-        height: 2px;
-        border: none;
-        background-color: black;
-        align-items: center; }
-      .container .heading .section .column3 .athlete {
-        font-size: 1.6rem;
-        color: white;
-        text-align: center;
-        padding: 6px;
-        margin-top: 6px; }
-  .container .objects {
-    margin-left: 7rem;
-    margin-right: 7rem;
-    margin-bottom: 5rem;
-    text-align: center;
-    box-sizing: border-box; }
-  .container .objects > h2 {
-    color: #e4ae23;
-    font-size: 6rem;
-    text-align: center;
-    font-family: "Oswald", sans-serif;
-    text-shadow: 1px 1px 1px black; }
-  .container .objects > span {
-    font-size: 14rem;
-    font-family: "Oswald", sans-serif;
-    color: white;
-    text-shadow: 1px 1px 1px black; }
-  .container .objects > p {
-    font-size: 3rem;
-    font-family: "Oswald", sans-serif;
-    color: white;
-    text-shadow: 1px 1px 1px black; }
-  .container .objects > .last {
-    font-size: 3.2rem;
-    color: #68bac6;
-    font-family: "Oswald", sans-serif;
-    text-align: center;
-    text-shadow: 1px 1px 1px black; }
+  background-color: rgb(47, 108, 129);
+  background: linear-gradient(0deg, rgb(104, 186, 198), rgb(4, 49, 66));
+  border: 30px solid rgb(228, 174, 35);
+}
+.container .heading h1 {
+  font-size: 18rem;
+  color: rgb(255, 255, 255);
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+}
+.container .heading .title {
+  position: absolute;
+  top: 30px;
+  left: 800px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", serif;
+  margin: 0;
+}
+.container .heading .section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.container .heading .section .column1,
+.container .heading .section .column2,
+.container .heading .section .column3 {
+  width: 33%;
+}
+.container .heading .section .column1 {
+  margin-top: 9rem;
+  height: 26.2rem;
+  display: block;
+  text-align: center;
+  overflow: visible;
+}
+.container .heading .section .column1 .ronaldo {
+  color: rgb(255, 255, 255);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+}
+.container .heading .section .column2 {
+  height: 26.2rem;
+  display: block;
+  flex-direction: row-reverse;
+  flex-flow: wrap;
+}
+.container .heading .section .column3 {
+  height: 26.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow: visible;
+  font-family: "Bebas Neue", sans-serif;
+}
+.container .heading .section .column3 h2 {
+  padding: 6px;
+  margin-left: 3px;
+  font-size: 2rem;
+  text-align: center;
+}
+.container .heading .section .column3 h3 {
+  padding: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 2rem;
+  text-align: center;
+}
+.container .heading .section .column3 h4 {
+  padding: 6px;
+  margin-top: 6px;
+  margin-bottom: 3rem;
+  margin-left: 3px;
+  font-size: 2rem;
+  text-align: center;
+}
+.container .heading .section .column3 .box {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgb(228, 174, 35);
+}
+.container .heading .section .column3 .floyd {
+  align-items: center;
+  margin-top: -85px;
+  margin-left: -22px;
+  width: 190px;
+}
+.container .heading .section .column3 .line {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: black;
+  align-items: center;
+}
+.container .heading .section .column3 .athlete {
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 6px;
+  margin-top: 6px;
+}
+.container .objects {
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.container .objects > h2 {
+  color: rgb(228, 174, 35);
+  font-size: 6rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 1px 1px 1px black;
+}
+.container .objects > span {
+  font-size: 14rem;
+  font-family: "Oswald", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px black;
+}
+.container .objects > p {
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px black;
+}
+.container .objects > .last {
+  font-size: 3.2rem;
+  color: rgb(104, 186, 198);
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+}
 
 .objects {
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+}
 
 .heading {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+}
 
 .main {
   max-width: 1000px;
-  min-width: none; }
+  min-width: none;
+}
 
 .cristiano {
   position: absolute;
@@ -202,6 +234,7 @@ body {
   width: 76rem;
   height: 73.7rem;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=styles.css.map */
