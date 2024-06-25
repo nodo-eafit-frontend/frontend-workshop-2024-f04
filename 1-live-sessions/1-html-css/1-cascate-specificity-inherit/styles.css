@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	width: 100vw;
+}
+
+section {
+	padding: inherit;
+	width: 100%;
+}
+
+section p {
+	/* width: 50%; */
+	max-width: 50%;
+}
+
+div,
+span {
+	border: 5px solid black;
+}
+
+span {
+	border: 5px dotted rgb(135, 0, 180);
+}
+
+.container {
+	border: 5px dashed rgb(228, 0, 0);
+}
+
+.text-line {
+	border: 5px double rgb(0, 136, 14);
+}
+
+span.text-line {
+	border: 5px groove rgb(3, 137, 177);
+	background-color: rgb(7, 170, 220);
+	position: relative;
+}
+
+span.text-line::before {
+	content: '10';
+	color: rgb(255, 255, 255);
+	background-color: red;
+	border-radius: 50%;
+	padding: 5px;
+	position: absolute;
+	top: -18px;
+	right: -15px;
+}
+
+section span:last-child {
+	border: 10px double rgb(238, 255, 0);
+}
+
+#section-id > #text-line-id {
+	border: 10px double rgb(221, 0, 255);
+}
+
+/* span {
+				border: none !important;
+			} */
