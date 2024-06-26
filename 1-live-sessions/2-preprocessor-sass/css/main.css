@@ -60,6 +60,12 @@ table {
   font-weight: 200;
   font-display: swap;
 }
+.pink-style, .headlines--pink-style {
+  color: #e59a95;
+  line-height: 0.8;
+  font-size: 1.5rem;
+}
+
 /**
  // Metodología BEM
  .block {
@@ -70,6 +76,12 @@ table {
 	 }
 
 	 &--modifier {...}
+
+	 .block__entity
+
+	 .block--modifier
+
+	 .block__entity--modifier
 **/
 .headlines {
   display: grid;
@@ -77,11 +89,6 @@ table {
   grid-template-rows: repeat(2, 1fr);
   font-weight: bolder;
   grid-row-gap: 8rem;
-}
-.headlines--pink-style {
-  color: #e59a95;
-  line-height: 0.8;
-  font-size: 1.5rem;
 }
 .headlines section:nth-child(odd) {
   text-align: left;
@@ -99,7 +106,7 @@ table {
   padding-right: 6rem;
 }
 .magazine {
-  background: #a9100c;
+  background-color: #a9100c;
   background: linear-gradient(45deg, #0e0905 0%, #a9100c 61%);
   color: #f7d7d5;
   margin: 2rem;
@@ -113,6 +120,7 @@ table {
   font-family: "Vogue", "Times New Roman", Times, serif;
   line-height: 0.89;
   position: relative;
+  z-index: 0;
 }
 .magazine__title span {
   position: relative;
@@ -124,15 +132,14 @@ table {
   z-index: 1;
 }
 .magazine img {
-  z-index: 2;
   position: absolute;
+  z-index: 2;
+  left: -1.5rem;
+  top: 2.813rem;
   width: 26rem;
-  top: 45px;
-  left: -24px;
 }
 .magazine > article {
   position: relative;
-  z-index: 2;
 }
 
 body {

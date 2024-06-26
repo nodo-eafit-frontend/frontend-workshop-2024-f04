@@ -10,6 +10,12 @@
 	 }
 
 	 &--modifier {...}
+
+	 .block__entity
+
+	 .block--modifier
+
+	 .block__entity--modifier
 **/
 
 .headlines {
@@ -20,9 +26,7 @@
 	grid-row-gap: 8rem;
 
 	&--pink-style {
-		color: $color-pink;
-		line-height: 0.8;
-		font-size: 1.5rem; // TODO: Revisar Responsive
+		@extend .pink-style;
 	}
 
 	section:nth-child(odd) {
