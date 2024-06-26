@@ -1,10 +1,8 @@
 @use '../utils' as *;
 
 .magazine {
-	@include background-magazine;
-	// aspect-ratio: 2 / 2.9;
+	@include background-magazine($color-red, $color-black, 45deg);
 	color: $color-white;
-	// background-color: $color-red;
 	margin: 2rem;
 	padding: 1rem;
 	text-transform: uppercase;
@@ -16,6 +14,7 @@
 		font-family: $font-vogue;
 		line-height: 0.89;
 		position: relative;
+		z-index: 0;
 	}
 
 	&__title span {
@@ -31,16 +30,15 @@
 	}
 
 	img {
-		z-index: 2;
 		position: absolute;
+		z-index: 2;
+    left: -1.5rem;
+    top: 2.813rem;
     width: 26rem;
-    top: 45px;
-    left: -24px;
 	}
 
 	> article {
 		position: relative;
-		z-index: 2;
-	};
+	}
 }
 
