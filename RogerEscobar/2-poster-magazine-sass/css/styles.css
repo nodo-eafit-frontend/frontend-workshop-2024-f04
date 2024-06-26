@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "ScoutCondensed";
+  src: url(../assets/fonts/ScoutCond-Bold.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+.cover-lines {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.masthead {
+  font-family: "ScoutCondensed";
+  font-weight: 900;
+  font-size: 200px;
+  text-transform: none;
+  color: #0067ba;
+}
+
+.headlines {
+  font-weight: 700;
+  font-family: "Scout";
+  font-size: 30px;
+  color: #263249;
+}
+
+.tagline {
+  font-family: "Scout";
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: none;
+  color: #60625a;
+}
+
+.cover-line {
+  font-family: "Scout";
+  font-weight: 900;
+  font-size: 90px;
+  text-transform: none;
+  color: #21201c;
+}
+
+.headlines_especial {
+  font-family: "Scout";
+  font-weight: 700;
+  font-size: 60px;
+  color: #ff0000;
+}
+
+.number {
+  font-family: "Scout";
+  font-weight: 900;
+  font-size: 90px;
+  color: #0067ba;
+}
+
+.cover {
+  position: relative;
+  background-color: #e1dcd2;
+  width: 100%;
+  text-transform: uppercase;
+  width: min-content;
+  overflow: hidden;
+}
+.cover img {
+  align-items: center;
+  position: absolute;
+  width: 120%;
+  top: 0;
+  left: -160px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,29 @@
+//Typography family
+
+@font-face {
+  font-family: "ScoutCondensed";
+  src: url(../assets/fonts/ScoutCond-Bold.otf);
+  font-weight: 900; //BlackCondensed
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Black.otf);
+  font-weight: 900; //Black
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Bold.otf);
+  font-weight: 700; //Bold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Regular.otf);
+  font-weight: 400; //Regular
+  font-style: normal;
+}

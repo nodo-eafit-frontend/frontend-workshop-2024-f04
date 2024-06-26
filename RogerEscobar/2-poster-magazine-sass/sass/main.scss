@@ -1,0 +1,8 @@
+@use "./_base/reset";
+@use "./_layout/cover-lines";
+@use "./_layout/cover";
+
+body {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,53 @@
+@use "../_base/typography" as *;
+@use "../_base/variables" as *;
+
+.cover-lines {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.masthead {
+  font-family: map-get($fonts, masthead, family);
+  font-weight: map-get($fonts, masthead, weight);
+  font-size: 200px;
+  text-transform: none;
+  color: $color-blue;
+}
+
+.headlines {
+  font-weight: map-get($fonts, headlines, weight);
+  font-family: map-get($fonts, headlines, family);
+  font-size: 30px;
+  color: $color-darkblue;
+}
+
+.tagline {
+  font-family: map-get($fonts, taglines, family);
+  font-weight: map-get($fonts, taglines, weight);
+  font-size: 30px;
+  text-transform: none;
+  color: $color-gray;
+}
+
+.cover-line {
+  font-family: map-get($fonts, coverline, family);
+  font-weight: map-get($fonts, coverline, weight);
+  font-size: 90px;
+  text-transform: none;
+  color: $color-black;
+}
+
+.headlines_especial {
+  font-family: map-get($fonts, headlines, family);
+  font-weight: map-get($fonts, headlines, weight);
+  font-size: 60px;
+  color: $color-red;
+}
+
+.number {
+  font-family: map-get($fonts, coverline, family);
+  font-weight: map-get($fonts, coverline, weight);
+  font-size: 90px;
+  color: $color-blue;
+}
