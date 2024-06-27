@@ -1,0 +1,54 @@
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px; /* Reduje el padding para mayor espacio alrededor del contenido */
+    color:rgba(255, 255, 255, 0.887);
+}
+
+main {
+    background-color: rgba(132, 132, 180, 0.912);
+    width: 60rem;
+    height: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    text-transform: capitalize;
+    line-height: 70%;
+    text-align: center; /* Añadí text-align para centrar el título */
+    margin-bottom: 20px; /* Añadí margen inferior al título */
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+h2, p, em {
+    text-align: center; /* Centrar el contenido de los artículos */
+    margin-top: 0; /* Eliminar el espacio superior para los títulos */
+    font-weight: 400; /* Ajusté el peso de la fuente para mayor legibilidad */
+}
+
+.arti1, .arti2, .arti3, .arti4 {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arti1, .arti3 {
+    grid-column: 1; /* Establecer la primera columna para estos artículos */
+    
+}
+
+.arti2, .arti4 {
+    grid-column: 2; /* Establecer la segunda columna para estos artículos */
+}
