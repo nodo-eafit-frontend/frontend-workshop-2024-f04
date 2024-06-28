@@ -1,0 +1,19 @@
+@use './pallete' as *;
+
+/* Definición de variables CSS para colores */
+:root {
+  --color-pink: #ff1493; /* Rosa chicle */
+  --line-height-pink: 0.8;
+  --font-size-pink: 1.5rem;
+}
+
+/* Estilo para la clase pink-style */
+.pink-style {
+  color: var(--color-pink);
+  line-height: var(--line-height-pink);
+  font-size: var(--font-size-pink);
+  font-family: 'Playfair Display', serif; /* Añadir una fuente estilizada para un toque bonito */
+  font-weight: bold; /* Fuente en negrita para mayor impacto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra de texto sutil para destacar */
+  margin: 0.5rem 0; /* Margen vertical para espaciado */
+}

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap';
+
+// Reset CSS
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Playfair Display', serif;
+}
+
+// Variables
+$color-pink: #ff1493;
+$color-bg: #a9100c;
+$color-bg-gradient-start: #0e0905;
+$color-bg-gradient-end: #a9100c;
+$color-text: #f7d7d5;
+$font-primary: 'Playfair Display', serif;
+$line-height-default: 1.5;
+
+// Mixins
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin headline-style($color, $size) {
+	color: $color;
+	font-size: $size;
+	line-height: 0.8;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+// Extend
+%center-content {
+	@include flex-center;
+	text-align: center;
+}
+
+// Functions
+@function set-rem($size) {
+	@return calc(#{$size / 16}rem); // Utilizando calc para la división
+}
+
+// Styling
+.magazine {
+    background-color: $color-bg;
+    background: linear-gradient(45deg, $color-bg-gradient-start 0%, $color-bg-gradient-end 61%);
+    color: $color-text;
+    padding: set-rem(16);
+    @extend %center-content;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;     // Ajustar altura al 100% del viewport
+    overflow: hidden;  // Evitar desbordamiento de contenido
+
+    &__title {
+        font-size: set-rem(128);
+        position: absolute;
+        top: set-rem(16);
+        z-index: 1;
+        @extend %center-content;
+
+        span {
+            position: relative;
+            font-family: $font-primary;
+        }
+    }
+
+    .cover-image {
+        width: auto;       // Ancho del contenedor al 100%
+        height: 100vh;      // Alto del contenedor al 100%
+        object-fit: cover; // Mantener la relación de aspecto y cubrir el contenedor
+        z-index: 0;
+        position: relative;
+    }
+}
+
+
+.headlines {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	gap: set-rem(16);
+	margin-top: set-rem(-300);
+	z-index: 2;
+	position: relative;
+
+	.headline {
+		@include headline-style($color-text, set-rem(20));
+		padding: set-rem(8);
+	}
+}
+
+.pink-style {
+	@include headline-style($color-pink, set-rem(24));
+}
