@@ -2,52 +2,159 @@
 @use "../_base/variables" as *;
 
 .cover-lines {
+  padding-right: 28px;
+  padding-left: 20px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-.masthead {
-  font-family: map-get($fonts, masthead, family);
-  font-weight: map-get($fonts, masthead, weight);
-  font-size: 200px;
-  text-transform: none;
-  color: $color-blue;
-}
+  grid-template-rows: repeat(3, 1fr);
 
-.headlines {
-  font-weight: map-get($fonts, headlines, weight);
-  font-family: map-get($fonts, headlines, family);
-  font-size: 30px;
-  color: $color-darkblue;
-}
+  .cover-lines__item {
+    &--1,
+    &--2,
+    &--3 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 24px;
+      padding-right: 50%;
+      padding-top: 6px;
+    }
 
-.tagline {
-  font-family: map-get($fonts, taglines, family);
-  font-weight: map-get($fonts, taglines, weight);
-  font-size: 30px;
-  text-transform: none;
-  color: $color-gray;
-}
+    &--4 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      align-content: center;
+      z-index: 2;
+    }
 
-.cover-line {
-  font-family: map-get($fonts, coverline, family);
-  font-weight: map-get($fonts, coverline, weight);
-  font-size: 90px;
-  text-transform: none;
-  color: $color-black;
-}
+    &--5 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      text-align: right;
+      padding-left: 35%;
+      margin-top: -30px;
+      p:first-child {
+        color: $color-red;
+      }
+    }
 
-.headlines_especial {
-  font-family: map-get($fonts, headlines, family);
-  font-weight: map-get($fonts, headlines, weight);
-  font-size: 60px;
-  color: $color-red;
-}
+    &--6 {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      text-align: right;
+      padding-left: 50%;
+      margin-top: -100px;
+      p:last-child {
+        color: $color-black;
+        padding-left: 35%;
+        font-size: 18px;
+        line-height: 14px;
+      }
+    }
 
-.number {
-  font-family: map-get($fonts, coverline, family);
-  font-weight: map-get($fonts, coverline, weight);
-  font-size: 90px;
-  color: $color-blue;
+    &--7 {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding-right: 70%;
+    }
+
+    &--especial {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $color-yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 60px;
+      right: 55px;
+      font-family: map-get($fonts, special, family);
+      font-weight: map-get($fonts, special, weight);
+      font-style: italic;
+      font-size: 16px;
+      text-transform: none;
+      text-align: center;
+      color: $color-gray;
+      line-height: 12px;
+    }
+  }
+  &__headlines {
+    font-weight: map-get($fonts, headlines, weight);
+    font-family: map-get($fonts, headlines, family);
+    font-size: 26px;
+    line-height: 22px;
+    color: $color-darkblue;
+  }
+
+  &__tagline {
+    font-family: map-get($fonts, taglines, family);
+    font-weight: map-get($fonts, taglines, weight);
+    font-size: 24px;
+    text-transform: none;
+    color: $color-gray;
+  }
+
+  &__coverline {
+    font-family: map-get($fonts, coverline, family);
+    font-weight: map-get($fonts, coverline, weight);
+    font-size: 85px;
+    text-transform: none;
+    text-align: right;
+    color: $color-black;
+    line-height: 60px;
+    padding-top: 60px;
+  }
+
+  &__headlines_bold {
+    font-family: map-get($fonts, headlines, family);
+    font-weight: map-get($fonts, headlines, weight);
+    font-size: 30px;
+    line-height: 22px;
+    color: $color-black;
+  }
+
+  &__number {
+    font-family: map-get($fonts, coverline, family);
+    font-weight: map-get($fonts, coverline, weight);
+    font-size: 90px;
+    color: $color-blue;
+    line-height: 60px;
+  }
+  .codebar {
+    &__barcode-text {
+      font-family: map-get($fonts, taglines, family);
+      font-weight: map-get($fonts, taglines, weight);
+      font-size: 12px;
+      line-height: 10px;
+      text-transform: none;
+      color: $color-white;
+      margin-top: 90px;
+      padding-right: 40%;
+    }
+    &__website {
+      font-family: map-get($fonts, taglines, family);
+      font-weight: map-get($fonts, taglines, weight);
+      font-size: 14px;
+      text-transform: none;
+      text-align: center;
+      color: $color-white;
+      background-color: $color-black;
+      align-items: center;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    &__image {
+      height: 80px;
+    }
+  }
 }

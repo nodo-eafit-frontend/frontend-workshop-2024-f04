@@ -5,45 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entertainment Weekly #928</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon" />
   </head>
   <body>
     <main class="cover">
       <h1 class="masthead">
-        <span>Entertainment</span>
-        <!-- <span>weekly</span> -->
+        <span class="masthead__part--primary">Entertainment</span>
+        <span class="masthead__part--secondary">weekly</span>
+        <span class="masthead__part--tertiary">#928 • APRIL 6, 2007</span>
         <img
+          class="img-cover"
           src="./assets/images/harry_potter.png"
           alt="Daniel Radcliffe as Harry Potter" />
       </h1>
       <article class="cover-lines">
-        <section>
-          <h2 class="headlines">HOUSE</h2>
-          <p class="tagline">Your Complete A-Z Guide</p>
+        <div>
+          <section class="cover-lines__item cover-lines__item--1">
+            <h2 class="cover-lines__headlines">HOUSE</h2>
+            <p class="cover-lines__tagline">Your Complete A-Z Guide</p>
+          </section>
+          <section class="cover-lines__item cover-lines__item--2">
+            <h2 class="cover-lines__headlines">BUFFY</h2>
+            <p class="cover-lines__tagline">The 10th Anniversary</p>
+          </section>
+          <section class="cover-lines__item cover-lines__item--3">
+            <h2 class="cover-lines__headlines">JENNIFER LOPEZ</h2>
+            <p class="cover-lines__tagline">On Her Risky New Album</p>
+          </section>
+        </div>
+        <section class="cover-lines__item cover-lines__item--4">
+          <h2 class="cover-lines__coverline">Harry Potter</h2>
         </section>
-        <section>
-          <h2 class="headlines">BUFFY</h2>
-          <p class="tagline">The 10th Anniversary</p>
-        </section>
-        <section>
-          <h2 class="headlines">JENNIFER LOPEZ</h2>
-          <p class="tagline">On Her Risky New Album</p>
-        </section>
-        <section>
-          <h2 class="cover-line">Harry Potter</h2>
-          <p class="headlines_especial">
+        <div class="cover-lines__item cover-lines__item--especial">
+          <span>special preview issue</span>
+        </div>
+        <section class="cover-lines__item cover-lines__item--5">
+          <p class="cover-lines__headlines">
             ALL YOU NEED TO KNOW ABOUT THE NEW MOVIE
           </p>
-          <p class="headlines">EXCLUSIVE PHOTOS!</p>
+          <p class="cover-lines__headlines">EXCLUSIVE PHOTOS!</p>
         </section>
-        <section>
-          <h2 class="headlines-bold">THE ULTIMATE HARRY POTTER POP QUIZ</h2>
+        <section class="cover-lines__item cover-lines__item--6">
+          <h2 class="cover-lines__headlines_bold">
+            THE ULTIMATE HARRY POTTER POP QUIZ
+          </h2>
+          <span class="cover-lines__number">50</span>
+          <p class="cover-lines__tagline">
+            QUESTIONS TO SEPARATE WIZARDS FROM MUGGLES
+          </p>
         </section>
-        <section>
-          <h2 class="headlines">QUESTIONS TO SEPARATE WIZARDS FROM MUGGLES</h2>
-        </section>
-        <section class="number">
-          <span>50</span>
+        <section class="cover-lines__item cover-lines__item--7">
+          <p class="codebar__barcode-text">Daniel Radcliffe as Harry Potter</p>
+          <span class="codebar__website">www.ew.com</span>
+          <img
+            class="codebar__image"
+            src="./assets/images/codebar.png"
+            alt="Barcode" />
         </section>
       </article>
     </main>

@@ -3,7 +3,7 @@
 $fonts: (
   masthead: (
     family: "ScoutCondensed",
-    weight: 900,
+    weight: 400,
   ),
   headlines: (
     family: "Scout",
@@ -17,6 +17,10 @@ $fonts: (
     family: "Scout",
     weight: 400,
   ),
+  special: (
+    family: "Brygada+1918",
+    weight: 400,
+  ),
 );
 
 //Color palette
@@ -27,4 +31,5 @@ $color-black: #21201c;
 $color-gray: #60625a;
 $color-red: #ff0000;
 $color-yellow: #d0d659;
-$color-white: #e1dcd2;
+$color-paper: #e1dcd2;
+$color-white: #fff;
