@@ -1,0 +1,11 @@
+:root {
+    --tabs-border-color: #ABCDEF;
+    --tabs-border-size: 6px;
+    --tabs-text-color: white;
+    --tabs-dark-color: #012345;
+    --tabs-lite-color: #345678;
+    --card-color:#548231;
+    --button-color:#151718;
+    --forward-color:rgb(193, 211, 211);
+    --color-text-img:#e7f0e7;
+  }

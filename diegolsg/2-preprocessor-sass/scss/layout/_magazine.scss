@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+.magazine {
+	@include background-magazine($color-fondo-1,$color-fondo-2,0deg);
+	margin: 2rem;
+	width: min-content;
+
+	ul > span{
+		padding: 2%;
+		justify-content: center;
+		align-items: center;
+		vertical-align: middle;
+		border-top-width: 10px;
+		border-top-color: aliceblue;
+  
+
+	}
+
+	ul:first-child{
+		color: $color-text-white;
+		font-family: $font-ps;
+		font-size: 13px;
+		background-color:$color-text-black;
+		width: 100%;
+		display:flex;
+		
+		
+	}
+
+	&__title{
+		color:$color-text-play;
+		font-size: 2cm;
+		font-family: $font-play;
+		display: flex;
+		border-bottom: 5px ;
+
+		
+	}
+	
+	&__title span {
+		position: relative;
+		
+	}
+
+	&__title cite{
+		font-size: 10px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		color: $color-text-white;
+		
+	}
+
+	&__title span:first-of-type {
+		z-index: 3;
+	}
+
+	&__title span:last-of-type {
+		z-index: 1;
+	}
+	img {
+		position: absolute;
+		z-index: 2;
+		position: absolute;
+    z-index: 2;
+    left: 3rem;
+    top: 1.213rem;
+    width: 28rem
+	}
+
+	> article {
+		z-index: 4;
+		position: relative;
+	}
+}

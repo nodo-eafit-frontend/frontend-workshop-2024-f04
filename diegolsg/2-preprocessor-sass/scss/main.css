@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "PlayStation";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/zrnic rg.otf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "marvel";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/MarvelRegular-Dj83.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "spider-man";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/Spider-Man.otf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ps";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/TheRaveIsInYourPants-YxxO.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/EmotionEngineBold-YGnL.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+/**
+ // Metodología BEM
+ .block {
+   &__entity {...}
+
+	 &__entity {
+	   &--modifier {...}
+	 }
+
+	 &--modifier {...}
+
+	 .block__entity
+
+	 .block--modifier
+
+	 .block__entity--modifier
+**/
+.games {
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  top: -37%;
+}
+.games section:nth-child(2) {
+  grid-row: 2;
+}
+.games section:nth-child(2) p {
+  font-size: 8px;
+  background-color: #fde500;
+  text-align: right;
+  width: 70px;
+  padding-right: 2%;
+}
+.games section:nth-child(1) {
+  text-align: center;
+  font-size: 10px;
+  padding-left: 60%;
+  color: #f5ec6b;
+  grid-row: 2;
+}
+.games section:nth-child(1) h6 {
+  font-size: 6px;
+  color: #ffffff;
+  width: 50px;
+}
+.games section:nth-child(1) h2:nth-child(odd) {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 650px;
+  width: 75px;
+}
+.games section:nth-child(3) {
+  grid-column: 2;
+  grid-row: 3;
+  color: #000000;
+  font-size: 10px;
+}
+.games section:nth-child(4) {
+  grid-row: 4;
+  grid-column: 1/3;
+  color: #f5ec6b;
+  text-align: center;
+  grid-template-areas: section, section;
+  font-size: 5px;
+}
+.games section:nth-child(4) h4 {
+  font-family: "marvel", sans-serif;
+  color: #ffffff;
+  background-color: #f00317;
+  font-size: 15px;
+}
+.games section:nth-child(4) h2 {
+  color: #ffffff;
+  font-size: 1cm;
+}
+.games section:nth-child(4) p:nth-child(odd) {
+  color: #f00317;
+  font-size: 1cm;
+}
+
+.circle {
+  background: #ffea0f;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 5%;
+  border: #000000 2px solid;
+}
+
+.magazine {
+  background-color: #1f1a20;
+  background: linear-gradient(0deg, #252839 20%, #1f1a20 50%);
+  margin: 2rem;
+  width: -moz-min-content;
+  width: min-content;
+}
+.magazine ul > span {
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  border-top-width: 10px;
+  border-top-color: aliceblue;
+}
+.magazine ul:first-child {
+  color: #ffffff;
+  font-family: "ps", sans-serif;
+  font-size: 13px;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+}
+.magazine__title {
+  color: #fde500;
+  font-size: 2cm;
+  font-family: "PlayStation", sans-serif;
+  display: flex;
+  border-bottom: 5px;
+}
+.magazine__title span {
+  position: relative;
+}
+.magazine__title cite {
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+.magazine__title span:first-of-type {
+  z-index: 3;
+}
+.magazine__title span:last-of-type {
+  z-index: 1;
+}
+.magazine img {
+  position: absolute;
+  z-index: 2;
+  position: absolute;
+  z-index: 2;
+  left: 3rem;
+  top: 1.213rem;
+  width: 28rem;
+}
+.magazine > article {
+  z-index: 4;
+  position: relative;
+}
+
+body {
+  width: 500px;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */
