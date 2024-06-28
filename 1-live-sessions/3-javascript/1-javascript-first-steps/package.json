@@ -1,0 +1,12 @@
+{
+  "name": "1-javascript-first-steps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index"
+  },
+  "author": "Marvin Cely",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
