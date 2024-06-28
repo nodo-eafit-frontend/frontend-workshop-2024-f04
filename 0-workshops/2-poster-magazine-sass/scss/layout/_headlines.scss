@@ -11,26 +11,53 @@
 		@extend .blue-style;
 	}
 
+	section {
+		margin: 0.5rem 0; 
+	}
+
 	section:nth-child(odd) {
 		text-align: left;
+		padding-inline-end: 70%;
+		margin-inline-start: 0.5rem;
+		margin: 0.25rem 0;
+		
 	}
 
 	section:nth-child(even) {
 		text-align: right;
+		padding-inline-start: 50%;
+		padding-right: 0%;
+		margin: 0.25rem 0;
+		
 	}
 
-	section:nth-child(1) {
-		padding-right: 2rem;
-	}
-
-	section:nth-child(2) {
-		h2 {
-			font-size: 1.875rem;
+	.headlines-left {
+		p {
+		  color: $color-black;
+		  margin: 0.25rem 0;
 		}
-	}
 
-	section:nth-child(3) {
-		padding-right: 6rem;
+		h3 {
+		  color: $color-blue-h2;
+		  margin: 0.25rem 0;	
+		}
+		
+	  }
+	 
+	  .headlines-right {
+		p {
+		  color: $color-blue;
+		  margin: 0.25rem 0;
+		  
+		}
+		p.headlines--red-style {
+			color: $color-red;
+			margin: 0.25rem 0;
+		}
+		p.headlines--black-style {
+			color: $color-black;
+			margin: 0.25rem 0;
+			
+		  }
 	}
-	
 }

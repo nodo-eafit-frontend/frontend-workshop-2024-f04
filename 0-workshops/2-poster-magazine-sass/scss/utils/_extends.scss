@@ -1,7 +1,13 @@
 @use './colors' as *;
 
 .blue-style {
-  color: $color-blue-h2;
+  color: $color-blue;
+  line-height: 0.8;
+  font-size: 1.5rem;
+}
+
+.red-style{
+  color: $color-red;
   line-height: 0.8;
   font-size: 1.5rem;
 }

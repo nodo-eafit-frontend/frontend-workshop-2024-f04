@@ -1,5 +1,11 @@
 .blue-style, .headlines--blue-style {
-  color: #182675;
+  color: #0051ff;
+  line-height: 0.8;
+  font-size: 1.5rem;
+}
+
+.red-style {
+  color: #d81212;
   line-height: 0.8;
   font-size: 1.5rem;
 }
@@ -11,57 +17,71 @@
   font-weight: bolder;
   grid-row-gap: 8rem;
 }
+.headlines section {
+  margin: 0.5rem 0;
+}
 .headlines section:nth-child(odd) {
   text-align: left;
+  padding-inline-end: 70%;
+  margin-inline-start: 0.5rem;
+  margin: 0.25rem 0;
 }
 .headlines section:nth-child(even) {
   text-align: right;
+  padding-inline-start: 50%;
+  padding-right: 0%;
+  margin: 0.25rem 0;
 }
-.headlines section:nth-child(1) {
-  padding-right: 2rem;
+.headlines .headlines-left p {
+  color: #0e0905;
+  margin: 0.25rem 0;
 }
-.headlines section:nth-child(2) h2 {
-  font-size: 1.875rem;
+.headlines .headlines-left h3 {
+  color: #060d36;
+  margin: 0.25rem 0;
 }
-.headlines section:nth-child(3) {
-  padding-right: 6rem;
+.headlines .headlines-right p {
+  color: #0051ff;
+  margin: 0.25rem 0;
+}
+.headlines .headlines-right p.headlines--red-style {
+  color: #d81212;
+  margin: 0.25rem 0;
+}
+.headlines .headlines-right p.headlines--black-style {
+  color: #0e0905;
+  margin: 0.25rem 0;
 }
 
 .magazine {
   background-color: #fafafa;
   background: linear-gradient(45deg, #0e0905 0%, #fafafa 61%);
-  color: #fafafa;
+  color: #0e0905;
   margin: 2rem;
   padding: 1rem;
-  text-transform: uppercase;
   width: min-content;
 }
 .magazine__title {
-  color: #182675;
+  color: #060d36;
   font-size: 8rem;
   text-align: center;
   font-family: "anton", "Times New Roman", sans-serif;
-  line-height: 0.89;
+  line-height: 0.9;
   position: relative;
   z-index: 0;
 }
 .magazine__title span {
   position: relative;
-}
-.magazine__title span:first-of-type {
-  z-index: 3;
-}
-.magazine__title span:last-of-type {
-  z-index: 1;
+  color: #0051ff;
 }
 .magazine img {
   position: absolute;
   z-index: 2;
-  left: -1.5rem;
-  top: 2.813rem;
-  width: 26rem;
+  left: 2rem;
+  top: -3rem;
+  width: 40rem;
 }
-.magazine > article {
+.magazine article {
   position: relative;
 }
 
