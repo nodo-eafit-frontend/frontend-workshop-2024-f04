@@ -1,11 +1,11 @@
 .blue-style, .headlines--blue-style {
-  color: #0051ff;
+  color: #1481bd;
   line-height: 0.8;
   font-size: 1.5rem;
 }
 
 .red-style {
-  color: #d81212;
+  color: #d23843;
   line-height: 0.8;
   font-size: 1.5rem;
 }
@@ -33,37 +33,87 @@
   margin: 0.25rem 0;
 }
 .headlines .headlines-left p {
-  color: #0e0905;
+  color: #191b1d;
   margin: 0.25rem 0;
+  line-height: 1;
 }
 .headlines .headlines-left h3 {
-  color: #060d36;
+  color: #1481bd;
   margin: 0.25rem 0;
+  line-height: 1;
 }
-.headlines .headlines-right p {
-  color: #0051ff;
-  margin: 0.25rem 0;
+.headlines .headlines-right .p1 {
+  color: #191b1d;
+  margin: 0.5px 0;
+  font-size: 3rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  padding: 1px 1px;
+  line-height: 1;
 }
-.headlines .headlines-right p.headlines--red-style {
-  color: #d81212;
+.headlines .headlines-right .p2 {
+  color: #d23843;
   margin: 0.25rem 0;
+  font-size: 1rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  padding: 1px 1px;
+  line-height: 1;
+  text-transform: uppercase;
 }
-.headlines .headlines-right p.headlines--black-style {
-  color: #0e0905;
+.headlines .headlines-right .p3 {
+  color: #191b1d;
   margin: 0.25rem 0;
+  font-size: 1.15rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  padding: 1px 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.headlines .headlines-right .p4 {
+  color: #d23843;
+  margin: 0rem 0;
+  padding: 0%;
+  font-size: 2rem;
+}
+.headlines .headlines-right .p5 {
+  color: #191b1d;
+  margin: 0.1rem 0;
+  font-size: 1.8rem;
+  word-spacing: 0.9rem;
+  letter-spacing: 0rem;
+  padding: 0.5px 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.headlines .headlines-right .p6 {
+  color: #1481bd;
+  margin: 0 0;
+  font-size: 4rem;
+  word-spacing: 0.9rem;
+  letter-spacing: 0rem;
+}
+.headlines .headlines-right .p7 {
+  color: #191b1d;
+  margin: 0.25rem 0;
+  font-size: 1.2rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.3rem;
+  padding: 1px 1px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .magazine {
-  background-color: #fafafa;
-  background: linear-gradient(45deg, #0e0905 0%, #fafafa 61%);
-  color: #0e0905;
+  background-color: #e5e1df;
+  color: #191b1d;
   margin: 2rem;
   padding: 1rem;
-  width: min-content;
 }
 .magazine__title {
-  color: #060d36;
-  font-size: 8rem;
+  color: #1481bd;
+  font-size: 7.8rem;
   text-align: center;
   font-family: "anton", "Times New Roman", sans-serif;
   line-height: 0.9;
@@ -72,7 +122,7 @@
 }
 .magazine__title span {
   position: relative;
-  color: #0051ff;
+  color: #1481bd;
 }
 .magazine img {
   position: absolute;

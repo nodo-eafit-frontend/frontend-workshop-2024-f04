@@ -1,12 +1,12 @@
 @use '../utils' as *;
 
 .magazine {
-	@include background-magazine($color-white, $color-black, 45deg);
+	background-color: $color-back1;
 	color: $color-black;
 	margin: 2rem;
 	padding: 1rem;
 	
-	width: min-content;
+	
 
 	&__title {
         color: $color-blue-h2;
