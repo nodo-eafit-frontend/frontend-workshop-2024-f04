@@ -68,7 +68,7 @@ table {
 }
 @font-face {
   font-family: "spider-man";
-  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/Spider-Man.otf");
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/Spider-Man.otf") format("opentype");
   font-weight: 200;
   font-display: swap;
 }
@@ -106,45 +106,54 @@ table {
   text-transform: uppercase;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  top: -37%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: none;
+  top: -35%;
 }
 .games section:nth-child(2) {
-  grid-row: 2;
-}
-.games section:nth-child(2) p {
-  font-size: 8px;
-  background-color: #fde500;
+  font-size: 7px;
   text-align: right;
-  width: 70px;
-  padding-right: 2%;
+  background-color: #f00317;
+  grid-row: 1;
+  grid-column: -1;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: -30%;
+}
+.games section:nth-child(2) p:nth-child(odd) {
+  background-color: #fde500;
 }
 .games section:nth-child(1) {
   text-align: center;
   font-size: 10px;
-  padding-left: 60%;
   color: #f5ec6b;
-  grid-row: 2;
+  grid-row: 1/3;
+  grid-column: 1;
+  margin-top: 50%;
+  width: 41%;
+  padding-left: 60%;
 }
 .games section:nth-child(1) h6 {
   font-size: 6px;
   color: #ffffff;
-  width: 50px;
 }
 .games section:nth-child(1) h2:nth-child(odd) {
   color: #ffffff;
-  font-size: 12px;
   font-weight: 650px;
-  width: 75px;
 }
 .games section:nth-child(3) {
-  grid-column: 2;
-  grid-row: 3;
+  grid-column: 3;
+  grid-row: 2;
   color: #000000;
-  font-size: 10px;
+  font-size: 6px;
+  margin-top: 20%;
+  margin-right: 40%;
 }
 .games section:nth-child(4) {
-  grid-row: 4;
-  grid-column: 1/3;
+  grid-row: 3;
+  grid-column: 1/4;
   color: #f5ec6b;
   text-align: center;
   grid-template-areas: section, section;
@@ -154,22 +163,31 @@ table {
   font-family: "marvel", sans-serif;
   color: #ffffff;
   background-color: #f00317;
-  font-size: 15px;
+  font-size: 25px;
+  margin-left: 43%;
+  margin-bottom: 0.5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .games section:nth-child(4) h2 {
   color: #ffffff;
-  font-size: 1cm;
+  font-size: 3.3cm;
+  font-family: "spider-man", sans-serif;
+  grid-row: 4;
+  margin-bottom: -15%;
 }
-.games section:nth-child(4) p:nth-child(odd) {
+.games section:nth-child(4) p {
   color: #f00317;
-  font-size: 1cm;
+  font-size: 1.1cm;
+  text-align: inherit;
 }
-
-.circle {
+.games .circle {
   background: #ffea0f;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   justify-content: center;
   text-align: center;
   display: flex;
@@ -226,9 +244,9 @@ table {
   z-index: 2;
   position: absolute;
   z-index: 2;
-  left: 3rem;
+  left: 2.5rem;
   top: 1.213rem;
-  width: 28rem;
+  width: 30rem;
 }
 .magazine > article {
   z-index: 4;
