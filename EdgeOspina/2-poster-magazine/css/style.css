@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "letra-portada";
-  src: url(../assets/fonts/linkin-park-extrabold.ttf);
-}
-@font-face {
-  font-family: "letra-secundaria";
-  src: url(../assets/fonts/metropolis-semibold.otf);
-}
-@font-face {
-  font-family: "letra-principal";
-  src: url(../assets/fonts/saonara.otf);
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,6 +48,18 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "letra-portada";
+  src: url(../assets/fonts/linkin-park-extrabold.ttf);
+}
+@font-face {
+  font-family: "letra-secundaria";
+  src: url(../assets/fonts/metropolis-semibold.otf);
+}
+@font-face {
+  font-family: "letra-principal";
+  src: url(../assets/fonts/saonara.otf);
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -81,56 +81,37 @@ body, html {
   overflow: hidden;
 }
 
-.container__header {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-}
-
-.item {
-  position: absolute;
-  text-align: left;
-  padding: 5px;
-}
-
-.container__header--left-top :not(.container__header-title), .container__politics--left-bot, .container__boxing--right-top, .container__change--right-bot {
+.header--left-top :not(h1), .politics--left-bot, .boxing--right-top, .change--right-bot {
   width: 29%;
   z-index: 10;
 }
 
-.container__boxing--right-top, .container__change--right-bot {
+.boxing--right-top, .change--right-bot {
   bottom: 80%;
   text-align: right;
 }
 
-.container__header--left-top :not(.container__header-title, .container__header-british) {
-  top: 3.6rem;
-  left: 15%;
-  line-height: 0.5rem;
-  position: relative;
-}
-
-.container__politics--left-bot {
+.politics--left-bot {
   bottom: 38%;
   left: 3%;
   position: absolute;
 }
 
-.container__change--right-bot {
+.change--right-bot {
   top: 14rem;
   right: 10rem;
   left: 75%;
   width: 20%;
 }
 
-.container__boxing--right-top {
+.boxing--right-top {
   bottom: 30rem;
   width: 10rem;
   left: 65%;
   position: absolute;
 }
 
-.container__bmr--lower-segment {
+.bmr--lower-segment {
   top: 67%;
   z-index: 10;
   width: 30rem;
@@ -139,7 +120,7 @@ body, html {
   position: absolute;
 }
 
-.container__image-bryan-cranston {
+.image-bryan-cranston {
   z-index: 5;
   position: absolute;
   width: 48rem;
@@ -148,7 +129,18 @@ body, html {
   filter: brightness(70%);
 }
 
-.container__header-title {
+header {
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+}
+
+.item {
+  position: absolute;
+  padding: 5px;
+}
+
+.header--left-top h1 {
   font-family: "letra-portada";
   font-size: 12rem;
   letter-spacing: -17px;
@@ -158,45 +150,36 @@ body, html {
   position: absolute;
 }
 
-.container__header-british {
+.header--left-top > span:first-of-type {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
   font-size: 0.7rem;
   font-weight: 900;
-  position: relative;
-  top: 3.5rem;
-  left: 3.5rem;
+  position: absolute;
+  top: 4.5rem;
+  left: 4rem;
 }
 
-.container__header-british-bg {
-  font-family: "letra-secundaria";
-  text-transform: uppercase;
-  color: black;
-  font-size: 0.7rem;
-  font-weight: 800;
-  filter: blur(2px);
-}
-
-.container__header-gentlemen {
+.header-magazine-info {
+  line-height: 0.5rem;
+  width: 100rem;
+  position: absolute;
   text-transform: uppercase;
   font-family: "letra-secundaria";
-  font-size: 0.4rem;
   font-weight: bolder;
+  top: 9rem;
+  left: 1rem;
 }
-
-.container__header-june {
-  font-family: "letra-secundaria";
-  text-transform: uppercase;
+.header-magazine-info span:first-of-type {
+  font-size: 0.4rem;
+}
+.header-magazine-info span:nth-of-type(2) {
   color: #84d0f0;
   font-size: 0.5rem;
   letter-spacing: 2px;
-  font-weight: bolder;
 }
-
-.container__header-euro {
-  font-family: "letra-secundaria";
-  text-transform: uppercase;
+.header-magazine-info span:last-of-type {
   font-size: 0.5rem;
   letter-spacing: 2px;
 }
@@ -214,7 +197,7 @@ h2 {
   display: inline-block;
 }
 
-.container__politics-rupert {
+.politics-rupert {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 1.2rem;
@@ -222,18 +205,18 @@ h2 {
   font-weight: 600;
 }
 
-.container__politics-alastair {
+.politics-alastair {
   font-family: "letra-secundaria";
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-.container__politics-alex, .container__boxing-rematch {
+.politics-alex, .boxing-rematch {
   font-family: "letra-secundaria";
   font-size: 2.3rem;
 }
 
-.container__boxing-cobra-saint {
+.boxing-cobra-saint {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
@@ -241,11 +224,11 @@ h2 {
   font-weight: bolder;
 }
 
-.container__boxing-vs {
+.boxing-vs {
   font-size: 0.4rem;
 }
 
-.container__boxing-cfgg {
+.boxing-cfgg {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 1.2rem;
@@ -253,7 +236,7 @@ h2 {
   font-weight: 900;
 }
 
-.container__boxing-and {
+.boxing-and {
   font-family: "letra-principal";
   font-size: 1.1rem;
   font-weight: 200;
@@ -262,52 +245,52 @@ h2 {
   color: azure;
 }
 
-.container__boxing-oat {
+.boxing-oat {
   font-family: "letra-principal";
   font-size: 1.2rem;
   font-weight: 200;
 }
 
-.container__boxing-bbf {
+.boxing-bbf {
   text-transform: uppercase;
 }
 
-.container__boxing-interview, .container__bmr-story {
+.boxing-interview, .bmr-story {
   font-family: "letra-secundaria";
   font-size: 0.3rem;
   text-transform: uppercase;
 }
 
-.container__boxing-paul-henderson, .container__bmr-stuart-m, .container__bmr-norman-j {
+.boxing-paul-henderson, .bmr-stuart-m, .bmr-norman-j {
   font-size: 0.5rem;
   font-weight: 100;
 }
 
-.container__change-n24 {
+.change-n24 {
   font-family: "letra-principal";
   font-size: 2.5rem;
 }
 
-.container__change-page {
+.change-page {
   font-family: "letra-secundaria";
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 
-.container__change-watch-guide {
+.change-watch-guide {
   color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.6rem;
   font-weight: 900;
 }
 
-.container__change-brands {
+.change-brands {
   font-family: "letra-secundaria";
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-.container__bmr-title {
+.bmr-title {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 6rem;
@@ -316,17 +299,17 @@ h2 {
   line-height: 0.7;
 }
 
-.container__bmr-rising {
+.bmr-rising {
   color: azure;
 }
 
-.container__bmr-hollywood {
+.bmr-hollywood {
   font-family: "letra-principal";
   font-size: 1.4rem;
   font-weight: 200;
 }
 
-.container__bmr-bryanc {
+.bmr-bryanc {
   color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.3rem;
