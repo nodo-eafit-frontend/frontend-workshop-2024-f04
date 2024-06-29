@@ -1,16 +1,65 @@
-@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
 @font-face {
   font-family: "letra-portada";
-  src: url(./assets/linkin-park-extrabold.ttf);
+  src: url(../assets/fonts/linkin-park-extrabold.ttf);
 }
 @font-face {
   font-family: "letra-secundaria";
-  src: url(./assets/metropolis-semibold.otf);
+  src: url(../assets/fonts/metropolis-semibold.otf);
 }
 @font-face {
   font-family: "letra-principal";
-  src: url(./assets/saonara.otf);
+  src: url(../assets/fonts/saonara.otf);
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -24,15 +73,15 @@ body, html {
 
 .container {
   background: linear-gradient(35deg, rgb(10, 10, 10) 0%, rgb(29, 31, 29) 34%, rgba(55, 57, 54, 0.9904412449) 60%, rgb(83, 87, 82) 74%, rgb(140, 147, 140) 88%);
-  height: 694px;
-  width: 550px;
+  height: 43rem;
+  width: 34rem;
   border: 1px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   overflow: hidden;
 }
 
-header {
+.container__header {
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -44,62 +93,62 @@ header {
   padding: 5px;
 }
 
-#left-top :not(#gq), #left-bot, #right-top, #right-bot {
+.container__header--left-top :not(.container__header-title), .container__politics--left-bot, .container__boxing--right-top, .container__change--right-bot {
   width: 29%;
   z-index: 10;
 }
 
-#right-top, #right-bot {
+.container__boxing--right-top, .container__change--right-bot {
   bottom: 80%;
   text-align: right;
 }
 
-#left-top :not(#gq, #british) {
+.container__header--left-top :not(.container__header-title, .container__header-british) {
   top: 3.6rem;
   left: 15%;
-  line-height: 8px;
+  line-height: 0.5rem;
   position: relative;
 }
 
-#left-bot {
+.container__politics--left-bot {
   bottom: 38%;
   left: 3%;
   position: absolute;
 }
 
-#right-bot {
+.container__change--right-bot {
   top: 14rem;
   right: 10rem;
   left: 75%;
   width: 20%;
 }
 
-#right-top {
+.container__boxing--right-top {
   bottom: 30rem;
-  width: 160px;
+  width: 10rem;
   left: 65%;
   position: absolute;
 }
 
-#lower-segment {
+.container__bmr--lower-segment {
   top: 67%;
   z-index: 10;
-  width: 480px;
+  width: 30rem;
   text-align: center;
   left: 2.6rem;
   position: absolute;
 }
 
-#bryan-cranston {
+.container__image-bryan-cranston {
   z-index: 5;
   position: absolute;
   width: 48rem;
   top: -3rem;
   left: -6rem;
-  filter: brightness(45%);
+  filter: brightness(70%);
 }
 
-#gq {
+.container__header-title {
   font-family: "letra-portada";
   font-size: 12rem;
   letter-spacing: -17px;
@@ -109,7 +158,7 @@ header {
   position: absolute;
 }
 
-#british {
+.container__header-british {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
@@ -120,7 +169,7 @@ header {
   left: 3.5rem;
 }
 
-#british-bg {
+.container__header-british-bg {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
@@ -129,15 +178,14 @@ header {
   filter: blur(2px);
 }
 
-#gentlemen {
+.container__header-gentlemen {
   text-transform: uppercase;
   font-family: "letra-secundaria";
   font-size: 0.4rem;
   font-weight: bolder;
-  width: 20rem;
 }
 
-#june {
+.container__header-june {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: #84d0f0;
@@ -146,7 +194,7 @@ header {
   font-weight: bolder;
 }
 
-#euro {
+.container__header-euro {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   font-size: 0.5rem;
@@ -166,7 +214,7 @@ h2 {
   display: inline-block;
 }
 
-#rupert {
+.container__politics-rupert {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 1.2rem;
@@ -174,29 +222,30 @@ h2 {
   font-weight: 600;
 }
 
-#alastair {
+.container__politics-alastair {
   font-family: "letra-secundaria";
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-#alex, #rematch {
+.container__politics-alex, .container__boxing-rematch {
   font-family: "letra-secundaria";
   font-size: 2.3rem;
 }
 
-#cobra-saint {
+.container__boxing-cobra-saint {
   font-family: "letra-secundaria";
   text-transform: uppercase;
   color: black;
   font-size: 0.7rem;
   font-weight: bolder;
 }
-#cobra-saint #vs {
+
+.container__boxing-vs {
   font-size: 0.4rem;
 }
 
-#cfgg {
+.container__boxing-cfgg {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 1.2rem;
@@ -204,7 +253,7 @@ h2 {
   font-weight: 900;
 }
 
-#and {
+.container__boxing-and {
   font-family: "letra-principal";
   font-size: 1.1rem;
   font-weight: 200;
@@ -213,52 +262,52 @@ h2 {
   color: azure;
 }
 
-#oat {
+.container__boxing-oat {
   font-family: "letra-principal";
   font-size: 1.2rem;
   font-weight: 200;
 }
 
-#bbf {
+.container__boxing-bbf {
   text-transform: uppercase;
 }
 
-#interview, #story-b {
+.container__boxing-interview, .container__bmr-story {
   font-family: "letra-secundaria";
   font-size: 0.3rem;
   text-transform: uppercase;
 }
 
-#paul-henderson, #stuart-m, #norman-j {
+.container__boxing-paul-henderson, .container__bmr-stuart-m, .container__bmr-norman-j {
   font-size: 0.5rem;
   font-weight: 100;
 }
 
-#n24 {
+.container__change-n24 {
   font-family: "letra-principal";
   font-size: 2.5rem;
 }
 
-#page {
+.container__change-page {
   font-family: "letra-secundaria";
   font-size: 0.7rem;
   text-transform: uppercase;
 }
 
-#watch-guide {
+.container__change-watch-guide {
   color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.6rem;
   font-weight: 900;
 }
 
-#brands {
+.container__change-brands {
   font-family: "letra-secundaria";
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-#bmr {
+.container__bmr-title {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 6rem;
@@ -267,17 +316,17 @@ h2 {
   line-height: 0.7;
 }
 
-#rising {
+.container__bmr-rising {
   color: azure;
 }
 
-#hollywood {
+.container__bmr-hollywood {
   font-family: "letra-principal";
   font-size: 1.4rem;
   font-weight: 200;
 }
 
-#bryanc {
+.container__bmr-bryanc {
   color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.3rem;

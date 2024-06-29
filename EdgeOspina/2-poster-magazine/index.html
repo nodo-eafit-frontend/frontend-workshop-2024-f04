@@ -5,82 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Man Rising</title>
-    <link rel="icon" href="./assets/gq-logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/gq-logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- CONTENEDOR DE TODO -->
     <div class="container">
 
-        <!-- HEADER GQ -- Arriba/Izquierda-->
-        <header class="item" id="left-top">
-            <h1 id="gq">Gq</h1>
-            <span id="british">British</span>
-            <span id="british-bg">British</span>
-            <div class="magazine-info">
-                <span id="gentlemen">Gentlemen's Quarterly</span>
+        <!-- HEADER GQ -- Segmento Arriba/Izquierda-->
+        <header class="container__header item container__header--left-top">
+            <h1 class="container__header-title">Gq</h1>
+            <span class="container__header-british">British</span>
+            <span class="container__header-british-bg">British</span>
+            <div class="container__header-magazine-info">
+                <span class="container__header-gentlemen">Gentlemen's Quarterly</span>
                 <br>
-                <span id="june">June</span>
+                <span class="container__header-june">June</span>
                 <br>
-                <span id="euro">2014 <br> &euro;3.99</span>
+                <span class="container__header-euro">2014 <br> &euro;3.99</span>
             </div>
         </header>
 
         <main>
-            <!-- POLITICS -- Abajo/Izquierda -->
-            <article class="item" id="left-bot">
-                <h2 id="politics">Politics</h2>
-                <p id="rupert">'Rupert <br>Murdoch <br>is a <br>remarkable <br>man'</p>
-                <p id="alastair">Alastair Campbell interviews</p>
-                <span id="alex">Alex Salmond</span>
+            <!-- POLITICS -- Segmento Abajo/Izquierda -->
+            <article class="item container__politics container__politics--left-bot">
+                <h2 class="container__politics-title">Politics</h2>
+                <p class="container__politics-rupert">'Rupert <br>Murdoch <br>is a <br>remarkable <br>man'</p>
+                <p class="container__politics-alastair">Alastair Campbell interviews</p>
+                <span class="container__politics-alex">Alex Salmond</span>
             </article>
 
-            <!-- BOXING EXCLUSIVE -- Arriba/Derecha -->
-            <article class="item" id="right-top">
-                <h2 id="titulo">Boxing Exclusive</h2>
-                <span id="rematch">Rematch!</span>
+            <!-- BOXING EXCLUSIVE -- Segmento Arriba/Derecha -->
+            <article class="item container__boxing container__boxing--right-top">
+                <h2 class="container__boxing-title">Boxing Exclusive</h2>
+                <span class="container__boxing-rematch">Rematch!</span>
                 <br>
-                <span id="cobra-saint">The Cobra
-                    <span id="vs">VS</span> The Saint
+                <span class="container__boxing-cobra-saint">The Cobra
+                    <span class="container__boxing-vs">VS</span> The Saint
                 </span>
                 <br>
-                <span id="cfgg"> Carl Froch
-                    <span id="and">and </span> George Groves
+                <span class="container__boxing-cfgg"> Carl Froch
+                    <span class="container__boxing-and">and </span> George Groves
                 </span>
-                <span id="oat">on the
-                    <span id="bbf">Biggest british fight</span> <br>of all time
+                <span class="container__boxing-oat">on the
+                    <span class="container__boxing-bbf">Biggest british fight</span> <br>of all time
                 </span>
                 <br>
-                <span id="interview">Interview by
-                    <span id="paul-henderson">Paul Henderson</span>
+                <span class="container__boxing-interview">Interview by
+                    <span class="container__boxing-paul-henderson">Paul Henderson</span>
                 </span>
             </article>
 
-            <!-- TIME FOR CHANGE -- Abajo/Derecha-->
-            <article class="item" id="right-bot">
-                <h2>Time for change?</h2>
-                <span id="n24">24</span>
-                <span id="page">-page </span>
+            <!-- TIME FOR CHANGE -- Segmento Abajo/Derecha-->
+            <article class="item container__change container__change--right-bot">
+                <h2 class="container__change-title">Time for change?</h2>
+                <span class="container__change-n24">24</span>
+                <span class="container__change-page">-page </span>
                 <br>
-                <span id="watch-guide">Watch guide</span>
-                <p id="brands">All the brands and styles that matter <br>right now</p>
+                <span class="container__change-watch-guide">Watch guide</span>
+                <p class="container__change-brands">All the brands and styles that matter <br>right now</p>
             </article>
 
-            <!-- BAD MAN RISING -- Abajo/Centro -->
-            <article id="lower-segment">
-                <span id="bmr">Bad Man <span id="rising">Rising</span></span>
-                <p id="hollywood">Hey, Hollywood, didn't you hear? <br>Breaking Bad's <span id="bryanc">Bryan
-                        Cranston</span><span style="font-style: italic"> is</span> the danger!</p>
+            <!-- BAD MAN RISING -- Segmento Abajo/Centro -->
+            <article class="container__bmr container__bmr--lower-segment">
+                <span class="container__bmr-title">Bad Man <span class="container__bmr-rising">Rising</span></span>
+                <p class="container__bmr-hollywood">Hey, Hollywood, didn't you hear? <br>Breaking Bad's <span
+                        class="container__bmr-bryanc">Bryan Cranston</span><span style="font-style: italic"> is</span>
+                    the danger!</p>
                 <div>
-                    <span id="story-b">Story by <span id="stuart-m">Stuart McGurk</span> Photographed for British GQ by
-                        <span id="norman-j"> Norman Jean Roy</span></span>
+                    <span class="container__bmr-story">Story by <span class="container__bmr-stuart-m">Stuart
+                            McGurk</span> Photographed for British GQ by
+                        <span class="container__bmr-norman-j"> Norman Jean Roy</span></span>
                 </div>
             </article>
         </main>
 
-        <div class="">
-            <img id="bryan-cranston" src="./assets/bryan-cranston.png" alt="Bryan Cranston como Walter White">
+        <!-- IMAGEN PORTADA -->
+        <div class="container__image">
+            <img class="container__image-bryan-cranston" src="./assets/images/bryan-cranston.png"
+                alt="Bryan Cranston como Walter White">
         </div>
     </div>
 </body>
