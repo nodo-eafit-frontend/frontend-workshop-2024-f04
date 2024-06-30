@@ -21,30 +21,25 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 
 - **Fundamentos de SASS:** Variables, anidamiento, mixins, funciones, herencia y operadores.
 - **Organización de código:** Cómo estructurar tus archivos SASS para una mejor mantenibilidad.
-- **Diseño responsivo:** Adaptar tus diseños para que se vean bien en diferentes dispositivos.
 - **Buenas prácticas de CSS:** Escribir código CSS limpio, eficiente y reutilizable.
 - **Metodologías de CSS:** Entenderás cómo organizar tu código CSS utilizando metodologías como BEM (Block Element Modifier).
 - **Preprocesadores:** Aprenderás a compilar archivos SASS a CSS y cómo integrarlos en tu flujo de trabajo.
 
 ## ¿Qué se va a evaluar?
 
-- **Organización de recursos:**
+- [ ] **Organización de recursos:**
   - Fuentes de texto
   - Paleta de colores
   - Reset CSS
-- **Uso de herramientas como:**
+- [ ] **Uso de herramientas como:**
   - Mixins
   - Functions
   - Variables
   - Extends
-- **Diseño responsive: Diseño adaptable para diferentes dispositivos:**
-  - Móbil
-  - Tablet
-  - Escritorio
-- **Código limpio y modular:**
+- [ ] **Código limpio y modular:**
   - Utilizar metodología BEM
   - Reorganizar cada widget o componente por un archivo sass.
-- **Uso de propiedades css:**
+- [ ] **Uso de propiedades css:**
   - box-model:
     - margin
     - padding
@@ -54,6 +49,11 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
   - display: flexbox
 
 ## Recursos
+
+- [PNG Eggs | Imágenes PNG](https://www.pngegg.com/es)
+- [What ¿he Font](https://www.myfonts.com/pages/whatthefont)
+- [SASS - Por qué usar SASS ? - Estructura de carpetas](https://dev.to/fernandomoyano/sass-464d)
+- [CSS Gracdiend](https://cssgradient.io/)
 
 ### HTML & CSS
 
@@ -67,8 +67,3 @@ Ten encuenta, antes de desarrollar, tener preparado los recursos como:
 - [sass npm](https://www.npmjs.com/package/sass)
 - [Blocks, Elements and Modifiers](https://getbem.com/introduction/)
 - [Creando proyectos CSS mantenibles con SASS y BEM](https://medium.com/laboratoria-how-to/creando-proyectos-css-mantenibles-con-sass-y-bem-54e013c7b1d9)
-
-### Recursos de Diseño Responsivo:
-
-- [Guía de diseño responsivo](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
