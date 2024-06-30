@@ -69,16 +69,17 @@ body, html {
   justify-content: center;
   background-color: #171619;
   color: azure;
+  overflow-x: hidden;
 }
 
 .container {
   background: linear-gradient(35deg, rgb(10, 10, 10) 0%, rgb(29, 31, 29) 34%, rgba(55, 57, 54, 0.9904412449) 60%, rgb(83, 87, 82) 74%, rgb(140, 147, 140) 88%);
+  display: flex;
   height: 43rem;
   width: 34rem;
   border: 1px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
-  overflow: hidden;
 }
 
 .header--left-top :not(h1), .politics--left-bot, .boxing--right-top, .change--right-bot {
@@ -89,6 +90,7 @@ body, html {
 .boxing--right-top, .change--right-bot {
   bottom: 80%;
   text-align: right;
+  position: absolute;
   padding: 5px;
 }
 
@@ -238,13 +240,12 @@ h2 {
 }
 
 .change--right-bot {
-  top: 13rem;
-  right: 1rem;
+  top: 14rem;
+  right: 10rem;
   left: 75%;
   width: 20%;
   font-family: "letra-secundaria";
   text-transform: uppercase;
-  position: absolute;
 }
 .change--right-bot span:first-of-type {
   font-family: "letra-principal";
@@ -271,7 +272,8 @@ h2 {
   left: 2.6rem;
   position: absolute;
 }
-.bmr--lower-segment > span:first-of-type {
+
+.bmr-title {
   color: #84d0f0;
   font-family: "letra-principal";
   font-size: 6rem;
@@ -279,28 +281,33 @@ h2 {
   font-weight: 400;
   line-height: 0.7;
 }
-.bmr--lower-segment > span:first-of-type > span {
+
+.bmr-rising {
   color: azure;
 }
-.bmr--lower-segment p {
+
+.bmr-hollywood {
   font-family: "letra-principal";
   font-size: 1.4rem;
   font-weight: 200;
 }
-.bmr--lower-segment p > span:first-of-type {
+
+.bmr-bryanc {
   color: #84d0f0;
   font-family: "letra-secundaria";
   font-size: 1.3rem;
   font-weight: 900;
 }
-.bmr--lower-segment > span:last-of-type {
+
+.bmr-story {
   font-family: "letra-secundaria";
   font-size: 0.3rem;
   text-transform: uppercase;
 }
-.bmr--lower-segment > span:last-of-type > span {
+
+.bmr-stuart-m, .bmr-norman-j {
   font-size: 0.5rem;
   font-weight: 100;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css%7D.map */
