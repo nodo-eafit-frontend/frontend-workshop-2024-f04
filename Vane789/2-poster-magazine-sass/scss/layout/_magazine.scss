@@ -1,0 +1,40 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/extends" as *;
+
+.magazine{
+    @include background-magazine($color-brown, $color-light-brown, 45deg);
+    color: $color-white;
+    margin: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    width: min-content;
+    position: relative;
+
+    &__title{
+        font-size: 8rem;
+        font-family: $font-vogue;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+    
+        span{
+            position: absolute;
+            bottom: 20px;
+            right: 5px;
+            font-size: x-small;
+            z-index: 99;
+        }
+    }
+
+    img {
+		position: absolute;
+		z-index: 9;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+	}
+}
+
