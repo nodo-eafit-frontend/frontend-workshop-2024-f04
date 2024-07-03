@@ -1,4 +1,16 @@
-h1{
-    background-color: aquamarine;
+@import './pallet.scss';
+
+@media (769px <= width){
+
 }
+
+body{
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
 /*sass ./sass/styles.scss ./styles.css -w*/

@@ -1,5 +1,22 @@
+body {
+  font-weight: 100;
+}
+
+main {
+  aspect-ratio: 2/3;
+  height: min(90vh, 135vw);
+  max-width: 40rem;
+  min-width: 10rem;
+  width: calc(min(90vh, 135vw) * 0.6666666667);
+  background-color: gray;
+  color: white;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
 h1 {
-  background-color: aquamarine;
+  font-size: calc(min(min(90vh, 135vw), min(90vh, 135vw) * 0.6666666667) * 0.3);
 }
 
 /*sass ./sass/styles.scss ./styles.css -w*/
