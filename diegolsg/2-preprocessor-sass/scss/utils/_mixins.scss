@@ -1,0 +1,4 @@
+@mixin background-magazine($color2, $color1,$degree) {
+  background-color: $color1;
+  background: linear-gradient($degree, $color2 20%, $color1 50%);
+  }
