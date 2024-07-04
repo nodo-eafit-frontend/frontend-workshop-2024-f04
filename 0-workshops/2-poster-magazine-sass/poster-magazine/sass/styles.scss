@@ -1,0 +1,126 @@
+@import './base/fonts';
+@import './utilities/pallete';
+@import './base/reset';
+@import './utilities/variables';
+
+@import './layout/container';
+@import './layout/headings';
+
+@import  './layout/desktop.scss';
+
+
+/*$ratio: calc( 2 / 3);
+$height-calc: min(calc(90vw / $ratio), 90vh);
+$width-calc: calc($height-calc * $ratio);
+$font-size: calc(min($height-calc, $width-calc) * 0.30);
+
+aspect-ratio: 2 / 3;
+height: $height-calc;
+max-width: 40rem;
+min-width: 10rem;
+width: $width-calc;*/
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+
+/*esto encarga de mover los 3 comentarios de la derecha*/
+.igual {
+
+    color: rgb(0, 0, 0);
+    text-align: right;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+
+    & h2{                             /*este signo(&) significa .igual*/
+        font-size: 25px;
+        color: white;
+        text-align: right;
+        font-weight: 500;
+    }
+    & p {
+        color: white;
+        text-align: right;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+}
+
+.plus {
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+ 
+  font-style: normal;
+
+    & p {
+        font-weight: 600;
+        font-size: 23px;
+
+    }
+    & h2 {
+        color: $color-red;
+        font-weight: 800;
+        font-size: 32px;
+    }
+}
+footer {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  
+  & h2, p{
+    font-size: 90px;
+  }
+
+
+  & span{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+  }
+
+}
+
+
+/*se encarga de mover el titulo h2 de fashion*/
+.content__fashions h2 {
+
+    font-size: 55px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 360;
+    margin-left: 0px;
+
+    section{
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+    }
+
+
+
+    img{
+        width:959px;
+        height: 980px;
+    }
+}

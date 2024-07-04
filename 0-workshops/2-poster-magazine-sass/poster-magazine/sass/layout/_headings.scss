@@ -1,0 +1,36 @@
+/*article section{
+    h2 {
+
+    }
+
+    p {
+
+    }
+
+    :last-child {
+
+    }
+
+}*/
+
+.content {
+   
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+&__fashions {
+    font-size: 105px;
+    color: white;
+    line-height: 0.8;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    
+    }
+    
+    
+}
