@@ -56,13 +56,19 @@ table {
 
 @font-face {
   font-family: "PlayStation";
-  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/zrnic rg.otf");
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/playstation_by_lyricwest_dby5il4.ttf");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "marvel";
   src: url("/diegolsg/2-preprocessor-sass/assets/fonts/MarvelRegular-Dj83.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "miles";
+  src: url("/diegolsg/2-preprocessor-sass/assets/fonts/CombackHomeRegular-jEMd9.ttf");
   font-weight: 200;
   font-display: swap;
 }
@@ -107,22 +113,23 @@ table {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-template-rows: none;
-  top: -35%;
+  grid-template-rows: 60px 110px;
+  top: -20%;
 }
 .games section:nth-child(2) {
-  font-size: 7px;
-  text-align: right;
+  font-size: 5px;
+  font-weight: bold;
   background-color: #f00317;
   grid-row: 1;
-  grid-column: -1;
+  -moz-column-span: all;
+       column-span: all;
+  margin-bottom: 6%;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-left: -30%;
 }
-.games section:nth-child(2) p:nth-child(odd) {
+.games section:nth-child(2) span:nth-child(odd) {
   background-color: #fde500;
 }
 .games section:nth-child(1) {
@@ -131,13 +138,14 @@ table {
   color: #f5ec6b;
   grid-row: 1/3;
   grid-column: 1;
-  margin-top: 50%;
+  margin-top: 45%;
   width: 41%;
-  padding-left: 60%;
+  margin-left: 50%;
 }
 .games section:nth-child(1) h6 {
   font-size: 6px;
   color: #ffffff;
+  text-align: center;
 }
 .games section:nth-child(1) h2:nth-child(odd) {
   color: #ffffff;
@@ -148,16 +156,31 @@ table {
   grid-row: 2;
   color: #000000;
   font-size: 6px;
-  margin-top: 20%;
-  margin-right: 40%;
+  margin-top: 23%;
+  margin-left: -12%;
+  font-weight: bold;
+  transform: rotate(5deg);
+}
+.games section:nth-child(3) h2 {
+  font-size: 8px;
+}
+.games section:nth-child(3) p {
+  font-size: 9px;
+  color: #f00317;
+}
+.games section:nth-child(3) li {
+  font-size: 5px;
+  list-style-type: circle;
+}
+.games section:nth-child(3) li:nth-child(even) {
+  color: #f00317;
 }
 .games section:nth-child(4) {
   grid-row: 3;
   grid-column: 1/4;
-  color: #f5ec6b;
+  color: #000000;
   text-align: center;
-  grid-template-areas: section, section;
-  font-size: 5px;
+  font-size: 8px;
 }
 .games section:nth-child(4) h4 {
   font-family: "marvel", sans-serif;
@@ -175,24 +198,35 @@ table {
   color: #ffffff;
   font-size: 3.3cm;
   font-family: "spider-man", sans-serif;
-  grid-row: 4;
-  margin-bottom: -15%;
+  margin-left: 0%;
+  margin-bottom: -9%;
+}
+.games section:nth-child(4) p:first-of-type {
+  font-family: "miles", sans-serif;
+  color: #f00317;
+  font-size: 1.2cm;
+  text-align: inherit;
+  font-weight: bold;
+  background-color: inherit;
+  margin-inline: 10%;
 }
 .games section:nth-child(4) p {
-  color: #f00317;
-  font-size: 1.1cm;
-  text-align: inherit;
+  background-color: #ffea0f;
+  font-weight: bold;
+  margin-inline: 15%;
 }
 .games .circle {
   background: #ffea0f;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 51px;
+  height: 51px;
   justify-content: center;
   text-align: center;
   display: flex;
   padding: 5%;
   border: #000000 2px solid;
+  margin-left: -55%;
+  margin-top: -40%;
 }
 
 .magazine {
@@ -202,13 +236,17 @@ table {
   width: -moz-min-content;
   width: min-content;
 }
-.magazine ul > span {
+.magazine ul > p {
   padding: 2%;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   border-top-width: 10px;
   border-top-color: aliceblue;
+}
+.magazine p:last-child {
+  font-family: "PlayStation", sans-serif;
+  font-weight: 600px;
 }
 .magazine ul:first-child {
   color: #ffffff;
@@ -229,9 +267,10 @@ table {
   position: relative;
 }
 .magazine__title cite {
-  font-size: 10px;
+  font-size: 5px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #ffffff;
+  margin-top: 10%;
 }
 .magazine__title span:first-of-type {
   z-index: 3;
@@ -244,9 +283,9 @@ table {
   z-index: 2;
   position: absolute;
   z-index: 2;
-  left: 2.5rem;
-  top: 1.213rem;
-  width: 30rem;
+  left: 5rem;
+  top: 2.5rem;
+  width: 22rem;
 }
 .magazine > article {
   z-index: 4;

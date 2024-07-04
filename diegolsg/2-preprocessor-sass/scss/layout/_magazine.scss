@@ -5,7 +5,7 @@
 	margin: 2rem;
 	width: min-content;
 
-	ul > span{
+	ul > p{
 		padding: 2%;
 		justify-content: center;
 		align-items: center;
@@ -14,6 +14,10 @@
 		border-top-color: aliceblue;
   
 
+	}
+	p:last-child{
+		font-family: $font-play;
+		font-weight: 600px;
 	}
 
 	ul:first-child{
@@ -43,11 +47,12 @@
 	}
 
 	&__title cite{
-		font-size: 10px;
+		font-size: 5px;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		color: $color-text-white;
-		
+		margin-top: 10%;
 	}
+
 
 	&__title span:first-of-type {
 		z-index: 3;
@@ -61,9 +66,9 @@
 		z-index: 2;
 		position: absolute;
     z-index: 2;
-	left: 2.5rem;
-    top: 1.213rem;
-    width: 30rem;
+	left: 5rem;
+    top: 2.5rem;
+    width: 22rem;
 	}
 
 	> article {
