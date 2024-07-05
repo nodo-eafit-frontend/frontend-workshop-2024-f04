@@ -26,4 +26,7 @@ export const getChoicesMessage = (playerChoice, computerChoice) => {
  *
  * @returns {string} - Un mensaje que muestra la puntuación y las vidas restantes.
  */
-export const getScoreMessage = (stats) => ''; // TODO: Completar función
+export const getScoreMessage = (stats) => {
+    return `Puntuación: ${stats.score}
+Vidas restantes: ${stats.lifes}`; // TODO: Completar función
+}

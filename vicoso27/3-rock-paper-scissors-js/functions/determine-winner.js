@@ -17,8 +17,16 @@ import { CHOICES } from '../constants/index.js';
  */
 export default function determineWinner(playerChoice, computerChoice) {
 	let result;
-
-	// TODO: Completar Algoritmo
-
-	return result;
+	if (playerChoice === computerChoice) {
+        return 0; 
+    } else if (
+        (playerChoice === CHOICES.rock && computerChoice === CHOICES.scissors) ||
+        (playerChoice === CHOICES.paper && computerChoice === CHOICES.rock) ||
+        (playerChoice === CHOICES.scissors && computerChoice === CHOICES.paper)
+    ) {
+        return 1; 
+    } else {
+        return 2;
+    }
+	        // TODO: Completar Algoritmo
 }

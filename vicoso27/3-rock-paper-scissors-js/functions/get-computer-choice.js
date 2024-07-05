@@ -7,5 +7,5 @@
  *  - 2 representa "tijera"
  */
 export default function getComputerChoice() {
-	// TODO: Completar Algoritmo
+	return Math.floor(Math.random() * 3); // TODO: Completar Algoritmo
 }
