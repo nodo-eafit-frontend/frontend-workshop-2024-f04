@@ -1,0 +1,86 @@
+// Importamos las fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+// Variables
+$color-fondo: rgba(132, 132, 180, 0.912);
+$color-texto: rgba(255, 255, 255, 0.887);
+$color-articulos: rgba(62, 46, 46, 0.9);
+
+// Estilos generales
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: $color-texto;
+    background-color: #222;
+}
+
+main {
+    width: 60rem;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 1rem;
+    background-color: $color-fondo;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-family: 'Lora', serif;
+        font-size: 3.5rem;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        section {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: $color-articulos;
+            color: #fff;
+            text-align: center;
+            margin-top: 0;
+            font-weight: 400;
+
+            h2 {
+                font-weight: 400;
+            }
+
+            p {
+                font-weight: 400;
+            }
+
+            em {
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// Estilos específicos para la imagen de fondo
+.main {
+    background-image: url('../img/dt_dudamel.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+        }
+}
