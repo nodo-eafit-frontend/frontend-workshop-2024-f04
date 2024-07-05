@@ -1,88 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
-	font-family: Arial, sans-serif;
-	background-color: #fafafa;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
-}
-
-.instagram-card {
-	width: 400px;
-	border: 1px solid #dbdbdb;
-	background-color: #fff;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-	display: flex;
-	align-items: center;
+	font-family: 'Roboto', sans-serif;
 	padding: 10px;
+	width: 100vw;
 }
 
-.profile-picture {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	margin-right: 10px;
-}
-
-.profile-info {
-	display: flex;
-	flex-direction: column;
-}
-
-.username {
-	font-weight: bold;
-	font-size: 14px;
-}
-
-.location {
-	font-size: 12px;
-	color: #8e8e8e;
-}
-
-.post-image {
+section {
+	padding: inherit;
 	width: 100%;
-	height: auto;
 }
 
-.card-footer {
-	padding: 10px;
+section p {
+	/* width: 50%; */
+	max-width: 50%;
 }
 
-.actions {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 8px;
+div,
+span {
+	border: 5px solid black;
 }
 
-.actions span {
-	cursor: pointer;
+span {
+	border: 5px dotted rgb(135, 0, 180);
 }
 
-.likes {
-	font-weight: bold;
-	margin-bottom: 8px;
+.container {
+	border: 5px dashed rgb(228, 0, 0);
 }
 
-.description {
-	margin-bottom: 8px;
+.text-line {
+	border: 5px double rgb(0, 136, 14);
 }
 
-.description .username {
-	font-weight: bold;
+span.text-line {
+	border: 5px groove rgb(3, 137, 177);
+	background-color: rgb(7, 170, 220);
+	position: relative;
 }
 
-.comments {
-	color: #8e8e8e;
-	margin-bottom: 8px;
-	cursor: pointer;
+span.text-line::before {
+	content: '10';
+	color: rgb(255, 255, 255);
+	background-color: red;
+	border-radius: 50%;
+	padding: 5px;
+	position: absolute;
+	top: -18px;
+	right: -15px;
 }
 
-.time {
-	color: #8e8e8e;
-	font-size: 12px;
+section span:last-child {
+	border: 10px double rgb(238, 255, 0);
 }
+
+#section-id > #text-line-id {
+	border: 10px double rgb(221, 0, 255);
+}
+
+/* span {
+				border: none !important;
+			} */
