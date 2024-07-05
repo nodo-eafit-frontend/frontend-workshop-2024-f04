@@ -1,0 +1,51 @@
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 4rem;
+    grid-column-gap: 10rem;
+    position: relative;
+    
+
+
+    &__section &__title{
+        font-size: 1.2rem;
+        // background-color: aqua;
+        &--tam {
+            font-size: 1rem;
+            // background-color: purple;
+        }
+    }
+    &__section p{
+        font-size: 0.9rem;
+        // background-color: pink;
+        line-height: 1.5cap;
+        
+    }
+}
+.magazine__title{
+    // position: relative;
+    // z-index: 0;
+        img{
+        
+        position: absolute;
+        // left: 8rem;
+        top: 2.813rem;
+        z-index: 0;
+        }
+        
+        span{
+            position: relative;
+            font-size: 8rem;
+            // text-align: center;
+            // object-fit: cover;
+            z-index: 1;
+            // line-height: 0%;
+            // margin-top: 38px 0;
+        }
+        em{
+            font-size: 1rem;
+            }
+}
+

@@ -1,22 +1,50 @@
+.magazine {
+  aspect-ratio: 1/1.324;
+  color: white;
+  background-color: gray;
+  margin: 2rem;
+  text-transform: uppercase;
+  width: min-content;
+  font-weight: bolder;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 4rem;
+  grid-column-gap: 10rem;
+  position: relative;
+}
+.content__section .content__title {
+  font-size: 1.2rem;
+}
+.content__section .content__title--tam {
+  font-size: 1rem;
+}
+.content__section p {
+  font-size: 0.9rem;
+  line-height: 1.5cap;
+}
+
+.magazine__title img {
+  position: absolute;
+  top: 2.813rem;
+  z-index: 0;
+}
+.magazine__title span {
+  position: relative;
+  font-size: 8rem;
+  z-index: 1;
+}
+.magazine__title em {
+  font-size: 1rem;
+}
+
 body {
   font-weight: 100;
-}
-
-main {
-  aspect-ratio: 2/3;
-  height: min(90vh, 135vw);
-  max-width: 40rem;
-  min-width: 10rem;
-  width: calc(min(90vh, 135vw) * 0.6666666667);
-  background-color: gray;
-  color: white;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: calc(min(min(90vh, 135vw), min(90vh, 135vw) * 0.6666666667) * 0.3);
+  display: flex;
+  justify-content: center;
 }
 
 /*sass ./sass/styles.scss ./styles.css -w*/
