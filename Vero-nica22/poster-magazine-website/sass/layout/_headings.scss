@@ -3,25 +3,45 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 4rem;
-    grid-column-gap: 10rem;
+    grid-column-gap: 8rem;
     position: relative;
-    
+    // letter-spacing: -1px;
+    // padding-right: 6rem;
+    // text-align: left;
+    margin-top: -78px;
+    margin-left: 20px;
+    line-height: 1; //Para que queden mas juntas las palabras
 
 
     &__section &__title{
         font-size: 1.2rem;
+        font-family: "Manrope";
+        font-weight: 100;
+        margin: 0;
+        font-weight: bolder;
+        color: rgb(35, 35, 107);
+
         // background-color: aqua;
+
         &--tam {
             font-size: 1rem;
             // background-color: purple;
         }
     }
     &__section p{
+        font-family: "Manrope";
+        font-weight: 800;
         font-size: 0.9rem;
         // background-color: pink;
         line-height: 1.5cap;
         
+    }
+    &__section &__span{
+        font-weight: 100;
+        &--tam{
+            font-size: 3rem;
+
+        }
     }
 }
 .magazine__title{
@@ -36,16 +56,22 @@
         }
         
         span{
+            
             position: relative;
-            font-size: 8rem;
+            font-size: 7rem;
+            font-family: "Bodoni Moda";;
             // text-align: center;
             // object-fit: cover;
             z-index: 1;
             // line-height: 0%;
             // margin-top: 38px 0;
+            
         }
         em{
-            font-size: 1rem;
+            // position: absolute;
+            font-size: 0.5rem;
+            margin-left: 380px;
+            // top: 2.813rem;
             }
 }
 

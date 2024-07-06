@@ -1,0 +1,20 @@
+// @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';  
+
+// @font-face {
+//   font-family: 'Vogue';
+//   src: url('../assets/fonts/Vogue.ttf') format('truetype'); // The css processed file is localed in different directory
+//   font-weight: 200;
+//   font-display: swap;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap');
+// /* Luego defines @font-face para usar la fuente */
+// @font-face {
+//     font-family: "Bodoni Moda"; /* Nombre de la familia de fuentes */
+//     font-style: normal; /* Estilo de la fuente (normal, italic, etc.) */
+//     font-weight: 400; /* Peso de la fuente (400 es normal, 700 es bold, etc.) */
+//     src: local('Bodoni Moda'), url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap'); /* URL y formato de la fuente */
+// }
+// // <uniquifier>: Use a unique and descriptive class name
+// // <weight>: Use a value from 400 to 900
