@@ -3,50 +3,72 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 8rem;
+    grid-column-gap: 14.3rem;
     position: relative;
-    // letter-spacing: -1px;
-    // padding-right: 6rem;
-    // text-align: left;
-    margin-top: -78px;
-    margin-left: 20px;
+    margin: -78px 0 0 8px; 
     line-height: 1; //Para que queden mas juntas las palabras
 
 
     &__section &__title{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-family: "Manrope";
-        font-weight: 100;
-        margin: 0;
-        font-weight: bolder;
-        color: rgb(35, 35, 107);
-
-        // background-color: aqua;
-
-        &--tam {
-            font-size: 1rem;
-            // background-color: purple;
+        font-weight: 600;
+        color: $color-azul;
+        margin-bottom: 0;
+        &--position {
+            font-size: 1.3rem;
+            margin: -95PX 0 0 0px; 
         }
     }
-    &__section p{
+    &__section &__parrafos{
         font-family: "Manrope";
-        font-weight: 800;
-        font-size: 0.9rem;
-        // background-color: pink;
+        font-weight: 700;
+        font-size: 0.7rem;
         line-height: 1.5cap;
+        &--marg1{
+            margin:0 ; 
+            
+        }
+        &--marg2{
+            margin: 0 19px 0 0 ;
+            text-align: center;
+        }
+        &--marg3{
+            margin: 0 0 0 -16px ;
+            text-align: center;
+        }
+        &--marg4{
+            margin:0;
+        }
+        &--marg5{
+            margin: 130px 0 0 0;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;      
+        }
+        &--marg6{
+            text-align: center;
+            margin: 0;
+        }
         
     }
     &__section &__span{
-        font-weight: 100;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: -10px;
+        color: $color-cafe-oscuro;
         &--tam{
-            font-size: 3rem;
-
+            font-weight: 100;
+            font-size: 6rem;
+            font-family: "Manrope";
+            margin: 0 2px 0 -29px ;
+            color: $color-azul;
         }
     }
 }
 .magazine__title{
-    // position: relative;
-    // z-index: 0;
+
+    margin: 0 0 20px 0; 
         img{
         
         position: absolute;
@@ -56,22 +78,20 @@
         }
         
         span{
-            
             position: relative;
             font-size: 7rem;
-            font-family: "Bodoni Moda";;
-            // text-align: center;
-            // object-fit: cover;
+            font-family: "Bodoni Moda";
             z-index: 1;
-            // line-height: 0%;
-            // margin-top: 38px 0;
+            top: -1.7rem;
+            letter-spacing: -7px;
+            margin: 0 19px 20px 19px;
             
         }
         em{
-            // position: absolute;
+            position: relative;
             font-size: 0.5rem;
-            margin-left: 380px;
-            // top: 2.813rem;
+            margin-left: 378px;
+            top: -5.7rem;
             }
 }
 
