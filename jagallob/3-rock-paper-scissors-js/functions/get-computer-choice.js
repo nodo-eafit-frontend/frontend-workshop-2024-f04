@@ -8,4 +8,9 @@
  */
 export default function getComputerChoice() {
 	// TODO: Completar Algoritmo
+	
+	return (Math.floor(Math.random() * 3));
+
+	
 }
+		

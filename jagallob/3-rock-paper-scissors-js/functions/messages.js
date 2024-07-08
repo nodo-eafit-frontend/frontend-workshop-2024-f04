@@ -15,7 +15,56 @@
  */
 export const getChoicesMessage = (playerChoice, computerChoice) => {
 	// TODO: Completar función
-};
+
+
+	// switch (playerChoice) {
+    //     case CHOICES.rock:
+    //         switch (computerChoice) {
+    //             case CHOICES.rock:
+    //                 return `player eligió: ${CHOICES.rock.emoji}\ncomputer eligió: ${CHOICES.rock.emoji}`;
+    //             case CHOICES.paper:
+    //                 return `player eligió: ${CHOICES.rock.emoji}\ncomputer eligió: ${CHOICES.paper.emoji}`;
+    //             case CHOICES.scissors:
+    //                 return `player eligió: ${CHOICES.rock.emoji}\ncomputer eligió: ${CHOICES.scissors.emoji}`;
+    //             default:
+    //                 result = null;
+    //         }
+    //         break;
+ 
+    //     case CHOICES.paper:
+    //         switch (computerChoice) {
+    //             case CHOICES.rock:
+    //                 return `player eligió: ${CHOICES.paper.emoji}\ncomputer eligió: ${CHOICES.rock.emoji}`;
+    //             case CHOICES.paper:
+    //                 return `player eligió: ${CHOICES.paper.emoji}\ncomputer eligió: ${CHOICES.paper.emoji}`;;
+    //             case CHOICES.scissors:
+    //                 return `player eligió: ${CHOICES.paper.emoji}\ncomputer eligió: ${CHOICES.scissors.emoji}`;;
+    //             default:
+    //                 result = null;
+    //         }
+    //         break;
+ 
+    //     case CHOICES.scissors:
+    //         switch (computerChoice) {
+    //             case CHOICES.rock:
+    //                 return `player eligió: ${CHOICES.scissors.emoji}\ncomputer eligió: ${CHOICES.rock.emoji}`;
+    //             case CHOICES.paper:
+    //                 return `player eligió: ${CHOICES.scissors.emoji}\ncomputer eligió: ${CHOICES.paper.emoji}`;
+    //             case CHOICES.scissors:
+    //                 return `player eligió: ${CHOICES.scissors.emoji}\ncomputer eligió: ${CHOICES.scissors.emoji}`;
+    //             default:
+    //                 result = null;
+    //         }
+    //         break;
+ 
+    //     default:
+    //         result = null;
+	// 	}
+
+	return `player eligió: ${playerChoice.emoji}\ncomputer eligió: ${computerChoice.emoji}`;
+	
+}
+
 
 /**
  * Genera un mensaje mostrando la puntuación y las vidas restantes.
@@ -26,4 +75,6 @@ export const getChoicesMessage = (playerChoice, computerChoice) => {
  *
  * @returns {string} - Un mensaje que muestra la puntuación y las vidas restantes.
  */
-export const getScoreMessage = (stats) => ''; // TODO: Completar función
+export const getScoreMessage = (stats) => `Puntuación actual (Score): ${stats.score}🪙", Vidas restantes (Lifes): ${stats.lifes}💞'`; // TODO: Completar función
+
+

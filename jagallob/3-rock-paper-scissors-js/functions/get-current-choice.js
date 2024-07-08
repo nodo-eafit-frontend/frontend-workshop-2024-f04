@@ -8,4 +8,26 @@ import { CHOICES } from '../constants/index.js';
  */
 export default function getCurrentChoice(choiceValue) {
 	// TODO: Completar Algoritmo
+
+
+	if (choiceValue === CHOICES.rock.value){
+		return CHOICES.rock;
+	}
+
+	else if (choiceValue === CHOICES.paper.value){
+		return CHOICES.paper;
+	}
+
+	else if (choiceValue === CHOICES.scissors.value){
+		return CHOICES.scissors;
+	}
+
+	else {
+		return null;
+	}
+	
 }
+	
+
+
+	
