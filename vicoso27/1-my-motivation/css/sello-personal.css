@@ -1,0 +1,15 @@
+.sellopersonal {
+    margin: 30px; 
+    padding: 30px; 
+  }
+  
+.quien{
+    text-align: justify;
+    background-color:var(--backgroun-color)
+  }
+ 
+  picture img {
+    width: 200px;
+    height: 150px;
+    display: inline-flex;
+  }
