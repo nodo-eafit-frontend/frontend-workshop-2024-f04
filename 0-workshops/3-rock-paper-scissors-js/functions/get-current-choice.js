@@ -7,5 +7,10 @@ import { CHOICES } from '../constants/index.js';
  * @returns {Object|null} - El objeto de opción correspondiente al valor dado, o null si no se encuentra.
  */
 export default function getCurrentChoice(choiceValue) {
-	// TODO: Completar Algoritmo
+	for (const key in CHOICES) {
+        if (CHOICES[key].value === choiceValue) {
+            return CHOICES[key];
+        }
+    }
+    return null;
 }

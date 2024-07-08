@@ -4,8 +4,9 @@
  * @returns {number} Un número aleatorio entre 0 y 2, donde:
  *  - 0 representa "piedra"
  *  - 1 representa "papel"
- *  - 2 representa "tijera"
+ *  - 2 representa "tijera"º
  */
 export default function getComputerChoice() {
-	// TODO: Completar Algoritmo
-}
+		return Math.floor(Math.random() * 3);
+	}
+
