@@ -1,78 +1,93 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
 .magazine {
-	@include background-magazine($color-fondo-1,$color-fondo-2,0deg);
-	margin: 2rem;
-	width: min-content;
+  @include background-magazine($color-fondo-1, $color-fondo-2, 0deg);
+  margin: 8rem;
+  padding-bottom: 5%;
+  width: min-content;
 
-	ul > p{
-		padding: 2%;
-		justify-content: center;
-		align-items: center;
-		vertical-align: middle;
-		border-top-width: 10px;
-		border-top-color: aliceblue;
-  
+  ul > p {
+    display: flex;
+    padding-inline: 4%;
+    padding-block: 2%;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+  ul > p:last-child {
+    font-family: $font-play;
+    font-weight: 900;
+    font-size: large;
+  }
 
-	}
-	p:last-child{
-		font-family: $font-play;
-		font-weight: 600px;
-	}
+  ul:first-child {
+    color: $color-text-white;
+    font-family: $font-ps;
+    font-size: 13px;
+    background-color: $color-text-black;
+    width: 100%;
+    display: flex;
+  }
 
-	ul:first-child{
-		color: $color-text-white;
-		font-family: $font-ps;
-		font-size: 13px;
-		background-color:$color-text-black;
-		width: 100%;
-		display:flex;
-		
-		
-	}
+  &__title {
+    color: $color-text-play;
+    font-size: 2cm;
+    font-family: $font-play;
+    display: flex;
+  }
 
-	&__title{
-		color:$color-text-play;
-		font-size: 2cm;
-		font-family: $font-play;
-		display: flex;
-		border-bottom: 5px ;
+  &__title span {
+    position: relative;
+  }
 
-		
-	}
-	
-	&__title span {
-		position: relative;
-		
-	}
+  .sub1 {
+    display: flex;
+    font-size: 5px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: $color-text-white;
+    margin-top: -5%;
+    padding-right: 40%;
+    margin-right: 5%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  .sub2 {
+    display: flex;
+    font-size: 12px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: $color-text-white;
+    margin-top: -5%;
+    font-weight: 800;
+    margin-left: 40%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
 
-	&__title cite{
-		font-size: 5px;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		color: $color-text-white;
-		margin-top: 10%;
-	}
+  &__title span:first-of-type {
+    z-index: 3;
+  }
 
-
-	&__title span:first-of-type {
-		z-index: 3;
-	}
-
-	&__title span:last-of-type {
-		z-index: 1;
-	}
-	img {
-		position: absolute;
-		z-index: 2;
-		position: absolute;
+  &__title span:last-of-type {
+    z-index: 1;
+  }
+  img {
+    position: absolute;
     z-index: 2;
-	left: 5rem;
-    top: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    left: 5rem;
+    top: 9.4rem;
     width: 22rem;
-	}
-
-	> article {
-		z-index: 4;
-		position: relative;
-	}
+  }
+  > article {
+    z-index: 4;
+    position: relative;
+  }
 }

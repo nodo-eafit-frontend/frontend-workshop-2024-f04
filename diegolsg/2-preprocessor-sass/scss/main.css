@@ -111,41 +111,51 @@ table {
   font-family: "roboto", sans-serif;
   text-transform: uppercase;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-rows: 60px 110px;
-  top: -20%;
+  top: 3%;
 }
 .games section:nth-child(2) {
+  grid-column: 3;
   font-size: 5px;
+  margin-right: 12%;
+  display: flexbox;
   font-weight: bold;
+  text-align: -webkit-right;
+}
+.games section:nth-child(2) p:nth-child(even) {
   background-color: #f00317;
-  grid-row: 1;
-  -moz-column-span: all;
-       column-span: all;
-  margin-bottom: 6%;
+  color: #ffffff;
   width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  margin-top: 1%;
+  align-content: baseline;
 }
-.games section:nth-child(2) span:nth-child(odd) {
+.games section:nth-child(2) p:nth-child(odd) {
   background-color: #fde500;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1%;
+  font-family: "roboto", sans-serif;
+  align-content: baseline;
 }
 .games section:nth-child(1) {
   text-align: center;
-  font-size: 10px;
-  color: #f5ec6b;
+  font-weight: 700;
+  font-size: 9px;
+  color: #fde500;
   grid-row: 1/3;
-  grid-column: 1;
-  margin-top: 45%;
+  grid-column: 2;
+  margin-top: 50%;
   width: 41%;
-  margin-left: 50%;
+  margin-left: -25%;
 }
 .games section:nth-child(1) h6 {
   font-size: 6px;
   color: #ffffff;
   text-align: center;
+  font-weight: 900;
 }
 .games section:nth-child(1) h2:nth-child(odd) {
   color: #ffffff;
@@ -156,10 +166,10 @@ table {
   grid-row: 2;
   color: #000000;
   font-size: 6px;
-  margin-top: 23%;
-  margin-left: -12%;
+  margin-top: 0%;
+  margin-left: 37%;
   font-weight: bold;
-  transform: rotate(5deg);
+  transform: rotate(8deg);
 }
 .games section:nth-child(3) h2 {
   font-size: 8px;
@@ -171,24 +181,24 @@ table {
 .games section:nth-child(3) li {
   font-size: 5px;
   list-style-type: circle;
+  list-style-position: inside;
 }
-.games section:nth-child(3) li:nth-child(even) {
+.games section:nth-child(3) li:nth-child(odd) {
   color: #f00317;
 }
 .games section:nth-child(4) {
   grid-row: 3;
   grid-column: 1/4;
-  color: #000000;
   text-align: center;
-  font-size: 8px;
+  font-weight: "roboto", sans-serif;
 }
 .games section:nth-child(4) h4 {
   font-family: "marvel", sans-serif;
   color: #ffffff;
   background-color: #f00317;
   font-size: 25px;
-  margin-left: 43%;
-  margin-bottom: 0.5%;
+  margin-left: 51%;
+  margin-bottom: -2%;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -212,8 +222,11 @@ table {
 }
 .games section:nth-child(4) p {
   background-color: #ffea0f;
+  margin-inline: 17%;
+  font-size: 8px;
   font-weight: bold;
-  margin-inline: 15%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .games .circle {
   background: #ffea0f;
@@ -232,21 +245,24 @@ table {
 .magazine {
   background-color: #1f1a20;
   background: linear-gradient(0deg, #252839 20%, #1f1a20 50%);
-  margin: 2rem;
+  margin: 8rem;
+  padding-bottom: 5%;
   width: -moz-min-content;
   width: min-content;
 }
 .magazine ul > p {
-  padding: 2%;
+  display: flex;
+  padding-inline: 4%;
+  padding-block: 2%;
+  font-weight: 900;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  border-top-width: 10px;
-  border-top-color: aliceblue;
 }
-.magazine p:last-child {
+.magazine ul > p:last-child {
   font-family: "PlayStation", sans-serif;
-  font-weight: 600px;
+  font-weight: 900;
+  font-size: large;
 }
 .magazine ul:first-child {
   color: #ffffff;
@@ -261,16 +277,35 @@ table {
   font-size: 2cm;
   font-family: "PlayStation", sans-serif;
   display: flex;
-  border-bottom: 5px;
 }
 .magazine__title span {
   position: relative;
 }
-.magazine__title cite {
+.magazine .sub1 {
+  display: flex;
   font-size: 5px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #ffffff;
-  margin-top: 10%;
+  margin-top: -5%;
+  padding-right: 40%;
+  margin-right: 5%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.magazine .sub2 {
+  display: flex;
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin-top: -5%;
+  font-weight: 800;
+  margin-left: 40%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
 }
 .magazine__title span:first-of-type {
   z-index: 3;
@@ -284,7 +319,7 @@ table {
   position: absolute;
   z-index: 2;
   left: 5rem;
-  top: 2.5rem;
+  top: 9.4rem;
   width: 22rem;
 }
 .magazine > article {

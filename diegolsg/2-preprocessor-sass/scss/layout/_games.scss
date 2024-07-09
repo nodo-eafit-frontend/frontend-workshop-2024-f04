@@ -21,50 +21,57 @@
 	font-family: $font-roboto;
 	text-transform: uppercase;
 	display:grid;
-	grid-template-columns: repeat(2,1fr);
+	grid-template-columns: repeat(3,1fr);
 	grid-template-rows: repeat(4,1fr);
-	 grid-template-rows: 60px 110px;;
-	top: -20%;
+	grid-template-rows: 60px 110px;
+	top: 3%;
 	
 
 section:nth-child(2) {
+	grid-column: 3;
 	font-size: 5px;
+	margin-right: 12%;
+	display:flexbox;
 	font-weight: bold;
-	background-color: $color-text-red;
-	grid-row: 1;
-	column-span: all;
-	margin-bottom: 6%;
-	width: fit-content;
-	height:fit-content;
+	text-align: -webkit-right;
 	
-	
-
-	span:nth-child(odd){
+	p:nth-child(even){
+		background-color: $color-text-red;
+		color:$color-text-white;	
+		width: fit-content;
+		margin-top: 1%;
+		align-content: baseline;
+	}
+	p:nth-child(odd){
 	background-color: $color-text-play;
+	width: fit-content;
+	margin-top: 1%;
+	font-family: $font-roboto;
+	align-content: baseline;
 	}
 }
 
-section:nth-child(1){
+section:nth-child(1){	
 	h6{
 		font-size: 6px;
 		color: $color-text-white;
 		text-align: center;
-			
+		font-weight: 900;		
 	}
 	h2:nth-child(odd){
 		color:$color-text-white;
-		font-weight: 650px;
-			
+		font-weight: 650px;		
 	}
 	
 	text-align: center;
-	font-size: 10px;
-	color: $color-text-gren;
+	font-weight: 700;
+	font-size: 9px;
+	color: $color-text-play;
 	grid-row:1/3;
-	grid-column: 1;
-	margin-top: 45%;
+	grid-column: 2;
+	margin-top: 50%;
 	width: 41%;
-	margin-left: 50%;
+	margin-left: -25%;
 	
 	
 }
@@ -74,10 +81,10 @@ section:nth-child(3){
 	grid-row:2;
 	color: $color-text-black;	
 	font-size: 6px;	
-	margin-top: 23%;
-	margin-left: -12%;
+	margin-top: 0%;
+	margin-left: 37%;
 	font-weight: bold;
-	transform: rotate(5deg);
+	transform: rotate(8deg);
 	h2{	
 		font-size: 8px;
 	}
@@ -89,9 +96,10 @@ section:nth-child(3){
 	li{
 	font-size: 5px;
 	list-style-type:circle;
+	list-style-position:inside;
 	
 	}
-	li:nth-child(even){
+	li:nth-child(odd){
 		color: $color-text-red;
 	}
 	
@@ -100,18 +108,16 @@ section:nth-child(3){
 section:nth-child(4){
 	grid-row:3;
 	grid-column: 1/4;
-	color:$color-text-black;
 	text-align: center;
-	font-size: 8px;
-	
+	font-weight: $font-roboto;
 	
 	h4{
 		font-family: $font-marvel;
 		color:$color-text-white;
 		background-color: $color-text-red;
 		font-size: 25px;
-		margin-left: 43%;
-		margin-bottom: .5%;
+		margin-left: 51%;
+		margin-bottom: -2%;
 		width: fit-content;
 		height:fit-content;
 		
@@ -132,20 +138,20 @@ section:nth-child(4){
 	text-align:inherit;
 	font-weight: bold;
 	background-color:inherit;
-	
 	margin-inline:10%;
 	}
 
 	p{
 		background-color: $color-circle;
+		margin-inline: 17%;		
+		font-size: 8px;
 		font-weight: bold;
-		margin-inline: 15%;	
+		width:fit-content;
+		
 	}
 	
 	
 }
-
-
 
 .circle{
 	background: $color-circle;
