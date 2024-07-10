@@ -1,0 +1,35 @@
+@use './variables' as *;
+@use './pallete' as *;
+
+@mixin font-by-default {
+	font-family: inherit;
+	color: inherit;
+	font-weight: normal;
+	font-size: $font-size-m;
+	line-height: 1;
+}
+
+@mixin square($side) {
+	width: $side;
+	height: $side;
+}
+
+@mixin shadow-click {
+	box-shadow: $box-shadow;
+
+	&:hover {
+		box-shadow: $box-shadow-deep;
+		transform: scale(105%);
+	}
+
+	&:active {
+		box-shadow: none;
+		transform: scale(100%);
+	}
+
+	&:disabled {
+		background-color: $color-disabled;
+		box-shadow: none;
+		transform: none;
+	}
+}

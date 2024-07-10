@@ -1,0 +1,59 @@
+@use '../utils' as *;
+
+.modal {
+	@include font-by-default;
+	border-radius: 1rem;
+	border: none;
+	box-shadow: $box-shadow;
+	padding: 0;
+
+	&__container {
+		padding: 2rem;
+	}
+
+	&--error,
+	&--success {
+		align-items: center;
+		bottom: 8rem;
+		color: $color-font-invert;
+		display: flex;
+		font-weight: bold;
+		position: fixed;
+	}
+	&--error {
+		background-color: $color-error;
+	}
+
+	&--success {
+		background-color: $color-success;
+	}
+
+	&--error span,
+	&--success span {
+		margin-right: 0.5rem;
+	}
+
+	header {
+		position: relative;
+	}
+
+	header.modal__informative {
+		text-align: center;
+
+		img {
+			width: 7rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	header button[aria-label='close'] {
+		top: -10px;
+		right: -10px;
+		position: absolute;
+	}
+
+	footer {
+		display: flex;
+		justify-content: end;
+	}
+}
