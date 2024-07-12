@@ -1,4 +1,4 @@
-import { CHOICES } from '../constants/index.js';
+import { CHOICES } from "../constants/index.js";
 
 /**
  * Determina el ganador del juego de Piedra, Papel o Tijera.
@@ -16,9 +16,22 @@ import { CHOICES } from '../constants/index.js';
  * @returns {number} - Devuelve 0 si es empate, 1 si el jugador gana, 2 si la computadora gana.
  */
 export default function determineWinner(playerChoice, computerChoice) {
-	let result;
+  let result;
 
-	// TODO: Completar Algoritmo
+  if (playerChoice.value === computerChoice.value) {
+    result = 0; //Empate
+  } else if (
+    (playerChoice.value === CHOICES.rock.value &&
+      computerChoice.value === CHOICES.scissors.value) ||
+    (playerChoice.value === CHOICES.scissors.value &&
+      computerChoice.value === CHOICES.paper.value) ||
+    (playerChoice.value === CHOICES.paper.value &&
+      computerChoice.value === CHOICES.rock.value)
+  ) {
+    result = 1; // Jugador gana
+  } else {
+    result = 2; // Computador gana
+  }
 
-	return result;
+  return result;
 }

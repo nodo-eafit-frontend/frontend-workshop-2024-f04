@@ -1,6 +1,7 @@
 /**
  * Genera un mensaje mostrando las elecciones del jugador y de la computadora.
  *
+ * @param {string} playerName - Nombre del jugador
  * @param {Object} playerChoice - La elección del jugador.
  * @param {string} playerChoice.text - El texto de la elección del jugador (e.g., "Rock").
  * @param {string} playerChoice.emoji - El emoji de la elección del jugador.
@@ -13,8 +14,8 @@
  *
  * @returns {string} - Un mensaje que muestra las elecciones del jugador y de la computadora.
  */
-export const getChoicesMessage = (playerChoice, computerChoice) => {
-	// TODO: Completar función
+export const getChoicesMessage = (playerName, playerChoice, computerChoice) => {
+  return `${playerName}'s choice: ${playerChoice.text} ${playerChoice.emoji}\nRobot Choice: ${computerChoice.text} ${computerChoice.emoji}`;
 };
 
 /**
@@ -26,4 +27,6 @@ export const getChoicesMessage = (playerChoice, computerChoice) => {
  *
  * @returns {string} - Un mensaje que muestra la puntuación y las vidas restantes.
  */
-export const getScoreMessage = (stats) => ''; // TODO: Completar función
+export const getScoreMessage = (stats) => {
+  return `🪙 Score: ${stats.score}\n❤️ Lifes: ${stats.lifes}`;
+};

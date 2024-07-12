@@ -1,4 +1,4 @@
-import { CHOICES } from '../constants/index.js';
+import { CHOICES } from "../constants/index.js";
 
 /**
  * Obtiene el objeto de opción correspondiente a un valor de opción dado.
@@ -7,5 +7,8 @@ import { CHOICES } from '../constants/index.js';
  * @returns {Object|null} - El objeto de opción correspondiente al valor dado, o null si no se encuentra.
  */
 export default function getCurrentChoice(choiceValue) {
-	// TODO: Completar Algoritmo
+  const choice = Object.values(CHOICES).find(
+    (option) => option.value === choiceValue
+  );
+  return choice || null;
 }
