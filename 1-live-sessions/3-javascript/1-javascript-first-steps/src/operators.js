@@ -3,7 +3,7 @@
 // -- Relational operators
 {
 	// Distancias a diferentes planetas desde la Tierra en millones de kilómetros
-	let distanceToMars = 225;
+	let distanceToMars = 2250;
 	let distanceToVenus = 261;
 	let distanceToJupiter = 778;
 
@@ -55,13 +55,13 @@
 	let oxygenLevel = 85; // Percent
 	let waterSupply = 75; // Percent
 	let foodSupply = 60; // Percent
-	let energyLevel = 90; // Percent
+	let energyLevel = 20; // Percent
 
 	// Thresholds for a safe mission
-	let oxygenThreshold = 70;
-	let waterThreshold = 50;
-	let foodThreshold = 40;
-	let energyThreshold = 89;
+	const oxygenThreshold = 70;
+	const waterThreshold = 50;
+	const foodThreshold = 40;
+	const energyThreshold = 89;
 
 	// System verification
 	let isOxygenSufficient = oxygenLevel >= oxygenThreshold;
