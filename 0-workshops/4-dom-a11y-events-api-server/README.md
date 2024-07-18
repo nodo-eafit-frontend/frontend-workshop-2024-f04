@@ -64,6 +64,8 @@ Busca material de apoyo y cualquier interrogante no dudes en levantar la mano co
 
 - Incluye inputs de formulario como se muestra en el wireframe:
 
+![image](https://github.com/user-attachments/assets/3ff296d4-b064-4010-8aa6-001a04d25e09)
+
   - Nickname: Text
   - Board Size: [3x3, 4x4, 5x5]
   - Difficulty: [Easy, Moderate, Hard, Legendary]
