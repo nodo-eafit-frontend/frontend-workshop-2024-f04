@@ -1,0 +1,12 @@
+@use 'base' as *;
+@use 'utils' as *;
+@use 'layout' as *;
+
+
+body{
+	font-weight: 40;
+	display: flex;
+	justify-content: center;
+	color:$color-black;
+}
+
