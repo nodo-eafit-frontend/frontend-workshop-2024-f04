@@ -1,0 +1,521 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.button {
+  font-family: inherit;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.button:hover {
+  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
+  transform: scale(105%);
+}
+.button:active {
+  box-shadow: none;
+  transform: scale(100%);
+}
+.button:disabled {
+  background-color: #6c757d;
+  box-shadow: none;
+  transform: none;
+}
+.button__primary {
+  background-color: #073b4c;
+  color: #e9ecef;
+}
+.button__secondary {
+  background-color: #118ab2;
+  color: #e9ecef;
+}
+.button__icon {
+  border-radius: 50%;
+  padding: 0.2rem;
+  line-height: 0.8;
+  margin: 0;
+  height: fit-content;
+  background-color: transparent;
+}
+.button--success {
+  background-color: #06d6a0;
+  color: #e9ecef;
+}
+.button--error {
+  background-color: #ef476f;
+  color: #e9ecef;
+}
+.button--loading {
+  padding-right: 2rem;
+  position: relative;
+}
+.button--loading::after {
+  content: "";
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  border: solid #e9ecef 0.2rem;
+  border-top: solid transparent 0.2rem;
+  height: 1rem;
+  position: absolute;
+  width: 1rem;
+  top: 0.3rem;
+  right: 0.3rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form > * {
+  margin-block: 0.5rem;
+}
+.form--required {
+  color: #ef476f;
+}
+.form fieldset {
+  border-radius: 0.25rem;
+  border: solid 2px #adb5bd;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+h1.heading {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+h2.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: solid #6c757d 2px;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+h3.heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h4.heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modal {
+  font-family: inherit;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+.modal__container {
+  padding: 2rem;
+}
+.modal--error, .modal--success {
+  align-items: center;
+  bottom: 8rem;
+  color: #e9ecef;
+  display: flex;
+  font-weight: bold;
+  position: fixed;
+}
+.modal--error {
+  background-color: #ef476f;
+}
+.modal--success {
+  background-color: #06d6a0;
+}
+.modal--error span, .modal--success span {
+  margin-right: 0.5rem;
+}
+.modal header {
+  position: relative;
+}
+.modal header.modal__informative {
+  text-align: center;
+}
+.modal header.modal__informative img {
+  width: 7rem;
+  margin-bottom: 1rem;
+}
+.modal header button[aria-label=close] {
+  top: -10px;
+  right: -10px;
+  position: absolute;
+}
+.modal footer {
+  display: flex;
+  justify-content: end;
+}
+
+.home-page {
+  display: grid;
+  justify-content: center;
+  padding-block: 10rem;
+  align-items: center;
+  align-content: center;
+}
+
+.game-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+.game-page__board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  border: solid #073b4c 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.game-page__chip, .game-page__empty {
+  width: 6rem;
+  height: 6rem;
+  background-color: #118ab2;
+}
+.game-page__chip {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.game-page__chip:hover {
+  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
+  transform: scale(105%);
+}
+.game-page__chip:active {
+  box-shadow: none;
+  transform: scale(100%);
+}
+.game-page__chip:disabled {
+  background-color: #6c757d;
+  box-shadow: none;
+  transform: none;
+}
+.game-page__chip--number {
+  color: #e9ecef;
+  text-align: center;
+  align-content: center;
+  font-size: 3rem;
+  text-shadow: #343a40 2px 2px 5px;
+}
+.game-page__chip--image {
+  position: relative;
+}
+.game-page__chip--image * {
+  pointer-events: none;
+}
+.game-page__chip--image img {
+  width: inherit;
+}
+.game-page__chip--image span {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ced4da;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  left: 0;
+  padding: 0.25rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+.game-page__empty {
+  background-color: #495057;
+}
+.game-page--3x3.game-page__board {
+  width: 18rem;
+}
+.game-page--4x4.game-page__board {
+  width: 24rem;
+}
+.game-page--5x5.game-page__board {
+  width: 30rem;
+}
+.game-page__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-page__info section {
+  margin: 0.5rem;
+}
+.game-page__info section > * {
+  display: block;
+  text-align: center;
+  margin: 0.5rem;
+}
+.game-page__avatar {
+  font-size: 4rem;
+}
+.game-page__avatar, .game-page__avatar:hover {
+  box-shadow: none;
+}
+
+.tips-page {
+  margin: 2rem 0;
+}
+.tips-page section {
+  display: flex;
+}
+.tips-page p,
+.tips-page li {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.2;
+}
+.tips-page img {
+  margin-left: 1rem;
+  width: 20rem;
+}
+.tips-page article,
+.tips-page ol {
+  margin: 1rem 0;
+}
+.tips-page ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.tips-page li::marker {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.error-page {
+  text-align: center;
+  margin: 5rem 0;
+}
+.error-page img {
+  width: 15rem;
+}
+.error-page p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+body {
+  font-family: inherit;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  color: #343a40;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page > * {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  padding-inline: 6rem;
+}
+.page > *:not(.page__content) {
+  background-color: #073b4c;
+  color: #e9ecef;
+}
+.page__header a {
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.page__header img {
+  width: 3rem;
+  margin-inline: 1rem;
+}
+.page__content {
+  min-height: 15rem;
+}
+.page__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.page__footer section:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.page__footer h4 {
+  margin-bottom: 1rem;
+}
+.page__footer span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.page__footer a {
+  color: #ffd166;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */
