@@ -1,0 +1,40 @@
+/* Styles CSS */
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+@import url(/RogerEscobar/1-my-motivation/css/colors.css);
+@import url(/RogerEscobar/1-my-motivation/css/cards.css);
+@import url(/RogerEscobar/1-my-motivation/css/fonts.css);
+@import url(/RogerEscobar/1-my-motivation/css/hero.css);
+@import url(/RogerEscobar/1-my-motivation/css/motivation.css);
+@import url(/RogerEscobar/1-my-motivation/css/profile.css);
+@import url(/RogerEscobar/1-my-motivation/css/hobbies.css);
+@import url(/RogerEscobar/1-my-motivation/css/footer.css);
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Amiko:wght@400;700&family=Istok+Web:wght@700&family=Molengo&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
+
+h3 {
+  font-family: "Istok Web", sans-serif;
+  font-style: normal;
+  font-size: 27px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+h4 {
+  font-family: "Amiko", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--color-red);
+  text-align: center;
+  margin: 6px;
+}
+
+p {
+  font-family: "Amiko", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: justify;
+}

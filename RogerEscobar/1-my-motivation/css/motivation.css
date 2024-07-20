@@ -1,0 +1,31 @@
+#motivation {
+  background-color: var(--color-yellow);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.text-motivation {
+  max-width: 500px;
+  min-width: 300px;
+  padding: 20px;
+}
+.logo-nodo-container {
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.logo-eafit {
+  width: 100%;
+  position: relative;
+  padding: 30px;
+}
+
+.text_motivation h3 {
+  text-align: left;
+  margin-bottom: 6px;
+}

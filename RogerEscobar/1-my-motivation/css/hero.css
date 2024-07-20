@@ -1,0 +1,103 @@
+#hero-name {
+  min-height: 720px;
+  background-color: var(--color-blue);
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-rog-container {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.logo-rog {
+  width: 90px;
+  position: relative;
+  padding: 30px;
+}
+
+.texto-1 {
+  font-family: "Amiko", sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  color: var(--color-yellow);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-about {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Amiko", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-red);
+  text-align: center;
+  background-color: var(--color-background);
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 200px -20px 10px;
+  width: 250px;
+}
+
+.btn-about:hover {
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 200px -20px 10px;
+  align-items: baseline;
+  width: 250px;
+}
+
+/*inicio texto animado */
+
+.animated-text {
+  font-family: "Molengo", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--color-red);
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text ::before {
+  content: "Diseñador gráfico";
+  animation: words 9s infinite;
+}
+@keyframes words {
+  0%,
+  25% {
+    content: "DISEÑADOR GRÁFICO";
+  }
+  26%,
+  50% {
+    content: "DISEÑADOR UX";
+  }
+  51%,
+  75% {
+    content: "MOTION GRAPHER";
+  }
+  76%,
+  100% {
+    content: "APRENDIZ FRONTEND";
+  }
+}
+
+/* fin texto animado */

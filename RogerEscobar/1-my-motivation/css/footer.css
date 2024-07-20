@@ -1,0 +1,40 @@
+footer {
+  background-color: var(--color-blue);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: var(--color-yellow);
+}
+
+.fa-linkedin {
+  font-size: 30px;
+}
+
+.fa-instagram {
+  font-size: 30px;
+}
+
+.fa-github {
+  font-size: 30px;
+}
+
+.credit {
+  font-family: "Amiko";
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  font-size: 16px;
+}
