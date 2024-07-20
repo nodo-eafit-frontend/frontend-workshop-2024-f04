@@ -1,0 +1,36 @@
+@use "../_base/typography" as *;
+@use "../_base/variables" as *;
+
+.masthead {
+  font-family: map-get($fonts, masthead, family);
+  font-weight: map-get($fonts, masthead, weight);
+  font-size: 160px;
+  text-transform: none;
+  color: $color-blue;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  &__part {
+    display: block;
+  }
+
+  &__part--secondary {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 24px;
+    position: absolute;
+    bottom: 23px;
+    right: 14px;
+    letter-spacing: 19px;
+  }
+
+  &__part--tertiary {
+    color: $color-black;
+    font-family: map-get($fonts, taglines, family);
+    font-family: map-get($fonts, taglines, weight);
+    font-size: 10px;
+    position: absolute;
+    top: 45px;
+    right: 60px;
+  }
+}

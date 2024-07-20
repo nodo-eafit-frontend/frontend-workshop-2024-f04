@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,400..700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "ScoutCondensed";
+  src: url(../assets/fonts/ScoutCond-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+.cover-lines {
+  padding-right: 28px;
+  padding-left: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cover-lines .cover-lines__item--1, .cover-lines .cover-lines__item--2, .cover-lines .cover-lines__item--3 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 24px;
+  padding-right: 50%;
+  padding-top: 6px;
+}
+.cover-lines .cover-lines__item--4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-content: center;
+  z-index: 2;
+}
+.cover-lines .cover-lines__item--5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: right;
+  padding-left: 35%;
+  margin-top: -30px;
+}
+.cover-lines .cover-lines__item--5 p:first-child {
+  color: #ff0000;
+}
+.cover-lines .cover-lines__item--6 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: right;
+  padding-left: 50%;
+  margin-top: -100px;
+}
+.cover-lines .cover-lines__item--6 p:last-child {
+  color: #21201c;
+  padding-left: 35%;
+  font-size: 18px;
+  line-height: 14px;
+}
+.cover-lines .cover-lines__item--7 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-right: 70%;
+}
+.cover-lines .cover-lines__item--especial {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #d0d659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 60px;
+  right: 55px;
+  font-family: "Brygada+1918";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: none;
+  text-align: center;
+  color: #60625a;
+  line-height: 12px;
+}
+.cover-lines__headlines {
+  font-weight: 700;
+  font-family: "Scout";
+  font-size: 26px;
+  line-height: 22px;
+  color: #263249;
+}
+.cover-lines__tagline {
+  font-family: "Scout";
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: none;
+  color: #60625a;
+}
+.cover-lines__coverline {
+  font-family: "Scout";
+  font-weight: 900;
+  font-size: 85px;
+  text-transform: none;
+  text-align: right;
+  color: #21201c;
+  line-height: 60px;
+  padding-top: 60px;
+}
+.cover-lines__headlines_bold {
+  font-family: "Scout";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 22px;
+  color: #21201c;
+}
+.cover-lines__number {
+  font-family: "Scout";
+  font-weight: 900;
+  font-size: 90px;
+  color: #0067ba;
+  line-height: 60px;
+}
+.cover-lines .codebar__barcode-text {
+  font-family: "Scout";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 10px;
+  text-transform: none;
+  color: #fff;
+  margin-top: 90px;
+  padding-right: 40%;
+}
+.cover-lines .codebar__website {
+  font-family: "Scout";
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: none;
+  text-align: center;
+  color: #fff;
+  background-color: #21201c;
+  align-items: center;
+  display: inline-block;
+  margin-top: 10px;
+}
+.cover-lines .codebar__image {
+  height: 80px;
+}
+
+.cover {
+  position: relative;
+  background-color: #e1dcd2;
+  width: 100%;
+  text-transform: uppercase;
+  width: min-content;
+  overflow: hidden;
+}
+.cover .img-cover {
+  align-items: center;
+  position: absolute;
+  width: 120%;
+  top: 0;
+  left: -140px;
+}
+
+.masthead {
+  font-family: "ScoutCondensed";
+  font-weight: 400;
+  font-size: 160px;
+  text-transform: none;
+  color: #0067ba;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+}
+.masthead__part {
+  display: block;
+}
+.masthead__part--secondary {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: absolute;
+  bottom: 23px;
+  right: 14px;
+  letter-spacing: 19px;
+}
+.masthead__part--tertiary {
+  color: #21201c;
+  font-family: "Scout";
+  font-family: 400;
+  font-size: 10px;
+  position: absolute;
+  top: 45px;
+  right: 60px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

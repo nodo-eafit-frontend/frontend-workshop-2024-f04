@@ -1,0 +1,31 @@
+//Typography family
+
+@font-face {
+  font-family: "ScoutCondensed";
+  src: url(../assets/fonts/ScoutCond-Bold.otf);
+  font-weight: 700; //Regularondensed
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Black.otf);
+  font-weight: 900; //Black
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Bold.otf);
+  font-weight: 700; //Bold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scout";
+  src: url(../assets/fonts/Scout-Regular.otf);
+  font-weight: 400; //Regular
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,400..700&display=swap");
