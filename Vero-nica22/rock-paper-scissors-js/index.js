@@ -35,6 +35,7 @@ const playGame = async () => {
 
 	// Obtener elección del jugador y del computador
 	const playerChoiceValue = response.playerChoiceValue;
+	console.log(playerChoiceValue);
 	const computerChoiceValue = getComputerChoice();
 
 	// Obtener opciones elegidas a partir de los valores
@@ -51,6 +52,7 @@ const playGame = async () => {
 
 	return result;
 };
+console.log(playGame());
 
 /**
  * Jugar el juego en ciclos hasta que el jugador pierda todas la vidas

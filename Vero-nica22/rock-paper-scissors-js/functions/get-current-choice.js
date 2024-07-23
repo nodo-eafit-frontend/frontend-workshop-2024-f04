@@ -11,10 +11,11 @@ export default function getCurrentChoice(choiceValue) {
 	// TODO: Completar Algoritmo
 	for (const choice in CHOICES) {
 		if (CHOICES[choice].value === choiceValue) {
-            return CHOICES[choice].text;
+			let objectComputerChoice = CHOICES[choice];
+            return objectComputerChoice;
         }
 	}
 	return null;
 }
-let computerChoice = getComputerChoice();
-console.log(getCurrentChoice(computerChoice));
+// let computerChoice = getComputerChoice();
+// console.log(getCurrentChoice(computerChoice));
