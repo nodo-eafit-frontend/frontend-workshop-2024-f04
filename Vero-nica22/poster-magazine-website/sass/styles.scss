@@ -1,0 +1,18 @@
+@import './pallet.scss';
+@import './layout/magazine';
+@import './layout/headings';
+@import './base/typografy';
+
+
+
+
+body{
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+/*sass ./sass/styles.scss ./styles.css -w*/

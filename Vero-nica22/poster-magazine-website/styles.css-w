@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap");
+.magazine {
+  aspect-ratio: 1/1.324;
+  color: white;
+  background-color: gray;
+  margin: 2rem;
+  text-transform: uppercase;
+  width: min-content;
+  font-weight: bolder;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 13.7rem;
+  position: relative;
+  margin: -78px 0 0 8px;
+  line-height: 1;
+}
+.content__section .content__title {
+  font-size: 1.4rem;
+  font-family: "Manrope";
+  font-weight: 100;
+  font-weight: bolder;
+  color: rgb(30, 50, 90);
+  margin-bottom: 0;
+}
+.content__section .content__title--tam {
+  font-size: 1rem;
+}
+.content__section .content__parrafos {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 1.5cap;
+  margin: 0;
+  /* Arriba, derecha, abajo, izquierda */
+}
+.content__section .content__span {
+  background-color: aqua;
+  font-weight: 100;
+}
+.content__section .content__span--tam {
+  font-size: 3rem;
+}
+
+.magazine__title {
+  margin: 0 0 20px 0;
+}
+.magazine__title img {
+  position: absolute;
+  top: 2.813rem;
+  z-index: 0;
+}
+.magazine__title span {
+  position: relative;
+  font-size: 7rem;
+  font-family: "Bodoni Moda";
+  z-index: 1;
+}
+.magazine__title em {
+  font-size: 0.5rem;
+  margin-left: 380px;
+}
+
+body {
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+
+/*sass ./sass/styles.scss ./styles.css-w*/
+
+/*# sourceMappingURL=styles.css-w.map */

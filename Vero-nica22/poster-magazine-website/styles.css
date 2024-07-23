@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap");
+.magazine {
+  aspect-ratio: 1/1.51;
+  color: white;
+  background-color: gray;
+  margin: 2rem;
+  text-transform: uppercase;
+  width: min-content;
+  font-weight: bolder;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 14.3rem;
+  position: relative;
+  margin: -78px 0 0 8px;
+  line-height: 1;
+}
+.content__section .content__title {
+  font-size: 1.3rem;
+  font-family: "Manrope";
+  font-weight: 600;
+  color: rgb(23, 41, 76);
+  margin-bottom: 0;
+}
+.content__section .content__title--position {
+  font-size: 1.3rem;
+  margin: -80PX 0 0 0px;
+}
+.content__section .content__parrafos {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 1.5cap;
+}
+.content__section .content__parrafos--marg1 {
+  margin: 0;
+}
+.content__section .content__parrafos--marg2 {
+  margin: 0 19px 0 0;
+  text-align: center;
+}
+.content__section .content__parrafos--marg3 {
+  margin: 0 0 0 -16px;
+  text-align: center;
+}
+.content__section .content__parrafos--marg4 {
+  margin: 0;
+}
+.content__section .content__parrafos--marg5 {
+  margin: 130px 0 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.content__section .content__parrafos--marg6 {
+  text-align: center;
+  margin: 0;
+}
+.content__section .content__span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: -10px;
+  color: rgb(40, 16, 16);
+}
+.content__section .content__span--tam {
+  font-weight: 100;
+  font-size: 6rem;
+  font-family: "Manrope";
+  margin: 0 2px 0 -29px;
+  color: rgb(23, 41, 76);
+}
+
+.magazine__title {
+  margin: 0 0 20px 0;
+}
+.magazine__title img {
+  position: absolute;
+  top: 2.813rem;
+  z-index: 0;
+}
+.magazine__title span {
+  position: relative;
+  font-size: 7rem;
+  font-family: "Bodoni Moda";
+  z-index: 1;
+  top: -1.7rem;
+  letter-spacing: -7px;
+  margin: 0 19px 20px 19px;
+}
+.magazine__title em {
+  position: relative;
+  font-size: 0.5rem;
+  margin-left: 378px;
+  top: -5.7rem;
+}
+
+body {
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+
+/*sass ./sass/styles.scss ./styles.css -w*/
+
+/*# sourceMappingURL=styles.css.map */
