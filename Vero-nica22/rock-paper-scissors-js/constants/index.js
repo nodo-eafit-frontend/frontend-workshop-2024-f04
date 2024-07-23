@@ -25,9 +25,9 @@ export const MESSAGES = {
 };
 
 export const stats = { //Estadisticas
-	attemps: 0, //Intentos
-	byDraw: 1, //Por sorteo
-	byWin: 3, //Por ganar 
-	lifes: 3, //Vidas
-	score: 0, //Puntaje
+	attemps: 0, //Intentos incrementa cada vez que juega
+	byDraw: 1, // número de puntos por empates
+	byWin: 3, // Puntos de win incrementa cada vez que gana  
+	lifes: 3, // Disminuye cada vez que pierde
+	score: 0,  //Puntajes (Puntoajes de win y draw)
 };

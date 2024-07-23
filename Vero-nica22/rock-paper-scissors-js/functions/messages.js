@@ -1,3 +1,7 @@
+import { CHOICES, stats} from '../constants/index.js';
+import getComputerChoice from '../functions/get-computer-choice.js';
+import getCurrentChoice from '../functions/get-current-choice.js';
+
 /**
  * Genera un mensaje mostrando las elecciones del jugador y de la computadora.
  *
@@ -15,7 +19,19 @@
  */
 export const getChoicesMessage = (playerChoice, computerChoice) => {
 	// TODO: Completar función
+	return (`\n -------------------------------- 🧙 player [  ${playerChoice.emoji}  VS  ${computerChoice.emoji}  ] computer 🤖 --------------------------------`);
 };
+
+// let computerChoice = getComputerChoice();
+// let optionComputer = getCurrentChoice(computerChoice);
+// let playerChoice = {
+// 	text: 'Rock',
+// 	emoji: '✊',
+// 	value: 0,
+// };
+// console.log(playerChoice);
+// console.log(optionComputer);
+// console.log(getChoicesMessage(playerChoice, optionComputer));
 
 /**
  * Genera un mensaje mostrando la puntuación y las vidas restantes.
@@ -26,4 +42,8 @@ export const getChoicesMessage = (playerChoice, computerChoice) => {
  *
  * @returns {string} - Un mensaje que muestra la puntuación y las vidas restantes.
  */
-export const getScoreMessage = (stats) => ''; // TODO: Completar función
+export const getScoreMessage = (stats) =>{
+	
+    return (`\n ----------------------------------  ✨(Score): ${stats.score} | 💕(Lifes): ${stats.lifes}  ------------------------------------`);
+}; 
+// console.log(getScoreMessage(stats));

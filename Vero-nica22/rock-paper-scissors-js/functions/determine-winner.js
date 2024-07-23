@@ -1,5 +1,6 @@
 import { CHOICES } from '../constants/index.js'; //Trae los objetos de constants index 
 import getComputerChoice from '../functions/get-computer-choice.js';
+import getCurrentChoice from '../functions/get-current-choice.js';
 
 /**
  * Determina el ganador del juego de Piedra, Papel o Tijera.
@@ -23,36 +24,41 @@ import getComputerChoice from '../functions/get-computer-choice.js';
 
 export default function determineWinner(playerChoice, computerChoice) {
 	let result;
-	if (playerChoice === computerChoice) {
+	if (playerChoice.value === computerChoice.value) {
 		result = 0; //Empate
 
-	}else if (playerChoice === 0 && computerChoice === 1 ){
+	}else if (playerChoice.value === 0 && computerChoice.value === 1 ){
 		result = 2;
 
-	}else if (playerChoice === 1 && computerChoice === 0){
+	}else if (playerChoice.value === 1 && computerChoice.value === 0){
 		result = 1;
 	
-	}else if (playerChoice === 0 && computerChoice === 2){
+	}else if (playerChoice.value === 0 && computerChoice.value === 2){
 		result = 1;
 
-	}else if (playerChoice === 2 && computerChoice === 0){
+	}else if (playerChoice.value === 2 && computerChoice.value === 0){
 		result = 2;
 
-	}else if (playerChoice === 2 && computerChoice === 1){
+	}else if (playerChoice.value === 2 && computerChoice.value === 1){
 		result = 1;
 
-	}else if (playerChoice === 1 && computerChoice === 2){
+	}else if (playerChoice.value === 1 && computerChoice.value === 2){
 		result = 2;
+
 	}else{
 		result = null;
 	}
 	
-	// TODO: Completar Algoritmo
-	
-
 	return result;
 }
 
 // let computerChoice = getComputerChoice();
-// let playerChoice = 2;
-// console.log(determineWinner(playerChoice, computerChoice));
+// let optionComputer = getCurrentChoice(computerChoice);
+// let playerChoice = {
+// 	text: 'Rock',
+// 	emoji: '✊',
+// 	value: 0,
+// };
+// console.log(playerChoice);
+// console.log(optionComputer);
+// console.log(determineWinner(playerChoice, optionComputer));

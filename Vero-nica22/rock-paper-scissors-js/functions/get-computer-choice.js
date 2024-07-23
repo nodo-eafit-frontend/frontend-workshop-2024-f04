@@ -7,8 +7,8 @@
  *  - 2 representa "tijera"
  */
 export default function getComputerChoice() {
-	// TODO: Completar Algoritmo
-	let computerChoice = Math.floor(Math.random() * 3); //Un número random entre 0 y 2
+	let computerChoice;
+	computerChoice = Math.floor(Math.random() * 3); //Un número random entre 0 y 2
 	return computerChoice; //Devuelve el número aleatorio como la elección de la computadora
 }
 // console.log(getComputerChoice());

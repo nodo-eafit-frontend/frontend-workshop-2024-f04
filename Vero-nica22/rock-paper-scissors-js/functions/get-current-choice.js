@@ -8,10 +8,10 @@ import getComputerChoice from '../functions/get-computer-choice.js';
  * @returns {Object|null} - El objeto de opción correspondiente al valor dado, o null si no se encuentra.
  */
 export default function getCurrentChoice(choiceValue) {
-	// TODO: Completar Algoritmo
+	let objectComputerChoice;
 	for (const choice in CHOICES) {
 		if (CHOICES[choice].value === choiceValue) {
-			let objectComputerChoice = CHOICES[choice];
+			objectComputerChoice = CHOICES[choice];
             return objectComputerChoice;
         }
 	}
