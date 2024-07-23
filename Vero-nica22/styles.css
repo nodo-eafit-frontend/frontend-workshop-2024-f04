@@ -1,0 +1,310 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..800&display=swap');
+
+:root{
+    --color-prim:  palevioletred;
+    --color-nodo: #E1E2E6;
+    --color-sec: rgb(216, 112, 131);
+    --color-terc: rgb(71, 71, 71);
+    --color-cuar: rgb(153, 206, 244);
+    --color-quit: plum;
+    --color-sext: pink;
+    --color-sev: rgb(255, 225, 172);
+    --color-eig: rgb(66, 65, 65);
+    --color-white: white;
+    --color-footer: blanchedalmond;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+main {
+    width: 75rem;
+    margin: 0 auto;
+}
+
+picture{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), 
+        url(./img/foto-cerezos.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh; /*El tamaño*/
+    display: flex;
+    align-items: center;
+    width: 105%;
+    
+}
+
+.presentacion{
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+
+}
+
+
+.imagen-1{
+    width: 18.125rem; 
+    border-radius: 3.125rem;
+    position: relative;
+    left: 53.75rem; /* Mueve horizontalmente */
+    margin: 0.625rem 0 1.56rem 0 ; /*A, D,B I*/
+    top: 0; /* Mueve verticalemnte*/
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-prim);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    margin: 1.25rem;
+}
+
+.texto-presentacion{
+    font-size: 1.5rem;
+    left: 3.75rem;  /*Mueve horizontalmente*/
+    top: 7.5rem;/*Verticalmente*/
+    width: 42.5rem; /*El ancho */
+    position:   absolute; 
+    padding: 250 15.62rem;
+    margin-bottom: 1.125rem;
+}
+
+.nodo{
+    padding: 2.5rem;
+    background-color: var(--color-nodo);
+    width: 100%;
+    min-height: 25vh;
+    margin: 1.25rem 0 0 0;
+}
+
+h2{
+    font-size: 1.875rem; 
+    font-weight: 500;
+    color: var(--color-sec);
+    letter-spacing: 0.0625rem; 
+    margin: 0 0 0.5625rem 0; 
+    text-align: center;
+    text-transform: uppercase;
+}
+.texto-nodo{
+    font-size: 1.25rem;
+    position: absolute;
+    padding: 250 15.625rem;
+    margin: 0.75rem 0 0.625rem 0; /*A, D,B I*/
+
+}
+
+/*Carrusel de metas*/
+.carrousel{
+    width: 100%;
+    margin: 3.125rem 0 3.125rem 0; /*A, D,B I*/
+}
+
+h3{
+    font-size: 1.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0625rem;
+    margin: 0 0 0.5625rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-terc);
+}
+
+.item-carrousel p{
+    font-size: 1.625rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 5rem 1.125rem 0 1.125rem ; /*A, D,B I*/
+    
+    
+}
+
+.conte-carrousel{
+    width: 40%;
+    height: 12.5rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.item-carrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-carrousel-tarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.item-carrousel-arrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem; 
+}
+
+#item-carrousel-1{
+    background-color: var(--color-cuar) ;
+}
+
+#item-carrousel-2{
+    background-color: var(--color-quit);
+}
+
+#item-carrousel-3{
+    background-color: var(--color-sext);
+}
+
+#item-carrousel-4{
+    background-color: var(--color-sev);
+}
+
+.conte-carrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-carrousel-arrows > a > i{
+    color: var(--color-white);
+}
+
+.listaDeseos {
+    margin: 1.25rem 0 0.5625rem 1.25rem; /*A, D,B I*/
+}
+
+h4{
+    font-size: 1.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: var(--color-terc);
+    margin: 0 1.25rem 0.5625rem 0; /*A, D,B I*/
+}
+
+.listaDeseos  li {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin: 0 0.625rem 0.5625rem 0; /*A, D,B I*/
+    width: 75rem;
+    margin: 0 auto;
+}
+
+/*Grid*/
+.conteHobbies{
+    position: relative;
+    left: 50%;
+    transform: translate(-20%, 0);
+    margin: 1.25rem 0 1.25rem 0; /*A, D,B I*/
+}
+.hobbies{
+    display: grid;
+    grid-template-columns: 18.75rem 15.625rem;
+    grid-template-rows: auto 5rem;
+    gap: 1em;
+    width: 100%;
+    margin: 1.25rem 0 1.25rem 0; /*A, D,B I*/
+    
+}
+
+h5{
+    position: relative;
+    font-size: 1.875rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    left: 12.5rem;
+    color: var(--color-eig);
+
+}
+
+.hobbies h6{
+    font-size: 0.9375rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    margin: 0.5625rem;
+    text-align: center;
+}
+
+.hobbies p{
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    margin: 0.5625rem;
+    text-align: center;
+}
+
+.hobbies div {
+    background: var(--color-sext);
+    
+}
+.hobbies div:hover {
+    border: 0.0625rem solid var(--color-quit);
+}
+
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-footer);
+    min-height: 6.25rem;
+    padding: 1.25rem 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4.0625rem 0 0 0;
+    left: 3.75rem;
+    
+}
+
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.icon-elem{
+    list-style: none;
+    margin: 0 0.3125rem;
+}
+
+.icon{
+    font-size: 1.875rem;
+    display: inline-block;
+}
+
