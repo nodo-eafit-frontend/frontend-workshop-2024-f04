@@ -1,0 +1,118 @@
+@use '../utils' as *;
+
+$side-size: 6rem;
+
+.game-page {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-gap: 1rem;
+	margin-top: 1rem;
+
+	&__board {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 4rem auto;
+		border: solid $midnight-green 1rem;
+		border-radius: 1rem;
+		box-shadow: $box-shadow;
+	}
+
+	&__chip,
+	&__empty {
+		@include square($side-size);
+		background-color: $blue-ncs;
+	}
+
+	&__chip {
+		@include shadow-click;
+		cursor: pointer;
+
+		&--number {
+			color: $color-font-invert;
+			text-align: center;
+			align-content: center;
+			font-size: $font-size-extra-2;
+			text-shadow: $color-font 2px 2px 5px;
+		}
+
+		&--image {
+			position: relative;
+		}
+
+		&--image * {
+			pointer-events: none;
+		}
+
+		&--image img {
+			width: inherit;
+		}
+
+		&--image span {
+			@include square(1rem);
+			background-color: $french-gray;
+			border-radius: 50%;
+			font-size: $font-size-m;
+			font-style: italic;
+			font-weight: bold;
+			left: 0;
+			padding: 0.25rem;
+			position: absolute;
+			text-align: center;
+			top: 0;
+		}
+	}
+
+	&__empty {
+		background-color: $outer-space;
+	}
+
+	&--3x3 {
+		$side: 3;
+
+		&.game-page__board {
+			width: calc($side-size * $side);
+		}
+	}
+
+	&--4x4 {
+		$side: 4;
+
+		&.game-page__board {
+			width: calc($side-size * $side);
+		}
+	}
+
+	&--5x5 {
+		$side: 5;
+
+		&.game-page__board {
+			width: calc($side-size * $side);
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		section {
+			margin: 0.5rem;
+
+			> * {
+				display: block;
+				text-align: center;
+				margin: 0.5rem;
+			}
+		}
+	}
+
+	&__avatar {
+		font-size: $font-size-extra-3;
+	}
+
+	&__avatar,
+	&__avatar:hover {
+		box-shadow: none;
+	}
+}

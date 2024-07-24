@@ -1,0 +1,36 @@
+@use '../utils/' as *;
+
+.tips-page {
+	margin: 2rem 0;
+
+	section {
+		display: flex;
+	}
+
+	p,
+	li {
+		text-align: justify;
+		text-justify: inter-word;
+		line-height: 1.2;
+	}
+
+	img {
+		margin-left: 1rem;
+		width: 20rem;
+	}
+
+	article,
+	ol {
+		margin: 1rem 0;
+	}
+
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
+
+	li::marker {
+		font-weight: bold;
+		font-size: $font-size-l;
+	}
+}

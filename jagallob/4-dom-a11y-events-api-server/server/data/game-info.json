@@ -1,0 +1,28 @@
+{
+	"baseScore": 100000,
+	"timePenalty": 10,
+	"movePenalty": 5,
+	"movePenaltyWithoutTime": 20,
+	"difficultyInfo": {
+		"easy": {
+			"bonus": 1,
+			"timesToShuffle": 10,
+			"text": "Easy"
+		},
+		"moderate": {
+			"bonus": 1.5,
+			"timesToShuffle": 25,
+			"text": "Moderate"
+		},
+		"hard": {
+			"bonus": 2,
+			"timesToShuffle": 50,
+			"text": "Hard"
+		},
+		"legendary": {
+			"bonus": 3,
+			"timesToShuffle": 100,
+			"text": "Legendary"
+		}
+	}
+}
