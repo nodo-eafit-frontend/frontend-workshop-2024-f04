@@ -1,0 +1,314 @@
+:root {
+    --primary-color: #333;/*navig backgrond*/
+    --secondary-color: white;/*li navig*/
+    --tertiary-color: #111;/*li navig hover*/
+    --fourth-color: #04AA6D;/*h1 y li navig hover*/
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --fifth-color: #000;
+    --six-color: rgb(224, 5, 244);
+    --seven-color: rgb(7, 27, 246);
+    --eight-color: #777;
+    --text-color: #2c3e50;
+    --border-color: #bdc3c7;
+    --image: linear-gradient(rgb(106, 107, 102), rgb(107, 86, 108));/*body background*/
+    --shadow-h1: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+}
+
+body {
+    background-image: var(--image);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {    
+    color: var(--fourth-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: var(--shadow-h1);
+}
+
+
+
+ ul.navig {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--primary-color);
+  }
+  
+  ul.navig li {float: left;}
+  
+  ul.navig li a {
+    display: block;
+    color: var(--background-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.navig li a:hover:not(.active) {background-color: var(--tertiary-color);}
+  
+  ul.navig li a.active {background-color: var(--fourth-color);}
+  
+  ul.navig li.right {float: right;}
+  
+  @media screen and (max-width: 600px) {
+    ul.navig li.right, 
+    ul.navig li {float: none;}
+  }
+
+  article.quien-soy {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quien-soy span{
+    color: var(--fourth-color);
+    font-weight: bolder;    
+  }
+
+.quien-soy h2 { 
+    color: var(--fourth-color); 
+    font-weight: bolder;    
+  }
+
+  .quien-soy {    
+    border: 4px solid var(--fourth-color);    
+    margin: 5px auto 25px auto;
+    max-width: 300px;
+    padding: 5px 5px 5px 5px;
+    background-color: var(--fifth-color);
+    border-radius: 15px 50px;
+  }
+
+  #quien-soy img {
+    width: 170px;
+    height: 280px;
+    border-radius: 50%;    
+  }
+
+  #quien-soy-1 {
+    border: 4px solid var(--accent-color);    
+    margin: 5px auto 25px auto;
+    max-width: 300px;
+    padding: 5px 5px 5px 5px;
+    background-color: var(--fifth-color);
+    border-radius: 15px 50px;
+  }
+
+  #quien-soy-1 h2{
+    color: var(--fourth-color);      
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  #quien-soy-1 p{
+    margin-left: 5ch;
+    color: var(--fourth-color);
+    line-height: 1.3;
+  }
+
+  #motivation {
+    border: 4px solid var(--six-color);    
+    margin: 5px auto 25px auto;
+    max-width: 300px;
+    padding: 5px 5px 5px 5px;
+    background-color: var(--fifth-color);
+    border-radius: 15px 50px;    
+  }
+
+  #motivation h2{
+    color: var(--fourth-color);      
+    text-align: center;
+    font-weight: bolder;    
+  }
+
+  #motivation p{
+    color: var(--fourth-color);      
+    text-align: center;    
+    line-height: 1.3;
+  }
+
+  #aprende {
+    padding: 20px;
+  }
+
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {    
+    box-shadow: 0 4px 8px 0 var(--fifth-color);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 1.3;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+  }
+  
+  .card:hover {    
+    box-shadow: 0 8px 16px 0 var(--fifth-color);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+  .container > h4{
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .slogan {    
+    border: 4px solid var(--seven-color);
+    margin: 5px auto 25px auto;
+    max-width: 300px;
+    padding: 5px 5px 5px 5px;
+    background-color: var(--fifth-color);
+    border-radius: 15px 50px;
+    text-align: center;
+  }
+
+  .slogan h2{
+    color: var(--fourth-color);
+    font-weight: bolder;
+  }
+
+  .slogan p{
+    color: var(--fourth-color);    
+  }
+  
+  /* estilo del footer */
+  footer {
+    margin: 5px auto 0px auto;
+    background-color: var(--eight-color);
+    padding: 10px;
+    text-align: center;
+  }
+
+  a {
+    color: var(--fourth-color);
+    text-decoration: none;
+}
+
+footer > h2 {
+    color: var(--fourth-color);
+    padding: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: var(--shadow-h1);
+  }
+
+  /*carrusel*/
+  .slider {
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .slides::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+  }
+
+  .slides::-webkit-scrollbar-thumb{
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+
+  .slides::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+/*.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: var(--fourth-color);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }*/
+
+  .slides > ul {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: var(--fourth-color);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+  .slides img {
+    object-fit: cover;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+
+  .slider > a {
+    display: inline-flex;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--secondary-color);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5em 0;
+    position: relative;
+  }
+
+  .slider > a:active {
+    top: 1px;
+  }
+
+  .slider > a:focus {
+    background: var(--fifth-color);
+  }
+ 
+  @supports (scroll-snap-type: x) {
+    .slider > a {
+      display: inline-flex;
+    }
+  }
