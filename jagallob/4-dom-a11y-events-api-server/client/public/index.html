@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sliding Puzzle</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+	</head>
+	<body class="page">
+		<header class="page__header">
+			<a href="./index.html">
+				<img src="http://localhost:4000/images/logo.png" alt="Logo" />
+				<h1 class="heading">Sliding Puzzle</h1>
+			</a>
+		</header>
+		<main class="page__content home-page">
+			<button class="button button__primary" id="new-game-button">New Game</button>
+			<a class="button button__secondary" href="./pages/tips/index.html">Tips</a>
+			<dialog class="modal" id="new-game-modal" onmousedown="event.target===this && this.close()">
+				<div class="modal__container">
+					<header>
+						<h2 class="heading">New game</h2>
+						<button class="button button__icon" aria-label="close">
+							<span class="material-symbols-outlined"> close </span>
+						</button>
+					</header>
+					<form id="new-game-form" class="form" action="./pages/game/index.html">
+							<label for="nickname">nickname</label>
+							<input type="text" id="nickname" name="nickname" required />
+							<fieldset>
+								<legend>Board size*</legend>
+								<label>
+									<input type="radio" name="board-size" value="3x3" required />
+									3x3
+								</label>
+								<label>
+									<input type="radio" name="board-size" value="4x4" required />
+									4x4
+								</label>
+								<label>
+									<input type="radio" name="board-size" value="5x5" required />
+									5x5
+								</label>
+							</fieldset>
+							<label for="level">Level</label>
+							<select name="level" id="level" required>
+								<option value="">Selecet level</option>
+								<option value="easy">Easy</option>
+								<option value="moderate">Moderate</option>
+								<option value="hard">Hard</option>
+								<option value="legendary">Legendary</option>
+							</select>
+							<fieldset>
+								<legend>Chip Face*</legend>
+								<label>
+									<input type="radio" name="chip-face" value="number" required />
+									Number
+								</label>
+								<label>
+									<input type="radio" name="chip-face" value="image" required />
+									Image
+								</label>
+							</fieldset>
+					</form>
+					<footer>
+						<button type="reset" class="button button__secondary" form="new-game-form">reset</button>
+						<button type="submit" class="button button--success" form="new-game-form" disabled>Play!</button>
+					</footer>
+				</div>
+			</dialog>
+		</main>
+		<footer class="page__footer">
+			<section>
+				<span>Created by Marvin Cely </span>
+				<span>© 2024 </span>
+			</section>
+			<section>
+				<h4 class="heading">Credits</h4>
+				<span>
+					<a href="https://www.flaticon.es/iconos-gratis/puzzle">Puzzle icons created by Freepik</a> in Flaticon
+				</span>
+
+				<span>
+					<a href="https://www.flaticon.es/iconos-gratis/calidad">Calidad iconos creados por Vectors Market</a> in
+					Flaticon
+				</span>
+
+				<span>
+					<a href="https://www.flaticon.com/free-icons/dinosaur">Dinosaur icons created by Freepik</a> in Flaticon
+				</span>
+
+				<span
+					><a href="https://www.pexels.com/es-es/foto/montana-bajo-cielo-estrellado-1624504/"
+						>Foto de eberhard grossgasteiger</a
+					>
+					in Pexels</span
+				>
+				<span
+					><a href="https://www.pexels.com/es-es/foto/mar-azul-bajo-el-cielo-azul-claro-50594/">Foto de Pixabay</a> in
+					Pexels</span
+				>
+				<span
+					><a href="https://www.pexels.com/es-es/foto/2-personas-en-el-barco-2166711//">Foto de Quang Nguyen Vinh</a> in
+					Pexels</span
+				>
+			</section>
+		</footer>
+	</body>
+	<script type="module" src="index.js"></script>
+</html>

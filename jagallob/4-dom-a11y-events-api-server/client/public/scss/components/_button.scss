@@ -1,0 +1,70 @@
+@use '../utils' as *;
+
+.button {
+	@include font-by-default;
+	@include shadow-click;
+	border-radius: 1rem;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	margin: 0.5rem;
+	padding: 0.5rem 1rem;
+	text-align: center;
+
+	&__primary {
+		background-color: $color-primary;
+		color: $color-font-invert;
+	}
+
+	&__secondary {
+		background-color: $color-secondary;
+		color: $color-font-invert;
+	}
+
+	&__icon {
+		border-radius: 50%;
+		padding: 0.2rem;
+		line-height: 0.8;
+		margin: 0;
+		height: fit-content;
+		background-color: transparent;
+	}
+
+	&--success {
+		background-color: $color-success;
+		color: $color-font-invert;
+	}
+
+	&--error {
+		background-color: $color-error;
+		color: $color-font-invert;
+	}
+
+	&--loading {
+		padding-right: 2rem;
+		position: relative;
+	}
+
+	&--loading::after {
+		$spin-border: 0.2rem;
+		content: '';
+		animation: spin 1s linear infinite;
+		border-radius: 50%;
+		border: solid $color-font-invert $spin-border;
+		border-top: solid transparent $spin-border;
+		height: 1rem;
+		position: absolute;
+		width: 1rem;
+		top: 0.3rem;
+		right: 0.3rem;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
