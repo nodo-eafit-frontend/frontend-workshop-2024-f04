@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: "Castoro", "Times New Roman", Times, serif;
+}
+
+h3, p {
+  font-family: "Anton", sans-serif;
+}
+
+.main-cover-line p {
+  font-family: "Nokora", sans-serif;
+}
+
+h2 {
+  font-family: "Bowlby";
+}
+
+h1 {
+  color: rgb(250, 246, 246);
+  font-size: 6.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body {
+  width: 50rem;
+  height: 43rem;
+  padding-left: 250px;
+}
+
+.cover-magazine {
+  background: rgb(14, 13, 13);
+  background: linear-gradient(45deg, rgb(145, 140, 140) 0%, rgb(32, 32, 32) 61%);
+  border: 3.75rem solid rgb(250, 250, 15);
+  padding: auto;
+  height: 48rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.cover-magazine nav {
+  color: rgb(250, 246, 246);
+  width: 95%;
+  text-align: center;
+  padding: 1rem;
+  text-align: center;
+}
+.cover-magazine nav ul {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.cover-magazine .secondary-cover-lines {
+  position: absolute;
+  top: 250px;
+  z-index: 2;
+}
+.cover-magazine .secondary-cover-lines p {
+  color: rgb(250, 246, 246);
+}
+.cover-magazine .secondary-cover-lines h3 {
+  color: rgb(250, 250, 15);
+}
+.cover-magazine .secondary-cover-lines .subheadline-1, .cover-magazine .secondary-cover-lines .subheadline-2, .cover-magazine .secondary-cover-lines .subheadline-3, .cover-magazine .secondary-cover-lines .subheadline-4, .cover-magazine .secondary-cover-lines .subheadline-5 {
+  padding: 5px 5px;
+}
+.cover-magazine img {
+  width: 46rem;
+  height: auto;
+  position: absolute;
+  top: 216px;
+  left: -3.8rem;
+  z-index: 1;
+}
+.cover-magazine .main-cover-line p {
+  color: rgb(250, 246, 246);
+  font-size: 0.938rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 130px;
+  right: 5px;
+}
+.cover-magazine .headline h2 {
+  color: rgb(212, 118, 9);
+  font-size: 4.375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+  position: absolute;
+  bottom: 50px;
+  right: 60px;
+  text-shadow: 13px 13px 15px rgb(26, 25, 24);
+}
+.cover-magazine .headline h2 span {
+  font-size: 40px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,102 @@
+@use './utilities/reset' ;
+@use './utilities/fonts';
+@use './utilities/pallete' ;
+
+
+h1{
+    color: pallete.$color-primary;
+    font-size: 6.1rem;
+    text-align: center;
+    text-transform: uppercase;   
+}
+
+body{
+    width: 50rem;
+    height: 43rem;
+    padding-left: 250px;
+}
+
+
+.cover-magazine{
+    background: pallete.$color-backgroud;
+    background: linear-gradient(45deg, pallete.$color-gra-1 0%, pallete.$color-gra-2 61%);
+    border: 3.75rem solid pallete.$color-ng;
+    padding: auto;
+    height: 48rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    
+    nav{
+        color: pallete.$color-primary;
+        width: 95%;
+        text-align: center;
+        padding: 1rem;
+        text-align: center;
+                
+        ul{
+            list-style-type: none;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+        }  
+    }
+
+    .secondary-cover-lines{ 
+        position: absolute;
+        top: 250px;
+        z-index: 2;
+
+        p{
+            color: pallete.$color-primary
+        }
+        
+        h3{
+            color: pallete.$color-ng;
+        }    
+
+        .subheadline-1, .subheadline-2, .subheadline-3, .subheadline-4, .subheadline-5 {
+            padding: 5px 5px;
+        }
+
+    }
+
+    img{
+        width: 46rem;
+        height: auto;
+        position: absolute;
+        top: 216px;
+        left: -3.8rem;
+        z-index: 1;
+    }
+
+    .main-cover-line p{
+        color: pallete.$color-primary;
+        font-size: 0.938rem;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 130px;
+        right: 5px;
+    }
+
+    .headline h2{
+        color: pallete.$color-line;
+        font-size: 4.375rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 2;
+        position: absolute;
+        bottom: 50px;
+        right: 60px;
+        text-shadow: 13px 13px 15px pallete.$color-shadow;
+
+        span{
+            font-size: 40px;
+        }
+            
+    }
+
+}
+
+
+
