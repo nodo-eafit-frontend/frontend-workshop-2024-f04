@@ -1,0 +1,262 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;  
+}
+
+body{
+  /*background-color: #978f8f;*/
+  background-image: linear-gradient(rgb(106, 107, 102), rgb(107, 86, 108));
+}
+
+/* Estilo del header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  text-shadow: -1px 0 black, 0 4px black, 4px 0 black, 0 -1px black;
+}
+
+ul.navig {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.navig li {float: left;}
+
+ul.navig li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navig li a:hover:not(.active) {background-color: #111;}
+
+ul.navig li a.active {background-color: #04AA6D;}
+
+ul.navig li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.navig li.right, 
+  ul.navig li {float: none;}
+}
+
+article.quien-soy {
+  display: flex;
+}
+
+article.quien-soy h1{
+  color: yellowgreen;  
+  padding: 10px;
+  text-align: center;  
+}
+
+/*
+img {
+  width: 160px;
+  height: 250px;
+  border-radius: 50%;
+}*/
+
+.quiensoy h2{
+  /*border:2px solid DodgerBlue;*/
+  color: rgb(244, 246, 242);
+}
+
+.quien-soy p{
+  color: rgb(96, 142, 4);
+  margin-left: 5ch;
+}
+
+.quien-soy{
+  border: 4px solid rgb(7, 214, 76);
+  margin: 5px 300px 2px 300px;  
+  padding: 25px 25px 25px 25px;
+  background-color: rgb(1, 7, 9);
+  border-radius: 15px 50px;
+}
+
+/*
+#quiensoy1 h2{
+  border:2px solid Violet;
+}*/
+
+#quien-soy-1 p{
+  color: rgb(96, 142, 4);
+  margin-left: 5ch;
+}
+
+#quien-soy-1 h2{
+  /*border:2px solid DodgerBlue;*/
+  color: rgb(244, 246, 242);
+}
+
+#quien-soy-1 p{
+  color: rgb(96, 142, 4);
+  margin-left: 5ch;
+}
+
+#quien-soy-1{
+  border: 4px solid rgb(164, 9, 9);
+  margin: 5px 300px 5px 300px;
+  padding: 25px 25px 25px 25px;
+  background-color: rgb(3, 11, 14);
+  border-radius: 15px 50px;
+}
+
+#motivation h2{
+  /*border:2px solid DodgerBlue;*/
+  color: rgb(244, 246, 242);
+}
+
+#motivation h2{
+  color: rgb(96, 142, 4);
+  margin-left: 5ch;
+}
+
+#motivation p{
+  color: rgb(96, 142, 4);
+  margin-left: 5ch;
+}
+
+#motivation{
+  border: 4px solid rgb(179, 10, 131);
+  margin: 5px 300px 25px 300px;  
+  padding: 25px 25px 25px 25px;
+  background-color: rgb(20, 22, 22);
+  border-radius: 15px 50px;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card{
+  width: 325px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card-content{
+  padding: 30px 30px;
+  line-height: 1.3;
+}
+
+.card-content h2{
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.card-content p{
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: rotateY(150deg);
+}
+
+.tus-hobbies img{
+  width: 250px;
+  height: 250px;
+}
+
+.tus-hobbies h2{
+  /*border:2px solid DodgerBlue;*/
+  color: rgb(244, 246, 242);
+  justify-content: left;
+}
+
+article.tus-hobbies {
+  display: flex;
+}
+
+.tus-hobbies{
+  border: 4px solid lightblue;
+  margin: 25px 25px 25px 25px;
+  background-color: black;
+  padding: 25px 25px 25px 25px;  
+  border-radius: 15px 50px;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slogan{
+  color: #f0f0f0;
+  text-align: center;
+  border: 4px solid rgb(178, 237, 13);
+  margin: 5px 300px 2px 300px; 
+  background-color: black;
+  padding: 25px 25px 25px 25px;
+  border-radius: 15px 50px;
+}
+
+/* estilo del footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
