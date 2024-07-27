@@ -1,0 +1,158 @@
+body{
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(225, 210, 247);
+    text-align: justify;
+}
+
+.ima1{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    border-radius: 70px;
+    border:10px solid #8a2dbd;
+}
+
+.p0{
+    align-items: center;
+    display: flex;
+    }
+    
+   
+        body {
+            margin:auto;
+            width: 640px; 
+            padding: 50px;
+            font-family: 'arial', sans-serif; 
+            color: #160320;  
+    }
+
+.pt{
+    text-align: center;
+}
+
+h1{
+    font-style: "italic";
+    text-align: center;
+}
+.p1{
+    text-align: center;
+}
+h2,h4 {
+    text-align: center;
+    color:#b742db;
+
+}
+
+
+footer{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.Hobbies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hobbies img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+}
+
+.imagenes{
+    display: flex;
+    gap: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width:100px;
+    height:430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.container .card{
+    width: 250px;
+    height: 430px;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(107, 14, 230, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+   
+}
+
+.container .card:hover{
+    transform: translateY(0,0, 0, 0.2);
+    box-shadow: 0, 12px,16px rgba(182, 82, 173, 0.2);
+    border-color: #8a2dbd;
+}
+
+.container .card img{
+    width: 150px;
+    height:150px ;
+}
+
+.container .card h4{
+    font-weight: 600;
+}
+.container .card p{
+    padding: 0 1rem;
+    font-size:small;
+    font-weight: 200;
+}
+
+.container1{
+    width: 100%;
+    max-width:100px;
+    height:430px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    flex-direction:column;
+    align-items: center;
+}
+
+.container1 .cards{
+    width: 250px;
+    height: 430px;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(107, 14, 230, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+   
+}
+
+.container1 .cards:hover{
+    transform: translateY(0,0, 0, 0.2);
+    box-shadow: 0, 12px,16px rgba(182, 82, 173, 0.2);
+    border-color: #8a2dbd;
+}
+
+.container1 .cards img{
+    width: 150px;
+    height:150px ;
+}
+
+.container1 .cards h4{
+    font-weight: 600;
+}
+.container1 .cards p{
+    padding: 0 1rem;
+    font-size:small;
+    font-weight: 200;
+}
+
+
