@@ -1,0 +1,28 @@
+
+main{
+
+    
+    background-image: url(/assets/imagenes/rihana-fondo.jpg);
+    background-position: center;
+    background-size: cover;
+
+
+    aspect-ratio: 2 / 3;
+    width: 50rem;
+    height: 70rem;
+    margin: 50px;
+    padding: 3rem;
+    text-transform: uppercase;
+    z-index: 1;
+    
+}
+
+h1{
+    
+    color: $color-cofee;
+    text-align: center;
+    font-size: 270px;
+    font-weight: 100;
+    font-family: 'Vogue', 'Times New Roman', Times, Serif;
+   
+}
