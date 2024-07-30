@@ -1,0 +1,154 @@
+/*IMPORTAMOS ESTILOS DE FUENTES DE GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Permanent+Marker&family=Poetsen+One&display=swap');
+/*LO QUE PONGA ACA MUEVE EN TODA LA PAGINA*/
+*{
+    box-sizing: border-box ;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(../img/fondo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.c_img{
+    display:flex;
+    justify-content: space-between;
+    
+}
+.c_img img{
+    height: 200px;
+    width: 200px;
+    margin-left: 70px;
+    border-radius: 50%;
+}
+.img{
+    width: 25%;
+    background-color: burlywood;
+}
+.nombre{
+    width: 75%;
+    text-align: center;
+    background-color: burlywood;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.c_img h1{
+    line-height: 5;
+}
+.t_qnsoy{
+    background-color: rgb(249, 249, 250);
+    text-align: center;
+    text-transform: capitalize;
+    padding: 35px  0px  ; 
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.t_p{
+    width: 25%;
+}
+.m_r{
+    width: 75%;
+    background-color: rgb(249, 249, 250);
+    height: 100%;
+    margin-bottom: 30px;
+   
+}
+.p_p_p{
+    margin-top: -8px;
+    color: aliceblue;
+    padding: 0px 8px;
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.c_centro{
+    display: flex;
+    
+}
+.moti h2, .razo h2{
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.razo p, .moti p{
+    padding: 0px 0px 0px 15px;
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+.carrusel{
+    width: 300px!important;
+    margin: auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px!important;
+    
+}
+.carusel-principal{
+    background-color: rgba(170, 140, 110, 0.315)!important;
+}
+.card-body{
+    text-align: center!important;
+}
+.f_anterior, .f_siguiente{
+    background-color: black!important;
+}
+.grid-principal{
+    padding-top: 30px;
+
+}
+.grid-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dos columnas de igual tamaño */
+    grid-gap: 20px; /* Espacio entre las celdas */
+  }
+  
+.hobby{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+img {
+    max-width: 100%;
+    width: 200px;
+    border-radius: 20%;
+  }
+  
+.description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+.slogan {
+    font-weight: bold;
+    color: #333;
+  }
+footer {
+   
+    margin-top: -30px;
+    text-align: center;
+}
+.pie {
+    line-height: 4;
+    color: aliceblue;
+}
+.pie p{
+    margin: 0;
+}
+.pie a{
+    text-decoration: none;
+    color: rgb(41, 151, 248);
+}
