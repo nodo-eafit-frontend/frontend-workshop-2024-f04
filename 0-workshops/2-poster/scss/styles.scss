@@ -1,0 +1,162 @@
+@import './pallete.scss';
+@import './reset.scss';
+@import './fonts.scss';
+
+body {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    
+    position: relative;
+    aspect-ratio: 2 / 3;
+    width: 50%;  /* Ajusta el ancho del contenedor */
+    max-width: 400px; /* Ajusta el ancho máximo según el tamaño deseado */
+    height: auto;  /* Ajusta automáticamente la altura en función del contenido */
+    margin: 2rem auto; /* Centra el contenedor horizontalmente y ajusta el margen superior/inferior */
+    padding: 1rem;
+    color: $phrases;
+    background: linear-gradient(90deg, $color1 20%, $color2 50%, $color1 80%);
+    text-transform: uppercase;
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+.main-title {
+    position: relative;
+    display: inline-block;
+}
+
+.trademark {
+    color: $title;
+    position: absolute;
+    top: 28px;
+    left: -6px;
+    font-size: 0.7rem; 
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    font-size: 7.3rem; 
+    font-weight: bold;
+    color: $title;
+}
+
+.imagen {
+    position: absolute;
+    z-index: 2; 
+    top: 3px;
+    left: 7%;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(0.9);
+}
+
+article {
+    position: relative;
+    z-index: 3;
+
+    h2 {
+    font-size: 2rem; 
+    font-style: italic;
+    color: $subtitle;
+    }
+
+    p {
+    color: $phrases;
+    }
+}
+
+span{
+    font-family: 'Roboto', sans-serif;
+    margin: 0rem;
+    width: fit-content;  
+    max-width: 100%;     /* No permite que el ancho sobrepase el contenedor */
+    height: auto;        
+    position: absolute;
+    top: -1.5rem;        /* Ajusta la posición vertical */
+    transform-origin: left top; /* Establece el punto de origen para la escala */
+    transform: scale(0.4);  
+    
+}
+
+
+.sections-container {
+    line-height: 1.4;
+    display: flex;
+    gap: 2rem; /* Ajusta el espacio entre las secciones si es necesario */
+}
+
+p, em{
+    text-transform: none;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic
+    
+}
+
+.section1{
+
+    margin-left: 0.7rem;
+    margin-top: 1.3rem ;
+    width: 37%;
+    overflow-wrap: break-word;
+    
+
+    h2{
+        position: relative;
+        font-size: 0.9rem; /* Ajusta este valor al tamaño que desees */
+        color: $subtitle; 
+        margin: 0;
+        padding: 0;
+        
+    }
+    p{
+        font-size: 0.9rem; 
+    }
+    
+
+}
+.section2{
+
+    margin-left: 0.9rem;
+    margin-top: 1.3rem ;
+    width: 50%;
+    max-width: 31%;
+    margin-left: 10rem; 
+    overflow-wrap: break-word;
+    text-align: right;
+
+    h2{
+        position: relative;
+        font-size: 1rem; /* Ajusta este valor al tamaño que desees */
+        color: $subtitle; 
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.section4 {
+    line-height: 1; 
+    position: absolute;
+    bottom: 3;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 19rem;
+    h1{
+        color: $phrases;
+        font-size: 3rem;
+    }
+    p{
+        font-size: 4.5rem;
+    }
+    em{
+        font-size: 1.2rem;
+    }
+
+}

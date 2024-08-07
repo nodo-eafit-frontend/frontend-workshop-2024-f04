@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap";
+@import "https://fonts.google.com/specimen/Roboto";
+@import "https://fonts.googleapis.com";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 50%; /* Ajusta el ancho del contenedor */
+  max-width: 400px; /* Ajusta el ancho máximo según el tamaño deseado */
+  height: auto; /* Ajusta automáticamente la altura en función del contenido */
+  margin: 2rem auto; /* Centra el contenedor horizontalmente y ajusta el margen superior/inferior */
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(130, 70, 77) 20%, rgb(169, 126, 123) 50%, rgb(130, 70, 77) 80%);
+  text-transform: uppercase;
+  overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+.main-title {
+  position: relative;
+  display: inline-block;
+}
+
+.trademark {
+  color: rgb(237, 192, 186);
+  position: absolute;
+  top: 28px;
+  left: -6px;
+  font-size: 0.7rem;
+}
+
+h1 {
+  font-family: "Playfair Display SC", serif;
+  text-align: center;
+  font-size: 7.3rem;
+  font-weight: bold;
+  color: rgb(237, 192, 186);
+}
+
+.imagen {
+  position: absolute;
+  z-index: 2;
+  top: 3px;
+  left: 7%;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(0.9);
+}
+
+article {
+  position: relative;
+  z-index: 3;
+}
+article h2 {
+  font-size: 2rem;
+  font-style: italic;
+  color: rgb(238, 190, 188);
+}
+article p {
+  color: rgb(255, 255, 255);
+}
+
+span {
+  font-family: "Roboto", sans-serif;
+  margin: 0rem;
+  width: fit-content;
+  max-width: 100%; /* No permite que el ancho sobrepase el contenedor */
+  height: auto;
+  position: absolute;
+  top: -1.5rem; /* Ajusta la posición vertical */
+  transform-origin: left top; /* Establece el punto de origen para la escala */
+  transform: scale(0.4);
+}
+
+.sections-container {
+  line-height: 1.4;
+  display: flex;
+  gap: 2rem; /* Ajusta el espacio entre las secciones si es necesario */
+}
+
+p, em {
+  text-transform: none;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+}
+
+.section1 {
+  margin-left: 0.7rem;
+  margin-top: 1.3rem;
+  width: 37%;
+  overflow-wrap: break-word;
+}
+.section1 h2 {
+  position: relative;
+  font-size: 0.9rem; /* Ajusta este valor al tamaño que desees */
+  color: rgb(238, 190, 188);
+  margin: 0;
+  padding: 0;
+}
+.section1 p {
+  font-size: 0.9rem;
+}
+
+.section2 {
+  margin-left: 0.9rem;
+  margin-top: 1.3rem;
+  width: 50%;
+  max-width: 31%;
+  margin-left: 10rem;
+  overflow-wrap: break-word;
+  text-align: right;
+}
+.section2 h2 {
+  position: relative;
+  font-size: 1rem; /* Ajusta este valor al tamaño que desees */
+  color: rgb(238, 190, 188);
+  margin: 0;
+  padding: 0;
+}
+
+.section4 {
+  line-height: 1;
+  position: absolute;
+  bottom: 3;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 19rem;
+}
+.section4 h1 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+}
+.section4 p {
+  font-size: 4.5rem;
+}
+.section4 em {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=styles.css.map */
