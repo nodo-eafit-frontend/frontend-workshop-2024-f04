@@ -1,0 +1,19 @@
+{
+	"name": "3-rock-paper-scissors",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "Workshop to first steps with Javascript",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+	},
+	"author": "Marvin Cely",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	},
+	"dependencies": {
+		"prompts": "^2.4.2"
+	}
+}
