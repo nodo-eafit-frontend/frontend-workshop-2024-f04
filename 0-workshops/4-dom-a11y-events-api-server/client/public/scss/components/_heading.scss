@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+h1.heading {
+	font-size: $font-size-extra-2;
+	font-weight: bolder;
+}
+
+h2.heading {
+	font-size: $font-size-xl;
+	font-weight: bold;
+	border-bottom: solid $slate-gray 2px;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+h3.heading {
+	font-size: $font-size-l;
+	font-weight: bold;
+}
+
+h4.heading {
+	font-size: $font-size-l;
+	font-weight: bold;
+}

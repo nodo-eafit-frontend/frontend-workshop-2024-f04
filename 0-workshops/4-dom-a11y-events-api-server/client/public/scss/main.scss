@@ -1,0 +1,74 @@
+@use 'base' as *;
+@use 'utils' as *;
+@use 'components' as *;
+@use 'layout' as *;
+
+body {
+	@include font-by-default;
+	font-family: $font-roboto;
+	color: $color-font;
+}
+
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> * {
+		width: -webkit-fill-available;
+		width: -moz-available;
+		padding-inline: 6rem;
+	}
+
+	> *:not(.page__content) {
+		background-color: $color-primary;
+		color: $color-font-invert;
+	}
+
+	&__header a {
+		padding-block: 1rem;
+		display: flex;
+		align-items: center;
+		width: fit-content;
+	}
+
+	&__header img {
+		width: 3rem;
+		margin-inline: 1rem;
+	}
+
+	&__content {
+		min-height: 15rem;
+	}
+
+	&__footer {
+		margin-top: auto;
+		// height: 5rem;
+
+		display: flex;
+		justify-content: space-between;
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+
+		section:first-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
+		h4 {
+			margin-bottom: 1rem;
+		}
+
+		span {
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+
+		a {
+			color: $color-accent;
+			font-weight: bold;
+		}
+	}
+}

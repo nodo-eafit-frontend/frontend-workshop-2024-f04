@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+.form {
+	> * {
+		margin-block: 0.5rem;
+	}
+
+	&--required {
+		color: $color-error;
+	}
+
+	fieldset {
+		border-radius: 0.25rem;
+		border: solid 2px $french-gray-2;
+		padding: 0.5rem;
+		width: fit-content;
+	}
+}

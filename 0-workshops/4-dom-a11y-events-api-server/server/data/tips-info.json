@@ -1,0 +1,20 @@
+{
+	"history": {
+		"title": "History",
+		"paragraph": "The Sliding Puzzle, also known as the \"Game of 15\" or \"15 Puzzle\", was created in the 1870s. Its invention is attributed to Noyes Chapman, a New York postmaster, although Sam Loyd, a well-known puzzle creator, also claimed its invention, popularizing it further. This game consists of a board of jumbled numbered cells with an empty cell, where the objective is to rearrange the numbers by sliding the pieces until the correct order is achieved. This game has not only remained popular over the years because of its simplicity and challenge, but also because of its impact on the development of algorithms and problem-solving techniques in computer science.",
+		"image": {
+			"src": "https://media.istockphoto.com/id/175479741/photo/blank-slide-puzzle.jpg?s=612x612&w=0&k=20&c=7vSbGE5ykPk4RD8edu7uLrqqfqrZTXkuVC-o8dJ_H4s=",
+			"alt": "Image of a Sliding Puzzle"
+		}
+	},
+	"recommendations": {
+		"title": "Recommendations",
+		"paragraph": "To solve a Sliding Puzzle in a simple way, you must look at the board and visualize the final goal, usually an ascending numerical order.",
+		"steps": [
+			"Start by moving the pieces in the correct order, usually from top to bottom and left to right, making sure to place the top row first and then the left columns in their correct position.",
+			"Utiliza la celda vacía para desplazar las piezas, tratando de mantener las ya posicionadas en su lugar.",
+			"Advance by solving one row or column at a time until all the pieces are in order.",
+			"If you get stuck, go back a few moves and try a different strategy to avoid repetitive cycles. With practice and patience, you will complete the puzzle."
+		]
+	}
+}
