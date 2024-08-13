@@ -1,0 +1,13 @@
+@use "./base/reset";
+@use "./base/typography";
+@use "./layout/headlines";
+@use "./layout/magazine";
+@use "./utils/variables" as *;
+
+body {
+	font-family: $font-poppins;
+	color: $color-white;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+}
