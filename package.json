@@ -1,0 +1,12 @@
+{
+  "name": "frontend-workshop-2024-f04",
+  "version": "1.0.0",
+  "description": "crear juego piedra papel o tijeras",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Acevedo",
+  "license": "ISC"
+}
