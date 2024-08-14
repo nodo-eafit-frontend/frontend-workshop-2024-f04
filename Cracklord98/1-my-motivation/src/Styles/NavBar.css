@@ -1,0 +1,25 @@
+.navbar {
+  background-color: var(--color-navbar);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.navbar-brand img {
+  height: 24; 
+  width: 30;
+}
+
+.nav-item {
+  margin: 0 .5px; 
+}
+
+#navbarNav {
+  background-color: var(--color-navbar1); 
+}
+
+#LogoNodo {
+  height: 20%;
+  width: 20%;
+}
+
+

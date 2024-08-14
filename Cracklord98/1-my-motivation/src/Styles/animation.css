@@ -1,0 +1,69 @@
+#hobbies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background-color: #000;
+
+}
+
+.wrapper{
+    display: flex;
+
+}
+
+.primer-texto{
+    font-size: 60px;
+    color: #fff;
+}
+
+#hobbies .textos{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.textos li{
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    color: #0ef;
+    list-style: none;
+    padding: 0px 20px;
+    text-shadow: 0 0 10px rgb(0, 60, 255);
+    animation: slide 12s steps(3) infinite, colorful 6s infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -270px;
+    }
+}
+
+@keyframes colorful {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.textos li span{
+    position: relative;
+}
+
+.textos li span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 87px;
+    background: #000;
+    border-left: 2px #0ef solid;
+    animation: typing 2s steps(13) infinite alternate;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}

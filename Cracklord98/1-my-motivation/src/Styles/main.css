@@ -1,0 +1,52 @@
+:root {
+  --color-bg1: linear-gradient(90deg, #00f7ff, #f0a206); 
+  --color-bg2: linear-gradient(to right, #2196F3 0%, #a60368 100%);
+  --color-bg3: linear-gradient(45deg, red, blue, rgb(14, 236, 218), black); 
+  --color-textp: aliceblue;
+  --color-h2: azure;
+  --color-music:rgb(122, 174, 233);
+  --color-music1: bisque;
+  --color-navbar: #146bc15c;
+  --color-navbar1:#898a8bc0;
+  --color-bold:#20e2e9;
+  --color-card:rgba(22, 22, 26, 0.18);
+  --color-bgcard: #e1e1e1
+}
+
+
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css2");
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url(../assets/Typography/RobotoCondensed/roboto-condensed-cyrillic-600-normal.ttf);
+}
+
+#main {
+  width: 100vh;
+  height: 90rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-music1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #music-button:hover {
+    background-color: var(--color-music);
+  }
+  
