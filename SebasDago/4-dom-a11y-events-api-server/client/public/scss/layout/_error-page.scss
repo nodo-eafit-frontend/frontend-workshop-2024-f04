@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+.error-page {
+	text-align: center;
+	margin: 5rem 0;
+
+	img {
+		width: 15rem;
+	}
+
+	p {
+		font-size: $font-size-l;
+		margin-top: 1rem;
+	}
+}
