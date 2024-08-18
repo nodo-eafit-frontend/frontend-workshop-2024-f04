@@ -1,0 +1,13 @@
+/* Footer styles */
+.magazine__footer {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem 0;
+    @include flex-center;
+    flex-direction: column;
+
+    .footer__date,
+    .footer__issue {
+        font-size: $footer-font-size;
+    }
+}

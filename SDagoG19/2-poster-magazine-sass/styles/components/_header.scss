@@ -1,0 +1,11 @@
+/* Header styles */
+.magazine__header {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem 0;
+
+    .magazine__title {
+        @extend %flex-center;
+        font-size: $header-font-size;
+    }
+}
