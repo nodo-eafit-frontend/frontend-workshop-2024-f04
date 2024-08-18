@@ -1,0 +1,83 @@
+.magazine__header .magazine__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+}
+
+/* Base styles */
+body {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header styles */
+.magazine__header {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 1rem 0;
+}
+.magazine__header .magazine__title {
+  font-size: 2.5rem;
+}
+
+/* Cover styles */
+.magazine__cover {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  position: relative;
+}
+.magazine__cover .cover__image {
+  width: 100%;
+  height: auto;
+}
+.magazine__cover .cover__text {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: rgba(51, 51, 51, 0.7);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.magazine__cover .cover__text .cover__headline {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.magazine__cover .cover__text .cover__subtitle {
+  font-size: 0.875rem;
+}
+
+/* Footer styles */
+.magazine__footer {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.magazine__footer .footer__date,
+.magazine__footer .footer__issue {
+  font-size: 0.875rem;
+}
+
+/*# sourceMappingURL=main.css.map */
