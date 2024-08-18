@@ -18,7 +18,21 @@ import { CHOICES } from '../constants/index.js';
 export default function determineWinner(playerChoice, computerChoice) {
 	let result;
 
-	// TODO: Completar Algoritmo
+    // Piedra (0) vence a Tijera (2)
+    // Papel (1) vence a Piedra (0)
+    // Tijera (2) vence a Papel (1)
+    
+    if (playerChoice.value === computerChoice.value) {
+        result = 0; // Empate
+    } else if (
+        (playerChoice.value === 0 && computerChoice.value === 2) ||
+        (playerChoice.value === 1 && computerChoice.value === 0) ||
+        (playerChoice.value === 2 && computerChoice.value === 1)
+    ) {
+        result = 1; // Gana el jugador
+    } else {
+        result = 2; // Gana la computadora
+    }
 
 	return result;
 }
