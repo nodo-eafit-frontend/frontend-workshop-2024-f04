@@ -30,11 +30,12 @@ newGameModalEl.addEventListener('close', function () {
 newGameFormEl.addEventListener('change', (event) => {
 	const isFormValid = event.currentTarget.checkValidity();
 
-	// TODO: Completar código aquí...
-	// Utilizar checkValidity, querySelector, removeAttribute
 	const submitBtnEl = event.currentTarget.parentElement.querySelector('button[type="submit"]');
 
 	if (isFormValid) {
 		submitBtnEl.removeAttribute('disabled');
+	} else {
+		submitBtnEl.setAttribute('disabled', 'true');
 	}
 });
+

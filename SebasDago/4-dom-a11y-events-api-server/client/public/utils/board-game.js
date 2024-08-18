@@ -71,18 +71,27 @@ export const getSignBoardGame = (parentNode) => {
  * @property {boolean} data.withImage - Boolean indicating if an image is used.
  * @property {boolean} data.withTime - Boolean indicating if a timer is used.
  */
-export const sanitizeData = (params) => {
-	// TODO: modificar código aquí
+export function sanitizeData(params) {
+    const data = {};
 
-	const data = {
-		...params,
-		boardSize: 4,
-		withImage: true,
-		withTime: true,
-	};
+    // Sanitizar el nickname (ejemplo: eliminar espacios en blanco y caracteres especiales)
+    data.nickname = params.nickname ? params.nickname.trim().replace(/[^a-zA-Z0-9 ]/g, '') : 'Player';
 
-	return data;
-};
+    // Validar y sanitizar boardSize (debe ser un valor permitido: 3x3, 4x4, 5x5)
+    const allowedBoardSizes = ['3x3', '4x4', '5x5'];
+    data.boardSize = allowedBoardSizes.includes(params.boardSize) ? params.boardSize : '3x3';
+
+    // Validar y sanitizar difficulty (debe ser un valor permitido)
+    const allowedDifficulties = ['Easy', 'Moderate', 'Hard', 'Legendary'];
+    data.difficulty = allowedDifficulties.includes(params.difficulty) ? params.difficulty : 'Easy';
+
+    // Sanitizar valores booleanos para withImage y withTime
+    data.withImage = params.withImage === 'true';
+    data.withTime = params.withTime === 'true';
+
+    return data;
+}
+
 
 const createChip = (index, withImage, boardSize = 3) => {
 	const number = index + 1;
@@ -201,7 +210,20 @@ export const addEventToSwapByEmptyNeigbor = (props, callback) => {
 export const validateWinGame = (initSignGame, currentSignGame) => {
 	let matchedChips = 0;
 
-	// TODO: Agregar código aquí para contar las conincidencias
+	// Convertir las firmas en arrays para comparar cada posición
+	const initSignArray = initSignGame.split(',');
+	const currentSignArray = currentSignGame.split(',');
 
-	return [initSignGame === currentSignGame, matchedChips];
+	// Contar las coincidencias entre las posiciones de las fichas
+	for (let i = 0; i < initSignArray.length; i++) {
+		if (initSignArray[i] === currentSignArray[i]) {
+			matchedChips++;
+		}
+	}
+
+	// Verificar si el jugador ha ganado (todas las fichas están en posición correcta)
+	const hasWon = initSignGame === currentSignGame;
+
+	return [hasWon, matchedChips];
 };
+

@@ -26,10 +26,52 @@
 						</button>
 					</header>
 					<form id="new-game-form" class="form" action="./pages/game/index.html">
-						<!-- TODO: Agregar Formulario aquí... -->
-						<!-- Usar: `<label> <input> <fieldset> <legend> <select>` -->
+						<!-- Nickname -->
+						<label for="nickname">Nickname*</label>
+						<input type="text" id="nickname" name="nickname" required />
+					
+						<!-- Board Size -->
+						<fieldset>
+							<legend>Board Size*</legend>
+							<label>
+								<input type="radio" name="boardSize" value="3x3" required />
+								3x3
+							</label>
+							<label>
+								<input type="radio" name="boardSize" value="4x4" />
+								4x4
+							</label>
+							<label>
+								<input type="radio" name="boardSize" value="5x5" />
+								5x5
+							</label>
+						</fieldset>
+					
+						<!-- Difficulty Level -->
+						<label for="difficulty">Level*</label>
+						<select id="difficulty" name="difficulty" required>
+							<option value="" disabled selected>Select level</option>
+							<option value="easy">Easy</option>
+							<option value="moderate">Moderate</option>
+							<option value="hard">Hard</option>
+							<option value="legendary">Legendary</option>
+						</select>
+					
+						<!-- Game Properties -->
+						<fieldset>
+							<legend>Game Properties</legend>
+							<label>
+								<input type="checkbox" name="withImage" />
+								With Image?
+							</label>
+							<label>
+								<input type="checkbox" name="withTime" />
+								With Time?
+							</label>
+						</fieldset>
 					</form>
-					<footer>
+					
+					<footer>	
 						<button type="reset" class="button button__secondary" form="new-game-form">reset</button>
 						<button type="submit" class="button button--success" form="new-game-form" disabled>Play!</button>
 					</footer>
