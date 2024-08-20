@@ -1,0 +1,27 @@
+.hobbies {
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies img {
+    width: 200px; 
+    border-radius: 30px; 
+    margin-right: 20px; 
+}
+
+h4{
+    font-family: cursive;
+    font-optical-sizing: auto;
+    font-weight: 542;
+    font-style: normal;
+    font-size: 300%;
+    text-align: center;
+    color: #efeae7;
+    background-color:rgba(76, 127, 135, 0.543);
+    background-size: 20cm; border-radius: 30px;
+  
+  }
+  a{
+    font-size: 150%;
+  }
+    
