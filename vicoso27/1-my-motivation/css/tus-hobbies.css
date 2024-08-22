@@ -1,0 +1,44 @@
+.deporte {
+    float: left;
+      width: 100%;
+    grid-column: 1 ;
+    margin: 10px;
+    background-color: var(--backgroun-color)
+  }
+  .familytime {
+      float: center;
+      width: 100%;
+      grid-column: 2 ; 
+      margin: 10px; 
+      background-color:var(--backgroun-color)
+  }
+  .leer {
+    
+    float: right;
+    width: 100%;
+    grid-column: 3;
+    margin: 10px;
+    background-color: var(--backgroun-color)
+  }
+  
+  .deporte, .familytime, .leer {
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    float: left;
+    margin: 10px;
+   
+    }
+    ul.navega li {
+      list-style: none;
+      display: inline;
+      padding-right: 0.5em;
+    }
+    .hobbies {
+      display: grid;
+      grid-template-columns: repeat(1fr, 1fr, 1fr);
+      grid-gap: 20px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+    
+  

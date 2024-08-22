@@ -1,0 +1,23 @@
+
+  .footer {
+    background-color: var(--background-color)
+  }
+.contacto{
+  padding: 10px 0;
+  display: inline-flex;
+ 
+  height: 100px;
+  }
+  ul.contacto {
+    display: inline;
+   background-color:var(--background-color)
+   }
+
+img {
+  width: 20px;
+  height: 20px;
+}
+#contactate-conmigo{
+  padding: 50px 0;
+  display: inline-block;
+}
