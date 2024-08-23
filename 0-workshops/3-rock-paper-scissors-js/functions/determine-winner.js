@@ -20,5 +20,18 @@ export default function determineWinner(playerChoice, computerChoice) {
 
 	// TODO: Completar Algoritmo
 
-	return result;
+	// Determinar el ganador basado en los valores de las elecciones
+    if (playerChoice.value === computerChoice.value) {
+        result = 0; // Empate
+    } else if (
+        (playerChoice.value === CHOICES.rock.value && computerChoice.value === CHOICES.scissors.value) || // Rock vence a Scissors
+        (playerChoice.value === CHOICES.paper.value && computerChoice.value === CHOICES.rock.value) ||    // Paper vence a Rock
+        (playerChoice.value === CHOICES.scissors.value && computerChoice.value === CHOICES.paper.value)   // Scissors vence a Paper
+    ) {
+        result = 1; // Jugador gana
+    } else {
+        result = 2; // Computadora gana
+    }
+
+    return result;
 }
