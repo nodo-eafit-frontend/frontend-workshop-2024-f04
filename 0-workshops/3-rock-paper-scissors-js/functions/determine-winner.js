@@ -18,7 +18,17 @@ import { CHOICES } from '../constants/index.js';
 export default function determineWinner(playerChoice, computerChoice) {
 	let result;
 
-	// TODO: Completar Algoritmo
+	if (playerChoice.value === computerChoice.value) {
+	  result = 0; // Empate
+	} else if (
+		(playerChoice.value === 0 && computerChoice.value === 2) ||
+		(playerChoice.value === 1 && computerChoice.value === 0) ||
+		(playerChoice.value === 2 && computerChoice.value === 1)
+	) {
+	  result = 1; // Jugador gana
+	} else {
+	  result = 2; // Computadora gana
+	}
 
 	return result;
-}
+};
