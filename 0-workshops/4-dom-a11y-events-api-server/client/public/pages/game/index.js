@@ -96,8 +96,32 @@ import { getGameInfo, saveStats } from '../../services/index.js';
 			}
 		};
 
-		// Agrega evento de click apra cada ficha del tablero
-		addEventToSwapByEmptyNeigbor(eventClickProps, onClick); // Realizar eventos que intercambias vecinos del empty chip
+// client/public/utils/index.js
+
+function addEventToSwapByEmptyNeigbor(eventClickProps, onClick) {
+	const { chips, emptyNode, boardSize } = eventClickProps;
+
+	chips.forEach((chip) => {
+		chip.addEventListener('click', () => {
+		const chipIndex = Array.prototype.indexOf.call(chips, chip);
+		const emptyIndex = Array.prototype.indexOf.call(chips, emptyNode);
+
+		// Verificar si la pieza está en una posición adyacente a la pieza vacía
+		if (
+			(Math.abs(chipIndex - emptyIndex) === 1 && Math.floor(chipIndex / boardSize) === Math.floor(emptyIndex / boardSize)) ||
+			(Math.abs(chipIndex - emptyIndex) === boardSize)
+		) {
+		  // Intercambiar las piezas
+			const temp = chip.innerHTML;
+			chip.innerHTML = emptyNode.innerHTML;
+			emptyNode.innerHTML = temp;
+			
+		  // Llamar a la función onClick
+			onClick();
+		}
+		});
+	});
+	}
 
 		// Agrega evento de click al botón del modal para guardar las estadísticas
 		saveGoHomeBtn.addEventListener('click', async (event) => {

@@ -1,4 +1,6 @@
 import endpoint from './endpoint.js';
+import axios from 'axios';
+import endpoint from './endpoint.js';
 
 export const getGameInfo = async () => {
 	const url = endpoint.gameInfo();
@@ -43,23 +45,33 @@ export const saveStats = async (stats) => {
  *
  * @returns {Promise<Object>} A promise that resolves with the tips information data or rejects with an error.
  */
-export const getTipsInfo = () => {
+export async function getTipsInfo() {
 	const url = endpoint.tipsInfo();
-	const options = { signal: AbortSignal.timeout(endpoint.timeout) };
+	const options = {
+		signal: AbortSignal.timeout(endpoint.timeout),
+	};
 
-	// TODO: En la función, convierte el uso clase Promise a la notación async y await
-	const promise = new Promise((resolve, reject) => {
-		fetch(url, options)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				resolve(data);
-			})
-			.catch((error) => {
-				reject(error);
-			});
-	});
+	try {
+		const response = await axios.get(url, options);
+		return response.data;
+	} catch (error) {
+		console.error(error);
+	}
+	}
 
-	return promise;
-};
+	
+
+	export async function getTipsInfo() {
+		const url = endpoint.tipsInfo();
+		const options = {
+			signal: AbortSignal.timeout(endpoint.timeout),
+		};
+		
+		try {
+			const response = await fetch(url, options);
+			const data = await response.json();
+			return data;
+		} catch (error) {
+			console.error(error);
+		}
+		}

@@ -1,0 +1,1784 @@
+From 93b58bcebbff3c90ff3f5786ba956dbc7eebcfac Mon Sep 17 00:00:00 2001
+From: TakUHG <sofiavasqueztabares@gmail.com>
+Date: Sat, 24 Aug 2024 15:08:28 -0500
+Subject: [PATCH] lo que se pudo.final
+
+---
+ .../client/public/index.html                  |  52 +-
+ .../client/public/index.js                    |  86 +-
+ .../client/public/pages/game/index.js         |  28 +-
+ .../client/public/pages/tips/index.js         |  13 +-
+ .../client/public/scss/main.css               | 522 ++++++++++++
+ .../client/public/scss/main.css.map           |   1 +
+ .../client/public/services/endpoint.js        |   7 +-
+ .../client/public/services/index.js           |  46 +-
+ .../client/public/utils/index.js              |  59 ++
+ .../server/apis/tipInfo.js                    |  13 +-
+ .../server/package-lock.json                  | 797 ++++++++++++++++++
+ .../server/routes/index.js                    |   8 +-
+ 12 files changed, 1585 insertions(+), 47 deletions(-)
+ create mode 100644 0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css
+ create mode 100644 0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css.map
+ create mode 100644 0-workshops/4-dom-a11y-events-api-server/server/package-lock.json
+
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/index.html b/0-workshops/4-dom-a11y-events-api-server/client/public/index.html
+index b6f859d..d22dfa9 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/index.html
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/index.html
+@@ -25,10 +25,54 @@
+ 							<span class="material-symbols-outlined"> close </span>
+ 						</button>
+ 					</header>
+-					<form id="new-game-form" class="form" action="./pages/game/index.html">
+-						<!-- TODO: Agregar Formulario aquí... -->
+-						<!-- Usar: `<label> <input> <fieldset> <legend> <select>` -->
+-					</form>
++						<form id="new-game-form" class="form" action="./pages/game/index.html">
++							<div class="form__group">
++								<label for="nickname" class="form__label">Nickname</label>
++								<input type="text" id="nickname" class="form__input" name="nickname" required />
++							</div>
++	
++							<div class="form__group">
++								<label class="form__label">Board Size</label>
++								<fieldset class="form__fieldset">
++									<legend class="form__legend">Select Board Size</legend>
++									<div class="form__options">
++										<input type="radio" id="board-size-3x3" name="board-size" value="3x3" required />
++										<label for="board-size-3x3" class="form__option">3x3</label>
++	
++										<input type="radio" id="board-size-4x4" name="board-size" value="4x4" />
++										<label for="board-size-4x4" class="form__option">4x4</label>
++	
++										<input type="radio" id="board-size-5x5" name="board-size" value="5x5" />
++										<label for="board-size-5x5" class="form__option">5x5</label>
++									</div>
++								</fieldset>
++							</div>
++	
++							<div class="form__group">
++								<label for="difficulty" class="form__label">Difficulty</label>
++								<select id="difficulty" class="form__select" name="difficulty" required>
++									<option value="" disabled selected>Select Difficulty</option>
++									<option value="easy">Easy</option>
++									<option value="moderate">Moderate</option>
++									<option value="hard">Hard</option>
++									<option value="legendary">Legendary</option>
++								</select>
++							</div>
++	
++							<div class="form__group">
++								<label class="form__label">Game Properties</label>
++								<fieldset class="form__fieldset">
++									<legend class="form__legend">Select game properties</legend>
++									<div class="form__options">
++										<input type="checkbox" id="image" name="image" value="image" />
++										<label for="image" class="form__option">With Image?</label>
++	
++										<input type="checkbox" id="time" name="time" value="time" />
++										<label for="time" class="form__option">With Time?</label>
++									</div>
++								</fieldset>
++							</div>
++						</form>
+ 					<footer>
+ 						<button type="reset" class="button button__secondary" form="new-game-form">reset</button>
+ 						<button type="submit" class="button button--success" form="new-game-form" disabled>Play!</button>
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/index.js b/0-workshops/4-dom-a11y-events-api-server/client/public/index.js
+index 0fb063f..e4237f6 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/index.js
+@@ -19,22 +19,86 @@ newGameModalEl.addEventListener('close', function () {
+ 	newGameFormEl.reset();
+ });
+ 
+-/**
+- * Event listener for the 'change' event on the newGameFormEl.
+- * It checks if the form is valid and enables the submit button if it is.
+- *
+- * @param {Event} event - The event object associated with the 'change' event.
+- * @property {HTMLElement} event.currentTarget - The element that triggered the event (the form).
+- * @property {HTMLElement} event.currentTarget.parentElement - The parent element of the form, used to find the submit button.
+- */
+-newGameFormEl.addEventListener('change', (event) => {
+-	const isFormValid = event.currentTarget.checkValidity();
++<form id="new-game-form" class="form" action="./pages/game/index.html">
++<div class="form__group">
++	<label for="nickname" class="form__label">Nickname</label>
++	<input type="text" id="nickname" class="form__input" name="nickname" required />
++</div>
++
++<div class="form__group">
++	<label class="form__label">Board Size</label>
++	<fieldset class="form__fieldset">
++		<legend class="form__legend">Select Board Size</legend>
++		<div class="form__options">
++			<input type="radio" id="board-size-3x3" name="board-size" value="3x3" required />
++			<label for="board-size-3x3" class="form__option">3x3</label>
++
++			<input type="radio" id="board-size-4x4" name="board-size" value="4x4" />
++			<label for="board-size-4x4" class="form__option">4x4</label>
++
++			<input type="radio" id="board-size-5x5" name="board-size" value="5x5" />
++			<label for="board-size-5x5" class="form__option">5x5</label>
++		</div>
++	</fieldset>
++</div>
++
++<div class="form__group">
++	<label for="difficulty" class="form__label">Difficulty</label>
++	<select id="difficulty" class="form__select" name="difficulty" required>
++		<option value="" disabled selected>Select Difficulty</option>
++		<option value="easy">Easy</option>
++		<option value="moderate">Moderate</option>
++		<option value="hard">Hard</option>
++		<option value="legendary">Legendary</option>
++	</select>
++</div>
++
++<div class="form__group">
++	<label class="form__label">Game Properties</label>
++	<fieldset class="form__fieldset">
++		<legend class="form__legend">Select game properties</legend>
++		<div class="form__options">
++			<input type="checkbox" id="image" name="image" value="image" />
++			<label for="image" class="form__option">With Image?</label>
++
++			<input type="checkbox" id="time" name="time" value="time" />
++			<label for="time" class="form__option">With Time?</label>
++		</div>
++	</fieldset>
++</div>
++</form>
+ 
+ 	// TODO: Completar código aquí...
+ 	// Utilizar checkValidity, querySelector, removeAttribute
+ 	const submitBtnEl = event.currentTarget.parentElement.querySelector('button[type="submit"]');
+ 
++// client/public/utils/index.js
++
++export function addEventToSwapByEmptyNeigbor(eventClickProps, onClick) {
++	const { chips, emptyNode, boardSize } = eventClickProps;
++  
++	chips.forEach((chip) => {
++	  chip.addEventListener('click', () => {
++		const chipIndex = Array.prototype.indexOf.call(chips, chip);
++		const emptyIndex = Array.prototype.indexOf.call(chips, emptyNode);
++  
++		// Verificar si la pieza está en una posición adyacente a la pieza vacía
++		if (
++		  (Math.abs(chipIndex - emptyIndex) === 1 && Math.floor(chipIndex / boardSize) === Math.floor(emptyIndex / boardSize)) ||
++		  (Math.abs(chipIndex - emptyIndex) === boardSize)
++		) {
++		  // Intercambiar las piezas
++		  const temp = chip.innerHTML;
++		  chip.innerHTML = emptyNode.innerHTML;
++		  emptyNode.innerHTML = temp;
++  
++		  // Llamar a la función onClick
++		  onClick();
++		}
++	  });
++	});
++  }
++
+ 	if (isFormValid) {
+ 		submitBtnEl.removeAttribute('disabled');
+ 	}
+-});
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/pages/game/index.js b/0-workshops/4-dom-a11y-events-api-server/client/public/pages/game/index.js
+index 95f8205..72f1271 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/pages/game/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/pages/game/index.js
+@@ -96,8 +96,32 @@ import { getGameInfo, saveStats } from '../../services/index.js';
+ 			}
+ 		};
+ 
+-		// Agrega evento de click apra cada ficha del tablero
+-		addEventToSwapByEmptyNeigbor(eventClickProps, onClick); // Realizar eventos que intercambias vecinos del empty chip
++// client/public/utils/index.js
++
++function addEventToSwapByEmptyNeigbor(eventClickProps, onClick) {
++	const { chips, emptyNode, boardSize } = eventClickProps;
++
++	chips.forEach((chip) => {
++		chip.addEventListener('click', () => {
++		const chipIndex = Array.prototype.indexOf.call(chips, chip);
++		const emptyIndex = Array.prototype.indexOf.call(chips, emptyNode);
++
++		// Verificar si la pieza está en una posición adyacente a la pieza vacía
++		if (
++			(Math.abs(chipIndex - emptyIndex) === 1 && Math.floor(chipIndex / boardSize) === Math.floor(emptyIndex / boardSize)) ||
++			(Math.abs(chipIndex - emptyIndex) === boardSize)
++		) {
++		  // Intercambiar las piezas
++			const temp = chip.innerHTML;
++			chip.innerHTML = emptyNode.innerHTML;
++			emptyNode.innerHTML = temp;
++			
++		  // Llamar a la función onClick
++			onClick();
++		}
++		});
++	});
++	}
+ 
+ 		// Agrega evento de click al botón del modal para guardar las estadísticas
+ 		saveGoHomeBtn.addEventListener('click', async (event) => {
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/pages/tips/index.js b/0-workshops/4-dom-a11y-events-api-server/client/public/pages/tips/index.js
+index 53c6354..1f7df91 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/pages/tips/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/pages/tips/index.js
+@@ -5,5 +5,14 @@ document.title = 'Sliding Puzzel | Tips';
+ (async () => {
+ 	const tipInfo = await getTipsInfo();
+ 
+-	// TODO: Agregar información correspondiente del título, descripción e imagen, con respectivas clases
+-})();
++	const titleElement = document.querySelector('.heading');
++	titleElement.textContent = tipInfo.title;
++
++	const descriptionElement = document.querySelector('p');
++	descriptionElement.textContent = tipInfo.description;
++
++	const imageElement = document.querySelector('img');
++	imageElement.src = tipInfo.image;
++
++  // Agregar más elementos según sea necesario
++})();
+\ No newline at end of file
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css b/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css
+new file mode 100644
+index 0000000..b7e0766
+--- /dev/null
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css
+@@ -0,0 +1,522 @@
++@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
++@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
++/* http://meyerweb.com/eric/tools/css/reset/ 
++   v2.0 | 20110126
++   License: none (public domain)
++*/
++html,
++body,
++div,
++span,
++applet,
++object,
++iframe,
++h1,
++h2,
++h3,
++h4,
++h5,
++h6,
++p,
++blockquote,
++pre,
++a,
++abbr,
++acronym,
++address,
++big,
++cite,
++code,
++del,
++dfn,
++em,
++img,
++ins,
++kbd,
++q,
++s,
++samp,
++small,
++strike,
++strong,
++sub,
++sup,
++tt,
++var,
++b,
++u,
++i,
++center,
++dl,
++dt,
++dd,
++ol,
++ul,
++li,
++fieldset,
++form,
++label,
++legend,
++table,
++caption,
++tbody,
++tfoot,
++thead,
++tr,
++th,
++td,
++article,
++aside,
++canvas,
++details,
++embed,
++figure,
++figcaption,
++footer,
++header,
++hgroup,
++menu,
++nav,
++output,
++ruby,
++section,
++summary,
++time,
++mark,
++audio,
++video {
++  margin: 0;
++  padding: 0;
++  border: 0;
++  font-size: 100%;
++  font: inherit;
++  vertical-align: baseline;
++}
++
++/* HTML5 display-role reset for older browsers */
++article,
++aside,
++details,
++figcaption,
++figure,
++footer,
++header,
++hgroup,
++menu,
++nav,
++section {
++  display: block;
++}
++
++body {
++  line-height: 1;
++}
++
++ol,
++ul {
++  list-style: none;
++}
++
++blockquote,
++q {
++  quotes: none;
++}
++
++blockquote:before,
++blockquote:after,
++q:before,
++q:after {
++  content: "";
++  content: none;
++}
++
++table {
++  border-collapse: collapse;
++  border-spacing: 0;
++}
++
++a {
++  color: unset;
++  text-decoration: none;
++}
++
++.material-symbols-outlined {
++  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
++}
++
++.button {
++  font-family: inherit;
++  color: inherit;
++  font-weight: normal;
++  font-size: 1rem;
++  line-height: 1;
++  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
++  border-radius: 1rem;
++  border: none;
++  cursor: pointer;
++  font-weight: bold;
++  margin: 0.5rem;
++  padding: 0.5rem 1rem;
++  text-align: center;
++}
++.button:hover {
++  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
++  transform: scale(105%);
++}
++.button:active {
++  box-shadow: none;
++  transform: scale(100%);
++}
++.button:disabled {
++  background-color: #6c757d;
++  box-shadow: none;
++  transform: none;
++}
++.button__primary {
++  background-color: #073b4c;
++  color: #e9ecef;
++}
++.button__secondary {
++  background-color: #118ab2;
++  color: #e9ecef;
++}
++.button__icon {
++  border-radius: 50%;
++  padding: 0.2rem;
++  line-height: 0.8;
++  margin: 0;
++  height: -moz-fit-content;
++  height: fit-content;
++  background-color: transparent;
++}
++.button--success {
++  background-color: #06d6a0;
++  color: #e9ecef;
++}
++.button--error {
++  background-color: #ef476f;
++  color: #e9ecef;
++}
++.button--loading {
++  padding-right: 2rem;
++  position: relative;
++}
++.button--loading::after {
++  content: "";
++  animation: spin 1s linear infinite;
++  border-radius: 50%;
++  border: solid #e9ecef 0.2rem;
++  border-top: solid transparent 0.2rem;
++  height: 1rem;
++  position: absolute;
++  width: 1rem;
++  top: 0.3rem;
++  right: 0.3rem;
++}
++
++@keyframes spin {
++  0% {
++    transform: rotate(0deg);
++  }
++  100% {
++    transform: rotate(360deg);
++  }
++}
++.form > * {
++  margin-block: 0.5rem;
++}
++.form--required {
++  color: #ef476f;
++}
++.form fieldset {
++  border-radius: 0.25rem;
++  border: solid 2px #adb5bd;
++  padding: 0.5rem;
++  width: -moz-fit-content;
++  width: fit-content;
++}
++
++h1.heading {
++  font-size: 3rem;
++  font-weight: bolder;
++}
++
++h2.heading {
++  font-size: 1.5rem;
++  font-weight: bold;
++  border-bottom: solid #6c757d 2px;
++  margin-bottom: 1rem;
++  padding-bottom: 0.5rem;
++}
++
++h3.heading {
++  font-size: 1.2rem;
++  font-weight: bold;
++}
++
++h4.heading {
++  font-size: 1.2rem;
++  font-weight: bold;
++}
++
++.modal {
++  font-family: inherit;
++  color: inherit;
++  font-weight: normal;
++  font-size: 1rem;
++  line-height: 1;
++  border-radius: 1rem;
++  border: none;
++  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
++  padding: 0;
++}
++.modal__container {
++  padding: 2rem;
++}
++.modal--error, .modal--success {
++  align-items: center;
++  bottom: 8rem;
++  color: #e9ecef;
++  display: flex;
++  font-weight: bold;
++  position: fixed;
++}
++.modal--error {
++  background-color: #ef476f;
++}
++.modal--success {
++  background-color: #06d6a0;
++}
++.modal--error span, .modal--success span {
++  margin-right: 0.5rem;
++}
++.modal header {
++  position: relative;
++}
++.modal header.modal__informative {
++  text-align: center;
++}
++.modal header.modal__informative img {
++  width: 7rem;
++  margin-bottom: 1rem;
++}
++.modal header button[aria-label=close] {
++  top: -10px;
++  right: -10px;
++  position: absolute;
++}
++.modal footer {
++  display: flex;
++  justify-content: end;
++}
++
++.home-page {
++  display: grid;
++  justify-content: center;
++  padding-block: 10rem;
++  align-items: center;
++  align-content: center;
++}
++
++.game-page {
++  display: grid;
++  grid-template-columns: 3fr 1fr;
++  grid-gap: 1rem;
++  margin-top: 1rem;
++}
++.game-page__board {
++  display: flex;
++  flex-wrap: wrap;
++  margin: 4rem auto;
++  border: solid #073b4c 1rem;
++  border-radius: 1rem;
++  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
++}
++.game-page__chip, .game-page__empty {
++  width: 6rem;
++  height: 6rem;
++  background-color: #118ab2;
++}
++.game-page__chip {
++  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
++  cursor: pointer;
++}
++.game-page__chip:hover {
++  box-shadow: 0px 15px 20px -3px rgba(0, 0, 0, 0.2);
++  transform: scale(105%);
++}
++.game-page__chip:active {
++  box-shadow: none;
++  transform: scale(100%);
++}
++.game-page__chip:disabled {
++  background-color: #6c757d;
++  box-shadow: none;
++  transform: none;
++}
++.game-page__chip--number {
++  color: #e9ecef;
++  text-align: center;
++  align-content: center;
++  font-size: 3rem;
++  text-shadow: #343a40 2px 2px 5px;
++}
++.game-page__chip--image {
++  position: relative;
++}
++.game-page__chip--image * {
++  pointer-events: none;
++}
++.game-page__chip--image img {
++  width: inherit;
++}
++.game-page__chip--image span {
++  width: 1rem;
++  height: 1rem;
++  background-color: #ced4da;
++  border-radius: 50%;
++  font-size: 1rem;
++  font-style: italic;
++  font-weight: bold;
++  left: 0;
++  padding: 0.25rem;
++  position: absolute;
++  text-align: center;
++  top: 0;
++}
++.game-page__empty {
++  background-color: #495057;
++}
++.game-page--3x3.game-page__board {
++  width: 18rem;
++}
++.game-page--4x4.game-page__board {
++  width: 24rem;
++}
++.game-page--5x5.game-page__board {
++  width: 30rem;
++}
++.game-page__info {
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  justify-content: center;
++}
++.game-page__info section {
++  margin: 0.5rem;
++}
++.game-page__info section > * {
++  display: block;
++  text-align: center;
++  margin: 0.5rem;
++}
++.game-page__avatar {
++  font-size: 4rem;
++}
++.game-page__avatar, .game-page__avatar:hover {
++  box-shadow: none;
++}
++
++.tips-page {
++  margin: 2rem 0;
++}
++.tips-page section {
++  display: flex;
++}
++.tips-page p,
++.tips-page li {
++  text-align: justify;
++  text-justify: inter-word;
++  line-height: 1.2;
++}
++.tips-page img {
++  margin-left: 1rem;
++  width: 20rem;
++}
++.tips-page article,
++.tips-page ol {
++  margin: 1rem 0;
++}
++.tips-page ol {
++  list-style-type: decimal;
++  list-style-position: inside;
++}
++.tips-page li::marker {
++  font-weight: bold;
++  font-size: 1.2rem;
++}
++
++.error-page {
++  text-align: center;
++  margin: 5rem 0;
++}
++.error-page img {
++  width: 15rem;
++}
++.error-page p {
++  font-size: 1.2rem;
++  margin-top: 1rem;
++}
++
++body {
++  font-family: inherit;
++  color: inherit;
++  font-weight: normal;
++  font-size: 1rem;
++  line-height: 1;
++  font-family: "Roboto", sans-serif;
++  color: #343a40;
++}
++
++.page {
++  min-height: 100vh;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++}
++.page > * {
++  width: -webkit-fill-available;
++  width: -moz-available;
++  padding-inline: 6rem;
++}
++.page > *:not(.page__content) {
++  background-color: #073b4c;
++  color: #e9ecef;
++}
++.page__header a {
++  padding-block: 1rem;
++  display: flex;
++  align-items: center;
++  width: -moz-fit-content;
++  width: fit-content;
++}
++.page__header img {
++  width: 3rem;
++  margin-inline: 1rem;
++}
++.page__content {
++  min-height: 15rem;
++}
++.page__footer {
++  margin-top: auto;
++  display: flex;
++  justify-content: space-between;
++  padding-top: 5rem;
++  padding-bottom: 3rem;
++}
++.page__footer section:first-child {
++  display: flex;
++  flex-direction: column;
++  justify-content: flex-end;
++}
++.page__footer h4 {
++  margin-bottom: 1rem;
++}
++.page__footer span {
++  display: block;
++  margin-bottom: 0.5rem;
++}
++.page__footer a {
++  color: #ffd166;
++  font-weight: bold;
++}/*# sourceMappingURL=main.css.map */
+\ No newline at end of file
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css.map b/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css.map
+new file mode 100644
+index 0000000..56da7ca
+--- /dev/null
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/scss/main.css.map
+@@ -0,0 +1 @@
++{"version":3,"sources":["base/_typography.scss","base/_reset.scss","main.css","components/_button.scss","utils/_mixins.scss","utils/_variables.scss","utils/_pallete.scss","components/_form.scss","components/_heading.scss","components/_modal.scss","layout/_home-page.scss","layout/_game-page.scss","layout/_tips-page.scss","layout/_error-page.scss","main.scss"],"names":[],"mappings":"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","file":"main.css"}
+\ No newline at end of file
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/services/endpoint.js b/0-workshops/4-dom-a11y-events-api-server/client/public/services/endpoint.js
+index a3c4155..4e7cbc8 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/services/endpoint.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/services/endpoint.js
+@@ -12,9 +12,8 @@ const endpoint = {
+ 		return queryParams ? `${url}?${queryParams}` : url;
+ 	},
+ 	tipsInfo: function () {
+-		// TODO: completar para llenar y obtener el path correcto
+-		return '';
+-	},
+-};
++		return `${this.scheme}${this.domain}:${this.port}/tips-info`;
++		},
++	};
+ 
+ export default endpoint;
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/services/index.js b/0-workshops/4-dom-a11y-events-api-server/client/public/services/index.js
+index 4ca2c1d..d3526fa 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/services/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/services/index.js
+@@ -1,4 +1,6 @@
+ import endpoint from './endpoint.js';
++import axios from 'axios';
++import endpoint from './endpoint.js';
+ 
+ export const getGameInfo = async () => {
+ 	const url = endpoint.gameInfo();
+@@ -43,23 +45,33 @@ export const saveStats = async (stats) => {
+  *
+  * @returns {Promise<Object>} A promise that resolves with the tips information data or rejects with an error.
+  */
+-export const getTipsInfo = () => {
++export async function getTipsInfo() {
+ 	const url = endpoint.tipsInfo();
+-	const options = { signal: AbortSignal.timeout(endpoint.timeout) };
++	const options = {
++		signal: AbortSignal.timeout(endpoint.timeout),
++	};
+ 
+-	// TODO: En la función, convierte el uso clase Promise a la notación async y await
+-	const promise = new Promise((resolve, reject) => {
+-		fetch(url, options)
+-			.then((response) => {
+-				return response.json();
+-			})
+-			.then((data) => {
+-				resolve(data);
+-			})
+-			.catch((error) => {
+-				reject(error);
+-			});
+-	});
++	try {
++		const response = await axios.get(url, options);
++		return response.data;
++	} catch (error) {
++		console.error(error);
++	}
++	}
+ 
+-	return promise;
+-};
++	
++
++	export async function getTipsInfo() {
++		const url = endpoint.tipsInfo();
++		const options = {
++			signal: AbortSignal.timeout(endpoint.timeout),
++		};
++		
++		try {
++			const response = await fetch(url, options);
++			const data = await response.json();
++			return data;
++		} catch (error) {
++			console.error(error);
++		}
++		}
+diff --git a/0-workshops/4-dom-a11y-events-api-server/client/public/utils/index.js b/0-workshops/4-dom-a11y-events-api-server/client/public/utils/index.js
+index 5709447..9997d75 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/client/public/utils/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/client/public/utils/index.js
+@@ -1,3 +1,62 @@
+ export * from './modal.js';
+ export * from './board-game.js';
+ export * from './board-info.js';
++
++// client/public/utils/index.js
++
++export function sanitizeData(data) {
++    const sanitizedData = {};
++
++    // Sanitizar boardSize
++    sanitizedData.boardSize = parseInt(data.boardSize, 10);
++    if (isNaN(sanitizedData.boardSize) || sanitizedData.boardSize < 3 || sanitizedData.boardSize > 10) {
++    throw new Error('Invalid board size');
++    }
++
++    // Sanitizar difficulty
++    sanitizedData.difficulty = data.difficulty.trim();
++        if (!['easy', 'medium', 'hard'].includes(sanitizedData.difficulty)) {
++    throw new Error('Invalid difficulty level');
++    }
++
++    // Sanitizar nickname
++    sanitizedData.nickname = data.nickname.trim();
++    if (sanitizedData.nickname.length < 3 || sanitizedData.nickname.length > 20) {
++        throw new Error('Invalid nickname');
++    }
++
++    // Sanitizar withImage
++    sanitizedData.withImage = data.withImage === 'true';
++
++    // Sanitizar withTime
++    sanitizedData.withTime = data.withTime === 'true';
++
++    return sanitizedData;
++}
++
++// client/public/utils/index.js
++
++export function addEventToSwapByEmptyNeigbor(eventClickProps, onClick) {
++    const { chips, emptyNode, boardSize } = eventClickProps;
++  
++    chips.forEach((chip) => {
++      chip.addEventListener('click', () => {
++        const chipIndex = Array.prototype.indexOf.call(chips, chip);
++        const emptyIndex = Array.prototype.indexOf.call(chips, emptyNode);
++  
++        // Verificar si la pieza está en una posición adyacente a la pieza vacía
++        if (
++          (Math.abs(chipIndex - emptyIndex) === 1 && Math.floor(chipIndex / boardSize) === Math.floor(emptyIndex / boardSize)) ||
++          (Math.abs(chipIndex - emptyIndex) === boardSize)
++        ) {
++          // Intercambiar las piezas
++          const temp = chip.innerHTML;
++          chip.innerHTML = emptyNode.innerHTML;
++          emptyNode.innerHTML = temp;
++  
++          // Llamar a la función onClick
++          onClick();
++        }
++      });
++    });
++  }
+\ No newline at end of file
+diff --git a/0-workshops/4-dom-a11y-events-api-server/server/apis/tipInfo.js b/0-workshops/4-dom-a11y-events-api-server/server/apis/tipInfo.js
+index 8dd228c..b4c80b7 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/server/apis/tipInfo.js
++++ b/0-workshops/4-dom-a11y-events-api-server/server/apis/tipInfo.js
+@@ -1,6 +1,11 @@
+-const getTipsInfo = (request, response) => {
+-	// TODO: Completa el código así...
+-	response.setStatus(500);
+-};
++export function getTipsInfo(req, res) {
++	// Aquí va la lógica para obtener la información de tips-info
++	const tipsInfo = {
++	  // Información de tips-info
++	};
++
++	res.json(tipsInfo);
++}
++
+ 
+ // TODO: Exportar función
+diff --git a/0-workshops/4-dom-a11y-events-api-server/server/package-lock.json b/0-workshops/4-dom-a11y-events-api-server/server/package-lock.json
+new file mode 100644
+index 0000000..8729c0d
+--- /dev/null
++++ b/0-workshops/4-dom-a11y-events-api-server/server/package-lock.json
+@@ -0,0 +1,797 @@
++{
++	"name": "sliding-puzzel-server",
++	"version": "1.0.0",
++	"lockfileVersion": 3,
++	"requires": true,
++	"packages": {
++		"": {
++			"name": "sliding-puzzel-server",
++			"version": "1.0.0",
++			"license": "ISC",
++			"dependencies": {
++				"cors": "^2.8.5",
++				"dotenv": "^16.4.5",
++				"express": "^4.19.2"
++			}
++		},
++		"node_modules/accepts": {
++			"version": "1.3.8",
++			"resolved": "https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz",
++			"integrity": "sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==",
++			"license": "MIT",
++			"dependencies": {
++				"mime-types": "~2.1.34",
++				"negotiator": "0.6.3"
++			},
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/array-flatten": {
++			"version": "1.1.1",
++			"resolved": "https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz",
++			"integrity": "sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==",
++			"license": "MIT"
++		},
++		"node_modules/body-parser": {
++			"version": "1.20.2",
++			"resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.2.tgz",
++			"integrity": "sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==",
++			"license": "MIT",
++			"dependencies": {
++				"bytes": "3.1.2",
++				"content-type": "~1.0.5",
++				"debug": "2.6.9",
++				"depd": "2.0.0",
++				"destroy": "1.2.0",
++				"http-errors": "2.0.0",
++				"iconv-lite": "0.4.24",
++				"on-finished": "2.4.1",
++				"qs": "6.11.0",
++				"raw-body": "2.5.2",
++				"type-is": "~1.6.18",
++				"unpipe": "1.0.0"
++			},
++			"engines": {
++				"node": ">= 0.8",
++				"npm": "1.2.8000 || >= 1.4.16"
++			}
++		},
++		"node_modules/bytes": {
++			"version": "3.1.2",
++			"resolved": "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz",
++			"integrity": "sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/call-bind": {
++			"version": "1.0.7",
++			"resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.7.tgz",
++			"integrity": "sha512-GHTSNSYICQ7scH7sZ+M2rFopRoLh8t2bLSW6BbgrtLsahOIB5iyAVJf9GjWK3cYTDaMj4XdBpM1cA6pIS0Kv2w==",
++			"license": "MIT",
++			"dependencies": {
++				"es-define-property": "^1.0.0",
++				"es-errors": "^1.3.0",
++				"function-bind": "^1.1.2",
++				"get-intrinsic": "^1.2.4",
++				"set-function-length": "^1.2.1"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/content-disposition": {
++			"version": "0.5.4",
++			"resolved": "https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.4.tgz",
++			"integrity": "sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==",
++			"license": "MIT",
++			"dependencies": {
++				"safe-buffer": "5.2.1"
++			},
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/content-type": {
++			"version": "1.0.5",
++			"resolved": "https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz",
++			"integrity": "sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/cookie": {
++			"version": "0.6.0",
++			"resolved": "https://registry.npmjs.org/cookie/-/cookie-0.6.0.tgz",
++			"integrity": "sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/cookie-signature": {
++			"version": "1.0.6",
++			"resolved": "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz",
++			"integrity": "sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==",
++			"license": "MIT"
++		},
++		"node_modules/cors": {
++			"version": "2.8.5",
++			"resolved": "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz",
++			"integrity": "sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==",
++			"license": "MIT",
++			"dependencies": {
++				"object-assign": "^4",
++				"vary": "^1"
++			},
++			"engines": {
++				"node": ">= 0.10"
++			}
++		},
++		"node_modules/debug": {
++			"version": "2.6.9",
++			"resolved": "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz",
++			"integrity": "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==",
++			"license": "MIT",
++			"dependencies": {
++				"ms": "2.0.0"
++			}
++		},
++		"node_modules/define-data-property": {
++			"version": "1.1.4",
++			"resolved": "https://registry.npmjs.org/define-data-property/-/define-data-property-1.1.4.tgz",
++			"integrity": "sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==",
++			"license": "MIT",
++			"dependencies": {
++				"es-define-property": "^1.0.0",
++				"es-errors": "^1.3.0",
++				"gopd": "^1.0.1"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/depd": {
++			"version": "2.0.0",
++			"resolved": "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz",
++			"integrity": "sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/destroy": {
++			"version": "1.2.0",
++			"resolved": "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz",
++			"integrity": "sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8",
++				"npm": "1.2.8000 || >= 1.4.16"
++			}
++		},
++		"node_modules/dotenv": {
++			"version": "16.4.5",
++			"resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz",
++			"integrity": "sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==",
++			"license": "BSD-2-Clause",
++			"engines": {
++				"node": ">=12"
++			},
++			"funding": {
++				"url": "https://dotenvx.com"
++			}
++		},
++		"node_modules/ee-first": {
++			"version": "1.1.1",
++			"resolved": "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz",
++			"integrity": "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==",
++			"license": "MIT"
++		},
++		"node_modules/encodeurl": {
++			"version": "1.0.2",
++			"resolved": "https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz",
++			"integrity": "sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/es-define-property": {
++			"version": "1.0.0",
++			"resolved": "https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.0.tgz",
++			"integrity": "sha512-jxayLKShrEqqzJ0eumQbVhTYQM27CfT1T35+gCgDFoL82JLsXqTJ76zv6A0YLOgEnLUMvLzsDsGIrl8NFpT2gQ==",
++			"license": "MIT",
++			"dependencies": {
++				"get-intrinsic": "^1.2.4"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			}
++		},
++		"node_modules/es-errors": {
++			"version": "1.3.0",
++			"resolved": "https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz",
++			"integrity": "sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.4"
++			}
++		},
++		"node_modules/escape-html": {
++			"version": "1.0.3",
++			"resolved": "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz",
++			"integrity": "sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==",
++			"license": "MIT"
++		},
++		"node_modules/etag": {
++			"version": "1.8.1",
++			"resolved": "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz",
++			"integrity": "sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/express": {
++			"version": "4.19.2",
++			"resolved": "https://registry.npmjs.org/express/-/express-4.19.2.tgz",
++			"integrity": "sha512-5T6nhjsT+EOMzuck8JjBHARTHfMht0POzlA60WV2pMD3gyXw2LZnZ+ueGdNxG+0calOJcWKbpFcuzLZ91YWq9Q==",
++			"license": "MIT",
++			"dependencies": {
++				"accepts": "~1.3.8",
++				"array-flatten": "1.1.1",
++				"body-parser": "1.20.2",
++				"content-disposition": "0.5.4",
++				"content-type": "~1.0.4",
++				"cookie": "0.6.0",
++				"cookie-signature": "1.0.6",
++				"debug": "2.6.9",
++				"depd": "2.0.0",
++				"encodeurl": "~1.0.2",
++				"escape-html": "~1.0.3",
++				"etag": "~1.8.1",
++				"finalhandler": "1.2.0",
++				"fresh": "0.5.2",
++				"http-errors": "2.0.0",
++				"merge-descriptors": "1.0.1",
++				"methods": "~1.1.2",
++				"on-finished": "2.4.1",
++				"parseurl": "~1.3.3",
++				"path-to-regexp": "0.1.7",
++				"proxy-addr": "~2.0.7",
++				"qs": "6.11.0",
++				"range-parser": "~1.2.1",
++				"safe-buffer": "5.2.1",
++				"send": "0.18.0",
++				"serve-static": "1.15.0",
++				"setprototypeof": "1.2.0",
++				"statuses": "2.0.1",
++				"type-is": "~1.6.18",
++				"utils-merge": "1.0.1",
++				"vary": "~1.1.2"
++			},
++			"engines": {
++				"node": ">= 0.10.0"
++			}
++		},
++		"node_modules/finalhandler": {
++			"version": "1.2.0",
++			"resolved": "https://registry.npmjs.org/finalhandler/-/finalhandler-1.2.0.tgz",
++			"integrity": "sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==",
++			"license": "MIT",
++			"dependencies": {
++				"debug": "2.6.9",
++				"encodeurl": "~1.0.2",
++				"escape-html": "~1.0.3",
++				"on-finished": "2.4.1",
++				"parseurl": "~1.3.3",
++				"statuses": "2.0.1",
++				"unpipe": "~1.0.0"
++			},
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/forwarded": {
++			"version": "0.2.0",
++			"resolved": "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz",
++			"integrity": "sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/fresh": {
++			"version": "0.5.2",
++			"resolved": "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz",
++			"integrity": "sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/function-bind": {
++			"version": "1.1.2",
++			"resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz",
++			"integrity": "sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==",
++			"license": "MIT",
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/get-intrinsic": {
++			"version": "1.2.4",
++			"resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.2.4.tgz",
++			"integrity": "sha512-5uYhsJH8VJBTv7oslg4BznJYhDoRI6waYCxMmCdnTrcCrHA/fCFKoTFz2JKKE0HdDFUF7/oQuhzumXJK7paBRQ==",
++			"license": "MIT",
++			"dependencies": {
++				"es-errors": "^1.3.0",
++				"function-bind": "^1.1.2",
++				"has-proto": "^1.0.1",
++				"has-symbols": "^1.0.3",
++				"hasown": "^2.0.0"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/gopd": {
++			"version": "1.0.1",
++			"resolved": "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz",
++			"integrity": "sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==",
++			"license": "MIT",
++			"dependencies": {
++				"get-intrinsic": "^1.1.3"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/has-property-descriptors": {
++			"version": "1.0.2",
++			"resolved": "https://registry.npmjs.org/has-property-descriptors/-/has-property-descriptors-1.0.2.tgz",
++			"integrity": "sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==",
++			"license": "MIT",
++			"dependencies": {
++				"es-define-property": "^1.0.0"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/has-proto": {
++			"version": "1.0.3",
++			"resolved": "https://registry.npmjs.org/has-proto/-/has-proto-1.0.3.tgz",
++			"integrity": "sha512-SJ1amZAJUiZS+PhsVLf5tGydlaVB8EdFpaSO4gmiUKUOxk8qzn5AIy4ZeJUmh22znIdk/uMAUT2pl3FxzVUH+Q==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/has-symbols": {
++			"version": "1.0.3",
++			"resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tgz",
++			"integrity": "sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/hasown": {
++			"version": "2.0.2",
++			"resolved": "https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz",
++			"integrity": "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==",
++			"license": "MIT",
++			"dependencies": {
++				"function-bind": "^1.1.2"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			}
++		},
++		"node_modules/http-errors": {
++			"version": "2.0.0",
++			"resolved": "https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tgz",
++			"integrity": "sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==",
++			"license": "MIT",
++			"dependencies": {
++				"depd": "2.0.0",
++				"inherits": "2.0.4",
++				"setprototypeof": "1.2.0",
++				"statuses": "2.0.1",
++				"toidentifier": "1.0.1"
++			},
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/iconv-lite": {
++			"version": "0.4.24",
++			"resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz",
++			"integrity": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==",
++			"license": "MIT",
++			"dependencies": {
++				"safer-buffer": ">= 2.1.2 < 3"
++			},
++			"engines": {
++				"node": ">=0.10.0"
++			}
++		},
++		"node_modules/inherits": {
++			"version": "2.0.4",
++			"resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
++			"integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
++			"license": "ISC"
++		},
++		"node_modules/ipaddr.js": {
++			"version": "1.9.1",
++			"resolved": "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz",
++			"integrity": "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.10"
++			}
++		},
++		"node_modules/media-typer": {
++			"version": "0.3.0",
++			"resolved": "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz",
++			"integrity": "sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/merge-descriptors": {
++			"version": "1.0.1",
++			"resolved": "https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz",
++			"integrity": "sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==",
++			"license": "MIT"
++		},
++		"node_modules/methods": {
++			"version": "1.1.2",
++			"resolved": "https://registry.npmjs.org/methods/-/methods-1.1.2.tgz",
++			"integrity": "sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/mime": {
++			"version": "1.6.0",
++			"resolved": "https://registry.npmjs.org/mime/-/mime-1.6.0.tgz",
++			"integrity": "sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==",
++			"license": "MIT",
++			"bin": {
++				"mime": "cli.js"
++			},
++			"engines": {
++				"node": ">=4"
++			}
++		},
++		"node_modules/mime-db": {
++			"version": "1.52.0",
++			"resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz",
++			"integrity": "sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/mime-types": {
++			"version": "2.1.35",
++			"resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz",
++			"integrity": "sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==",
++			"license": "MIT",
++			"dependencies": {
++				"mime-db": "1.52.0"
++			},
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/ms": {
++			"version": "2.0.0",
++			"resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
++			"integrity": "sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==",
++			"license": "MIT"
++		},
++		"node_modules/negotiator": {
++			"version": "0.6.3",
++			"resolved": "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz",
++			"integrity": "sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/object-assign": {
++			"version": "4.1.1",
++			"resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
++			"integrity": "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">=0.10.0"
++			}
++		},
++		"node_modules/object-inspect": {
++			"version": "1.13.2",
++			"resolved": "https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.2.tgz",
++			"integrity": "sha512-IRZSRuzJiynemAXPYtPe5BoI/RESNYR7TYm50MC5Mqbd3Jmw5y790sErYw3V6SryFJD64b74qQQs9wn5Bg/k3g==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/on-finished": {
++			"version": "2.4.1",
++			"resolved": "https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tgz",
++			"integrity": "sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==",
++			"license": "MIT",
++			"dependencies": {
++				"ee-first": "1.1.1"
++			},
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/parseurl": {
++			"version": "1.3.3",
++			"resolved": "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz",
++			"integrity": "sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/path-to-regexp": {
++			"version": "0.1.7",
++			"resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz",
++			"integrity": "sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==",
++			"license": "MIT"
++		},
++		"node_modules/proxy-addr": {
++			"version": "2.0.7",
++			"resolved": "https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz",
++			"integrity": "sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==",
++			"license": "MIT",
++			"dependencies": {
++				"forwarded": "0.2.0",
++				"ipaddr.js": "1.9.1"
++			},
++			"engines": {
++				"node": ">= 0.10"
++			}
++		},
++		"node_modules/qs": {
++			"version": "6.11.0",
++			"resolved": "https://registry.npmjs.org/qs/-/qs-6.11.0.tgz",
++			"integrity": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==",
++			"license": "BSD-3-Clause",
++			"dependencies": {
++				"side-channel": "^1.0.4"
++			},
++			"engines": {
++				"node": ">=0.6"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/range-parser": {
++			"version": "1.2.1",
++			"resolved": "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz",
++			"integrity": "sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/raw-body": {
++			"version": "2.5.2",
++			"resolved": "https://registry.npmjs.org/raw-body/-/raw-body-2.5.2.tgz",
++			"integrity": "sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==",
++			"license": "MIT",
++			"dependencies": {
++				"bytes": "3.1.2",
++				"http-errors": "2.0.0",
++				"iconv-lite": "0.4.24",
++				"unpipe": "1.0.0"
++			},
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/safe-buffer": {
++			"version": "5.2.1",
++			"resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
++			"integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
++			"funding": [
++				{
++					"type": "github",
++					"url": "https://github.com/sponsors/feross"
++				},
++				{
++					"type": "patreon",
++					"url": "https://www.patreon.com/feross"
++				},
++				{
++					"type": "consulting",
++					"url": "https://feross.org/support"
++				}
++			],
++			"license": "MIT"
++		},
++		"node_modules/safer-buffer": {
++			"version": "2.1.2",
++			"resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
++			"integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
++			"license": "MIT"
++		},
++		"node_modules/send": {
++			"version": "0.18.0",
++			"resolved": "https://registry.npmjs.org/send/-/send-0.18.0.tgz",
++			"integrity": "sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==",
++			"license": "MIT",
++			"dependencies": {
++				"debug": "2.6.9",
++				"depd": "2.0.0",
++				"destroy": "1.2.0",
++				"encodeurl": "~1.0.2",
++				"escape-html": "~1.0.3",
++				"etag": "~1.8.1",
++				"fresh": "0.5.2",
++				"http-errors": "2.0.0",
++				"mime": "1.6.0",
++				"ms": "2.1.3",
++				"on-finished": "2.4.1",
++				"range-parser": "~1.2.1",
++				"statuses": "2.0.1"
++			},
++			"engines": {
++				"node": ">= 0.8.0"
++			}
++		},
++		"node_modules/send/node_modules/ms": {
++			"version": "2.1.3",
++			"resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
++			"integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
++			"license": "MIT"
++		},
++		"node_modules/serve-static": {
++			"version": "1.15.0",
++			"resolved": "https://registry.npmjs.org/serve-static/-/serve-static-1.15.0.tgz",
++			"integrity": "sha512-XGuRDNjXUijsUL0vl6nSD7cwURuzEgglbOaFuZM9g3kwDXOWVTck0jLzjPzGD+TazWbboZYu52/9/XPdUgne9g==",
++			"license": "MIT",
++			"dependencies": {
++				"encodeurl": "~1.0.2",
++				"escape-html": "~1.0.3",
++				"parseurl": "~1.3.3",
++				"send": "0.18.0"
++			},
++			"engines": {
++				"node": ">= 0.8.0"
++			}
++		},
++		"node_modules/set-function-length": {
++			"version": "1.2.2",
++			"resolved": "https://registry.npmjs.org/set-function-length/-/set-function-length-1.2.2.tgz",
++			"integrity": "sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==",
++			"license": "MIT",
++			"dependencies": {
++				"define-data-property": "^1.1.4",
++				"es-errors": "^1.3.0",
++				"function-bind": "^1.1.2",
++				"get-intrinsic": "^1.2.4",
++				"gopd": "^1.0.1",
++				"has-property-descriptors": "^1.0.2"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			}
++		},
++		"node_modules/setprototypeof": {
++			"version": "1.2.0",
++			"resolved": "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz",
++			"integrity": "sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==",
++			"license": "ISC"
++		},
++		"node_modules/side-channel": {
++			"version": "1.0.6",
++			"resolved": "https://registry.npmjs.org/side-channel/-/side-channel-1.0.6.tgz",
++			"integrity": "sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==",
++			"license": "MIT",
++			"dependencies": {
++				"call-bind": "^1.0.7",
++				"es-errors": "^1.3.0",
++				"get-intrinsic": "^1.2.4",
++				"object-inspect": "^1.13.1"
++			},
++			"engines": {
++				"node": ">= 0.4"
++			},
++			"funding": {
++				"url": "https://github.com/sponsors/ljharb"
++			}
++		},
++		"node_modules/statuses": {
++			"version": "2.0.1",
++			"resolved": "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz",
++			"integrity": "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/toidentifier": {
++			"version": "1.0.1",
++			"resolved": "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz",
++			"integrity": "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==",
++			"license": "MIT",
++			"engines": {
++				"node": ">=0.6"
++			}
++		},
++		"node_modules/type-is": {
++			"version": "1.6.18",
++			"resolved": "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz",
++			"integrity": "sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==",
++			"license": "MIT",
++			"dependencies": {
++				"media-typer": "0.3.0",
++				"mime-types": "~2.1.24"
++			},
++			"engines": {
++				"node": ">= 0.6"
++			}
++		},
++		"node_modules/unpipe": {
++			"version": "1.0.0",
++			"resolved": "https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz",
++			"integrity": "sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		},
++		"node_modules/utils-merge": {
++			"version": "1.0.1",
++			"resolved": "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz",
++			"integrity": "sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.4.0"
++			}
++		},
++		"node_modules/vary": {
++			"version": "1.1.2",
++			"resolved": "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz",
++			"integrity": "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==",
++			"license": "MIT",
++			"engines": {
++				"node": ">= 0.8"
++			}
++		}
++	}
++}
+diff --git a/0-workshops/4-dom-a11y-events-api-server/server/routes/index.js b/0-workshops/4-dom-a11y-events-api-server/server/routes/index.js
+index fdb7274..7638213 100644
+--- a/0-workshops/4-dom-a11y-events-api-server/server/routes/index.js
++++ b/0-workshops/4-dom-a11y-events-api-server/server/routes/index.js
+@@ -1,7 +1,9 @@
++/server/routes/index.js
++
+ const express = require('express');
+ const { getStats, postStats } = require('../apis/stats');
+ const { getGameInfo } = require('../apis/gameInfo');
+-// const { getTipsInfo } = require('') // TODO: completar
++const { getTipsInfo } = require('../apis/tipsInfo'); // Importar la función getTipsInfo
+ 
+ const router = express.Router();
+ 
+@@ -10,6 +12,6 @@ router.get('/game-info', getGameInfo);
+ router.get('/stats', getStats);
+ router.post('/stats', postStats);
+ 
+-// router.get(); // TODO: Agregar API con su respectivo método
++router.get('/tips-info', getTipsInfo); // Agregar la ruta para la API GET /tips-info
+ 
+-module.exports = router;
++module.exports = router;
+\ No newline at end of file
+-- 
+2.46.0.windows.1
+
