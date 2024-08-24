@@ -1,0 +1,4 @@
+$ratio: calc(2/3);
+$height-calc: min(calc(90vw / $ratio), 90vh);
+$width-calc: calc($height-calc * $ratio);
+$font-size: calc(min($height-calc, $width-calc) * 0.30);

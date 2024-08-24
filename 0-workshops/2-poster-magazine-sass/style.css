@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap");
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 40rem;
+  min-width: 10rem;
+  margin-bottom: -40px;
+  background: linear-gradient(90deg, rgb(131, 161, 231) 0%, rgb(109, 110, 175) 11%, rgb(43, 38, 44) 90%, rgb(37, 31, 31) 100%);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: -160px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-container img {
+  position: absolute;
+  bottom: 0px;
+  top: 5px;
+  margin-left: 1px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 250px;
+  font-family: "Jost", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-align: left;
+  letter-spacing: -50px;
+  color: #e5e5e5;
+  margin-top: -100px;
+  margin-left: -15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.bloque-1, .bloque-234, .bloque-5 {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: -20px;
+  width: 100%;
+  max-width: 800px;
+  color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.bloque-1 {
+  margin-top: 110px;
+  margin-left: -15px;
+}
+
+.bloque-1__h3 {
+  font-family: "Rock Salt", cursive;
+  font-size: 18px;
+  margin-top: 28px;
+  margin-bottom: 9px;
+  margin-left: -5px;
+  text-align: left;
+  text-shadow: 1px 1px 2px #000000;
+  line-height: 30px;
+}
+
+.bloque-234 {
+  font-size: 10px;
+}
+
+.block__text {
+  font-size: 10px;
+}
+
+.bloque-5 {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: -35px;
+  margin-left: -18px;
+}
+
+.bloque-5__h2a {
+  font-family: "Rock Salt", cursive;
+  font-size: 32px;
+  line-height: 24px;
+  text-align: left;
+  z-index: 10;
+  color: #000000;
+  text-shadow: 1px 1px 2px #000000;
+  margin-bottom: -15px;
+}
+
+.bloque-5__h2b {
+  font-family: "Rock Salt", cursive;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: left;
+  z-index: 10;
+  color: #000000;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.bloque-5__h2c {
+  font-family: "Rock Salt", cursive;
+  font-size: 57px;
+  line-height: 50px;
+  text-align: left;
+  z-index: 10;
+  margin-top: -100px;
+  margin-left: 250px;
+  color: #000000;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.block__text {
+  margin: -5px;
+  margin-bottom: -28px;
+}
+
+.block__text,
+.bloque-1__h3,
+.bloque-234 p,
+.bloque-5__h2a,
+.bloque-5__h2b,
+.bloque-5__h2c {
+  position: relative;
+  z-index: 2;
+}/*# sourceMappingURL=style.css.map */
