@@ -25,10 +25,54 @@
 							<span class="material-symbols-outlined"> close </span>
 						</button>
 					</header>
-					<form id="new-game-form" class="form" action="./pages/game/index.html">
-						<!-- TODO: Agregar Formulario aquí... -->
-						<!-- Usar: `<label> <input> <fieldset> <legend> <select>` -->
-					</form>
+						<form id="new-game-form" class="form" action="./pages/game/index.html">
+							<div class="form__group">
+								<label for="nickname" class="form__label">Nickname</label>
+								<input type="text" id="nickname" class="form__input" name="nickname" required />
+							</div>
+	
+							<div class="form__group">
+								<label class="form__label">Board Size</label>
+								<fieldset class="form__fieldset">
+									<legend class="form__legend">Select Board Size</legend>
+									<div class="form__options">
+										<input type="radio" id="board-size-3x3" name="board-size" value="3x3" required />
+										<label for="board-size-3x3" class="form__option">3x3</label>
+	
+										<input type="radio" id="board-size-4x4" name="board-size" value="4x4" />
+										<label for="board-size-4x4" class="form__option">4x4</label>
+	
+										<input type="radio" id="board-size-5x5" name="board-size" value="5x5" />
+										<label for="board-size-5x5" class="form__option">5x5</label>
+									</div>
+								</fieldset>
+							</div>
+	
+							<div class="form__group">
+								<label for="difficulty" class="form__label">Difficulty</label>
+								<select id="difficulty" class="form__select" name="difficulty" required>
+									<option value="" disabled selected>Select Difficulty</option>
+									<option value="easy">Easy</option>
+									<option value="moderate">Moderate</option>
+									<option value="hard">Hard</option>
+									<option value="legendary">Legendary</option>
+								</select>
+							</div>
+	
+							<div class="form__group">
+								<label class="form__label">Game Properties</label>
+								<fieldset class="form__fieldset">
+									<legend class="form__legend">Select game properties</legend>
+									<div class="form__options">
+										<input type="checkbox" id="image" name="image" value="image" />
+										<label for="image" class="form__option">With Image?</label>
+	
+										<input type="checkbox" id="time" name="time" value="time" />
+										<label for="time" class="form__option">With Time?</label>
+									</div>
+								</fieldset>
+							</div>
+						</form>
 					<footer>
 						<button type="reset" class="button button__secondary" form="new-game-form">reset</button>
 						<button type="submit" class="button button--success" form="new-game-form" disabled>Play!</button>

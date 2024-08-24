@@ -12,9 +12,8 @@ const endpoint = {
 		return queryParams ? `${url}?${queryParams}` : url;
 	},
 	tipsInfo: function () {
-		// TODO: completar para llenar y obtener el path correcto
-		return '';
-	},
-};
+		return `${this.scheme}${this.domain}:${this.port}/tips-info`;
+		},
+	};
 
 export default endpoint;
