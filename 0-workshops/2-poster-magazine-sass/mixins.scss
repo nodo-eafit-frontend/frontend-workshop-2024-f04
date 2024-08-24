@@ -1,0 +1,16 @@
+@mixin block-text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: $white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin header-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: -160px;
+    z-index: 1;
+}

@@ -1,0 +1,180 @@
+// Importaciones de las fuentes de Google
+@import './utili/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap');
+
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'extends';
+
+
+$ratio: calc(2/3);
+$height-calc: min(calc(90vw / $ratio), 90vh);
+$width-calc: calc($height-calc * $ratio);
+$font-size: calc(min($height-calc, $width-calc) * 0.30);
+
+.header-container img {
+    position: absolute; // Posiciona la imagen en el fondo del contenedor
+    bottom: 0px; // Coloca la imagen en la parte inferior del contenedor
+    top: 5px;
+    margin-left: 1px;
+    width: 100%; // La imagen ocupa el ancho total del contenedor
+    height: auto; // Mantiene la altura proporcional de la imagen
+    object-fit: cover; // Ajusta la imagen para que cubra el área sin distorsión
+    z-index: 0; // Asegura que la imagen esté debajo del texto
+
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; // Centra el main horizontalmente
+    justify-content: center; // Centra el main verticalmente
+    min-height: 100vh;
+    margin: 0; // Elimina el margen predeterminado del body
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column; // Asegura que el contenido en main se apile verticalmente
+    align-items: flex-start; // Alinea el contenido a la izquierda
+    width: 100%;
+    max-width: 40rem;
+    min-width: 10rem;
+    margin-bottom: -40px;
+    background: $gradient;
+    box-sizing: border-box; // Incluye padding y border en el tamaño total del elemento
+    position: relative; // Necesario para posicionar la imagen
+    overflow: hidden; // Oculta cualquier contenido que se desborde
+}
+
+.header-container {
+    @include header-container;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; // Alinea el contenido a la izquierda
+
+}
+
+
+
+h1 {
+    font-size: 250px;
+    font-family: "Jost", sans-serif;
+    font-weight: 900;
+    margin: 0;
+    text-align: left;
+    letter-spacing: -50px;
+    color: $white;
+    margin-top: -100px;
+    margin-left: -15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Alinea el contenido de los bloques a la izquierda
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.bloque-1, .bloque-234, .bloque-5 {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: -20px;
+    width: 100%; 
+    max-width: 800px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Alinea el contenido a la izquierda
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    z-index: 1; // Asegura que el contenedor esté encima de la imagen
+}
+
+.bloque-234 {
+    font-size: 10px;
+}
+
+.block__text{
+    font-size:10px ;
+}
+
+.bloque-1{
+    margin-top: 110px;
+    margin-left: -15px;
+}
+
+.bloque-1__h3 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 9px;
+    margin-left: -5px;
+    text-align: left;
+    text-shadow: 1px 1px 2px $black;
+    line-height: 30px;
+}
+
+.bloque-5 {
+    text-align: left; // Alinea el texto en el bloque
+    margin-top: 5px;
+    margin-bottom: -35px;
+    margin-left: -18px;
+}
+
+.bloque-5__h2a {
+    font-family: 'Rock Salt', cursive;
+    font-size: 32px;
+    line-height: 24px;
+    text-align: left;
+    z-index: 10;
+    color: $black;
+    text-shadow: 1px 1px 2px $black; 
+    margin-bottom: -15px;
+}
+
+.bloque-5__h2b {
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+    z-index: 10;
+    color: $black;
+    text-shadow: 1px 1px 2px $black; 
+}
+
+.bloque-5__h2c {
+    font-family: 'Rock Salt', cursive;
+    font-size: 57px;
+    line-height: 50px;
+    text-align: left;
+    z-index: 10;
+    margin-top: -100px;
+    margin-left: 250px;
+    color: $black;
+    text-shadow: 1px 1px 2px $black; 
+}
+
+
+.block__text{
+    margin: -5px;
+    margin-bottom: -28px;
+}
+
+.block__text,
+.bloque-1__h3,
+.bloque-234 p,
+.bloque-5__h2a,
+.bloque-5__h2b,
+.bloque-5__h2c {
+    position: relative; // Asegura que el z-index funcione en estos elementos
+    z-index: 2; // Asegura que el texto esté sobre la imagen
+}
