@@ -14,7 +14,7 @@
  * @returns {string} - Un mensaje que muestra las elecciones del jugador y de la computadora.
  */
 export const getChoicesMessage = (playerChoice, computerChoice) => {
-	return You chose ${playerChoice.text} ${playerChoice.emoji}, computer chose ${computerChoice.text} ${computerChoice.emoji};
+	return You choise ${playerChoice.text} ${playerChoice.emoji}, computer chose ${computerChoice.text} ${computerChoice.emoji};
 };
 
 /**
