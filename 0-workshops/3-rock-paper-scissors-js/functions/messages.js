@@ -14,8 +14,9 @@
  * @returns {string} - Un mensaje que muestra las elecciones del jugador y de la computadora.
  */
 export const getChoicesMessage = (playerChoice, computerChoice) => {
-	// TODO: Completar función
+	return `You chose ${playerChoice.text} ${playerChoice.emoji}, computer chose ${computerChoice.text} ${computerChoice.emoji}`;
 };
+
 
 /**
  * Genera un mensaje mostrando la puntuación y las vidas restantes.
@@ -26,4 +27,6 @@ export const getChoicesMessage = (playerChoice, computerChoice) => {
  *
  * @returns {string} - Un mensaje que muestra la puntuación y las vidas restantes.
  */
-export const getScoreMessage = (stats) => ''; // TODO: Completar función
+export const getScoreMessage = (stats) => {
+	return `Score: ${stats.score} 🪙, Lifes: ${stats.lifes} 💞`;
+};
