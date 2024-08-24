@@ -1,3 +1,6 @@
+
+/* RESET CSS (NORMALIZE CSS */
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -103,7 +106,7 @@ html {
   [type="button"],
   [type="reset"],
   [type="submit"] {
-    -webkit-appearance: button;
+  -webkit-appearance: button;
   }
   
   button::-moz-focus-inner,
@@ -207,7 +210,7 @@ span {
 }
 
 
-
+/* CÓDIGO */
 
 
 
@@ -242,7 +245,6 @@ h1 {
     color: var(--color-text-primary);
 }
 
-
 body {
     background: linear-gradient(var(--color-background-gradient-start), var(--color-background-gradient-middle), var(--color-background-gradient-end));
     font-family: 'Chakra Petch', sans-serif;
@@ -257,15 +259,13 @@ h2 {
     color: var(--color-text-secondary);
 }
 
- 
-
-
 .container1 {
     display: flex;
     flex-direction: row;
     margin-bottom: 70px;
     margin-right: 10px;
     margin-top: 70px;
+    padding: 30px;
 }
 
 header {
@@ -285,22 +285,13 @@ main {
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
-
-
-
-
 .parte2 {
     flex: 1;
     padding: 10px;
     margin-right: 15px;
     margin-bottom: 90px;
+    padding: 30px;
 }
-
-
-
-
-
-
 
 * {
     margin: 0;
@@ -409,9 +400,6 @@ main {
     left: -200vw;
 }
 
-
-
-
 .container3 {
     width: 100%;
     display: flex;
@@ -454,14 +442,6 @@ main {
     padding: 10px;
 }
 
-
-
-
-
-
-
-
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -469,12 +449,12 @@ main {
 }
 
 .container4 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 960px;
-    margin: 30px auto;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 10px;
 }
 
 .parte {
@@ -521,11 +501,5 @@ footer {
 @media (min-width: 600px) {
     .container4 {
         grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 900px) {
-    .container4 {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
