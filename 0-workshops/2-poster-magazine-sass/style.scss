@@ -16,18 +16,6 @@ $height-calc: min(calc(90vw / $ratio), 90vh);
 $width-calc: calc($height-calc * $ratio);
 $font-size: calc(min($height-calc, $width-calc) * 0.30);
 
-.header-container img {
-    position: absolute; // Posiciona la imagen en el fondo del contenedor
-    bottom: 0px; // Coloca la imagen en la parte inferior del contenedor
-    top: 5px;
-    margin-left: 1px;
-    width: 100%; // La imagen ocupa el ancho total del contenedor
-    height: auto; // Mantiene la altura proporcional de la imagen
-    object-fit: cover; // Ajusta la imagen para que cubra el área sin distorsión
-    z-index: 0; // Asegura que la imagen esté debajo del texto
-
-}
-
 body {
     display: flex;
     flex-direction: column; 
@@ -37,6 +25,7 @@ body {
     margin: 0; // Elimina el margen predeterminado del body
     padding: 20px;
 }
+
 
 main {
     display: flex;
@@ -57,6 +46,19 @@ main {
     display: flex;
     flex-direction: column; 
     align-items: flex-start; // Alinea el contenido a la izquierda
+
+}
+
+
+.header-container img {
+    position: absolute; // Posiciona la imagen en el fondo del contenedor
+    bottom: 0px; // Coloca la imagen en la parte inferior del contenedor
+    top: 5px;
+    margin-left: 1px;
+    width: 100%; // La imagen ocupa el ancho total del contenedor
+    height: auto; // Mantiene la altura proporcional de la imagen
+    object-fit: cover; // Ajusta la imagen para que cubra el área sin distorsión
+    z-index: 0; // Asegura que la imagen esté debajo del texto
 
 }
 
@@ -83,6 +85,8 @@ h1 {
     padding: 20px;
 }
 
+
+
 .bloque-1, .bloque-234, .bloque-5 {
     padding: 20px;
     border-radius: 10px;
@@ -97,14 +101,6 @@ h1 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
     z-index: 1; // Asegura que el contenedor esté encima de la imagen
-}
-
-.bloque-234 {
-    font-size: 10px;
-}
-
-.block__text{
-    font-size:10px ;
 }
 
 .bloque-1{
@@ -123,12 +119,32 @@ h1 {
     line-height: 30px;
 }
 
+.bloque-234 {
+    font-size: 10px;
+}
+
+.block__text{
+    font-size:10px ;
+}
+
+
+
+
+
+
+
+
+
+
 .bloque-5 {
     text-align: left; // Alinea el texto en el bloque
     margin-top: 5px;
     margin-bottom: -35px;
     margin-left: -18px;
 }
+
+
+
 
 .bloque-5__h2a {
     font-family: 'Rock Salt', cursive;
@@ -141,6 +157,9 @@ h1 {
     margin-bottom: -15px;
 }
 
+
+
+
 .bloque-5__h2b {
     font-family: 'Rock Salt', cursive;
     font-size: 40px;
@@ -150,6 +169,9 @@ h1 {
     color: $black;
     text-shadow: 1px 1px 2px $black; 
 }
+
+
+
 
 .bloque-5__h2c {
     font-family: 'Rock Salt', cursive;
@@ -164,10 +186,15 @@ h1 {
 }
 
 
+
+
+
 .block__text{
     margin: -5px;
     margin-bottom: -28px;
 }
+
+
 
 .block__text,
 .bloque-1__h3,
