@@ -1,0 +1,81 @@
+*{
+    background-color: bisque;
+}
+
+#titulo{
+    color: darkolivegreen;
+    background-color: rgb(179, 179, 179);
+    padding: 25px 0px;
+    text-align: center;
+    margin:auto;
+    font-size: 35px;
+    font-family: "Bebas Neue";
+}
+
+#subtitulo{
+    color: darkolivegreen;
+    text-shadow: 3px 5px 5px grey;
+    font-size: 25px;
+    font-family: "Bebas Neue";
+    margin-left: 150px;
+    margin-top: 25px;
+    margin-bottom: 1px;
+}
+
+.descripcion{
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: right;
+    width: 300px;
+}
+
+.imagen1{
+    float: left;
+    width: 325px;
+    height: 225px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 15px;
+    border: 3px black solid;
+    background-color:  rgb(92, 92, 92);
+}
+
+*{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+    float: right;
+
+}
+
+th, td{
+    border: solid 1px black;
+    padding: 5px;
+    width: 200px;
+}
+
+th{
+    background-color:  rgb(179, 179, 179);
+    font-family: "Bebas Neue";
+    font-size: 25px;
+    color: darkolivegreen;
+}
+
+.subtitulo2{
+    color: darkolivegreen;
+    text-shadow: 3px 5px 5px grey;
+    font-size: 25px;
+    font-family: "Bebas Neue";
+    margin-left: 116px;
+}
+
+.subtitulo3{
+    color: darkolivegreen;
+    text-shadow: 3px 5px 5px grey;
+    font-size: 25px;
+    font-family: "Bebas Neue";
+}
