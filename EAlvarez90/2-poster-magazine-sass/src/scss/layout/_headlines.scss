@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.title{
+font-family: "Barlow", sans-serif;
+float: left;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows:repeat(2, 1fr);
+grid-row-gap: 3rem;
+}
+
+
+section:nth-child(even) {
+    text-align: right;
+}
+
+section:nth-child(1) {
+    padding-right:1rem;
+    font-size: 20px;
+}
+
+
+section:nth-child(3) {
+    padding-right: .5rem;
+    text-align:right;
+    margin: 3rem;
+       
+    
+}
+.magazine{
+    h3{
+        font-size: small;
+    }
+    p{
+        font-size: 25px;
+    }
+    h4{
+        font-size: 100px;
+    } 
+}
+
+
