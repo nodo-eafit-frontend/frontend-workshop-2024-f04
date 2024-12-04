@@ -1,0 +1,16 @@
+{
+  "name": "2-poster-magazine-sass",
+  "version": "1.0.0",
+  "description": "En este reto, vas a crear un sitio web contenga una portada promocional de resvistas. utilizando HTML y SASS.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./scss/main.scss ./css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.32.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

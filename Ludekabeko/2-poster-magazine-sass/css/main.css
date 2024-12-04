@@ -1,0 +1,77 @@
+@import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Playfair Display", serif;
+}
+
+.magazine__title, .magazine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.magazine {
+  background-color: #a9100c;
+  background: linear-gradient(45deg, #0e0905 0%, #a9100c 61%);
+  color: #f7d7d5;
+  padding: calc(1rem);
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.magazine__title {
+  font-size: calc(8rem);
+  position: absolute;
+  top: calc(1rem);
+  z-index: 1;
+}
+.magazine__title span {
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+.magazine .cover-image {
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.headlines {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: calc(1rem);
+  margin-top: calc(-18.75rem);
+  z-index: 2;
+  position: relative;
+}
+.headlines .headline {
+  color: #f7d7d5;
+  font-size: calc(1.25rem);
+  line-height: 0.8;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  padding: calc(0.5rem);
+}
+
+.pink-style {
+  color: #ff1493;
+  font-size: calc(1.5rem);
+  line-height: 0.8;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=main.css.map */

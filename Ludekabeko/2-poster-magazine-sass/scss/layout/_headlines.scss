@@ -1,0 +1,56 @@
+@use '../utils' as *;
+
+/**
+ // Metodología BEM
+ .block {
+   &__entity {...}
+
+	 &__entity {
+	   &--modifier {...}
+	 }
+
+	 &--modifier {...}
+
+	 .block__entity
+
+	 .block--modifier
+
+	 .block__entity--modifier
+**/
+
+.headlines {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	font-weight: bolder;
+	grid-row-gap: 8rem;
+
+	&--pink-style {
+		@extend .pink-style;
+	}
+
+	section:nth-child(odd) {
+		text-align: left;
+	}
+
+	section:nth-child(even) {
+		text-align: right;
+	}
+
+	section:nth-child(1) {
+		padding-right: 2rem;
+	}
+
+	section:nth-child(2) {
+		h2 {
+			font-size: 1.875rem;
+		}
+	}
+
+	section:nth-child(3) {
+		padding-right: 6rem;
+	}
+	section:nth-child(4) {
+
+	}
+}
