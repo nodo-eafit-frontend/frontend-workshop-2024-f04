@@ -1,0 +1,10 @@
+@use "base" as *;
+@use "utils" as *;
+@use "layout" as *;
+
+body {
+  font-family: $font-robot;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
