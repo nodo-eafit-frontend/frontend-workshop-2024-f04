@@ -1,0 +1,17 @@
+.navigation {
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background-color: inherit;
+	font-weight: bolder;
+}
+
+.navigation > menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.navigation a {
+	padding: 0.5rem;
+}

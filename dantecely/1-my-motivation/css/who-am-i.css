@@ -1,0 +1,26 @@
+#who-am-i {
+	align-items: center;
+	display: flex;
+	text-align: end;
+}
+
+#who-am-i :first-child {
+	text-align: start;
+}
+
+#who-am-i picture {
+	border-radius: 50%;
+	display: inline-block;
+	flex-shrink: 0;
+	height: 18rem;
+	margin-left: 1rem;
+	overflow: hidden;
+	position: relative;
+	width: 18rem;
+}
+
+#who-am-i picture > img {
+	height: 100%;
+	margin-left: -2rem;
+	width: auto;
+}

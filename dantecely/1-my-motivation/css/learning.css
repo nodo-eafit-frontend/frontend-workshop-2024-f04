@@ -1,0 +1,17 @@
+#learning > ul {
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: thin;
+}
+
+#learning > ul > li {
+	margin: 1rem;
+}
+
+#learning > ul > li:first-child {
+	margin-left: 0.5rem;
+}
+
+#learning > ul > li:last-child {
+	margin-right: 0.5rem;
+}
