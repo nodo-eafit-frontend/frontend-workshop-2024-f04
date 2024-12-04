@@ -1,0 +1,22 @@
+@use 'base' as *;
+@use 'utils' as *;
+@use 'layout' as *;
+
+body {
+	font-family: $font-anton;
+	font-weight: 100;
+	display: flex;
+	justify-content: center;
+}
+
+// https://stackoverflow.com/questions/69226967/css-responsive-box-that-maintains-aspect-ratio-but-never-overflows-the-viewport
+// $ratio: calc( 2 / 3);
+// $height-calc: min(calc(90vw / $ratio), 90vh);
+// $width-calc: calc($height-calc * $ratio);
+// $font-size: calc(min($height-calc, $width-calc) * 0.30);
+
+// Dentro del selector
+// height: -webkit-fill-available;s
+// max-width: 40rem;
+// min-width: 10rem;
+// width: -webkit-fill-available;
