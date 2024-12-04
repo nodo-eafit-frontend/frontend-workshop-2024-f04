@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #eee2e2;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+    padding: 10px;
+    background: hsla(320, 70%, 71%, 0.561);
+    color: #fff;
+}
+
+
+section {
+    margin: 25px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
+}
+
+
+.imgPerfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+h2 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+
+p {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* O utiliza justify-content: center para centrarlas */
+    gap: 20px;
+    text-align: center;
+}
+
+.hobbies h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+}
+
+
+
+.hobby {
+    text-align: center;
+}
+
+img {
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #e981c68f;
+    color: #fff;
+}
+
+
+footer a {
+    color: #00817b;
+    text-decoration: none;
+}

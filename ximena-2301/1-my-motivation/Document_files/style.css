@@ -1,0 +1,25 @@
+h1 {
+  color: #00ff00;
+  text-align: center;
+}
+
+h2 {
+  color: #00ff00;
+}
+
+body {
+  background-image: url("/assets/billie.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.abajo {
+  background-color: #00f;
+  width: 50%;
+  bottom: 0;
+  margin-top: 1000px;
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */
